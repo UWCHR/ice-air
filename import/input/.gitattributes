@@ -1,0 +1,11 @@
+*.csv filter=lfs diff=lfs merge=lfs -text
+ARTS_Data_Dictionary.csv.gz filter=lfs diff=lfs merge=lfs -text
+ARTS_Passenger_Data_FY11.csv.gz filter=lfs diff=lfs merge=lfs -text
+ARTS_Passenger_Data_FY14.csv.gz filter=lfs diff=lfs merge=lfs -text
+ARTS_Passenger_Data_FY15.csv.gz filter=lfs diff=lfs merge=lfs -text
+ARTS_Passenger_Data_FY17.csv.gz filter=lfs diff=lfs merge=lfs -text
+ARTS_Passenger_Data_FY18.csv.gz filter=lfs diff=lfs merge=lfs -text
+ARTS_Passenger_Data_FY12.csv.gz filter=lfs diff=lfs merge=lfs -text
+ARTS_Passenger_Data_FY13.csv.gz filter=lfs diff=lfs merge=lfs -text
+ARTS_Passenger_Data_FY16.csv.gz filter=lfs diff=lfs merge=lfs -text
+ARTS_Passenger_Data_FY19.csv.gz filter=lfs diff=lfs merge=lfs -text

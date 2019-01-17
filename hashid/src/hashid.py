@@ -11,7 +11,6 @@ import hashlib
 import argparse
 import pandas as pd
 import sys
-import locale
 if sys.version_info[0] < 3:
     raise "Must be using Python 3"
 
@@ -27,7 +26,6 @@ def _get_args():
     parser.add_argument("--arts_fy17", required=True)
     parser.add_argument("--arts_fy18", required=True)
     parser.add_argument("--arts_fy19", required=True)
-    parser.add_argument("--airports", required=True)
     parser.add_argument("--output", required=True)
     return parser.parse_args()
 
@@ -87,14 +85,14 @@ if __name__ == "__main__":
 
         del hash_fields
 
-    arts_fy11.to_csv('../output/arts_fy11.csv.gz', **to_csv_opts)
-    arts_fy12.to_csv('../output/arts_fy12.csv.gz', **to_csv_opts)
-    arts_fy13.to_csv('../output/arts_fy13.csv.gz', **to_csv_opts)
-    arts_fy14.to_csv('../output/arts_fy14.csv.gz', **to_csv_opts)
-    arts_fy15.to_csv('../output/arts_fy15.csv.gz', **to_csv_opts)
-    arts_fy16.to_csv('../output/arts_fy16.csv.gz', **to_csv_opts)
-    arts_fy17.to_csv('../output/arts_fy17.csv.gz', **to_csv_opts)
-    arts_fy18.to_csv('../output/arts_fy18.csv.gz', **to_csv_opts)
-    arts_fy19.to_csv('../output/arts_fy19.csv.gz', **to_csv_opts)
+    arts_fy11.to_csv('output/arts_fy11.csv.gz', **to_csv_opts)
+    arts_fy12.to_csv('output/arts_fy12.csv.gz', **to_csv_opts)
+    arts_fy13.to_csv('output/arts_fy13.csv.gz', **to_csv_opts)
+    arts_fy14.to_csv('output/arts_fy14.csv.gz', **to_csv_opts)
+    arts_fy15.to_csv('output/arts_fy15.csv.gz', **to_csv_opts)
+    arts_fy16.to_csv('output/arts_fy16.csv.gz', **to_csv_opts)
+    arts_fy17.to_csv('output/arts_fy17.csv.gz', **to_csv_opts)
+    arts_fy18.to_csv('output/arts_fy18.csv.gz', **to_csv_opts)
+    arts_fy19.to_csv('output/arts_fy19.csv.gz', **to_csv_opts)
 
 # End.

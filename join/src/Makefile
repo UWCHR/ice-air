@@ -4,16 +4,16 @@
 # :maintainer: PN
 # :copyright: GPL v2 or later
 #
-# ice-air/join/src/Makefile
+# ice-air/hashid/src/Makefile
 #
 
 all: \
-		output/iceair.csv.gz
+		output/arts_fy11.csv.gz
 
 .PHONY: all
 
-output/iceair.csv.gz: \
-		src/join.py \
+output/arts_fy11.csv.gz: \
+		src/hashid.py \
 		input/ARTS_Passenger_Data_FY11.csv.gz \
 		input/ARTS_Passenger_Data_FY12.csv.gz \
 		input/ARTS_Passenger_Data_FY13.csv.gz \
@@ -22,8 +22,7 @@ output/iceair.csv.gz: \
 		input/ARTS_Passenger_Data_FY16.csv.gz \
 		input/ARTS_Passenger_Data_FY17.csv.gz \
 		input/ARTS_Passenger_Data_FY18.csv.gz \
-		input/ARTS_Passenger_Data_FY19.csv.gz \
-		hand/GlobalAirportDatabase.csv.gz
+		input/ARTS_Passenger_Data_FY19.csv.gz
 	python $< \
 		--arts_fy11=input/ARTS_Passenger_Data_FY11.csv.gz \
 		--arts_fy12=input/ARTS_Passenger_Data_FY12.csv.gz \
@@ -34,7 +33,6 @@ output/iceair.csv.gz: \
 		--arts_fy17=input/ARTS_Passenger_Data_FY17.csv.gz \
 		--arts_fy18=input/ARTS_Passenger_Data_FY18.csv.gz \
 		--arts_fy19=input/ARTS_Passenger_Data_FY19.csv.gz \
-		--airports=hand/GlobalAirportDatabase.csv.gz \
 		--output=$@
 
 # END.

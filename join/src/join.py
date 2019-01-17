@@ -3,7 +3,7 @@
 # :author: PN
 # :copyright: GPL v2 or later
 #
-# ice-air/join/src/join.py
+# ice-air/hashid/src/hashid.py
 #
 #
 
@@ -68,25 +68,33 @@ if __name__ == "__main__":
     arts_fy17 = pd.read_csv(args.arts_fy17, **read_csv_opts)
     arts_fy18 = pd.read_csv(args.arts_fy18, **read_csv_opts)
     arts_fy19 = pd.read_csv(args.arts_fy19, **read_csv_opts)
-    airports = pd.read_csv(args.airports, **read_csv_opts)
 
-    iceair = pd.concat([arts_fy11,
-                        arts_fy12,
-                        arts_fy13,
-                        arts_fy14,
-                        arts_fy15,
-                        arts_fy16,
-                        arts_fy17,
-                        arts_fy18,
-                        arts_fy19])
+    files = [arts_fy11,
+             arts_fy12,
+             arts_fy13,
+             arts_fy14,
+             arts_fy15,
+             arts_fy16,
+             arts_fy17,
+             arts_fy18,
+             arts_fy19]
 
-    hash_fields = iceair.columns
+    for file in files:
+        hash_fields = file.columns
 
-    iceair['hashid'] = iceair.apply(make_hashid, axis=1)
-    assert len(set(iceair['hashid'])) == len(set(iceair['hashid']))
+        file['hashid'] = file.apply(make_hashid, axis=1)
+        assert len(set(file['hashid'])) == len(file['hashid'])
 
-    del hash_fields
+        del hash_fields
 
-    iceair.to_csv('output/iceair.csv.gz', **to_csv_opts)
+    arts_fy11.to_csv('../output/arts_fy11.csv.gz', **to_csv_opts)
+    arts_fy12.to_csv('../output/arts_fy12.csv.gz', **to_csv_opts)
+    arts_fy13.to_csv('../output/arts_fy13.csv.gz', **to_csv_opts)
+    arts_fy14.to_csv('../output/arts_fy14.csv.gz', **to_csv_opts)
+    arts_fy15.to_csv('../output/arts_fy15.csv.gz', **to_csv_opts)
+    arts_fy16.to_csv('../output/arts_fy16.csv.gz', **to_csv_opts)
+    arts_fy17.to_csv('../output/arts_fy17.csv.gz', **to_csv_opts)
+    arts_fy18.to_csv('../output/arts_fy18.csv.gz', **to_csv_opts)
+    arts_fy19.to_csv('../output/arts_fy19.csv.gz', **to_csv_opts)
 
 # End.

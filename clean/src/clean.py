@@ -7,6 +7,7 @@
 #
 #
 import pandas as pd
+import numpy as np
 import argparse
 import sys
 import yaml
@@ -93,9 +94,22 @@ if __name__ == "__main__":
         clean = yaml.load(yamlfile)
 
     for key in clean.keys():
+        print(f'Cleaning {key}')
         df[key] = df[key].replace(clean[key])
         df[key] = df[key].astype('category')
-        print(df[key].value_counts())
+
+    out_of_bounds_high = df['Age'] > 99
+    out_of_bounds_low = df['Age'] < 0
+    df.loc[out_of_bounds_high, 'Age'] = np.nan
+    df.loc[out_of_bounds_low, 'Age'] = np.nan
+    juvenile = df['Age'] <= 18
+    df['Juvenile'] = juvenile
+
+    # Could standardize column name capitalization here
+    df['PULOC'] = df['PULOC'].str.upper()
+    df['PULOC'] = df['PULOC'].astype('category')
+    df['DropLoc'] = df['DropLoc'].str.upper()
+    df['DropLoc'] = df['DropLoc'].astype('category')
 
     to_csv_opts = {'sep': '|',
                    'quotechar': '"',

@@ -3,7 +3,7 @@
 # :author: PN
 # :copyright: GPL v2 or later
 #
-# ice-air/optimize/src/src/optimize.py
+# ice-air/optimize/src/optimize.py
 #
 # Shamelessly copied from: https://www.dataquest.io/blog/pandas-big-data/
 #

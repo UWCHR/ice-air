@@ -49,4 +49,10 @@ CountryOfCitizenship:
     'ST VINCENT': 'ST. VINCENT & THE GRENADINES'
     'DOMNICAN REPUBLIC': 'DOMINICAN REPUBLIC'
 
+air2_AirportName:
+    'Bole International Airport': 'Addis Ababa Bole International Airport'
+
+DropLoc:
+    'LYPR': 'BKPR'
+
 ...

@@ -35,3 +35,15 @@ Criminality:
     'NON-CRIMINAL': 'NC'
     'Non-Criminal': 'NC'
     'SA': 'C'
+
+CountryOfCitizenship:
+    'CAMODIA': 'CAMBODIA'
+    'EL SAL': 'EL SALVADOR'
+    'MEXIC': 'MEXICO'
+    'MONGOLA': 'MONGOLIA'
+    'PALESTINIAN': 'PALESTINE'
+    'PHILIPINNES': 'PHILIPPINES'
+    'ST KITTS-NEVIS': 'ST. KITTS-NEVIS'
+    'ST LUCIA': 'ST. LUCIA'
+    'ST VINCENT': 'ST. VINCENT & THE GRENADINES'
+    'DOMNICAN REPUBLIC': 'DOMINICAN REPUBLIC'

@@ -36,7 +36,8 @@ output/ice-air.csv.gz: \
 		--fy18=input/ARTS_Passenger_Data_FY18.csv.gz \
 		--fy19=input/ARTS_Passenger_Data_FY19.csv.gz \
 		--clean=hand/clean.yaml \
-		--dtypes=input/dtypes.yaml \
+		--dtypes_in=input/dtypes.yaml \
+		--dtypes_out=output/dtypes.yaml \
 		--output=$@
 
 # End.

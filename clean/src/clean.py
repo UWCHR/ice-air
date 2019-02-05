@@ -27,7 +27,8 @@ def _get_args():
     parser.add_argument("--fy18", required=True)
     parser.add_argument("--fy19", required=True)
     parser.add_argument("--clean", required=True)
-    parser.add_argument("--dtypes", required=True)
+    parser.add_argument("--dtypes_in", required=True)
+    parser.add_argument("--dtypes_out", required=True)
     parser.add_argument("--output", required=True)
     return parser.parse_args()
 
@@ -44,7 +45,7 @@ def mem_usage(pandas_obj):
 if __name__ == "__main__":
     args = _get_args()
 
-    with open(args.dtypes, 'r') as yamlfile:
+    with open(args.dtypes_in, 'r') as yamlfile:
         dtypes = yaml.load(yamlfile)
 
     read_csv_opts = {'sep': '|',
@@ -102,8 +103,7 @@ if __name__ == "__main__":
     out_of_bounds_low = df['Age'] < 0
     df.loc[out_of_bounds_high, 'Age'] = np.nan
     df.loc[out_of_bounds_low, 'Age'] = np.nan
-    juvenile = df['Age'] <= 18
-    df['Juvenile'] = juvenile
+    assert df['Age'].min() == 0
 
     # Could standardize column name capitalization here
     df['PULOC'] = df['PULOC'].str.upper()
@@ -118,4 +118,9 @@ if __name__ == "__main__":
                    'index': False}
 
     df.to_csv(args.output, **to_csv_opts)
+
+    dtypes['Juvenile'] = 'bool'
+    
+    with open(args.dtypes_out, 'w') as outfile:
+        yaml.dump(dtypes, outfile, default_flow_style=False)
 # END.

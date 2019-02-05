@@ -55,4 +55,8 @@ air2_AirportName:
 DropLoc:
     'LYPR': 'BKPR'
 
+Juvenile:
+    'Yes': True
+    'No': False
+
 ...

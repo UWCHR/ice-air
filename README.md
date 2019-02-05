@@ -12,6 +12,33 @@ This project uses "Principled Data Processing" techniques and tools developed by
 
 Tasks in this project are designed to be executed using the recursive make tool [makr](https://github.com/hrdag/makr).
 
+# TO-DO
+
+CLEAN
+- [x] Output revised dtypes ({'Juvenile': 'bool'})
+
+COUNTRY OF CITIZENSHIP
+- [ ] How many deportation flights leave from the US to COUNTRY?
+  - [ ] Annually from the US in total
+  - [ ] Annually from King County 
+  - [ ] Over the course of the whole data set
+  - [ ] Monthly this past year (FY2018) out of King County
+- [ ] What percentage of the passengers on these flights are convicted criminals? 
+  - [ ] Over the course of the entire data set annually, particularly FY2018
+
+MINORS
+- [ ] Has the number of minors being repatriated increased over time? For what countries? 
+- [ ] How many minors are typically on a flight? 
+- [ ] Are there flights with only minors?
+- [ ] Increase in deportations of minors to Guatemala?
+  - [ ] Instances of more than 20 unaccompanied minors in Guatemala in one day
+
+MEXICO
+- [ ] Destination cities for removal flights of Mexican nationals over time.
+
+CAMBODIA
+- [ ] Halt of repatriations in 2017?
+
 # ARTS PASSENGER DATA DICTIONARY
 
 Field|Description

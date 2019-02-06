@@ -27,6 +27,7 @@ def _get_args():
     parser.add_argument("--fy18", required=True)
     parser.add_argument("--fy19", required=True)
     parser.add_argument("--clean", required=True)
+    parser.add_argument("--missing_airports", required=True)
     parser.add_argument("--dtypes_in", required=True)
     parser.add_argument("--dtypes_out", required=True)
     parser.add_argument("--output", required=True)
@@ -90,6 +91,32 @@ if __name__ == "__main__":
             converted_obj.loc[:, col] = df_obj[col]
 
     df[converted_obj.columns] = converted_obj
+
+    missing = pd.read_csv(args.missing_airports)
+
+    air_names = list(df['air_AirportName'].cat.categories)
+    air2_names = list(df['air2_AirportName'].cat.categories)
+    air_countries = list(df['air_Country'].cat.categories)
+    air2_countries = list(df['air2_Country'].cat.categories)
+
+    air_names.extend(list(missing['airport_name']))
+    air2_names.extend(list(missing['airport_name']))
+    air_countries.extend(list(missing['airport_country']))
+    air2_countries.extend(list(missing['airport_country']))
+
+    df['air_AirportName'].cat.set_categories(set(air_names), inplace=True)
+    df['air2_AirportName'].cat.set_categories(set(air2_names), inplace=True)
+    df['air_Country'].cat.set_categories(set(air_countries), inplace=True)
+    df['air2_Country'].cat.set_categories(set(air2_countries), inplace=True)
+
+    for index, row in missing.iterrows():
+        code = row['airport_code']
+        name = row['airport_name']
+        country = row['airport_country']
+        df.loc[df['PULOC'] == code, 'air_Country'] = country
+        df.loc[df['PULOC'] == code, 'air_AirportName'] = name
+        df.loc[df['DropLoc'] == code, 'air2_Country'] = country
+        df.loc[df['DropLoc'] == code, 'air2_AirportName'] = name
 
     with open(args.clean, 'r') as yamlfile:
         clean = yaml.load(yamlfile)

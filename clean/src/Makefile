@@ -15,6 +15,7 @@ PHONY: all
 output/ice-air.csv.gz: \
 	src/clean.py \
 	hand/clean.yaml \
+	hand/missing_airports.csv \
 	input/dtypes.yaml \
 	input/ARTS_Passenger_Data_FY11.csv.gz \
 	input/ARTS_Passenger_Data_FY12.csv.gz \
@@ -36,6 +37,7 @@ output/ice-air.csv.gz: \
 		--fy18=input/ARTS_Passenger_Data_FY18.csv.gz \
 		--fy19=input/ARTS_Passenger_Data_FY19.csv.gz \
 		--clean=hand/clean.yaml \
+		--missing_airports=hand/missing_airports.csv \
 		--dtypes_in=input/dtypes.yaml \
 		--dtypes_out=output/dtypes.yaml \
 		--output=$@

@@ -102,11 +102,11 @@ if __name__ == "__main__":
     df['CountryOfCitizenship'].cat.add_categories(['UNKNOWN'], inplace=True)
     df['CountryOfCitizenship'].fillna('UNKNOWN', inplace=True)
 
-    # out_of_bounds_high = df['Age'] > 99
-    # out_of_bounds_low = df['Age'] < 0
-    # df.loc[out_of_bounds_high, 'Age'] = np.nan
-    # df.loc[out_of_bounds_low, 'Age'] = np.nan
-    # assert df['Age'].min() == 0
+    out_of_bounds_high = df['Age'] > 99
+    out_of_bounds_low = df['Age'] < 0
+    df.loc[out_of_bounds_high, 'Age'] = np.nan
+    df.loc[out_of_bounds_low, 'Age'] = np.nan
+    assert df['Age'].min() == 0
 
     # Could standardize column name capitalization here
     df['PULOC'] = df['PULOC'].str.upper()

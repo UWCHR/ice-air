@@ -99,11 +99,11 @@ if __name__ == "__main__":
         df[key] = df[key].replace(clean[key])
         df[key] = df[key].astype('category')
 
-    out_of_bounds_high = df['Age'] > 99
-    out_of_bounds_low = df['Age'] < 0
-    df.loc[out_of_bounds_high, 'Age'] = np.nan
-    df.loc[out_of_bounds_low, 'Age'] = np.nan
-    assert df['Age'].min() == 0
+    # out_of_bounds_high = df['Age'] > 99
+    # out_of_bounds_low = df['Age'] < 0
+    # df.loc[out_of_bounds_high, 'Age'] = np.nan
+    # df.loc[out_of_bounds_low, 'Age'] = np.nan
+    # assert df['Age'].min() == 0
 
     # Could standardize column name capitalization here
     df['PULOC'] = df['PULOC'].str.upper()
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     df.to_csv(args.output, **to_csv_opts)
 
     dtypes['Juvenile'] = 'bool'
-    
+
     with open(args.dtypes_out, 'w') as outfile:
         yaml.dump(dtypes, outfile, default_flow_style=False)
 # END.

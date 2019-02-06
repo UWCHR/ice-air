@@ -34,7 +34,7 @@ MINORS
   - [ ] Instances of more than 20 unaccompanied minors in Guatemala in one day
 
 MEXICO
-- [ ] Destination cities for removal flights of Mexican nationals over time.
+- [x] Destination locations for removal flights of Mexican nationals over time.
 
 CAMBODIA
 - [ ] Halt of repatriations in 2017?

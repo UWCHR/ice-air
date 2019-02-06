@@ -38,6 +38,8 @@ MEXICO
 
 CAMBODIA
 - [ ] Halt of repatriations in 2017?
+- [ ] Average number of people per flight?
+- [ ] Flights that land in Cambodia? Flights out of Phoenix?
 
 # ARTS PASSENGER DATA DICTIONARY
 

@@ -1,0 +1,73 @@
+,PULOC,MissionYear,R-T,air2_AirportName,AlienMasterIDCount,MissionCount
+0,KBFI,2010,R,San Diego International Airport,1012,23
+1,KBFI,2010,R,Valley International Airport,326,1
+2,KBFI,2010,T,El Paso International Airport,1,5
+3,KBFI,2010,T,George Bush Intercontinental Houston Airport,21,5
+4,KBFI,2010,T,Phoenix-Mesa-Gateway Airport,178,7
+5,KBFI,2011,R,Phoenix-Mesa-Gateway Airport,51,5
+6,KBFI,2011,R,San Diego International Airport,3555,1
+7,KBFI,2011,R,Valley International Airport,2123,2
+8,KBFI,2011,R,Beijing Capital International Airport,6,1
+9,KBFI,2011,T,El Paso International Airport,1,99
+10,KBFI,2011,T,Phoenix-Mesa-Gateway Airport,747,1
+11,KBFI,2011,T,San Diego International Airport,45,1
+12,KBFI,2011,T,Valley International Airport,2,1
+13,KBFI,2012,R,El Paso International Airport,6,1
+14,KBFI,2012,R,La Aurora Airport,114,4
+15,KBFI,2012,R,Phoenix-Mesa-Gateway Airport,2,3
+16,KBFI,2012,R,San Diego International Airport,3312,12
+17,KBFI,2012,R,Valley International Airport,606,33
+18,KBFI,2012,T,El Paso International Airport,387,37
+19,KBFI,2012,T,Phoenix-Mesa-Gateway Airport,962,19
+20,KBFI,2012,T,San Diego International Airport,8,3
+21,KBFI,2012,T,Valley International Airport,5,3
+22,KBFI,2013,R,El Paso International Airport,17,8
+23,KBFI,2013,R,Phoenix-Mesa-Gateway Airport,185,9
+24,KBFI,2013,R,San Antonio International Airport,26,1
+25,KBFI,2013,R,San Diego International Airport,1446,1
+26,KBFI,2013,R,Valley International Airport,73,1
+27,KBFI,2013,R,Yuma MCAS/Yuma International Airport,23,1
+28,KBFI,2013,R,Brownsville South Padre Island International Airport,14,1
+29,KBFI,2013,R,El Centro Naf Airport,174,1
+30,KBFI,2013,T,El Paso International Airport,1255,57
+31,KBFI,2013,T,Phoenix-Mesa-Gateway Airport,1379,1
+32,KBFI,2013,T,San Antonio International Airport,1,3
+33,KBFI,2013,T,San Diego International Airport,5,4
+34,KBFI,2013,T,Valley International Airport,4,12
+35,KBFI,2013,T,El Centro Naf Airport,1,29
+36,KBFI,2014,R,El Paso International Airport,67,36
+37,KBFI,2014,R,El Salvador International Airport,97,28
+38,KBFI,2014,R,Phoenix-Mesa-Gateway Airport,407,2
+39,KBFI,2014,T,Alexandria International Airport,2,13
+40,KBFI,2014,T,El Paso International Airport,1830,7
+41,KBFI,2014,T,McCarran International Airport,1,1
+42,KBFI,2014,T,Miami International Airport,1,1
+43,KBFI,2014,T,Phoenix-Mesa-Gateway Airport,1089,1
+44,KBFI,2014,T,San Antonio International Airport,106,2
+45,KBFI,2015,R,El Paso International Airport,24,1
+46,KBFI,2015,R,Phoenix-Mesa-Gateway Airport,265,1
+47,KBFI,2015,R,Brownsville South Padre Island International Airport,3,45
+48,KBFI,2015,T,Alexandria International Airport,73,1
+49,KBFI,2015,T,El Paso International Airport,1414,1
+50,KBFI,2015,T,Meadows Field,23,1
+51,KBFI,2015,T,Phoenix-Mesa-Gateway Airport,1015,5
+52,KBFI,2015,T,San Diego International Airport,1,2
+53,KBFI,2015,T,Brownsville South Padre Island International Airport,34,6
+54,KBFI,2016,R,Phoenix-Mesa-Gateway Airport,252,35
+55,KBFI,2016,R,San Diego International Airport,214,1
+56,KBFI,2016,T,Alexandria International Airport,236,37
+57,KBFI,2016,T,El Paso International Airport,1184,39
+58,KBFI,2016,T,Phoenix-Mesa-Gateway Airport,1287,1
+59,KBFI,2016,T,San Diego International Airport,5,1
+60,KBFI,2017,R,El Paso International Airport,59,2
+61,KBFI,2017,R,Phoenix-Mesa-Gateway Airport,146,25
+62,KBFI,2017,R,San Diego International Airport,5,12
+63,KBFI,2017,T,Alexandria International Airport,72,1
+64,KBFI,2017,T,El Paso International Airport,2145,1
+65,KBFI,2017,T,Phoenix-Mesa-Gateway Airport,1035,2
+66,KBFI,2018,R,El Paso International Airport,1269,1
+67,KBFI,2018,R,Phoenix-Mesa-Gateway Airport,117,2
+68,KBFI,2018,R,San Diego International Airport,44,1
+69,KBFI,2018,T,El Paso International Airport,953,40
+70,KBFI,2018,T,Phoenix-Mesa-Gateway Airport,874,2
+71,KBFI,2018,T,Brownsville South Padre Island International Airport,21,1

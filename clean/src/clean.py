@@ -99,6 +99,9 @@ if __name__ == "__main__":
         df[key] = df[key].replace(clean[key])
         df[key] = df[key].astype('category')
 
+    df['CountryOfCitizenship'].cat.add_categories(['UNKNOWN'], inplace=True)
+    df['CountryOfCitizenship'].fillna('UNKNOWN', inplace=True)
+
     # out_of_bounds_high = df['Age'] > 99
     # out_of_bounds_low = df['Age'] < 0
     # df.loc[out_of_bounds_high, 'Age'] = np.nan

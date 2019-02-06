@@ -48,7 +48,6 @@ CountryOfCitizenship:
     'ST LUCIA': 'ST. LUCIA'
     'ST VINCENT': 'ST. VINCENT & THE GRENADINES'
     'DOMNICAN REPUBLIC': 'DOMINICAN REPUBLIC'
-    .NAN: 'UNKNOWN'
 
 air2_AirportName:
     'Bole International Airport': 'Addis Ababa Bole International Airport'

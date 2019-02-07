@@ -77,7 +77,7 @@ CountryOfCitizenship|Country of Citizenship|(partial clean)
 Juvenile|Is Alien a Juvenile|(cleaned)
 MissionWeek|Mission Week|
 MissionQuarter|Mission Quarter|
-MissionYear|Mission Year|(fiscal year)
+MissionYear|Mission Year|
 MissionMonth|Mission Month|
 Criminality|Criminality|(cleaned)
 FamilyUnitFlag|Family Unit Flag|

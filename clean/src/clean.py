@@ -28,6 +28,7 @@ def _get_args():
     parser.add_argument("--fy19", required=True)
     parser.add_argument("--clean", required=True)
     parser.add_argument("--missing_airports", required=True)
+    parser.add_argument("--airport_dict", required=True)
     parser.add_argument("--dtypes_in", required=True)
     parser.add_argument("--dtypes_out", required=True)
     parser.add_argument("--output", required=True)
@@ -144,6 +145,9 @@ if __name__ == "__main__":
     df['DropLoc'] = df['DropLoc'].str.upper()
     df['DropLoc'] = df['DropLoc'].astype('category')
 
+    df['NonCriminal'] = df['Criminality'] == 'NC'
+    df['NonCriminal'] = df['NonCriminal'].astype('category')
+
     to_csv_opts = {'sep': '|',
                    'quotechar': '"',
                    'compression': 'gzip',
@@ -154,7 +158,21 @@ if __name__ == "__main__":
 
     dtypes['Juvenile'] = 'bool'
     dtypes['CountryOfCitizenship'] = 'category'
+    dtypes['NonCriminal'] = 'bool'
 
     with open(args.dtypes_out, 'w') as outfile:
         yaml.dump(dtypes, outfile, default_flow_style=False)
+
+    pickup_names = df[['PULOC', 'air_AirportName']].drop_duplicates()
+    pickup_names.set_index('PULOC', inplace=True)
+    dropoff_names = df[['DropLoc', 'air2_AirportName']].drop_duplicates()
+    dropoff_names.set_index('DropLoc', inplace=True)
+
+    pickup_dict = pickup_names.to_dict()['air_AirportName']
+    dropoff_dict = dropoff_names.to_dict()['air2_AirportName']
+
+    airport_dict = {**pickup_dict, **dropoff_dict}
+
+    with open(args.airport_dict, 'w') as outfile:
+            yaml.dump(airport_dict, outfile, default_flow_style=False, allow_unicode=True)
 # END.

@@ -18,6 +18,7 @@ MissionNumber: uint32
 MissionQuarter: uint8
 MissionWeek: uint8
 MissionYear: uint16
+NonCriminal: bool
 PULOC: category
 R-T: category
 ReasonStruck: category

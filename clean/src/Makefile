@@ -38,6 +38,7 @@ output/ice-air.csv.gz: \
 		--fy19=input/ARTS_Passenger_Data_FY19.csv.gz \
 		--clean=hand/clean.yaml \
 		--missing_airports=hand/missing_airports.csv \
+		--airport_dict=output/airport_dict.yaml \
 		--dtypes_in=input/dtypes.yaml \
 		--dtypes_out=output/dtypes.yaml \
 		--output=$@

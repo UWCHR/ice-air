@@ -22,10 +22,10 @@ GLOBAL
 - [ ] Cost of most common travel segment? ($7785/hour/flight)
 
 COUNTRY OF CITIZENSHIP
-- [ ] How many deportation flights leave from the US to COUNTRY?
-  - [ ] Annually from the US in total
+- [x] How many deportation flights leave from the US to COUNTRY?
+  - [x] Annually from the US in total
   - [ ] Annually from King County 
-  - [ ] Over the course of the whole data set
+  - [x] Over the course of the whole data set
   - [ ] Monthly this past year (FY2018) out of King County
 - [ ] What percentage of the passengers on these flights are convicted criminals? 
   - [ ] Over the course of the entire data set annually, particularly FY2018
@@ -42,16 +42,16 @@ MEXICO
 - [x] Destination locations for removal flights of Mexican nationals over time.
 
 CAMBODIA
-- [ ] Halt of repatriations in 2017?
-- [ ] Average number of people per flight?
-- [ ] Flights that land in Cambodia? Flights out of Phoenix?
+- [x] Halt of repatriations in 2017?
+- [x] Average number of people per flight?
+- [x] Flights that land in Cambodia? Flights out of Phoenix?
 
 KBFI
 - [ ] How many juveniles left or flew into Seattle, if any?
-- [ ] How many passengers were included in dropoffs in Seattle?
-- [ ] What are the top nationalities of folks flying into/out of Seattle?
-- [ ] What nationalities have seen an uptick in passengers leaving Seattle?
-- [ ] What year saw the most passengers flying into/out of Seattle? Another question we could base research on is why might this be?
+- [x] How many passengers were included in dropoffs in Seattle?
+- [x] What are the top nationalities of folks flying into/out of Seattle?
+- [x] What nationalities have seen an uptick in passengers leaving Seattle?
+- [x] What year saw the most passengers flying into/out of Seattle? Another question we could base research on is why might this be?
 - [ ] Using ICE's cost estimate on their website, could we potentially find out the cost of a flight, say from Seattle to Phoenix? 
 - [ ] Perhaps we could identify how many flights out of Seattle fly into airports in the middle of the country - does this denote a transfer of people based on the audit sample flight path?
 

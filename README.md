@@ -21,9 +21,9 @@ Tasks in this project are designed to be executed using the recursive make tool 
 `analyze/note/nationality.ipynb`
 - [x] How many deportation flights leave from the US to COUNTRY?
   - [x] Annually from the US in total
-  - [ ] Annually from King County 
+  - [x] Annually from King County 
   - [x] Over the course of the whole data set
-  - [ ] Monthly this past year (FY2018) out of King County
+  - [x] Monthly this past year (FY2018) out of King County
 - [ ] What percentage of the passengers on these flights are convicted criminals? 
   - [ ] Over the course of the entire data set annually, particularly FY2018
   - MEXICO
@@ -59,9 +59,9 @@ Tasks in this project are designed to be executed using the recursive make tool 
 
 Field|Description|(UWCHR notes)
 -----|-----------|-------------
-Status|Criminal Status|
+Status|Criminal Status|(actually relates to grounds for deportation)
 Sex|Sex|(cleaned)
-Convictions|Convictions|
+Convictions|Convictions|(not consistent with Criminality in early years of dataset, very messy)
 GangMember|Gang Member|
 ClassLvl|Class Level|
 Age|Age|(cleaned)
@@ -79,7 +79,7 @@ MissionWeek|Mission Week|
 MissionQuarter|Mission Quarter|
 MissionYear|Mission Year|
 MissionMonth|Mission Month|
-Criminality|Criminality|(cleaned)
+Criminality|Criminality|(cleaned, missing many values in 2010 but other years pretty good)
 FamilyUnitFlag|Family Unit Flag|
 UnaccompaniedFlag|Unaccompanied Flag|
 AlienMasterID|Unique value assigned by ARTS for Alien|

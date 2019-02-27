@@ -1,4 +1,4 @@
-calendar_year,monthly_mean_dropoff_flights,monthly_mean_dropoffs,monthly_mean_pickup_flights,monthly_mean_pickups
+calendar_year,monthly_mean_dropoff_missions,monthly_mean_dropoffs,monthly_mean_pickup_missions,monthly_mean_pickups
 2010,4.0,39.333333333333336,7.666666666666667,512.6666666666666
 2011,4.416666666666667,59.0,8.333333333333334,544.1666666666666
 2012,3.9166666666666665,115.41666666666667,4.833333333333333,450.1666666666667

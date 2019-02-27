@@ -14,46 +14,12 @@ Tasks in this project are designed to be executed using the recursive make tool 
 
 # TO-DO
 
-`analyze/note/global.ipynb`
-- [x] Expansion over time?
-- [ ] Cost of most common travel segment? ($7785/hour/flight)
+- [ ] Clean up analysis notebooks.
+  - Use implementation in `analyze/note/airport.ipynb` to pull chart labels from df name (or use separate name variables).
+- [ ] Start cleaning `Status` field:
+  - First convert all to uppercase, reset categories in `clean/`.
+  - Dump list of bad values to YAML.
 
-`analyze/note/nationality.ipynb`
-- [x] How many deportation flights leave from the US to COUNTRY?
-  - [x] Annually from the US in total
-  - [x] Annually from King County 
-  - [x] Over the course of the whole data set
-  - [x] Monthly this past year (FY2018) out of King County
-- [ ] What percentage of the passengers on these flights are convicted criminals? 
-  - [ ] Over the course of the entire data set annually, particularly FY2018
-  - MEXICO
-    - [x] Destination locations for removal flights of Mexican nationals over time.
-  - CAMBODIA
-    - [x] Halt of repatriations in 2017?
-    - [x] Average number of people per flight?
-    - [x] Flights that land in Cambodia? Flights out of Phoenix?
-  - Disproportionate rate of transfers for specific groups? Meaningful?
-
-`analyze/note/juveniles.ipynb`
-- [x] Has the number of minors being repatriated increased over time?
-- [x] For what countries? 
-- [ ] How many minors are typically on a flight? 
-- [ ] Are there flights with only minors?
-- [ ] Increase in deportations of minors to Guatemala?
-  - [ ] Instances of more than 20 unaccompanied minors in Guatemala in one day
-
-
-`analyze/note/airport.ipynb`
-- [ ] How many juveniles left or flew into Seattle, if any?
-- [x] How many passengers were included in dropoffs in Seattle?
-- [x] What are the top nationalities of folks flying into/out of Seattle?
-- [x] What nationalities have seen an uptick in passengers leaving Seattle?
-- [x] What year saw the most passengers flying into/out of Seattle? Another question we could base research on is why might this be?
-- [ ] Using ICE's cost estimate on their website, could we potentially find out the cost of a flight, say from Seattle to Phoenix?
-  - [ ] Most common flight path from/to KBFI
-- [ ] Airport ranks (what rank is KBFI for removals, transfers, etc.)
-  - [ ] "KBFI is top airport for [transfers/removals] of [nationality]"
-    - for CountryOfCitizenship get rank of KBFI
 
 # ARTS PASSENGER DATA DICTIONARY
 

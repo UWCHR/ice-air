@@ -17,6 +17,7 @@ output/ice-air.csv.gz: \
 	hand/clean.yaml \
 	hand/missing_airports.csv \
 	input/dtypes.yaml \
+	input/status.csv \
 	input/ARTS_Passenger_Data_FY11.csv.gz \
 	input/ARTS_Passenger_Data_FY12.csv.gz \
 	input/ARTS_Passenger_Data_FY13.csv.gz \
@@ -37,7 +38,9 @@ output/ice-air.csv.gz: \
 		--fy18=input/ARTS_Passenger_Data_FY18.csv.gz \
 		--fy19=input/ARTS_Passenger_Data_FY19.csv.gz \
 		--clean=hand/clean.yaml \
+		--status=input/status.csv \
 		--missing_airports=hand/missing_airports.csv \
+		--bad_statuses=output/bad_statuses.yaml \
 		--airport_dict=output/airport_dict.yaml \
 		--dtypes_in=input/dtypes.yaml \
 		--dtypes_out=output/dtypes.yaml \

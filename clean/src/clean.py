@@ -27,8 +27,10 @@ def _get_args():
     parser.add_argument("--fy18", required=True)
     parser.add_argument("--fy19", required=True)
     parser.add_argument("--clean", required=True)
+    parser.add_argument("--status", required=True)
     parser.add_argument("--missing_airports", required=True)
     parser.add_argument("--airport_dict", required=True)
+    parser.add_argument("--bad_statuses", required=True)
     parser.add_argument("--dtypes_in", required=True)
     parser.add_argument("--dtypes_out", required=True)
     parser.add_argument("--output", required=True)
@@ -122,6 +124,13 @@ if __name__ == "__main__":
     with open(args.clean, 'r') as yamlfile:
         clean = yaml.load(yamlfile)
 
+    # Want to be careful that this is not deleting anything we want to keep
+    # Also we will want to move this into a pre-import step for public repo
+    df.replace(to_replace='[0-9]{8,9}',
+               value='POSSIBLE A NUMBER DELETED',
+               regex=True,
+               inplace=True)
+
     for key in clean.keys():
         print(f'Cleaning {key}')
         df[key] = df[key].replace(clean[key])
@@ -145,6 +154,19 @@ if __name__ == "__main__":
     df['DropLoc'] = df['DropLoc'].str.upper()
     df['DropLoc'] = df['DropLoc'].astype('category')
 
+    status = pd.read_csv(args.status)
+    valid_status_codes = list(status['Code'])
+    df['Status'] = df['Status'].str.upper()
+    df['Status'] = df['Status'].astype('category')
+
+    invalid_status = df[~df['Status'].isin(valid_status_codes)]
+    bad_statuses = list(invalid_status['Status'].value_counts().index)
+
+    with open(args.bad_statuses, 'w') as outfile:
+            yaml.dump(bad_statuses, outfile,
+                      default_flow_style=False,
+                      allow_unicode=True)
+
     df['NonCriminal'] = df['Criminality'] == 'NC'
     df['NonCriminal'] = df['NonCriminal'].astype('category')
 
@@ -161,7 +183,8 @@ if __name__ == "__main__":
     dtypes['NonCriminal'] = 'bool'
 
     with open(args.dtypes_out, 'w') as outfile:
-        yaml.dump(dtypes, outfile, default_flow_style=False)
+        yaml.dump(dtypes, outfile,
+                  default_flow_style=False)
 
     pickup_names = df[['PULOC', 'air_AirportName']].drop_duplicates()
     pickup_names.set_index('PULOC', inplace=True)

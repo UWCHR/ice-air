@@ -17,8 +17,13 @@ Tasks in this project are designed to be executed using the recursive make tool 
 - [ ] Clean up analysis notebooks.
   - Use implementation in `analyze/note/airport.ipynb` to pull chart labels from df name (or use separate name variables).
 - [ ] Start cleaning `Status` field:
-  - First convert all to uppercase, reset categories in `clean/`.
-  - Dump list of bad values to YAML.
+  - [x] First convert all to uppercase, reset categories in `clean/`.
+  - [x] Dump list of bad values to YAML.
+  - [ ] Decide which bad values to standardize.
+- [x] Clean all potential A-numbers (8-9 digit numeric strings)
+  - [ ] Test to make sure not affecting values we want to keep; maybe limit to just `Status` and `GangMember` fields.
+  - [ ] Move to pre-clean task
+    - Does this mean we need to create separate public repo in future?
 
 
 # ARTS PASSENGER DATA DICTIONARY

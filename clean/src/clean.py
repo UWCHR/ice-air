@@ -126,6 +126,8 @@ if __name__ == "__main__":
 
     # Want to be careful that this is not deleting anything we want to keep
     # Also we will want to move this into a pre-import step for public repo
+    # And it takes a long time to regex entire DF, we probably only need to
+    # do the `Status` and `GangMember` fields.
     df.replace(to_replace='[0-9]{8,9}',
                value='POSSIBLE A NUMBER DELETED',
                regex=True,
@@ -160,7 +162,8 @@ if __name__ == "__main__":
     df['Status'] = df['Status'].astype('category')
 
     invalid_status = df[~df['Status'].isin(valid_status_codes)]
-    bad_statuses = list(invalid_status['Status'].value_counts().index)
+    status_counts = invalid_status['Status'].value_counts()
+    bad_statuses = list(status_counts[status_counts > 0].index)
 
     with open(args.bad_statuses, 'w') as outfile:
             yaml.dump(bad_statuses, outfile,

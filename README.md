@@ -21,7 +21,7 @@ Tasks in this project are designed to be executed using the recursive make tool 
   - [x] Dump list of bad values to YAML.
   - [ ] Decide which bad values to standardize.
 - [x] Clean all potential A-numbers (8-9 digit numeric strings)
-  - [ ] Test to make sure not affecting values we want to keep; maybe limit to just `Status` and `GangMember` fields.
+  - [ ] Test to make sure not affecting values we want to keep; maybe limit to just `Status` and `GangMember` fields?
   - [ ] Move to pre-clean task
     - Does this mean we need to create separate public repo in future?
 

@@ -8,8 +8,6 @@ path <- '../input/ice-air.csv.gz'
 DT = fread(path, stringsAsFactors=TRUE)
 
 DT$MissionDate <- ymd(DT$MissionDate)
-DT$AlienMasterID <- as.factor(DT$AlienMasterID)
-DT$MissionID <- as.factor(DT$MissionID)
 
 q <- quarter(DT$MissionDate, with_year = TRUE, fiscal_start = 10)
 fy <- stringr::str_sub(q, 1, 4)

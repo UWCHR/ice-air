@@ -8,6 +8,8 @@ path <- '../input/ice-air.csv.gz'
 DT = fread(path, stringsAsFactors=TRUE)
 
 DT$MissionDate <- ymd(DT$MissionDate)
+DT$AlienMasterID <- as.factor(DT$AlienMasterID)
+DT$MissionID <- as.factor(DT$MissionID)
 
 q <- quarter(DT$MissionDate, with_year = TRUE, fiscal_start = 10)
 fy <- stringr::str_sub(q, 1, 4)
@@ -17,10 +19,10 @@ rm(q, fy)
 annual_passengers <- DT[,
                         .(number_of_passengers = length(unique(AlienMasterID))),
                         by = FY]
-annual_removals <- DT[DT$'R-T' == 'R',
+annual_removals <- DT[`R-T` == 'R',
                       .(number_of_removals = length(unique(AlienMasterID))),
                       by = FY]
-annual_transfers <- DT[DT$'R-T' == 'T',
+annual_transfers <- DT[`R-T` == 'T',
                       .(number_of_transfers = length(unique(AlienMasterID))),
                       by = FY]
 annual_removal_missions <- DT[DT$'R-T' == 'R',
@@ -65,6 +67,6 @@ g <- g + labs(fill = "Country of Citizenship",
          x = "Fiscal Year",
          y = "Total Removals",
          title = "ICE Air Removals by Country of Citizenship",
-         subtitle = "(Top 5 any year)",
+         subtitle = "(Top 5 per year)",
          caption = "(UWCHR, based on data released by ICE)")
 g

@@ -11,7 +11,7 @@ import pandas as pd
 import numpy as np
 import yaml
 
-with open('../input/dtypes.yaml', 'r') as yamlfile:
+with open('input/dtypes.yaml', 'r') as yamlfile:
     column_types = yaml.load(yamlfile)
 
 read_csv_opts = {'sep': '|',
@@ -22,7 +22,7 @@ read_csv_opts = {'sep': '|',
                  'parse_dates': ['MissionDate'],
                  'infer_datetime_format': True}
 
-df = pd.read_csv('../input/ice-air.csv.gz', **read_csv_opts)
+df = pd.read_csv('input/ice-air.csv.gz', **read_csv_opts)
 
 ```
 

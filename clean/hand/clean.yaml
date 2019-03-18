@@ -59,4 +59,34 @@ Juvenile:
     'Yes': True
     'No': False
 
+# Status:
+#     '16`': '16'
+#     '8F8': '8F'
+#     '8IF': '8F'
+#     '9CC':
+#     '9CC PEND':
+#     '9CC PFR':
+#     '9CC W/STAY':
+#     '9CCA':
+#     '9TH CC':
+#     '9TH CCA':
+#     '9TH CIR PEND':
+#     'BIA APP':
+#     'BIA APPEAL':
+#     'BIA PEND':
+#     'BIA PENDING':
+#     'BIA REF TO IJ':
+#     'BIA REMAND':
+#     'BIA REMANDED':
+#     'BIS PENDING':
+#     'IN PROCEEDINGS':
+#     'STAY': 
+#     'STAY OF DEPOR': 
+#     'STAY OF REMOV': 
+#     'STAY OF REMOV': 
+#     'STAY TRANF': 
+
+
+
+
 ...

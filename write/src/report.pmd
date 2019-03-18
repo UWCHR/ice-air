@@ -1,11 +1,9 @@
+```python, imports_and_global_vars, echo=False
 #
 # Title: ICE Air
 # Author: University of Washington Center for Human Rights
 # Date: 2019-03-18
 #
-#
-
-```python, imports, echo=False
 
 import pandas as pd
 import numpy as np
@@ -24,6 +22,40 @@ read_csv_opts = {'sep': '|',
 
 df = pd.read_csv('input/ice-air.csv.gz', **read_csv_opts)
 
-```
+pre_drop = len(df)
+df = df.drop_duplicates()
+post_drop = len(df)
+assert pre_drop == post_drop
 
-Test.
+pre_drop = len(df)
+df = df.drop_duplicates()
+post_drop = len(df)
+assert pre_drop == post_drop
+
+unique_AlienMasterID = len(set(df['AlienMasterID']))
+assert sum(df['AlienMasterID'].isnull()) == 0
+
+unique_MissionID = len(set(df['MissionID']))
+assert sum(df['MissionID'].isnull()) == 0
+
+unique_MissionNumber = len(set(df['MissionNumber']))
+assert sum(df['MissionNumber'].isnull()) == 0
+
+assert sum(df.groupby(['MissionID', 'MissionNumber'])['MissionNumber'].nunique() > 1) == 0
+assert sum(df.groupby(['MissionNumber', 'MissionID'])['MissionID'].nunique() > 1) == 0
+
+missions = df.groupby(['MissionDate', 'MissionID', 'MissionNumber', 'PULOC', 'DropLoc'])
+missions_alt = df.groupby(['MissionDate', 'MissionNumber', 'MissionID',  'PULOC', 'DropLoc'])
+assert len(missions) == len(missions_alt)
+del missions_alt
+mission_segments = len(missions)
+
+earliest_record = df['MissionDate'].min()
+latest_record = df['MissionDate'].max()
+number_of_pickup_airports = len(set(df['PULOC'].dropna()))
+number_of_dropoff_airports = len(set(df['DropLoc'].dropna()))
+
+```
+# ICE Air
+
+This report uses data from ICE's Alien Repatriation Tracking System (ARTS) obtained via a Freedom of Information Act Request by the University of Washington Center for Human Rights. The ARTS dataset contains <%= len(df) %> records of passengers on ICE Air Operations charter flights during the period from <%= print(earliest_record.strftime('%B %-d, %Y')) %> to <%= print(latest_record.strftime('%B %-d, %Y')) %>, including full data for U.S. Federal Government fiscal years 2011 through 2018.

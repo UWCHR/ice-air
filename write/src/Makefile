@@ -8,8 +8,7 @@
 .PHONY: all clean
 
 all: \
-	output/ice-air-report.md \
-	output/ice-air-report.html
+	output/ice-air-report.md
 
 clean:
 	rm output/*
@@ -20,11 +19,11 @@ output/ice-air-report.md: \
 		input/dtypes.yaml
 	pweave src/report.pmd -f markdown -o output/ice-air-report.md
 
-output/ice-air-report.html: \
-		src/report.pmd \
-		input/ice-air.csv.gz \
-		input/dtypes.yaml
-	pweave src/report.pmd -f md2html -o output/ice-air-report.html
+# output/ice-air-report.html: \
+# 		src/report.pmd \
+# 		input/ice-air.csv.gz \
+# 		input/dtypes.yaml
+# 	pweave src/report.pmd -f md2html -o output/ice-air-report.html
 
 
 # done.

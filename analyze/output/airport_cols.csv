@@ -1,0 +1,232 @@
+|ICAO|AirportID|AirportName|City|StateID|StateAbbr|Country
+0|KIWA|71.0|Phoenix-Mesa-Gateway Airport|Mesa|4.0|AZ|USA
+121|KMDT|79.0|Harrisburg International Airport|Harrisburg|40.0|PA|USA
+243|KSAT|108.0|San Antonio International Airport|San Antonio|46.0|TX|USA
+251|KHRL|65.0|Valley International Airport|Harlingen|46.0|TX|USA
+347|KCSG|51.0|Columbus Metropolitan Airport|Columbus|11.0|GA|USA
+380|KIAH|69.0|George Bush Intercontinental Houston Airport|Houston|46.0|TX|USA
+466|KELP|57.0|El Paso International Airport|El Paso|46.0|TX|USA
+513|KDEN|54.0|Denver International Airport|Denver|6.0|CO|USA
+558|KSAN|107.0|San Diego International Airport|San Diego|5.0|CA|USA
+602|KOAK|92.0|Metropolitan Oakland International Airport|Oakland|5.0|CA|USA
+607|KBFL|40.0|Meadows Field|Bakersfield|5.0|CA|USA
+727|KAEX|35.0|Alexandria International Airport|Alexandria|20.0|LA|USA
+856|KMIA|83.0|Miami International Airport|Miami|10.0|FL|USA
+1022|KORD|97.0|Chicago O'Hare International Airport|Chicago|16.0|IL|USA
+1110|KMCI|78.0|Kansas City International Airport|Kansas City|26.0|MO|USA
+1181|KBFI|39.0|Boeing Field King County International Airport|Seattle|51.0|WA|USA
+1377|KDAL|53.0|Dallas Love Field|Dallas|46.0|TX|USA
+1701|KLAS|74.0|McCarran International Airport|Las Vegas|35.0|NV|USA
+2009|KTOL|120.0|Toledo Express Airport|Toledo|37.0|OH|USA
+2111|KLRD|77.0|Laredo International Airport|Laredo|46.0|TX|USA
+2186|KATL|36.0|Hartsfield Jackson Atlanta International Airport|Atlanta|11.0|GA|USA
+2291|KRNO|105.0|Reno Tahoe International Airport|Reno|35.0|NV|USA
+2707|KMSP|85.0|Minneapolis-St Paul International/Wold-Chamberlain Airport|Minneapolis|25.0|MN|USA
+2764|KOMA|94.0|Eppley Airfield|Omaha|31.0|NE|USA
+4830|KTWF|123.0|Joslin Field Magic Valley Regional Airport|Twin Falls|15.0|ID|USA
+4858|KSLC|116.0|Salt Lake City International Airport|Salt Lake City|47.0|UT|USA
+8220|KONT|95.0|Ontario International Airport|Ontario|5.0|CA|USA
+15901|||||||
+16808|KSMF|117.0|Sacramento International Airport|Sacramento|5.0|CA|USA
+23576|KPAE|98.0|Snohomish County (Paine Field) Airport|Everett|51.0|WA|USA
+24098|KCOS|49.0|City of Colorado Springs Municipal Airport|Colorado Springs|6.0|CO|USA
+27599|KBOS|44.0|General Edward Lawrence Logan International Airport|Boston|21.0|MA|USA
+31174|KCVG|52.0|Cincinnati Northern Kentucky International Airport|Covington|19.0|KY|USA
+67444|KCMH|47.0|Port Columbus International Airport|Columbus|37.0|OH|USA
+69486|KDFW|212.0|Dallas Fort Worth International Airport|Dallas-Fort Worth|46.0|TX|USA
+70935|KBOI|43.0|Boise Air Terminal/Gowen field|Boise|15.0|ID|USA
+77185|KDTW|55.0|Detroit Metropolitan Wayne County Airport|Detroit|24.0|MI|USA
+133045|MSLP|157.0|El Salvador International Airport|San Salvador|||El Salvador
+169818|KTUS|122.0|Tucson International Airport|Tucson|4.0|AZ|USA
+193882|KIAG|68.0|Niagara Falls International Airport|Niagara Falls|36.0|NY|USA
+226867|KEWR|58.0|Newark Liberty International Airport|Newark|33.0|NJ|USA
+260107|KIAD|67.0|Washington Dulles International Airport|Washington Dc - Dulles|8.0|DC|USA
+280198|MGGT|149.0|La Aurora Airport|Guatemala City|||Guatemala
+292576|KJAX|72.0|Jacksonville International Airport|Jacksonville|10.0|FL|USA
+300384|KSEA|112.0|Seattle Tacoma International Airport|Seattle|51.0|WA|USA
+331297|KTEB|119.0|Teterboro Airport|Teterboro|33.0|NJ|USA
+389885|SEGU|177.0|Simon Bolivar International Airport|Guayaquill|||Ecuador
+389995|EDDF|9.0|Frankfurt am Main International Airport|Frankfurt|||Germany
+392439|KBUF|46.0|Buffalo Niagara International Airport|Buffalo|36.0|NY|USA
+437096|TJSJ|187.0|Luis Munoz Marin International Airport|San Juan|41.0|PR|USA
+476862|KMWA|87.0|Williamson County Regional Airport|Marion|16.0|IL|USA
+487356|MHLM|150.0|Ramon Villeda Morales International Airport|San Pedro Sula|||Honduras
+562227|KPHX|101.0|Phoenix Sky Harbor International Airport|Phoenix|4.0|AZ|USA
+659307|KNJK|88.0|El Centro Naf Airport|El Centro|5.0|CA|USA
+705181|KGRK|62.0|Robert Gray  Army Air Field Airport|Fort Hood|46.0|TX|USA
+708867|KAUS|37.0|Austin Bergstrom International Airport|Austin|46.0|TX|USA
+709002|TJBQ|186.0|Rafael Hernandez Airport|Aguadilla|41.0|PR|USA
+711242|KCRP|50.0|Corpus Christi International Airport|Corpus Christi|46.0|TX|USA
+714999|KGYY|63.0|Gary Chicago International Airport|Gary|17.0|IN|USA
+751705|KYIP|126.0|Willow Run Airport|Detroit|24.0|MI|USA
+775762|MKJP|153.0|Norman Manley International Airport|Kingston|||Jamaica
+786991|MTPP|159.0|Toussaint Louverture International Airport|Port-Of-Prince|||Haiti
+793083|KBRO|45.0|Brownsville South Padre Island International Airport|Brownsville|46.0|TX|USA
+901224|KBED|38.0|Laurence G Hanscom Field|Bedford|21.0|MA|USA
+934631|KSTL|118.0|Lambert St Louis International Airport|St Louis|26.0|MO|USA
+953668|KSKF|115.0|Lackland Air Force Base (Kelly Field Annex) Airport|San Antonio, Kelly Fld|46.0|TX|USA
+971446|KNYL|91.0|Yuma MCAS/Yuma International Airport|Yuma Naval|4.0|AZ|USA
+971447|KNYL|90.0|Yuma MCAS/Yuma International Airport|Yuma|3.0|AR|USA
+973644|KROW|106.0|Roswell International Air Center Airport|Roswell|34.0|NM|USA
+1010147|KRIC|104.0|Richmond International Airport|Richmond|48.0|VA|USA
+1072625|MMMD|154.0|Manuel Crescencio Rejón International Airport|Merida|||Mexico
+1146708|KOPF|96.0|Opa-Locka Executive Airport|Miami|10.0|FL|USA
+1226306|KCLT|254.0|Charlotte Douglas International Airport|Charlotte|29.0|NC|USA
+1256407|MDSD|148.0|Las Americas International Airport|Santo Domingo|||Dominican Republic
+1260733|TIST|185.0|Cyril E. King Airport|St Thomas|49.0|VI|USA
+1335864|KSDM|272.0|Brown Field Municipal Airport|San Diego|||USA
+1346719|KVCV|124.0|Southern California Logistics Airport|Victorville|5.0|CA|USA
+1383950|KCHS|279.0|Charleston International Airport|Charleston|43.0|SC|USA
+1396875|KABQ|204.0|Albuquerque International Sunport Airport|Albuquerque|34.0|NM|USA
+1399296|KYKM|277.0|Yakima Air Terminal|Yakima|51.0|WA|USA
+1526859|KMEM|80.0|Memphis International Airport|Memphis|45.0|TN|USA
+1545651|KFTW||||||
+1595636|KPSM|291.0|Portsmouth International Airport|Portsmouth, NH|||USA
+1612087|KYNG|281.0|Youngston Warren Regional Airport|Vienna Center|||USA
+1721216|KALB||Albany International Airport||||USA
+1728812|KFTW|301.0|Fort Worth Meacham International Airport|Fort Worth|46.0|TX|USA
+856|MHTG|152.0|Toncontín International Airport|Tegucigalpa|||Honduras
+10960|MNMG|156.0|Augusto C. Sandino (Managua) International Airport|Managua|||Nicaragua
+13580|SKBO|178.0|El Dorado International Airport|Bogota|||Colombia
+16609|MUHA|160.0|Jose Marti International Airport |La Habana|||Cuba
+27117|KABI|34.0|Abilene Regional Airport|Abilene|46.0|TX|USA
+95719|KBDL|206.0|Bradley International Airport|Hartford|7.0|CT|USA
+102457|SBGR|176.0|Guarulhos–Governador André Franco Montoro International Airport |Sao Paulo|||Brazil
+132336|RJBB|172.0|Kansai International Airport|Osaka|||Japan
+145932|LPPD|136.0|João Paulo II Airport|Ponta Delgada|||Portugal
+145934|BKPR|146.0|Pristina International Airport|Pristina|||Kosovo
+145935|UGTB|192.0|Tbilisi International Airport|Tbilisi|||Georgia
+145936|LUKK|142.0|Chisinau International Airport|Chisinau|||Moldova
+163721|LROP|139.0|Henri Coandâ International Airport|Bucharest|||Romania
+163723|UKKK|193.0|Kiev Zhuliany International Airport|Kiev|||Ukraine
+163725|LATI|127.0|Tirana International Airport Mother Teresa|Tirana|||Albania
+163726|HECA|30.0|Cairo International Airport|Cairo|||Egypt
+163727|OJAI|163.0|Queen Alia International Airport|Amman|||Jordan
+169818|MMMX|155.0|Licenciado Benito Juarez International Airport|Mexico City|||Mexico
+190644|KHST|217.0|Homestead ARB Airport|Homestead|10.0|FL|USA
+193793|DNMM|7.0|Murtala Muhammed International Airport|Lagos|||Nigeria
+193794|GLRB|24.0|Roberts International Airport|Monrovia|||Liberia
+193804|DIAP|6.0|Port Bouet Airport|Abidjan|||Ivory Coast
+193815|DGAA|5.0|Kotoka International Airport|Accra|||Ghana
+193868|GVAC|27.0|Amílcar Cabral International Airport|Sal|||Cape Verde
+193878|HKJK|31.0|Jomo Kenyatta International Airport|Nairobi|||Kenya
+193880|HRYR|32.0|Kigali International Airport|Kigali|||Rwanda
+193881|HSSJ|33.0|Juba Airport|Juba|||South Sudan
+193882|LWSK|143.0|Skopje Alexander the Great Airport|Skopje|||Macedonia
+193884|UTDD|194.0|Dushanbe Airport|Dushanbe|||Tajikistan
+217106|ZBAA|203.0|Beijing Capital International Airport|Beijing|||China
+227397|OYSN|166.0|Sana'a International Airport|Sana'a|||Yemen
+272576|TXKF|190.0|L.F. Wade International International Airport|St. David's Island|||Bermuda
+274010|LYBE|144.0|Belgrade Nikola Tesla Airport|Belgrade|||Serbia
+274011|LYPG|145.0|Podgorica Airport|Podgorica|||Montenegro
+274013|LRBS|138.0|Bâneasa International Airport|Bucharest|||Romania
+274015|LHBP|128.0|Budapest Liszt Ferenc international Airport|Budapest|||Hungary
+280056|FZAA|19.0|Ndjili International Airport|Kinshasa|||Democratic Republic of Congo
+280058|HAAB|29.0|Addis Ababa Bole International Airport|Addis Ababa|||Ethiopia
+280059|HAAB|244.0|Addis Ababa Bole International Airport|Bole|||Ethiopia
+282360|TTPP|188.0|Piarco International Airport|Port Of Spain|||Trinidad and Tobago
+283065|EGGW|11.0|London Luton Airport|London|||United Kingdom
+283068|LLBG|134.0|Ben Gurion International Airport|Tel Aviv|||Israel
+297289|GUCY|26.0|Conakry Airport|Conakry|||Guinea
+297292|FKYS|18.0|Yaoundé Nsimalen International Airport|Nsimalen|||Cameroon
+297293|DRRN|8.0|Diori Hamani International Airport|Niamey|||Niger
+297294|GABS|20.0|Senou Airport|Bamako|||Mali
+303077|SYCJ|182.0|Cheddi Jagan International Airport|Georgetown|||Guyana
+316963|SLLP|179.0|El Alto International Airport |La Paz|||Bolivia
+316965|SPIM|181.0|Jorge Chávez International Airport |Lima|||Peru
+320771|EPWA|17.0|Warsaw Chopin Airport|Warsaw|||Poland
+320774|UUEE|195.0|Sheremetyevo International Airport|Moscow|||Russia
+331297|OLBA|164.0|Beirut Rafic Hariri International Airport|Beruit|||Lebanon
+365499|UWKD|196.0|Kazan International Airport|Kazan|||Russia
+389995|VCBI|197.0|Bandaranaike International Colombo Airport|Colombo|||Sri Lanka
+496550|LZIB|147.0|M. R. Štefánik Airport|Bratislava|||Slovakia
+507162|MYNN|161.0|Lynden Pindling International Airport|Nassau|||Bahamas
+711465|KRFD|103.0|Chicago Rockford International Airport|Rockford|16.0|IL|USA
+732219|MZBZ|162.0|Philip S. W. Goldson International Airport|Belize City|||Belize
+832642|KLIT|76.0|Adams Field|Little Rock|3.0|AR|USA
+842620|SLVR|180.0|Viru Viru International Airport|Santa Cruz|||Bolivia
+923304|TVSV|189.0|E. T. Joshua Airport|Kingstown|||St Vincent
+923308|TDPD|184.0|Melville Hall Airport|Dominica|||Dominica
+939953|KBNA|42.0|Nashville International Airport|Nashville|45.0|TN|USA
+947700|KLAW|75.0|Lawton Fort Sill Regional Airport|Lawton|38.0|OK|USA
+951992|KNTD|89.0|Point Mugu Naval Air Station (Naval Base Ventura Co)|Oxnard, Pt Magu|5.0|CA|USA
+995494|MHSC|151.0|Coronel Enrique Soto Cano Air Base|Comayagua|||Honduras
+1031217|KGFK|215.0|Grand Forks International Airport|Grand Forks|30.0|ND|USA
+1038867|FKKD|238.0|Douala International Airport|Douala|||Cameroon
+1038869|FOOL|239.0|Libreville International Airport|Libreville|||Gabon
+1077453|FLKK|235.0|Kenneth Kaunda International/Lusaka Airport|Lusaka|||Zambia
+1077455|FWKI|236.0|Lilongwe - Kamuzu International Airport|Lilongwe|||Malawi
+1077456|HTDA|240.0|Julius Nyerere International Airport|Dar es Salaam|||Tanzania
+1097533|LKPR|133.0|Ruzyn-¢ International Airport|Prague|||Czech Republic
+1097535|UKBB|241.0|Boryspil International Airport|Boryspil|||Ukraine
+1112333|LTBA|140.0|Atatürk International Airport |Istanbul|||Turkey
+1112334|UTTT|242.0|Toshkent Xalqaro|Tashkent|||Uzbekistan
+1146708|HSSS|243.0|Khartoum International Airport|Khartoum|||Sudan
+1146713|HUEN|245.0|Entebbe International Airport|Entebbe|||Uganda
+1180484|ZSFZ|246.0|Fuzhou Changle International Airport|Fuzhou|||China
+1184906|FTTJ|247.0|N'Djamena International Airport|N'Djamena|||Chad
+1209879|KBWI|205.0|Baltimore/Washington International Thurgood Marshall Airport|Baltimore|22.0|MD|USA
+1212201|KBLV|250.0|Mid America St Louis/Scott AFB|Belleville|16.0|IL|USA
+1218420|OJAM|249.0|Amman Civil Airport|Amman|||Jordan
+1226767|VVTS|253.0|Tan So'n Nhat International Airport|Ho Chi Minh|||Vietnam
+1226768|PKMJ|251.0|Marshall Islands International Airport|Rairok|||Republic of the Marshall Islands
+1226769|VDPP|252.0|Phnom Penh International Airport|Phnom Penh|||Cambodia
+1234685|SAEZ|255.0|Ezeiza International Airport|Buenos Aires|||Argentina
+1234692|SUMU|257.0|Carrasco International Airport|Montevideo|||Uruguay
+1234694|SPJC|256.0|Jorge Chavez International Airport|Callao|||Peru
+1235872|LFPB|258.0|Le Bourget International Airport|Paris|||France
+1259584|RPLL|175.0|Ninoy Aquino International Airport|Manila|||Philippines
+1259590|RCTP|260.0|Taiwan Taoyuan International Airport|Taipei|||Taiwan
+1264309|VGHS|198.0|Dhaka Shahjalal International Airport|Dhaka|||Bangladesh
+1264336|VNKT|199.0|Tribhuvan International Airport|Kathmandu|||Nepal
+1264340|VIDP|264.0|Indira Gandhi International Airport|Delhi|||India
+1267834|BKPR|263.0|Pristina International Airport|Pristina|||Kosovo
+1273250|TKPK|266.0|Robert L. Bradshaw International Airport|Basseterre|||St. Kitts
+1273251|TBPB|265.0|Grantley Adams International Airport|Seawell|||Barbados
+1273253|TVSC|267.0|Canouan Airport|Canouan|||St. Vincent
+1280047|DXXX|268.0|Lomé–Tokoin Airport|Togo|||Lomé
+1280049|FGSL|269.0|Malabo Santa Isabel Airport|Malabo|||Equatorl Guinea
+1288475|UUWW|270.0|Vnukovo International Airport|Moscow|||Russia
+1288482|EYVI|271.0|Vilnius International Airport|Vilnius|||Lithuania
+1335864|YSSY|275.0|Sydney Kingsford Smith Airport|Sydney|||Australia
+1335865|NZWN|274.0|Wellington International Airport|Wellington|||New Zealand
+1335866|NFTF|273.0|Fua'amotu International Airport|Fua'amotu|||Tonga
+1381398|GBYD|21.0|Banjul International Airport|Banjul|||Gambia
+1382059|GQNO|278.0|Nouakchott-Oumtounsy International Airport|Nouakchott|||Mauritania
+1387579|KMDW||Chicago Midway International Airport||||USA
+1399087|MPTO|280.0|Panama International Airport|Panama City|||Panama
+1418244|HCMM|283.0|Aden Adde International Airport|Mogadishu|||Somalia
+1418944|LIRA|130.0|Ciampino Airport|Rome|||Italy
+1418945|LEMD|282.0|Adolfo Suarez Madrid-Barajas Airport|Madrid|||Spain
+1418948|LQSA|137.0|Sarajevo International Airport|Sarajevo|||Bosnia
+1430727|FVHA|285.0|Harare International Airport|Harare|||Zimbabwe
+1437656|KMHR||Sacramento Mather Airport||||USA
+1440963|GOOY|25.0|Léopold Sédar Senghor International Airport|Dakar|||Senegal
+1448725|TGPY|287.0|Grenada International Airport|St. Georges|||Grenada
+1455221|GFLL|23.0|Lungi International Airport|Freetown|||Sierra Leone
+1457328|SMJP|288.0|Johan Adolf Pengel International Airport|Paramaribo|||Suriname
+1459721|ORBI|289.0|Baghdad International Airport|Baghdad|||Iraq
+1459722|ORBI|165.0|Baghdad International Airport|Baghdad|||Iraq
+1459737|KKBL|290.0|Hamid Karzai International Airport|Kabul|||Afghanistan
+1500502|DAAG|262.0|Houari Boumediene Airport|Algiers|||Algeria
+1523853|OAKB|293.0|Kabul International Airport|Kabul|||Afghanistan
+1538630|KCLE|211.0|Cleveland Hopkins International Airport|Cleveland|37.0|OH|USA
+1540891|GVNP|28.0|Praia International Airport|Praia|||Cape Verde
+1542393|TAPA|183.0|V.C. Bird International Airport|Antigua|||Antigua and Barbuda
+1565090|DFFD|4.0|Ouagadougou Airport|Ouagadougou|||Burkina Faso
+1572959|VYYY|296.0|Yangon International Airport|Yangon|||Myanmar
+1589083|FALA|276.0|Lanseria Airport|Johannesburg|||South Africa
+1599083|PHNL|171.0|Honolulu International Airport|Honolulu|13.0|HI|USA
+1599096|OPRN|300.0|Islamabad International Airport|Islamabad|||Pakistan
+1604925|TLPL|297.0|Hewanorra International Airport|Vieux Fort|||St. Lucia
+1614094|NSFA||Faleolo International Airport||||Samoa
+1622062|OMDW|295.0|Dubai International Airport|Dubai|||UAE
+1625685|EGSS|298.0|London Heathrow Airport|London|||United Kingdom
+1650140|VTBS|200.0|Suvarnabhumi Airport|Bangkok|||Thailand
+1660926|KPDX|100.0|Portland International Airport|Portland|39.0|OR|USA
+1667440|GMMN|248.0|Mohammed V International Airport|Casablanca|||Morocco
+1710726|FCBB||Maya-Maya Airport||||Republic of the Congo
+1710728|FYWH||Hosea Kutako International Airport||||Namibia
+1714482|HBBA||Bujumbura International Airport||||Burundi
+1722337|SBCF||Tancredo Neves International Airport||||Brazil
+1748027|SBBR|302.0|Brasilia International Airport|Brasilia|||Brazil

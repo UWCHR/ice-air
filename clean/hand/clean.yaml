@@ -59,34 +59,44 @@ Juvenile:
     'Yes': True
     'No': False
 
-# Status:
-#     '16`': '16'
-#     '8F8': '8F'
-#     '8IF': '8F'
-#     '9CC':
-#     '9CC PEND':
-#     '9CC PFR':
-#     '9CC W/STAY':
-#     '9CCA':
-#     '9TH CC':
-#     '9TH CCA':
-#     '9TH CIR PEND':
-#     'BIA APP':
-#     'BIA APPEAL':
-#     'BIA PEND':
-#     'BIA PENDING':
-#     'BIA REF TO IJ':
-#     'BIA REMAND':
-#     'BIA REMANDED':
-#     'BIS PENDING':
-#     'IN PROCEEDINGS':
-#     'STAY': 
-#     'STAY OF DEPOR': 
-#     'STAY OF REMOV': 
-#     'STAY OF REMOV': 
-#     'STAY TRANF': 
-
-
-
+Status:
+    'ADMIN': '11'
+    'C/F': '8G'
+    'DEPORT': 'RM'
+    'E/R': '8F'
+    'ER': '8F'
+    'ER-NEW': '8F'
+    'ER-TRANSFER': '8F'
+    'ER/CF': '8G'
+    'EXP REM': '8F'
+    'F/O - TRANSFER': '3'
+    'F/O': '3'
+    'FINAL ORDER': '3'
+    'FO': '3'
+    'I-205/REIN': '16'
+    'I-296/EXP': '8F'
+    'NTA - TRANSFER': 'NTA'
+    'NTA': 'NTA'
+    'NTA-TFR': 'NTA'
+    'NTA-TFRD': 'NTA'
+    'NTA-TRANSFER': 'NTA'
+    'RE': '16'
+    'RE-INST': '16'
+    'RE-INSTATE': '16'
+    'REIN': '16'
+    'REINS': '16'
+    'REINST': '16'
+    'REINSTATE': '16'
+    'REINSTATEMENT': '16'
+    'REMOVAL': 'RM'
+    'RM': 'RM'
+    'TRANSFER - F/O': '16'
+    'TRANSFER - NTA': 'NTA'
+    'V': '1A'
+    'VD': '1A'
+    'VR': '1A'
+    'XFO': '16'
+    'XNTA': 'NTA'
+    .NAN: 'NO STATUS'
 
 ...

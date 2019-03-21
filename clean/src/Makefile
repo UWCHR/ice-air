@@ -14,6 +14,8 @@ PHONY: all
 
 output/ice-air.csv.gz: \
 	src/clean.py \
+	hand/bad_pulocs.csv \
+	hand/bad_droplocs.csv \
 	hand/clean.yaml \
 	hand/missing_airports.csv \
 	input/dtypes.yaml \
@@ -41,6 +43,8 @@ output/ice-air.csv.gz: \
 		--status=input/status.csv \
 		--missing_airports=hand/missing_airports.csv \
 		--bad_statuses=output/bad_statuses.yaml \
+		--bad_pulocs=hand/bad_pulocs.csv \
+		--bad_droplocs=hand/bad_droplocs.csv \
 		--airport_dict=output/airport_dict.yaml \
 		--dtypes_in=input/dtypes.yaml \
 		--dtypes_out=output/dtypes.yaml \

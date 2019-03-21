@@ -31,6 +31,8 @@ def _get_args():
     parser.add_argument("--missing_airports", required=True)
     parser.add_argument("--airport_dict", required=True)
     parser.add_argument("--bad_statuses", required=True)
+    parser.add_argument("--bad_droplocs", required=True)
+    parser.add_argument("--bad_pulocs", required=True)
     parser.add_argument("--dtypes_in", required=True)
     parser.add_argument("--dtypes_out", required=True)
     parser.add_argument("--output", required=True)
@@ -94,6 +96,21 @@ if __name__ == "__main__":
             converted_obj.loc[:, col] = df_obj[col]
 
     df[converted_obj.columns] = converted_obj
+
+    predrop = len(df)
+    df = df[~df['PULOC'].isnull()]
+    postdrop = len(df)
+    print(f'Dropped {predrop - postdrop} records with null PULOC')
+    del predrop, postdrop
+
+    predrop = len(df)
+    df = df[~df['DropLoc'].isnull()]
+    postdrop = len(df)
+    print(f'Dropped {predrop - postdrop} records with null DropLoc')
+    del predrop, postdrop
+
+    # Filling in some missing airport name and country values from hand/.
+    # Could integrate this with process for removing duplicate airports?
 
     missing = pd.read_csv(args.missing_airports)
 
@@ -172,6 +189,29 @@ if __name__ == "__main__":
 
     df['NonCriminal'] = df['Criminality'] == 'NC'
     df['NonCriminal'] = df['NonCriminal'].astype('category')
+
+    # Dropping duplicate records caused by merge of bad airport data by ICE.
+    # Should end with set of unique `AlienMasterID` values.
+    # Should not affect any statistics caluclated using unique `AlienMasterID`.
+
+    bad_pulocs = pd.read_csv(args.bad_pulocs)
+    bad_droplocs = pd.read_csv(args.bad_droplocs)
+
+    premerge = len(df)
+    df = pd.merge(df, bad_pulocs, how='left')
+    df = pd.merge(df, bad_droplocs, how='left')
+    postmerge = len(df)
+    assert premerge == postmerge
+    del premerge, postmerge
+
+    predrop = len(df)
+    df = df[df['PULOC_drop'].isnull()]
+    df = df[df['DropLoc_drop'].isnull()]
+    postdrop = len(df)
+    print(f'Dropped {predrop - postdrop} records with duplicated airports.')
+    assert len(df) == len(set(df.AlienMasterID))
+
+    df = df.drop(['PULOC_drop', 'DropLoc_drop'], axis=1)
 
     to_csv_opts = {'sep': '|',
                    'quotechar': '"',

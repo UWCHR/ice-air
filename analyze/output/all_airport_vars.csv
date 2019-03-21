@@ -1,227 +1,224 @@
 ,airport_name,monthly_dropoff_avg,monthly_dropoff_mission_avg,monthly_pickup_avg,monthly_pickup_mission_avg,removal_percent,total_unique,transfer_percent,unique_dropoff_missions,unique_dropoffs,unique_pickup_missions,unique_pickups,unique_removals,unique_transfers
-KIWA,Phoenix-Mesa-Gateway Airport,948.4,24.79,1981.2,38.95,53.36,289016,46.64,2454,93892,3856,196139,154214,134801
-KMDT,Harrisburg International Airport,149.39,6.21,771.19,9.05,29.07,91138,70.93,615,14790,896,76348,26494,64643
-KSAT,San Antonio International Airport,69.0,1.88,1085.19,18.77,71.01,113492,28.98,177,6486,1858,107434,80593,32886
-KHRL,Valley International Airport,2437.7,28.44,2050.84,24.74,88.61,273531,11.39,1735,148700,1509,125101,242369,31162
-KCSG,Columbus Metropolitan Airport,95.41,2.89,850.49,12.0,67.98,89670,32.02,269,8873,1140,80797,60956,28714
-KIAH,George Bush Intercontinental Houston Airport,32.13,0.76,508.87,8.81,93.23,53401,6.77,75,3181,872,50378,49785,3615
-KELP,El Paso International Airport,880.67,19.45,1375.02,23.38,54.99,223069,45.01,1926,87186,2315,136127,122665,100404
-KDEN,Denver International Airport,85.46,2.6,211.36,4.87,30.62,29003,69.38,252,8290,477,20713,8880,20123
-KSAN,San Diego International Airport,635.79,11.51,535.43,10.19,59.8,115898,40.2,1139,62943,1009,53008,69309,46589
-KOAK,Metropolitan Oakland International Airport,25.8,5.26,417.86,10.0,62.51,42982,37.49,510,2503,970,40532,26867,16115
-KBFL,Meadows Field,45.93,8.18,399.84,11.87,61.5,27000,38.5,466,2618,724,24390,16606,10394
-KAEX,Alexandria International Airport,1710.26,30.64,2423.26,41.16,52.53,408354,47.47,3033,169316,4075,239903,214526,193828
-KMIA,Miami International Airport,231.19,5.08,561.49,14.69,55.81,78108,44.19,498,22657,1454,55588,43591,34516
-KORD,Chicago O'Hare International Airport,32.32,1.55,204.97,3.34,67.32,22240,32.68,143,2973,314,19267,14973,7267
-KMCI,Kansas City International Airport,2.48,0.61,129.8,3.61,64.56,13091,35.44,59,241,357,12850,8452,4639
-KBFI,Boeing Field King County International Airport,153.44,3.75,347.91,4.71,32.37,49634,67.63,371,15191,466,34443,16069,33565
-KDAL,Dallas Love Field,7.48,0.13,133.95,3.0,93.56,11961,6.44,11,613,255,11386,11191,770
-KLAS,McCarran International Airport,22.65,3.53,191.15,5.29,44.45,21166,55.55,349,2242,524,18924,9408,11758
-KTOL,Toledo Express Airport,19.46,1.68,252.89,4.09,57.51,26943,42.49,165,1907,405,25036,15494,11449
-KLRD,Laredo International Airport,473.97,6.67,569.79,8.3,87.18,103322,12.82,660,46923,822,56409,90080,13242
-KATL,Hartsfield Jackson Atlanta International Airport,28.26,0.57,152.97,2.76,79.0,17761,21.0,53,2628,273,15144,14032,3729
-KRNO,Reno Tahoe International Airport,1.5,1.5,24.74,1.35,49.3,1933,50.7,3,3,105,1930,953,980
-KMSP,Minneapolis-St Paul International/Wold-Chamberlain Airport,6.68,0.84,122.81,3.04,60.09,12813,39.91,82,655,301,12158,7699,5114
-KOMA,Eppley Airfield,6.22,0.62,94.06,2.67,55.68,9915,44.32,60,603,264,9312,5521,4394
-KTWF,Joslin Field Magic Valley Regional Airport,,,51.64,1.36,67.78,568,32.22,0,0,15,568,385,183
-KSLC,Salt Lake City International Airport,21.56,1.39,112.87,3.14,35.83,13152,64.17,135,2091,308,11061,4713,8439
-KONT,Ontario International Airport,24.09,0.52,31.63,0.57,35.83,5492,64.17,51,2361,56,3131,1968,3524
-KONT,Ontario International Airport,24.09,0.52,31.63,0.57,35.83,5492,64.17,51,2361,56,3131,1968,3524
-KSMF,Sacramento International Airport,,,28.5,0.75,15.79,114,84.21,0,0,3,114,18,96
-KPAE,Snohomish County (Paine Field) Airport,0.86,0.14,14.5,0.18,70.41,338,29.59,3,19,4,319,238,100
-KCOS,City of Colorado Springs Municipal Airport,10.42,0.12,33.36,0.68,63.1,4184,36.9,11,948,66,3236,2640,1544
-KBOS,General Edward Lawrence Logan International Airport,15.6,0.56,19.55,0.45,1.39,2590,98.61,32,889,39,1701,36,2554
-KCVG,Cincinnati Northern Kentucky International Airport,,,25.33,0.67,84.21,76,15.79,0,0,2,76,64,12
-KCMH,Port Columbus International Airport,,,61.0,1.0,100.0,61,0.0,0,0,1,61,61,0
-KDFW,Dallas Fort Worth International Airport,,,2.32,0.09,100.0,188,0.0,0,0,7,188,188,0
-KBOI,Boise Air Terminal/Gowen field,1.0,1.0,70.12,3.0,45.31,1684,54.69,1,1,72,1683,763,921
-KDTW,Detroit Metropolitan Wayne County Airport,4.0,1.0,8.03,0.09,69.35,261,30.65,1,4,3,257,181,80
-MSLP,El Salvador International Airport,1593.67,15.85,0.25,0.21,99.99,157795,0.01,1569,157773,19,22,157774,17
-KTUS,Tucson International Airport,69.83,0.78,336.32,2.95,65.73,14958,34.27,28,2514,109,12444,9832,5126
-KIAG,Niagara Falls International Airport,,,1.97,0.23,100.0,122,0.0,0,0,14,122,122,0
-KEWR,Newark Liberty International Airport,180.13,5.86,354.75,6.16,15.12,46889,84.88,510,15671,542,31218,7089,39800
-KBRO,Brownsville South Padre Island International Airport,830.55,14.02,2227.12,26.46,77.78,270976,22.22,1122,66444,2434,204895,210766,60198
-KIAD,Washington Dulles International Airport,,,65.0,1.0,0.0,65,100.0,0,0,1,65,0,65
-MGGT,La Aurora Airport,3303.13,30.49,0.2,0.19,99.92,327026,0.08,3019,327010,15,16,326750,276
-KJAX,Jacksonville International Airport,34.8,0.43,23.67,0.35,6.18,5176,93.82,41,3306,28,1870,320,4856
-KSEA,Seattle Tacoma International Airport,,,7.0,1.0,100.0,7,0.0,0,0,1,7,7,0
-KTEB,Teterboro Airport,,,7.0,1.0,100.0,7,0.0,0,0,1,7,7,0
-SEGU,Simon Bolivar International Airport,102.7,2.02,1.0,1.0,99.99,10066,0.01,198,10065,1,1,10065,1
-EDDF,Frankfurt am Main International Airport,0.1,0.04,1.0,1.0,100.0,6,0.0,2,5,1,1,6,0
-KBUF,Buffalo Niagara International Airport,95.64,1.79,46.59,1.89,8.0,11332,92.0,143,7651,149,3681,906,10426
-TJSJ,Luis Munoz Marin International Airport,,,3.95,0.08,37.15,253,62.85,0,0,5,253,94,159
-KMWA,Williamson County Regional Airport,,,1.0,1.0,0.0,1,100.0,0,0,1,1,0,1
-MHLM,Ramon Villeda Morales International Airport,2050.05,20.65,0.2,0.19,99.99,202970,0.01,2044,202955,14,15,202955,12
-KPHX,Phoenix Sky Harbor International Airport,,,1.0,1.0,100.0,1,0.0,0,0,1,1,1,0
-KNJK,El Centro Naf Airport,1272.25,11.5,42.0,2.0,99.56,20440,0.44,184,20356,4,84,20350,90
-KGRK,Robert Gray  Army Air Field Airport,,,263.0,3.0,100.0,263,0.0,0,0,3,263,263,0
-KAUS,Austin Bergstrom International Airport,25.0,1.0,708.5,5.5,88.9,1442,11.1,1,25,11,1417,1282,160
-TJBQ,Rafael Hernandez Airport,,,43.33,0.67,0.0,130,100.0,0,0,2,130,0,130
-KCRP,Corpus Christi International Airport,,,75.08,0.69,78.38,976,21.62,0,0,9,976,765,211
-KGYY,Gary Chicago International Airport,126.91,4.08,270.85,4.88,27.99,26252,72.01,269,8376,322,17876,7349,18903
-KYIP,Willow Run Airport,,,132.0,2.0,65.15,132,34.85,0,0,2,132,86,46
-MKJP,Norman Manley International Airport,62.26,0.99,66.0,1.0,100.0,6167,0.0,97,6101,1,66,6167,0
-MTPP,Toussaint Louverture International Airport,90.03,1.73,1.0,1.0,99.99,8644,0.01,166,8643,1,1,8643,1
-KBED,Laurence G Hanscom Field,170.0,2.0,89.67,1.67,3.12,609,96.88,4,340,5,269,19,590
-KSTL,Lambert St Louis International Airport,29.0,0.67,21.67,1.0,3.29,152,96.71,2,87,3,65,5,147
-KSKF,Lackland Air Force Base (Kelly Field Annex) Airport,312.0,3.0,246.0,2.0,0.0,870,100.0,6,624,2,246,0,870
-KNYL,Yuma MCAS/Yuma International Airport,1002.14,9.62,11.81,0.12,98.7,29440,1.3,279,29062,4,378,29058,382
-KROW,Roswell International Air Center Airport,28.0,1.0,108.0,3.33,92.05,352,7.95,1,28,10,324,324,28
-KRIC,Richmond International Airport,14.2,0.64,36.4,0.73,12.31,2688,87.69,36,795,38,1893,331,2357
-MMMD,Manuel Crescencio Rejón International Airport,80.0,1.0,79.0,2.0,49.69,159,50.31,1,80,2,79,79,80
-KOPF,Opa-Locka Executive Airport,4.0,1.0,14.52,0.33,9.69,392,90.31,1,4,9,392,38,354
-KCLT,Charlotte Douglas International Airport,,,11.0,1.0,0.0,11,100.0,0,0,1,11,0,11
-MDSD,Las Americas International Airport,150.32,2.03,1.0,1.0,99.99,14883,0.01,201,14882,1,1,14882,1
-TIST,Cyril E. King Airport,,,11.0,1.0,0.0,11,100.0,0,0,1,11,0,11
-KSDM,Brown Field Municipal Airport,,,4.0,1.0,100.0,4,0.0,0,0,1,4,4,0
-KVCV,Southern California Logistics Airport,18.31,0.19,40.43,0.39,0.0,1809,100.0,9,879,9,930,0,1809
-KCHS,Charleston International Airport,173.6,1.6,55.0,1.0,0.0,923,100.0,8,868,1,55,0,923
-KYKM,Yakima Air Terminal,133.0,1.0,108.0,1.0,0.0,241,100.0,1,133,1,108,0,241
-KABQ,Albuquerque International Sunport Airport,77.4,0.87,163.06,2.11,57.11,3964,42.89,13,1161,38,2935,2264,1700
-KMEM,Memphis International Airport,73.63,0.63,83.13,1.07,0.0,5223,100.0,34,3976,16,1247,0,5223
-KFTW,Fort Worth Meacham International Airport,6.54,0.38,84.36,2.71,93.29,1266,6.71,5,85,38,1181,1181,85
-KPSM,Portsmouth International Airport,18.3,2.2,117.82,3.82,8.52,1479,91.48,22,183,42,1296,126,1353
-KYNG,Youngston Warren Regional Airport,45.96,1.04,3.78,0.33,2.2,1137,97.8,25,1103,3,34,25,1112
-KALB,Albany International Airport,84.25,1.0,12.0,1.0,3.44,349,96.56,4,337,1,12,12,337
-MHTG,Toncontín International Airport,831.0,7.67,,,100.0,19944,0.0,184,19944,0,0,19944,0
-MNMG,Augusto C. Sandino (Managua) International Airport,82.18,1.84,,,99.99,8054,0.01,180,8054,0,0,8053,1
-SKBO,El Dorado International Airport,74.51,1.0,,,100.0,7302,0.0,98,7302,0,0,7302,0
-MUHA,Jose Marti International Airport ,4.95,0.64,,,100.0,480,0.0,62,480,0,0,480,0
-KABI,Abilene Regional Airport,33.45,0.73,,,0.0,368,100.0,8,368,0,0,0,368
-KBDL,Bradley International Airport,19.0,1.0,,,0.0,19,100.0,1,19,0,0,0,19
-SBGR,Guarulhos–Governador André Franco Montoro International Airport ,0.05,0.02,,,100.0,4,0.0,2,4,0,0,4,0
-RJBB,Kansai International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-LPPD,João Paulo II Airport,0.38,0.25,,,100.0,3,0.0,2,3,0,0,3,0
 BKPR,Pristina International Airport,0.06,0.05,,,100.0,4,0.0,3,4,0,0,4,0
-UGTB,Tbilisi International Airport,0.09,0.09,,,100.0,2,0.0,2,2,0,0,2,0
-LUKK,Chisinau International Airport,0.07,0.04,,,100.0,5,0.0,3,5,0,0,5,0
-LROP,Henri Coandâ International Airport,0.07,0.04,,,100.0,3,0.0,2,3,0,0,3,0
-UKKK,Kiev Zhuliany International Airport,0.12,0.05,,,100.0,8,0.0,3,8,0,0,8,0
-LATI,Tirana International Airport Mother Teresa,0.12,0.05,,,100.0,7,0.0,3,7,0,0,7,0
-HECA,Cairo International Airport,0.16,0.05,,,100.0,14,0.0,4,14,0,0,14,0
-OJAI,Queen Alia International Airport,0.43,0.06,,,100.0,36,0.0,5,36,0,0,36,0
-MMMX,Licenciado Benito Juarez International Airport,1031.13,7.87,,,100.0,85584,0.0,653,85584,0,0,85584,0
-KHST,Homestead ARB Airport,22.2,0.4,,,100.0,111,0.0,2,111,0,0,111,0
-DNMM,Murtala Muhammed International Airport,2.99,0.08,,,100.0,284,0.0,8,284,0,0,284,0
-GLRB,Roberts International Airport,1.4,0.1,,,100.0,130,0.0,9,130,0,0,130,0
-DIAP,Port Bouet Airport,0.32,0.06,,,100.0,31,0.0,6,31,0,0,31,0
+DAAG,Houari Boumediene Airport,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
+DFFD,Ouagadougou Airport,5.0,1.0,,,100.0,5,0.0,1,5,0,0,5,0
 DGAA,Kotoka International Airport,3.76,0.09,,,100.0,350,0.0,8,350,0,0,350,0
+DIAP,Port Bouet Airport,0.32,0.06,,,100.0,31,0.0,6,31,0,0,31,0
+DNMM,Murtala Muhammed International Airport,2.99,0.08,,,100.0,284,0.0,8,284,0,0,284,0
+DRRN,Diori Hamani International Airport,0.08,0.03,,,100.0,5,0.0,2,5,0,0,5,0
+DXXX,Lomé–Tokoin Airport,0.12,0.08,,,100.0,3,0.0,2,3,0,0,3,0
+EDDF,Frankfurt am Main International Airport,0.1,0.04,1.0,1.0,100.0,6,0.0,2,5,1,1,6,0
+EGGW,London Luton Airport,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
+EGSS,London Heathrow Airport,7.0,1.0,,,100.0,7,0.0,1,7,0,0,7,0
+EPWA,Warsaw Chopin Airport,0.25,0.1,,,100.0,15,0.0,6,15,0,0,15,0
+EYVI,Vilnius International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+FALA,Lanseria Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+FCBB,Maya-Maya Airport,4.0,1.0,,,100.0,4,0.0,1,4,0,0,4,0
+FGSL,Malabo Santa Isabel Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+FKKD,Douala International Airport,0.62,0.19,,,100.0,30,0.0,9,30,0,0,30,0
+FKYS,Yaoundé Nsimalen International Airport,0.32,0.08,,,100.0,8,0.0,2,8,0,0,8,0
+FLKK,Kenneth Kaunda International/Lusaka Airport,0.13,0.09,,,100.0,6,0.0,4,6,0,0,6,0
+FOOL,Libreville International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+FTTJ,N'Djamena International Airport,0.13,0.06,,,100.0,4,0.0,2,4,0,0,4,0
+FVHA,Harare International Airport,0.27,0.13,,,100.0,4,0.0,2,4,0,0,4,0
+FWKI,Lilongwe - Kamuzu International Airport,0.12,0.12,,,100.0,2,0.0,2,2,0,0,2,0
+FYWH,Hosea Kutako International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+FZAA,Ndjili International Airport,0.18,0.06,,,100.0,15,0.0,5,15,0,0,15,0
+GABS,Senou Airport,0.18,0.06,,,100.0,15,0.0,5,15,0,0,15,0
+GBYD,Banjul International Airport,1.92,0.16,,,100.0,48,0.0,4,48,0,0,48,0
+GFLL,Lungi International Airport,1.12,0.24,,,100.0,19,0.0,4,19,0,0,19,0
+GLRB,Roberts International Airport,1.4,0.1,,,100.0,130,0.0,9,130,0,0,130,0
+GMMN,Mohammed V International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+GOOY,Léopold Sédar Senghor International Airport,11.88,0.25,,,100.0,190,0.0,4,190,0,0,190,0
+GQNO,Nouakchott-Oumtounsy International Airport,0.54,0.17,,,100.0,13,0.0,4,13,0,0,13,0
+GUCY,Conakry Airport,2.2,0.09,,,100.0,176,0.0,7,176,0,0,176,0
 GVAC,Amílcar Cabral International Airport,4.0,1.0,,,100.0,4,0.0,1,4,0,0,4,0
+GVNP,Praia International Airport,1.0,0.13,,,100.0,15,0.0,2,15,0,0,15,0
+HAAB,Addis Ababa Bole International Airport,0.11,0.05,,,100.0,9,0.0,4,9,0,0,9,0
+HBBA,Bujumbura International Airport,6.0,1.0,,,100.0,6,0.0,1,6,0,0,6,0
+HCMM,Aden Adde International Airport,24.39,0.35,,,100.0,561,0.0,8,561,0,0,561,0
+HECA,Cairo International Airport,0.16,0.05,,,100.0,14,0.0,4,14,0,0,14,0
 HKJK,Jomo Kenyatta International Airport,1.04,0.16,,,100.0,99,0.0,15,99,0,0,99,0
 HRYR,Kigali International Airport,0.03,0.03,,,100.0,2,0.0,2,2,0,0,2,0
 HSSJ,Juba Airport,1.13,0.07,,,100.0,107,0.0,7,107,0,0,107,0
+HSSS,Khartoum International Airport,0.44,0.12,,,100.0,18,0.0,5,18,0,0,18,0
+HTDA,Julius Nyerere International Airport,0.15,0.05,,,100.0,6,0.0,2,6,0,0,6,0
+HUEN,Entebbe International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+KABI,Abilene Regional Airport,33.45,0.73,,,0.0,368,100.0,8,368,0,0,0,368
+KABQ,Albuquerque International Sunport Airport,77.4,0.87,163.06,2.11,57.11,3964,42.89,13,1161,38,2935,2264,1700
+KAEX,Alexandria International Airport,1710.26,30.64,2423.19,41.15,52.53,408347,47.47,3033,169316,4074,239896,214519,193828
+KALB,Albany International Airport,84.25,1.0,12.0,1.0,3.44,349,96.56,4,337,1,12,12,337
+KATL,Hartsfield Jackson Atlanta International Airport,28.26,0.57,152.97,2.76,79.0,17761,21.0,53,2628,273,15144,14032,3729
+KAUS,Austin Bergstrom International Airport,25.0,1.0,708.5,5.5,88.9,1442,11.1,1,25,11,1417,1282,160
+KBDL,Bradley International Airport,19.0,1.0,,,0.0,19,100.0,1,19,0,0,0,19
+KBED,Laurence G Hanscom Field,170.0,2.0,89.67,1.67,3.12,609,96.88,4,340,5,269,19,590
+KBFI,Boeing Field King County International Airport,153.44,3.75,347.91,4.71,32.37,49634,67.63,371,15191,466,34443,16069,33565
+KBFL,Meadows Field,45.93,8.18,399.84,11.87,61.5,27000,38.5,466,2618,724,24390,16606,10394
+KBLV,Mid America St Louis/Scott AFB,11.62,0.38,,,0.0,93,100.0,3,93,0,0,0,93
+KBNA,Nashville International Airport,56.0,1.0,,,0.0,56,100.0,1,56,0,0,0,56
+KBOI,Boise Air Terminal/Gowen field,1.0,1.0,70.12,3.0,45.31,1684,54.69,1,1,72,1683,763,921
+KBOS,General Edward Lawrence Logan International Airport,15.6,0.56,19.55,0.45,1.39,2590,98.61,32,889,39,1701,36,2554
+KBRO,Brownsville South Padre Island International Airport,830.55,14.02,2227.12,26.46,77.78,270976,22.22,1122,66444,2434,204895,210766,60198
+KBUF,Buffalo Niagara International Airport,95.64,1.79,46.59,1.89,8.0,11332,92.0,143,7651,149,3681,906,10426
+KBWI,Baltimore/Washington International Thurgood Marshall Airport,34.0,1.0,,,0.0,34,100.0,1,34,0,0,0,34
+KCHS,Charleston International Airport,173.6,1.6,55.0,1.0,0.0,923,100.0,8,868,1,55,0,923
+KCLE,Cleveland Hopkins International Airport,56.5,1.0,,,0.0,113,100.0,2,113,0,0,0,113
+KCLT,Charlotte Douglas International Airport,,,11.0,1.0,0.0,11,100.0,0,0,1,11,0,11
+KCMH,Port Columbus International Airport,,,61.0,1.0,100.0,61,0.0,0,0,1,61,61,0
+KCOS,City of Colorado Springs Municipal Airport,10.42,0.12,33.36,0.68,63.1,4184,36.9,11,948,66,3236,2640,1544
+KCRP,Corpus Christi International Airport,,,75.08,0.69,78.38,976,21.62,0,0,9,976,765,211
+KCSG,Columbus Metropolitan Airport,95.41,2.89,850.49,12.0,67.98,89670,32.02,269,8873,1140,80797,60956,28714
+KCVG,Cincinnati Northern Kentucky International Airport,,,25.33,0.67,84.21,76,15.79,0,0,2,76,64,12
+KDAL,Dallas Love Field,7.48,0.13,133.95,3.0,93.56,11961,6.44,11,613,255,11386,11191,770
+KDEN,Denver International Airport,85.46,2.6,211.36,4.87,30.62,29003,69.38,252,8290,477,20713,8880,20123
+KDFW,Dallas Fort Worth International Airport,,,2.32,0.09,100.0,188,0.0,0,0,7,188,188,0
+KDTW,Detroit Metropolitan Wayne County Airport,4.0,1.0,8.03,0.09,69.35,261,30.65,1,4,3,257,181,80
+KELP,El Paso International Airport,880.67,19.45,1375.02,23.38,54.99,223069,45.01,1926,87186,2315,136127,122665,100404
+KEWR,Newark Liberty International Airport,180.13,5.86,354.75,6.16,15.12,46889,84.88,510,15671,542,31218,7089,39800
+KFTW,Fort Worth Meacham International Airport,6.54,0.38,84.36,2.71,93.29,1266,6.71,5,85,38,1181,1181,85
+KGFK,Grand Forks International Airport,1.0,1.0,,,0.0,1,100.0,1,1,0,0,0,1
+KGRK,Robert Gray  Army Air Field Airport,,,263.0,3.0,100.0,263,0.0,0,0,3,263,263,0
+KGYY,Gary Chicago International Airport,126.91,4.08,270.85,4.88,27.99,26252,72.01,269,8376,322,17876,7349,18903
+KHRL,Valley International Airport,2437.36,28.43,2049.08,24.72,88.6,273403,11.4,1734,148679,1508,124994,242241,31162
+KHST,Homestead ARB Airport,22.2,0.4,,,100.0,111,0.0,2,111,0,0,111,0
+KIAD,Washington Dulles International Airport,,,65.0,1.0,0.0,65,100.0,0,0,1,65,0,65
+KIAG,Niagara Falls International Airport,,,1.97,0.23,100.0,122,0.0,0,0,14,122,122,0
+KIAH,George Bush Intercontinental Houston Airport,32.13,0.76,508.87,8.81,93.23,53401,6.77,75,3181,872,50378,49785,3615
+KIWA,Phoenix-Mesa-Gateway Airport,948.4,24.79,1981.2,38.95,53.36,289016,46.64,2454,93892,3856,196139,154214,134801
+KJAX,Jacksonville International Airport,34.8,0.43,23.67,0.35,6.18,5176,93.82,41,3306,28,1870,320,4856
+KKBL,Hamid Karzai International Airport,22.0,1.0,,,100.0,22,0.0,1,22,0,0,22,0
+KLAS,McCarran International Airport,22.65,3.53,191.15,5.29,44.45,21166,55.55,349,2242,524,18924,9408,11758
+KLAW,Lawton Fort Sill Regional Airport,938.0,7.5,,,0.0,1876,100.0,15,1876,0,0,0,1876
+KLIT,Adams Field,1.0,1.0,,,0.0,1,100.0,1,1,0,0,0,1
+KLRD,Laredo International Airport,473.97,6.67,569.79,8.3,87.18,103322,12.82,660,46923,822,56409,90080,13242
+KMCI,Kansas City International Airport,2.48,0.61,129.8,3.61,64.56,13091,35.44,59,241,357,12850,8452,4639
+KMDT,Harrisburg International Airport,149.39,6.21,771.19,9.05,29.07,91138,70.93,615,14790,896,76348,26494,64643
+KMDW,Chicago Midway International Airport,31.0,1.0,,,0.0,31,100.0,1,31,0,0,0,31
+KMEM,Memphis International Airport,73.63,0.63,83.13,1.07,0.0,5223,100.0,34,3976,16,1247,0,5223
+KMHR,Sacramento Mather Airport,48.0,1.0,,,0.0,48,100.0,1,48,0,0,0,48
+KMIA,Miami International Airport,231.19,5.08,561.49,14.69,55.81,78108,44.19,498,22657,1454,55588,43591,34516
+KMSP,Minneapolis-St Paul International/Wold-Chamberlain Airport,6.68,0.84,122.81,3.04,60.09,12813,39.91,82,655,301,12158,7699,5114
+KMWA,Williamson County Regional Airport,,,1.0,1.0,0.0,1,100.0,0,0,1,1,0,1
+KNJK,El Centro Naf Airport,1272.25,11.5,42.0,2.0,99.56,20440,0.44,184,20356,4,84,20350,90
+KNTD,Point Mugu Naval Air Station (Naval Base Ventura Co),588.5,5.0,,,0.0,1177,100.0,10,1177,0,0,0,1177
+KNYL,Yuma MCAS/Yuma International Airport,1002.14,9.62,11.81,0.12,98.7,29440,1.3,279,29062,4,378,29058,382
+KOAK,Metropolitan Oakland International Airport,25.8,5.26,417.86,10.0,62.51,42982,37.49,510,2503,970,40532,26867,16115
+KOMA,Eppley Airfield,6.22,0.62,94.06,2.67,55.68,9915,44.32,60,603,264,9312,5521,4394
+KONT,Ontario International Airport,24.09,0.52,31.63,0.57,35.83,5492,64.17,51,2361,56,3131,1968,3524
+KOPF,Opa-Locka Executive Airport,4.0,1.0,14.52,0.33,9.69,392,90.31,1,4,9,392,38,354
+KORD,Chicago O'Hare International Airport,32.32,1.55,204.97,3.34,67.32,22240,32.68,143,2973,314,19267,14973,7267
+KPAE,Snohomish County (Paine Field) Airport,0.86,0.14,14.5,0.18,70.41,338,29.59,3,19,4,319,238,100
+KPDX,Portland International Airport,124.0,1.0,,,0.0,124,100.0,1,124,0,0,0,124
+KPSM,Portsmouth International Airport,18.3,2.2,117.82,3.82,8.52,1479,91.48,22,183,42,1296,126,1353
+KRFD,Chicago Rockford International Airport,20.0,1.0,,,0.0,20,100.0,1,20,0,0,0,20
+KRIC,Richmond International Airport,14.2,0.64,36.4,0.73,12.31,2688,87.69,36,795,38,1893,331,2357
+KRNO,Reno Tahoe International Airport,1.5,1.5,24.74,1.35,49.3,1933,50.7,3,3,105,1930,953,980
+KROW,Roswell International Air Center Airport,28.0,1.0,108.0,3.33,92.05,352,7.95,1,28,10,324,324,28
+KSAN,San Diego International Airport,635.78,11.51,535.43,10.19,59.8,115897,40.2,1139,62942,1009,53008,69308,46589
+KSAT,San Antonio International Airport,68.49,1.87,1085.19,18.77,71.04,113444,28.95,176,6438,1858,107434,80593,32838
+KSDM,Brown Field Municipal Airport,,,4.0,1.0,100.0,4,0.0,0,0,1,4,4,0
+KSKF,Lackland Air Force Base (Kelly Field Annex) Airport,312.0,3.0,246.0,2.0,0.0,870,100.0,6,624,2,246,0,870
+KSLC,Salt Lake City International Airport,21.56,1.39,112.87,3.14,35.83,13152,64.17,135,2091,308,11061,4713,8439
+KSMF,Sacramento International Airport,,,28.5,0.75,15.79,114,84.21,0,0,3,114,18,96
+KSTL,Lambert St Louis International Airport,29.0,0.67,21.67,1.0,3.29,152,96.71,2,87,3,65,5,147
+KTEB,Teterboro Airport,,,7.0,1.0,100.0,7,0.0,0,0,1,7,7,0
+KTOL,Toledo Express Airport,19.46,1.68,252.89,4.09,57.51,26943,42.49,165,1907,405,25036,15494,11449
+KTUS,Tucson International Airport,69.83,0.78,336.32,2.95,65.73,14958,34.27,28,2514,109,12444,9832,5126
+KTWF,Joslin Field Magic Valley Regional Airport,,,51.64,1.36,67.78,568,32.22,0,0,15,568,385,183
+KVCV,Southern California Logistics Airport,18.31,0.19,40.43,0.39,0.0,1809,100.0,9,879,9,930,0,1809
+KYIP,Willow Run Airport,,,132.0,2.0,65.15,132,34.85,0,0,2,132,86,46
+KYKM,Yakima Air Terminal,133.0,1.0,108.0,1.0,0.0,241,100.0,1,133,1,108,0,241
+KYNG,Youngston Warren Regional Airport,45.96,1.04,3.78,0.33,2.2,1137,97.8,25,1103,3,34,25,1112
+LATI,Tirana International Airport Mother Teresa,0.12,0.05,,,100.0,7,0.0,3,7,0,0,7,0
+LEMD,Adolfo Suarez Madrid-Barajas Airport,5.0,1.0,,,100.0,5,0.0,1,5,0,0,5,0
+LFPB,Le Bourget International Airport,1.0,0.5,,,100.0,4,0.0,2,4,0,0,4,0
+LHBP,Budapest Liszt Ferenc international Airport,0.11,0.08,,,100.0,7,0.0,5,7,0,0,7,0
+LIRA,Ciampino Airport,0.45,0.18,,,100.0,5,0.0,2,5,0,0,5,0
+LKPR,Ruzyn-¢ International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+LLBG,Ben Gurion International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+LPPD,João Paulo II Airport,0.38,0.25,,,100.0,3,0.0,2,3,0,0,3,0
+LQSA,Sarajevo International Airport,0.91,0.27,,,100.0,10,0.0,3,10,0,0,10,0
+LRBS,Bâneasa International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+LROP,Henri Coandâ International Airport,0.07,0.04,,,100.0,3,0.0,2,3,0,0,3,0
+LTBA,Atatürk International Airport ,4.0,1.0,,,100.0,4,0.0,1,4,0,0,4,0
+LUKK,Chisinau International Airport,0.07,0.04,,,100.0,5,0.0,3,5,0,0,5,0
 LWSK,Skopje Alexander the Great Airport,5.0,1.0,,,100.0,5,0.0,1,5,0,0,5,0
-UTDD,Dushanbe Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-ZBAA,Beijing Capital International Airport,6.0,1.0,,,100.0,6,0.0,1,6,0,0,6,0
-OYSN,Sana'a International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-TXKF,L.F. Wade International International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
 LYBE,Belgrade Nikola Tesla Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
 LYPG,Podgorica Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-LRBS,Bâneasa International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-LHBP,Budapest Liszt Ferenc international Airport,0.11,0.08,,,100.0,7,0.0,5,7,0,0,7,0
-FZAA,Ndjili International Airport,0.18,0.06,,,100.0,15,0.0,5,15,0,0,15,0
-HAAB,Addis Ababa Bole International Airport,0.11,0.05,,,100.0,9,0.0,4,9,0,0,9,0
-TTPP,Piarco International Airport,0.95,0.14,,,100.0,77,0.0,11,77,0,0,77,0
-EGGW,London Luton Airport,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
-LLBG,Ben Gurion International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-GUCY,Conakry Airport,2.2,0.09,,,100.0,176,0.0,7,176,0,0,176,0
-FKYS,Yaoundé Nsimalen International Airport,0.32,0.08,,,100.0,8,0.0,2,8,0,0,8,0
-DRRN,Diori Hamani International Airport,0.08,0.03,,,100.0,5,0.0,2,5,0,0,5,0
-GABS,Senou Airport,0.18,0.06,,,100.0,15,0.0,5,15,0,0,15,0
-SYCJ,Cheddi Jagan International Airport,1.31,0.1,,,100.0,105,0.0,8,105,0,0,105,0
-SLLP,El Alto International Airport ,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-SPIM,Jorge Chávez International Airport ,1.55,0.07,,,100.0,45,0.0,2,45,0,0,45,0
-EPWA,Warsaw Chopin Airport,0.25,0.1,,,100.0,15,0.0,6,15,0,0,15,0
-UUEE,Sheremetyevo International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+LZIB,M. R. Štefánik Airport,0.05,0.05,,,100.0,2,0.0,2,2,0,0,2,0
+MDSD,Las Americas International Airport,150.32,2.03,1.0,1.0,99.99,14883,0.01,201,14882,1,1,14882,1
+MGGT,La Aurora Airport,3301.77,30.48,0.2,0.19,99.92,326891,0.08,3018,326875,15,16,326615,276
+MHLM,Ramon Villeda Morales International Airport,2050.05,20.65,0.2,0.19,99.99,202970,0.01,2044,202955,14,15,202955,12
+MHSC,Coronel Enrique Soto Cano Air Base,7.28,0.28,,,100.0,131,0.0,5,131,0,0,131,0
+MHTG,Toncontín International Airport,831.0,7.67,,,100.0,19944,0.0,184,19944,0,0,19944,0
+MKJP,Norman Manley International Airport,62.26,0.99,66.0,1.0,100.0,6167,0.0,97,6101,1,66,6167,0
+MMMD,Manuel Crescencio Rejón International Airport,80.0,1.0,79.0,2.0,49.69,159,50.31,1,80,2,79,79,80
+MMMX,Licenciado Benito Juarez International Airport,1031.13,7.87,,,100.0,85584,0.0,653,85584,0,0,85584,0
+MNMG,Augusto C. Sandino (Managua) International Airport,82.18,1.84,,,99.99,8054,0.01,180,8054,0,0,8053,1
+MPTO,Panama International Airport,1.07,0.2,,,100.0,16,0.0,3,16,0,0,16,0
+MSLP,El Salvador International Airport,1593.67,15.85,0.25,0.21,99.99,157795,0.01,1569,157773,19,22,157774,17
+MTPP,Toussaint Louverture International Airport,90.03,1.73,1.0,1.0,99.99,8644,0.01,166,8643,1,1,8643,1
+MUHA,Jose Marti International Airport ,4.95,0.64,,,100.0,480,0.0,62,480,0,0,480,0
+MYNN,Lynden Pindling International Airport,0.36,0.04,,,100.0,26,0.0,3,26,0,0,26,0
+MZBZ,Philip S. W. Goldson International Airport,0.45,0.05,,,100.0,25,0.0,3,25,0,0,25,0
+NFTF,Fua'amotu International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+NSFA,Faleolo International Airport,6.0,1.0,,,100.0,6,0.0,1,6,0,0,6,0
+NZWN,Wellington International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+OAKB,Kabul International Airport,2.3,0.3,,,100.0,23,0.0,3,23,0,0,23,0
+OJAI,Queen Alia International Airport,0.43,0.06,,,100.0,36,0.0,5,36,0,0,36,0
+OJAM,Amman Civil Airport,7.0,1.0,,,100.0,7,0.0,1,7,0,0,7,0
 OLBA,Beirut Rafic Hariri International Airport,7.0,1.0,,,100.0,7,0.0,1,7,0,0,7,0
+OMDW,Dubai International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+OPRN,Islamabad International Airport,27.25,0.5,,,100.0,109,0.0,2,109,0,0,109,0
+ORBI,Baghdad International Airport,0.8,0.1,,,100.0,16,0.0,2,16,0,0,16,0
+OYSN,Sana'a International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+PHNL,Honolulu International Airport,2.0,1.0,,,0.0,2,100.0,1,2,0,0,0,2
+PKMJ,Marshall Islands International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+RCTP,Taiwan Taoyuan International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+RJBB,Kansai International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+RPLL,Ninoy Aquino International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+SAEZ,Ezeiza International Airport,0.61,0.09,,,100.0,14,0.0,2,14,0,0,14,0
+SBBR,Brasilia International Airport,7.0,1.0,,,100.0,7,0.0,1,7,0,0,7,0
+SBCF,Tancredo Neves International Airport,5.0,1.0,,,100.0,5,0.0,1,5,0,0,5,0
+SBGR,Guarulhos–Governador André Franco Montoro International Airport ,0.05,0.02,,,100.0,4,0.0,2,4,0,0,4,0
+SEGU,Simon Bolivar International Airport,102.7,2.02,1.0,1.0,99.99,10066,0.01,198,10065,1,1,10065,1
+SKBO,El Dorado International Airport,74.51,1.0,,,100.0,7302,0.0,98,7302,0,0,7302,0
+SLLP,El Alto International Airport ,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+SLVR,Viru Viru International Airport,6.0,1.0,,,100.0,6,0.0,1,6,0,0,6,0
+SMJP,Johan Adolf Pengel International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+SPIM,Jorge Chávez International Airport ,1.55,0.07,,,100.0,45,0.0,2,45,0,0,45,0
+SPJC,Jorge Chavez International Airport,1.22,0.09,,,100.0,39,0.0,3,39,0,0,39,0
+SUMU,Carrasco International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+SYCJ,Cheddi Jagan International Airport,1.31,0.1,,,100.0,105,0.0,8,105,0,0,105,0
+TAPA,V.C. Bird International Airport,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
+TBPB,Grantley Adams International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+TDPD,Melville Hall Airport,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
+TGPY,Grenada International Airport,5.0,1.0,,,100.0,5,0.0,1,5,0,0,5,0
+TIST,Cyril E. King Airport,,,11.0,1.0,0.0,11,100.0,0,0,1,11,0,11
+TJBQ,Rafael Hernandez Airport,,,43.33,0.67,0.0,130,100.0,0,0,2,130,0,130
+TJSJ,Luis Munoz Marin International Airport,,,3.95,0.08,37.15,253,62.85,0,0,5,253,94,159
+TKPK,Robert L. Bradshaw International Airport,4.0,1.0,,,100.0,4,0.0,1,4,0,0,4,0
+TLPL,Hewanorra International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+TTPP,Piarco International Airport,0.95,0.14,,,100.0,77,0.0,11,77,0,0,77,0
+TVSC,Canouan Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+TVSV,E. T. Joshua Airport,4.0,1.0,,,100.0,4,0.0,1,4,0,0,4,0
+TXKF,L.F. Wade International International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+UGTB,Tbilisi International Airport,0.09,0.09,,,100.0,2,0.0,2,2,0,0,2,0
+UKBB,Boryspil International Airport,0.24,0.12,,,100.0,8,0.0,4,8,0,0,8,0
+UKKK,Kiev Zhuliany International Airport,0.12,0.05,,,100.0,8,0.0,3,8,0,0,8,0
+UTDD,Dushanbe Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
+UTTT,Toshkent Xalqaro,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
+UUEE,Sheremetyevo International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+UUWW,Vnukovo International Airport,0.8,0.2,,,100.0,8,0.0,2,8,0,0,8,0
 UWKD,Kazan International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
 VCBI,Bandaranaike International Colombo Airport,0.11,0.04,,,100.0,5,0.0,2,5,0,0,5,0
-LZIB,M. R. Štefánik Airport,0.05,0.05,,,100.0,2,0.0,2,2,0,0,2,0
-MYNN,Lynden Pindling International Airport,0.36,0.04,,,100.0,26,0.0,3,26,0,0,26,0
-KRFD,Chicago Rockford International Airport,20.0,1.0,,,0.0,20,100.0,1,20,0,0,0,20
-MZBZ,Philip S. W. Goldson International Airport,0.45,0.05,,,100.0,25,0.0,3,25,0,0,25,0
-KLIT,Adams Field,1.0,1.0,,,0.0,1,100.0,1,1,0,0,0,1
-SLVR,Viru Viru International Airport,6.0,1.0,,,100.0,6,0.0,1,6,0,0,6,0
-TVSV,E. T. Joshua Airport,4.0,1.0,,,100.0,4,0.0,1,4,0,0,4,0
-TDPD,Melville Hall Airport,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
-KBNA,Nashville International Airport,56.0,1.0,,,0.0,56,100.0,1,56,0,0,0,56
-KLAW,Lawton Fort Sill Regional Airport,938.0,7.5,,,0.0,1876,100.0,15,1876,0,0,0,1876
-KNTD,Point Mugu Naval Air Station (Naval Base Ventura Co),588.5,5.0,,,0.0,1177,100.0,10,1177,0,0,0,1177
-MHSC,Coronel Enrique Soto Cano Air Base,7.28,0.28,,,100.0,131,0.0,5,131,0,0,131,0
-KGFK,Grand Forks International Airport,1.0,1.0,,,0.0,1,100.0,1,1,0,0,0,1
-FKKD,Douala International Airport,0.62,0.19,,,100.0,30,0.0,9,30,0,0,30,0
-FOOL,Libreville International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-FLKK,Kenneth Kaunda International/Lusaka Airport,0.13,0.09,,,100.0,6,0.0,4,6,0,0,6,0
-FWKI,Lilongwe - Kamuzu International Airport,0.12,0.12,,,100.0,2,0.0,2,2,0,0,2,0
-HTDA,Julius Nyerere International Airport,0.15,0.05,,,100.0,6,0.0,2,6,0,0,6,0
-LKPR,Ruzyn-¢ International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-UKBB,Boryspil International Airport,0.24,0.12,,,100.0,8,0.0,4,8,0,0,8,0
-LTBA,Atatürk International Airport ,4.0,1.0,,,100.0,4,0.0,1,4,0,0,4,0
-UTTT,Toshkent Xalqaro,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
-HSSS,Khartoum International Airport,0.44,0.12,,,100.0,18,0.0,5,18,0,0,18,0
-HUEN,Entebbe International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-ZSFZ,Fuzhou Changle International Airport,5.57,0.14,,,100.0,156,0.0,4,156,0,0,156,0
-FTTJ,N'Djamena International Airport,0.13,0.06,,,100.0,4,0.0,2,4,0,0,4,0
-KBWI,Baltimore/Washington International Thurgood Marshall Airport,34.0,1.0,,,0.0,34,100.0,1,34,0,0,0,34
-KBLV,Mid America St Louis/Scott AFB,11.62,0.38,,,0.0,93,100.0,3,93,0,0,0,93
-OJAM,Amman Civil Airport,7.0,1.0,,,100.0,7,0.0,1,7,0,0,7,0
-VVTS,Tan So'n Nhat International Airport,2.28,0.16,,,100.0,73,0.0,5,73,0,0,73,0
-PKMJ,Marshall Islands International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
 VDPP,Phnom Penh International Airport,3.75,0.28,,,100.0,120,0.0,9,120,0,0,120,0
-SAEZ,Ezeiza International Airport,0.61,0.09,,,100.0,14,0.0,2,14,0,0,14,0
-SUMU,Carrasco International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-SPJC,Jorge Chavez International Airport,1.22,0.09,,,100.0,39,0.0,3,39,0,0,39,0
-LFPB,Le Bourget International Airport,1.0,0.5,,,100.0,4,0.0,2,4,0,0,4,0
-RPLL,Ninoy Aquino International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-RCTP,Taiwan Taoyuan International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
 VGHS,Dhaka Shahjalal International Airport,11.7,0.35,,,100.0,269,0.0,8,269,0,0,269,0
-VNKT,Tribhuvan International Airport,0.76,0.14,,,100.0,16,0.0,3,16,0,0,16,0
 VIDP,Indira Gandhi International Airport,13.62,0.31,,,100.0,395,0.0,9,395,0,0,395,0
-TKPK,Robert L. Bradshaw International Airport,4.0,1.0,,,100.0,4,0.0,1,4,0,0,4,0
-TBPB,Grantley Adams International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-TVSC,Canouan Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-DXXX,Lomé–Tokoin Airport,0.12,0.08,,,100.0,3,0.0,2,3,0,0,3,0
-FGSL,Malabo Santa Isabel Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-UUWW,Vnukovo International Airport,0.8,0.2,,,100.0,8,0.0,2,8,0,0,8,0
-EYVI,Vilnius International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-YSSY,Sydney Kingsford Smith Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-NZWN,Wellington International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-NFTF,Fua'amotu International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-GBYD,Banjul International Airport,1.92,0.16,,,100.0,48,0.0,4,48,0,0,48,0
-GQNO,Nouakchott-Oumtounsy International Airport,0.54,0.17,,,100.0,13,0.0,4,13,0,0,13,0
-KMDW,Chicago Midway International Airport,31.0,1.0,,,0.0,31,100.0,1,31,0,0,0,31
-MPTO,Panama International Airport,1.07,0.2,,,100.0,16,0.0,3,16,0,0,16,0
-HCMM,Aden Adde International Airport,24.39,0.35,,,100.0,561,0.0,8,561,0,0,561,0
-LIRA,Ciampino Airport,0.45,0.18,,,100.0,5,0.0,2,5,0,0,5,0
-LEMD,Adolfo Suarez Madrid-Barajas Airport,5.0,1.0,,,100.0,5,0.0,1,5,0,0,5,0
-LQSA,Sarajevo International Airport,0.91,0.27,,,100.0,10,0.0,3,10,0,0,10,0
-FVHA,Harare International Airport,0.27,0.13,,,100.0,4,0.0,2,4,0,0,4,0
-GOOY,Léopold Sédar Senghor International Airport,11.88,0.25,,,100.0,190,0.0,4,190,0,0,190,0
-KMHR,Sacramento Mather Airport,48.0,1.0,,,0.0,48,100.0,1,48,0,0,0,48
-TGPY,Grenada International Airport,5.0,1.0,,,100.0,5,0.0,1,5,0,0,5,0
-GFLL,Lungi International Airport,1.12,0.24,,,100.0,19,0.0,4,19,0,0,19,0
-SMJP,Johan Adolf Pengel International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-ORBI,Baghdad International Airport,0.8,0.1,,,100.0,16,0.0,2,16,0,0,16,0
-KKBL,Hamid Karzai International Airport,22.0,1.0,,,100.0,22,0.0,1,22,0,0,22,0
-DAAG,Houari Boumediene Airport,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
-OAKB,Kabul International Airport,2.3,0.3,,,100.0,23,0.0,3,23,0,0,23,0
-TAPA,V.C. Bird International Airport,3.0,1.0,,,100.0,3,0.0,1,3,0,0,3,0
-KCLE,Cleveland Hopkins International Airport,56.5,1.0,,,0.0,113,100.0,2,113,0,0,0,113
-GVNP,Praia International Airport,1.0,0.13,,,100.0,15,0.0,2,15,0,0,15,0
-DFFD,Ouagadougou Airport,5.0,1.0,,,100.0,5,0.0,1,5,0,0,5,0
-VYYY,Yangon International Airport,7.0,1.0,,,100.0,7,0.0,1,7,0,0,7,0
-FALA,Lanseria Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-PHNL,Honolulu International Airport,2.0,1.0,,,0.0,2,100.0,1,2,0,0,0,2
-OPRN,Islamabad International Airport,27.25,0.5,,,100.0,109,0.0,2,109,0,0,109,0
-TLPL,Hewanorra International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-NSFA,Faleolo International Airport,6.0,1.0,,,100.0,6,0.0,1,6,0,0,6,0
-OMDW,Dubai International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-EGSS,London Heathrow Airport,7.0,1.0,,,100.0,7,0.0,1,7,0,0,7,0
+VNKT,Tribhuvan International Airport,0.76,0.14,,,100.0,16,0.0,3,16,0,0,16,0
 VTBS,Suvarnabhumi Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-KPDX,Portland International Airport,124.0,1.0,,,0.0,124,100.0,1,124,0,0,0,124
-GMMN,Mohammed V International Airport,1.0,1.0,,,100.0,1,0.0,1,1,0,0,1,0
-FCBB,Maya-Maya Airport,4.0,1.0,,,100.0,4,0.0,1,4,0,0,4,0
-FYWH,Hosea Kutako International Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
-HBBA,Bujumbura International Airport,6.0,1.0,,,100.0,6,0.0,1,6,0,0,6,0
-SBCF,Tancredo Neves International Airport,5.0,1.0,,,100.0,5,0.0,1,5,0,0,5,0
-SBBR,Brasilia International Airport,7.0,1.0,,,100.0,7,0.0,1,7,0,0,7,0
+VVTS,Tan So'n Nhat International Airport,2.28,0.16,,,100.0,73,0.0,5,73,0,0,73,0
+VYYY,Yangon International Airport,7.0,1.0,,,100.0,7,0.0,1,7,0,0,7,0
+YSSY,Sydney Kingsford Smith Airport,2.0,1.0,,,100.0,2,0.0,1,2,0,0,2,0
+ZBAA,Beijing Capital International Airport,6.0,1.0,,,100.0,6,0.0,1,6,0,0,6,0
+ZSFZ,Fuzhou Changle International Airport,5.57,0.14,,,100.0,156,0.0,4,156,0,0,156,0

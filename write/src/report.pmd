@@ -8,6 +8,7 @@
 import pandas as pd
 import numpy as np
 import yaml
+import matplotlib.pyplot as plt
 from tabulate import tabulate
 
 with open('input/dtypes.yaml', 'r') as yamlfile:
@@ -131,14 +132,106 @@ Remaining fields in the dataset represent passenger and airport characteristics.
 * The `Age` and `Juvenile` fields are relatively self-explanatory. `Juvenile` is a binary field where all passengers aged 17 or younger are marked True; the values in this field are consistent with the numeric values in `Age`. Values below 0 or above 99 in `Age` were set as null values in the cleaning process.
 * Notably, two ARTS fields that would likely be of great interest to researchers and advocates, `FamilyUnitFlag` and `UnaccompaniedFlag` (presumably relating to unaccompanied minors), are entirely unused in this dataset: not a single record is flagged with either of these values. As noted above, there is no indication that these values have been redacted or withheld by ICE, suggesting that they are simply not used.
 
+## Cleaning
+
 ## Analysis
 
 ```python, ice_air_scope, echo=False
 
+assert sum(df['DropLoc'].isnull()) == 0
+assert sum(df['PULOC'].isnull()) == 0
 number_of_pickup_airports = len(set(df['PULOC'].dropna()))
 number_of_dropoff_airports = len(set(df['DropLoc'].dropna()))
 total_airports = len(set(df['PULOC'].dropna()).union(set(df['DropLoc'].dropna())))
 
+number_of_pickup_countries = len(set(df['air_Country'].dropna()))
+number_of_dropoff_countries = len(set(df['air2_Country'].dropna()))
+total_countries = len(set(df['air_Country']).union(set(df['air2_Country'])))
+
+droplocs_per_fy = df.resample('AS-OCT', on='MissionDate')['DropLoc']
+pulocs_per_fy = df.resample('AS-OCT', on='MissionDate')['PULOC']
+drop_countries_per_fy = df.resample('AS-OCT', on='MissionDate')['air2_Country']
+pu_countries_per_fy = df.resample('AS-OCT', on='MissionDate')['air_Country']
+unique_droplocs = droplocs_per_fy.nunique()
+unique_pulocs = pulocs_per_fy.nunique()
+unique_countries = drop_countries_per_fy.nunique()
+expansion = pd.DataFrame({'Pickup Airports': unique_pulocs,
+                          'Dropoff Airports': unique_droplocs,
+                          'Destination Countries': unique_countries})
+expansion.index = expansion.index.year + 1
+expansion.index.name = 'FY'
+
+usa_pu = set(df.loc[df['air_Country'] == 'USA']['PULOC'])
+usa_drop = set(df.loc[df['air2_Country'] == 'USA']['DropLoc'])
+foreign_pu = set(df.loc[df['air_Country'] != 'USA']['PULOC'])
+foreign_drop = set(df.loc[df['air2_Country'] != 'USA']['DropLoc'])
+
 ```
 
-As revealed by the ARTS data, the scope of ICE Air Operations is global, and has expanded over the years. During Fiscal Year 2018, the last year for which complete data is available, ICE Air passengers were picked up at 41 different airports and dropped off 
+The ARTS dataset contains <%= round((len(set(df['AlienMasterID'])) / 1000000), 2) %> million records of passengers on nearly <%= int(round((len(set(df['MissionID'])) / 1000), 1)) %> thousand ICE Air Operations missions during the period from <%= print(earliest_record.strftime('%B %-d, %Y')) %> to <%= print(latest_record.strftime('%B %-d, %Y')) %>, including full data for U.S. Federal Government Fiscal Years 2011 through 2018.
+
+The ARTS database assigns each passenger a unique ID for each mission. Because this ID is simply a sequential numeric ID, and the dataset does not include other unique identifiers such as passenger name or A-number, it is not inherently possible to determine the number of individuals represented in the dataset; nor is it possible to track individuals who may have experienced multiple flights. Close inspection of the data does permit identification of possible repeat passengers based on combinations of characteristics, such as age, country of citizenship, etc. However, given the number of records contained in the dataset, and notable inconsistencies in data entry, such a de-duplication process at scale would be prohibitive, if feasible.
+
+ICE Air "missions" are identified by a unique ID value. Each mission can include multiple combinations of pickup and drop-off locations. These values encode the pickup and drop-off location for each passenger on the mission, not the flight itinerary of the mission. Therefore, while each mission may include multiple flight segments, the ARTS database does not represent the total number of flights operated by ICE Air during the period covered.
+
+Missions can include a mix of passengers destined for either "removal" from the U.S. to another country or to hubs near the U.S.-Mexico border, where deportation proceeds via ground transportation; or "transfer" between locations within the U.S. (A small number of records denote "transfers" and "removals" originating outside of the U.S., and "transfers" destined to non-U.S. countries; it is possible that these represent errors in data entry.)
+
+```python, removal_transfer_trends, echo=False
+
+removal_percent = round((len(df.loc[df['R-T'] == 'R']) / len(df) * 100), 2)
+transfer_percent = round((len(df.loc[df['R-T'] == 'T']) / len(df) * 100), 2)
+
+removal_df = df.loc[df['R-T'] == 'R']
+transfer_df = df.loc[df['R-T'] == 'T']
+removal_df.set_index('MissionDate', inplace=True)
+transfer_df.set_index('MissionDate', inplace=True)
+
+annual_removals = removal_df['AlienMasterID'].resample('AS-OCT').nunique()
+annual_removals.name = 'Total removals'
+annual_transfers = transfer_df['AlienMasterID'].resample('AS-OCT').nunique()
+annual_transfers.name = 'Total transfers'
+
+```
+
+<%= removal_percent %> % of passengers in the ARTS database were destined for removal, <%= transfer_percent %> represent transfers. Due to the limitations of the ARTS database described above, it is difficult to determine how many passengers categorized as transfers may simply be in the staging process for deportation, versus transfer for other reasons such as between detention facilities, appearances in legal processes, or release.
+
+As shown in Figure 1 below, ICE Air 
+
+<div align='center'>
+<p><strong>Figure 1: ICE Air Global Trends</strong></p>
+```python, trend_plot, echo=False
+
+def pickup_dropoff_trend(data):
+    
+    fig, ax = plt.subplots()
+    
+    for datum in data:
+        ax = datum.plot(style='o-', legend=True)
+    
+    ax.set_ylabel('Total Passengers', fontsize=16)
+    ax.set_ylim(0)
+    ax.set_xticklabels([f'FY{str(x)[2:4]}' for x in range(2010,2019)])
+    ax.set_xlabel('Fiscal Year', fontsize=16)
+    # ax.set_title(f'ICE Air Global Trends', fontsize=18)
+    ax.tick_params(labelsize=14)
+    ax.legend(fontsize=14)
+    ax.set_facecolor('#EEEEEE')
+    ax.grid(color='#FFFFFF')
+    
+    fig.set_size_inches(10, 8)
+    return fig, ax
+
+plot = pickup_dropoff_trend([annual_removals['2010':'2017'], annual_transfers['2010':'2017']]);
+
+```
+</div>
+
+As revealed by the ARTS data, ICE Air is global in scale. In total, over the period covered by the ARTS dataset, ICE Air operations have been conducted to or from <%= len(usa_pu.union(usa_drop)) %> airports in the U.S. and its territories; and to <% len(foreign_pu.union(foreign_drop)) %> airports in <%= total_countries - 1 %> other countries worldwide.
+
+ICE Air's reach has expanded with time. During Fiscal Year 2018, the last year for which complete data is available, ICE Air operations were carried out in <%= expansion.loc[2018, 'Destination Countries'] %> countries, including the United States; passengers were picked up at <%= expansion.loc[2018, 'Pickup Airports'] %> different airports and dropped off at <%= expansion.loc[2018, 'Dropoff Airports'] %> airports. As seen in the chart below, the reach of ICE Air has grown steadily since falling off during FY 2013; with operations in FY 2018 representing its maximum extent in terms of unique dropoff airports and destination countries (including the U.S.).
+
+<div align='center'>
+<p><strong>Table 1: ICE Air's Global Reach</strong></p>
+<%= print(tabulate(expansion.loc[2011:2018], headers=expansion.columns, tablefmt="html")) %>
+</div>
+

@@ -44,9 +44,9 @@ Remaining fields in the dataset represent passenger and airport characteristics.
 
 
 
-The ARTS dataset contains 1.73 million records of passengers on nearly 15 thousand ICE Air Operations missions during the period from October 1, 2010 to December 5, 2018, including full data for U.S. Federal Government Fiscal Years 2011 through 2018.
+The ARTS dataset contains 1.73 million records of passengers on nearly 15,000 ICE Air Operations missions during the period from October 1, 2010 to December 5, 2018, including full data for U.S. Federal Government Fiscal Years 2011 through 2018.
 
-The ARTS database assigns each passenger a unique ID for each mission. Because this ID is simply a sequential numeric ID, and the dataset does not include other unique identifiers such as passenger name or A-number, it is not inherently possible to determine the number of individuals represented in the dataset; nor is it possible to track individuals who may have experienced multiple flights. Close inspection of the data does permit identification of possible repeat passengers based on combinations of characteristics, such as age, country of citizenship, etc. However, given the number of records contained in the dataset, and notable inconsistencies in data entry, such a de-duplication process at scale would be prohibitive, if at all feasible.
+The ARTS database assigns each passenger a unique ID for each mission. Because this ID is simply a sequential numeric ID, and the dataset does not include other unique identifiers such as passenger name or A-number, it is not inherently possible to determine the number of individuals represented in the dataset; nor is it possible to track individuals who may have experienced multiple flights. Close inspection of the data does permit identification of possible repeat passengers based on combinations of characteristics, such as age, country of citizenship, etc. However, given the number of records contained in the dataset, and notable inconsistencies in data entry, such a de-duplication process at scale would be prohibitive, if feasible.
 
 ICE Air "missions" are identified by a unique ID value. Each mission can include multiple combinations of pickup and drop-off locations. These values encode the pickup and drop-off location for each passenger on the mission, not the flight itinerary of the mission. Therefore, while each mission may include multiple flight segments, the ARTS database does not represent the total number of flights operated by ICE Air during the period covered.
 
@@ -55,14 +55,18 @@ Missions can include a mix of passengers destined for either "removal" from the 
 
 
 
-71.2 % of passengers in the ARTS database were destined for removal, 28.8 represent transfers. Due to the limitations of the ARTS database described above, it is difficult to determine how many passengers categorized as transfers may simply be in the staging process for deportation, versus transfer for other reasons such as between detention facilities, legal processes, or release. 
+71.2% of passengers in the ARTS database were destined for removal, 28.8% represent transfers. Due to the limitations of the ARTS database described above, it is difficult to determine how many passengers categorized as transfers may simply be in the staging process for deportation, versus transfer for other reasons such as between detention facilities, appearances in legal processes, or release. (A trivial number of passengers are not categorized as either removals or transfers.)
+
+FY 2012 had the highest passenger volume in the dataset, with 264230 total passengers. After declining to a minimum of 156946 total passengers during FY 2015, the number of passengers begins to ascend again, reaching 190601 total passengers during FY 2018:
 
 <div align='center'>
-<p><strong>Figure 1: ICE Air Global Trends</strong></p>
+<p><strong>Figure 1: ICE Air Annual Passengers</strong></p>
 
 ![](figures/report_trend_plot_1.png){#trend_plot }\
 
 </div>
+
+Passengers 
 
 As revealed by the ARTS data, ICE Air is global in scale. In total, over the period covered by the ARTS dataset, ICE Air operations have been conducted to or from 88 airports in the U.S. and its territories; and to 135 airports in 118 other countries worldwide.
 

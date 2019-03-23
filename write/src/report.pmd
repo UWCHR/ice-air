@@ -168,7 +168,7 @@ foreign_drop = set(df.loc[df['air2_Country'] != 'USA']['DropLoc'])
 
 ```
 
-The ARTS dataset contains <%= round((len(set(df['AlienMasterID'])) / 1000000), 2) %> million records of passengers on nearly <%= int(round((len(set(df['MissionID'])) / 1000), 1)) %> thousand ICE Air Operations missions during the period from <%= print(earliest_record.strftime('%B %-d, %Y')) %> to <%= print(latest_record.strftime('%B %-d, %Y')) %>, including full data for U.S. Federal Government Fiscal Years 2011 through 2018.
+The ARTS dataset contains <%= round((len(set(df['AlienMasterID'])) / 1000000), 2) %> million records of passengers on nearly <%= print(f'{int(round((len(set(df.MissionID)) / 1000), 1))},000') %> ICE Air Operations missions during the period from <%= print(earliest_record.strftime('%B %-d, %Y')) %> to <%= print(latest_record.strftime('%B %-d, %Y')) %>, including full data for U.S. Federal Government Fiscal Years 2011 through 2018.
 
 The ARTS database assigns each passenger a unique ID for each mission. Because this ID is simply a sequential numeric ID, and the dataset does not include other unique identifiers such as passenger name or A-number, it is not inherently possible to determine the number of individuals represented in the dataset; nor is it possible to track individuals who may have experienced multiple flights. Close inspection of the data does permit identification of possible repeat passengers based on combinations of characteristics, such as age, country of citizenship, etc. However, given the number of records contained in the dataset, and notable inconsistencies in data entry, such a de-duplication process at scale would be prohibitive, if feasible.
 
@@ -191,40 +191,46 @@ annual_removals.name = 'Total removals'
 annual_transfers = transfer_df['AlienMasterID'].resample('AS-OCT').nunique()
 annual_transfers.name = 'Total transfers'
 
+r_t_annual = pd.DataFrame({'Removals': annual_removals['2010':'2017'], 'Transfers': annual_transfers['2010':'2017']})
+r_t_annual.index = [f'FY{str(x)[2:4]}' for x in r_t_annual.index.year + 1]
+
 ```
 
-<%= removal_percent %> % of passengers in the ARTS database were destined for removal, <%= transfer_percent %> represent transfers. Due to the limitations of the ARTS database described above, it is difficult to determine how many passengers categorized as transfers may simply be in the staging process for deportation, versus transfer for other reasons such as between detention facilities, appearances in legal processes, or release.
+<%= removal_percent %>% of passengers in the ARTS database were destined for removal, <%= transfer_percent %>% represent transfers. Due to the limitations of the ARTS database described above, it is difficult to determine how many passengers categorized as transfers may simply be in the staging process for deportation, versus transfer for other reasons such as between detention facilities, appearances in legal processes, or release. (A trivial number of passengers are not categorized as either removals or transfers.)
 
-As shown in Figure 1 below, ICE Air 
+FY 2012 had the highest passenger volume in the dataset, with <%= r_t_annual.loc['FY12'].sum() %> total passengers. After declining to a minimum of <%= r_t_annual.loc['FY15'].sum() %> total passengers during FY 2015, the number of passengers begins to ascend again, reaching <%= r_t_annual.loc['FY18'].sum() %> total passengers during FY 2018:
 
 <div align='center'>
-<p><strong>Figure 1: ICE Air Global Trends</strong></p>
+<p><strong>Figure 1: ICE Air Annual Passengers</strong></p>
 ```python, trend_plot, echo=False
 
-def pickup_dropoff_trend(data):
+def removal_transfer_bar(data, title=str, xlabel=str, ylabel=str):
     
     fig, ax = plt.subplots()
     
-    for datum in data:
-        ax = datum.plot(style='o-', legend=True)
+    data.plot(kind='bar', stacked=True, legend=True, ax=ax).legend(bbox_to_anchor=(1,1))
     
-    ax.set_ylabel('Total Passengers', fontsize=16)
-    ax.set_ylim(0)
-    ax.set_xticklabels([f'FY{str(x)[2:4]}' for x in range(2010,2019)])
-    ax.set_xlabel('Fiscal Year', fontsize=16)
-    # ax.set_title(f'ICE Air Global Trends', fontsize=18)
+    ax.set_axisbelow(True)
+    ax.set_ylabel(ylabel, fontsize=16)
+    ax.set_xlabel(xlabel, fontsize=16)
+    
+#    ax.set_title(title, fontsize=18)
     ax.tick_params(labelsize=14)
-    ax.legend(fontsize=14)
+    plt.xticks(rotation=0)
     ax.set_facecolor('#EEEEEE')
     ax.grid(color='#FFFFFF')
     
     fig.set_size_inches(10, 8)
-    return fig, ax
 
-plot = pickup_dropoff_trend([annual_removals['2010':'2017'], annual_transfers['2010':'2017']]);
+removal_transfer_bar(r_t_annual,
+                     title=f'ICE Air Annual Passengers',
+                     ylabel=f'Total Passengers',
+                     xlabel='Fiscal Year');
 
 ```
 </div>
+
+Passengers 
 
 As revealed by the ARTS data, ICE Air is global in scale. In total, over the period covered by the ARTS dataset, ICE Air operations have been conducted to or from <%= len(usa_pu.union(usa_drop)) %> airports in the U.S. and its territories; and to <% len(foreign_pu.union(foreign_drop)) %> airports in <%= total_countries - 1 %> other countries worldwide.
 

@@ -48,6 +48,7 @@ output/ice-air.csv.gz: \
 		--airport_dict=output/airport_dict.yaml \
 		--dtypes_in=input/dtypes.yaml \
 		--dtypes_out=output/dtypes.yaml \
+		--clean_stats=output/clean_stats.yaml \
 		--output=$@
 
 # End.

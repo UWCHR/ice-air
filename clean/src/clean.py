@@ -35,6 +35,7 @@ def _get_args():
     parser.add_argument("--bad_pulocs", required=True)
     parser.add_argument("--dtypes_in", required=True)
     parser.add_argument("--dtypes_out", required=True)
+    parser.add_argument("--clean_stats", required=True)
     parser.add_argument("--output", required=True)
     return parser.parse_args()
 
@@ -84,6 +85,7 @@ if __name__ == "__main__":
 
     df = pd.concat(files)
     df_obj = df.select_dtypes(include=['object']).copy()
+    input_len = len(df)
 
     converted_obj = pd.DataFrame()
 
@@ -100,13 +102,15 @@ if __name__ == "__main__":
     predrop = len(df)
     df = df[~df['PULOC'].isnull()]
     postdrop = len(df)
-    print(f'Dropped {predrop - postdrop} records with null PULOC')
+    null_puloc = predrop - postdrop
+    print(f'Dropped {null_puloc} records with null PULOC')
     del predrop, postdrop
 
     predrop = len(df)
     df = df[~df['DropLoc'].isnull()]
     postdrop = len(df)
-    print(f'Dropped {predrop - postdrop} records with null DropLoc')
+    null_droploc = predrop - postdrop
+    print(f'Dropped {null_droploc} records with null DropLoc')
     del predrop, postdrop
 
     # Filling in some missing airport name and country values from hand/.
@@ -159,8 +163,10 @@ if __name__ == "__main__":
     df['CountryOfCitizenship'] = df['CountryOfCitizenship'].str.upper()
     df['CountryOfCitizenship'].fillna('UNKNOWN', inplace=True)
 
-    out_of_bounds_high = df['Age'] > 99
-    out_of_bounds_low = df['Age'] < 0
+    age_high_bound = 99
+    age_low_bound = 0
+    out_of_bounds_high = df['Age'] > age_high_bound
+    out_of_bounds_low = df['Age'] < age_low_bound
     df.loc[out_of_bounds_high, 'Age'] = np.nan
     df.loc[out_of_bounds_low, 'Age'] = np.nan
     assert df['Age'].min() == 0
@@ -208,8 +214,10 @@ if __name__ == "__main__":
     df = df[df['PULOC_drop'].isnull()]
     df = df[df['DropLoc_drop'].isnull()]
     postdrop = len(df)
-    print(f'Dropped {predrop - postdrop} records with duplicated airports.')
+    air_duplicates = predrop - postdrop
+    print(f'Dropped {air_duplicates} records with duplicated airports.')
     assert len(df) == len(set(df.AlienMasterID))
+    del predrop, postdrop
 
     df = df.drop(['PULOC_drop', 'DropLoc_drop'], axis=1)
 
@@ -219,6 +227,7 @@ if __name__ == "__main__":
                    'encoding': 'utf-8',
                    'index': False}
 
+    output_len = len(df)
     df.to_csv(args.output, **to_csv_opts)
 
     dtypes['Juvenile'] = 'bool'
@@ -236,9 +245,26 @@ if __name__ == "__main__":
 
     pickup_dict = pickup_names.to_dict()['air_AirportName']
     dropoff_dict = dropoff_names.to_dict()['air2_AirportName']
-
     airport_dict = {**pickup_dict, **dropoff_dict}
 
     with open(args.airport_dict, 'w') as outfile:
-            yaml.dump(airport_dict, outfile, default_flow_style=False, allow_unicode=True)
+        yaml.dump(airport_dict,
+                  outfile,
+                  default_flow_style=False,
+                  allow_unicode=True)
+
+    clean_stats = dict(input_len=input_len,
+                       null_puloc=null_puloc,
+                       null_droploc=null_droploc,
+                       air_duplicates=air_duplicates,
+                       age_high_bound=age_high_bound,
+                       age_low_bound=age_low_bound,
+                       output_len=output_len)
+
+    with open(args.clean_stats, 'w') as outfile:
+        yaml.dump(clean_stats,
+                  outfile,
+                  default_flow_style=False,
+                  allow_unicode=True)
+
 # END.

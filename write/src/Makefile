@@ -17,12 +17,14 @@ clean:
 output/ice-air-report.md: \
 		src/report.pmd \
 		input/ice-air.csv.gz \
+		input/clean_stats.yaml\
 		input/dtypes.yaml
 	pweave src/report.pmd -f markdown -o output/ice-air-report.md
 
 output/ice-air-report.html: \
 		src/report.pmd \
 		input/ice-air.csv.gz \
+		input/clean_stats.yaml\
 		input/dtypes.yaml
 	pweave src/report.pmd -f md2html -o output/ice-air-report.html
 

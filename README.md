@@ -4,7 +4,7 @@ A project to analyze data from Immigration and Customs Enforcement's Alien Repat
 
 Raw Excel files used in this project can be found on [UWCHR's Google Drive](https://drive.google.com/drive/folders/1DFhlKSI1u9yrPqPmLKW0o2IKUsUhSEIl?usp=sharing).
 
-Input files in `import/input/` have been renamed to remove spaces, converted to CSV, and Gzipped. Input files are symlinked to `import/output/` and then to `input/` of downstream tasks for modification and analysis.
+Input files in `import/input/` have been renamed to remove spaces in filenames, converted to CSV with pipe separator (`|`), and Gzipped. Input files are symlinked to `import/output/` and then to `input/` of downstream tasks for modification and analysis.
 
 This repo uses [Git LFS](https://git-lfs.github.com/).
 
@@ -15,6 +15,7 @@ Tasks in this project are designed to be executed using the recursive make tool 
 # TO-DO
 
 - [ ] Clean analysis notebooks for publication
+  - Move relevant code into report
 - [ ] Write data appendix report
 
 # ARTS PASSENGER DATA DICTIONARY

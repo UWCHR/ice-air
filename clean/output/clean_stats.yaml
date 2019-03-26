@@ -1,7 +1,10 @@
 age_high_bound: 99
 age_low_bound: 0
-air_duplicates: 30510
-input_len: 1763020
+dropped_bad_airport_merge: 30510
+duplicate_AlienMasterID: 29465
+input_records: 1763020
+input_unique_AlienMasterID: 1733555
 null_droploc: 122
 null_puloc: 808
+number_of_input_files: 9
 output_len: 1731580

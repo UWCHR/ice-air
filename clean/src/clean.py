@@ -85,8 +85,16 @@ if __name__ == "__main__":
 
     df = pd.concat(files)
     df_obj = df.select_dtypes(include=['object']).copy()
-    input_len = len(df)
+    input_records = len(df)
+    input_unique_AlienMasterID = len(set(df['AlienMasterID']))
+    duplicate_AlienMasterID = len(df) - len(set(df['AlienMasterID']))
 
+    # g = df.groupby(['AlienMasterID']).size()
+    # AlienMasterID_count = g.reset_index(name='AlienMasterID_count').set_index('AlienMasterID')
+    # df = df.join(AlienMasterID_count, on='AlienMasterID')
+    # print(df['AlienMasterID_count'].value_counts(dropna=False))
+
+    df_obj = df.select_dtypes(include=['object']).copy()
     converted_obj = pd.DataFrame()
 
     for col in df_obj.columns:
@@ -98,6 +106,7 @@ if __name__ == "__main__":
             converted_obj.loc[:, col] = df_obj[col]
 
     df[converted_obj.columns] = converted_obj
+    del df_obj, converted_obj
 
     predrop = len(df)
     df = df[~df['PULOC'].isnull()]
@@ -198,7 +207,6 @@ if __name__ == "__main__":
 
     # Dropping duplicate records caused by merge of bad airport data by ICE.
     # Should end with set of unique `AlienMasterID` values.
-    # Should not affect any statistics caluclated using unique `AlienMasterID`.
 
     bad_pulocs = pd.read_csv(args.bad_pulocs)
     bad_droplocs = pd.read_csv(args.bad_droplocs)
@@ -210,12 +218,17 @@ if __name__ == "__main__":
     assert premerge == postmerge
     del premerge, postmerge
 
+    temp = pd.concat([df[~df['PULOC_drop'].isnull()],
+                      df[~df['DropLoc_drop'].isnull()]])
+    dupes_to_drop = list(set(temp['AlienMasterID']))
+    temp.to_csv('output/test.csv', sep='|')
+
     predrop = len(df)
     df = df[df['PULOC_drop'].isnull()]
     df = df[df['DropLoc_drop'].isnull()]
     postdrop = len(df)
-    air_duplicates = predrop - postdrop
-    print(f'Dropped {air_duplicates} records with duplicated airports.')
+    dropped_bad_airport_merge = predrop - postdrop
+    print(f'Dropped {dropped_bad_airport_merge} records with duplicated airports.')
     assert len(df) == len(set(df.AlienMasterID))
     del predrop, postdrop
 
@@ -230,6 +243,9 @@ if __name__ == "__main__":
     output_len = len(df)
     df.to_csv(args.output, **to_csv_opts)
 
+    # Outputting a few YAML dictionaries used in downstream tasks
+    # First updating data types that we've cleaned here:
+
     dtypes['Juvenile'] = 'bool'
     dtypes['CountryOfCitizenship'] = 'category'
     dtypes['NonCriminal'] = 'bool'
@@ -237,6 +253,10 @@ if __name__ == "__main__":
     with open(args.dtypes_out, 'w') as outfile:
         yaml.dump(dtypes, outfile,
                   default_flow_style=False)
+
+    # Creating a standard set of airport codes and names
+    # We could standardize all airport metadata in this task, including
+    # longitude/latitude, if desired, especially since some is broken.
 
     pickup_names = df[['PULOC', 'air_AirportName']].drop_duplicates()
     pickup_names.set_index('PULOC', inplace=True)
@@ -253,10 +273,15 @@ if __name__ == "__main__":
                   default_flow_style=False,
                   allow_unicode=True)
 
-    clean_stats = dict(input_len=input_len,
+    # Outputting cleaning statistics for use in reporting
+
+    clean_stats = dict(number_of_input_files=len(files),
+                       input_records=input_records,
+                       input_unique_AlienMasterID=input_unique_AlienMasterID,
+                       duplicate_AlienMasterID=duplicate_AlienMasterID,
                        null_puloc=null_puloc,
                        null_droploc=null_droploc,
-                       air_duplicates=air_duplicates,
+                       dropped_bad_airport_merge=dropped_bad_airport_merge,
                        age_high_bound=age_high_bound,
                        age_low_bound=age_low_bound,
                        output_len=output_len)

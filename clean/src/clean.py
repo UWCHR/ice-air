@@ -28,11 +28,9 @@ def _get_args():
     parser.add_argument("--fy19", required=True)
     parser.add_argument("--clean", required=True)
     parser.add_argument("--status", required=True)
-    parser.add_argument("--missing_airports", required=True)
+    parser.add_argument("--bad_airports", required=True)
     parser.add_argument("--airport_dict", required=True)
     parser.add_argument("--bad_statuses", required=True)
-    parser.add_argument("--bad_droplocs", required=True)
-    parser.add_argument("--bad_pulocs", required=True)
     parser.add_argument("--dtypes_in", required=True)
     parser.add_argument("--dtypes_out", required=True)
     parser.add_argument("--clean_stats", required=True)
@@ -89,11 +87,8 @@ if __name__ == "__main__":
     input_unique_AlienMasterID = len(set(df['AlienMasterID']))
     duplicate_AlienMasterID = len(df) - len(set(df['AlienMasterID']))
 
-    # g = df.groupby(['AlienMasterID']).size()
-    # AlienMasterID_count = g.reset_index(name='AlienMasterID_count').set_index('AlienMasterID')
-    # df = df.join(AlienMasterID_count, on='AlienMasterID')
-    # print(df['AlienMasterID_count'].value_counts(dropna=False))
-
+    # Convert 'object' columns to categories, where efficient.
+    # Implementation via https://www.dataquest.io/blog/pandas-big-data/
     df_obj = df.select_dtypes(include=['object']).copy()
     converted_obj = pd.DataFrame()
 
@@ -109,6 +104,14 @@ if __name__ == "__main__":
     del df_obj, converted_obj
 
     predrop = len(df)
+    df = df.drop_duplicates(subset=['AlienMasterID'])
+    postdrop = len(df)
+    dropped_duplicate_AlienMasterID = predrop - postdrop
+    print(f'Dropped {dropped_duplicate_AlienMasterID} records with duplicated AlienMasterID.')
+    assert len(df) == len(set(df.AlienMasterID))
+    del predrop, postdrop
+
+    predrop = len(df)
     df = df[~df['PULOC'].isnull()]
     postdrop = len(df)
     null_puloc = predrop - postdrop
@@ -122,34 +125,48 @@ if __name__ == "__main__":
     print(f'Dropped {null_droploc} records with null DropLoc')
     del predrop, postdrop
 
-    # Filling in some missing airport name and country values from hand/.
-    # Could integrate this with process for removing duplicate airports?
+    # Fixing some missing/bad airport name and country values from hand/.
+    # This ignores some fields we don't use in analysis, like AirportID
+    # and StateID values.
+    # Not sure all this category fiddling is necessary?
 
-    missing = pd.read_csv(args.missing_airports)
+    bad = pd.read_csv(args.bad_airports)
 
     air_names = list(df['air_AirportName'].cat.categories)
     air2_names = list(df['air2_AirportName'].cat.categories)
     air_countries = list(df['air_Country'].cat.categories)
     air2_countries = list(df['air2_Country'].cat.categories)
+    air_cities = list(df['air_City'].cat.categories)
+    air2_cities = list(df['air2_City'].cat.categories)
 
-    air_names.extend(list(missing['airport_name']))
-    air2_names.extend(list(missing['airport_name']))
-    air_countries.extend(list(missing['airport_country']))
-    air2_countries.extend(list(missing['airport_country']))
+    air_names.extend(list(bad['airport_name'].dropna()))
+    air2_names.extend(list(bad['airport_name'].dropna()))
+    air_countries.extend(list(bad['airport_country'].dropna()))
+    air2_countries.extend(list(bad['airport_country'].dropna()))
+    air_cities.extend(list(bad['airport_city'].dropna()))
+    air2_cities.extend(list(bad['airport_city'].dropna()))
 
     df['air_AirportName'].cat.set_categories(set(air_names), inplace=True)
     df['air2_AirportName'].cat.set_categories(set(air2_names), inplace=True)
     df['air_Country'].cat.set_categories(set(air_countries), inplace=True)
     df['air2_Country'].cat.set_categories(set(air2_countries), inplace=True)
+    df['air_City'].cat.set_categories(set(air_cities), inplace=True)
+    df['air2_City'].cat.set_categories(set(air2_cities), inplace=True)
 
-    for index, row in missing.iterrows():
+    for index, row in bad.iterrows():
         code = row['airport_code']
         name = row['airport_name']
+        city = row['airport_city']
+        state = row['airport_state']
         country = row['airport_country']
         df.loc[df['PULOC'] == code, 'air_Country'] = country
         df.loc[df['PULOC'] == code, 'air_AirportName'] = name
+        df.loc[df['PULOC'] == code, 'air_City'] = city
+        df.loc[df['PULOC'] == code, 'st_StateAbbr'] = state
         df.loc[df['DropLoc'] == code, 'air2_Country'] = country
         df.loc[df['DropLoc'] == code, 'air2_AirportName'] = name
+        df.loc[df['DropLoc'] == code, 'air2_City'] = city
+        df.loc[df['DropLoc'] == code, 'st2_StateAbbr'] = state
 
     with open(args.clean, 'r') as yamlfile:
         clean = yaml.load(yamlfile)
@@ -205,35 +222,6 @@ if __name__ == "__main__":
     df['NonCriminal'] = df['Criminality'] == 'NC'
     df['NonCriminal'] = df['NonCriminal'].astype('category')
 
-    # Dropping duplicate records caused by merge of bad airport data by ICE.
-    # Should end with set of unique `AlienMasterID` values.
-
-    bad_pulocs = pd.read_csv(args.bad_pulocs)
-    bad_droplocs = pd.read_csv(args.bad_droplocs)
-
-    premerge = len(df)
-    df = pd.merge(df, bad_pulocs, how='left')
-    df = pd.merge(df, bad_droplocs, how='left')
-    postmerge = len(df)
-    assert premerge == postmerge
-    del premerge, postmerge
-
-    temp = pd.concat([df[~df['PULOC_drop'].isnull()],
-                      df[~df['DropLoc_drop'].isnull()]])
-    dupes_to_drop = list(set(temp['AlienMasterID']))
-    temp.to_csv('output/test.csv', sep='|')
-
-    predrop = len(df)
-    df = df[df['PULOC_drop'].isnull()]
-    df = df[df['DropLoc_drop'].isnull()]
-    postdrop = len(df)
-    dropped_bad_airport_merge = predrop - postdrop
-    print(f'Dropped {dropped_bad_airport_merge} records with duplicated airports.')
-    assert len(df) == len(set(df.AlienMasterID))
-    del predrop, postdrop
-
-    df = df.drop(['PULOC_drop', 'DropLoc_drop'], axis=1)
-
     to_csv_opts = {'sep': '|',
                    'quotechar': '"',
                    'compression': 'gzip',
@@ -279,9 +267,9 @@ if __name__ == "__main__":
                        input_records=input_records,
                        input_unique_AlienMasterID=input_unique_AlienMasterID,
                        duplicate_AlienMasterID=duplicate_AlienMasterID,
+                       dropped_duplicate_AlienMasterID=dropped_duplicate_AlienMasterID,
                        null_puloc=null_puloc,
                        null_droploc=null_droploc,
-                       dropped_bad_airport_merge=dropped_bad_airport_merge,
                        age_high_bound=age_high_bound,
                        age_low_bound=age_low_bound,
                        output_len=output_len)

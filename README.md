@@ -14,23 +14,14 @@ Tasks in this project are designed to be executed using the recursive make tool 
 
 # TO-DO
 
-- [ ] Clean up analysis notebooks.
-  - Use implementation in `analyze/note/airport.ipynb` to pull chart labels from df name (or use separate name variables).
-- [ ] Start cleaning `Status` field:
-  - [x] First convert all to uppercase, reset categories in `clean/`.
-  - [x] Dump list of bad values to YAML.
-  - [ ] Decide which bad values to standardize.
-- [x] Clean all potential A-numbers (8-9 digit numeric strings)
-  - [ ] Test to make sure not affecting values we want to keep; maybe limit to just `Status` and `GangMember` fields?
-  - [ ] Move to pre-clean task
-    - Does this mean we need to create separate public repo in future?
-
+- [ ] Clean analysis notebooks for publication
+- [ ] Write data appendix report
 
 # ARTS PASSENGER DATA DICTIONARY
 
 Field|Description|(UWCHR notes)
 -----|-----------|-------------
-Status|Criminal Status|(actually relates to grounds for deportation)
+Status|Criminal Status|(actually relates to status of deportation proceedings, partially cleaned)
 Sex|Sex|(cleaned)
 Convictions|Convictions|(not consistent with Criminality in early years of dataset, very messy)
 GangMember|Gang Member|
@@ -50,25 +41,25 @@ MissionWeek|Mission Week|
 MissionQuarter|Mission Quarter|
 MissionYear|Mission Year|
 MissionMonth|Mission Month|
-Criminality|Criminality|(cleaned, missing many values in 2010 but other years pretty good)
-FamilyUnitFlag|Family Unit Flag|
-UnaccompaniedFlag|Unaccompanied Flag|
+Criminality|Criminality|(cleaned, missing many values in early years)
+FamilyUnitFlag|Family Unit Flag|(this field is never used)
+UnaccompaniedFlag|Unaccompanied Flag|(this field is never used)
 AlienMasterID|Unique value assigned by ARTS for Alien|
 MissionID|Unique value assigned by ARTS for mission|
 air_AirportID|Airport ID (numerical)|
 air_AirportName|Airport Name|(cleaned, missing values filled)
-air_City|Airport City|
+air_City|Airport City|(cleaned)
 st_StateID|State ID (Numerical)|
-st_StateAbbr|State Abbreviation|
+st_StateAbbr|State Abbreviation|(cleaned)
 AOR_AORID|Area of Responsibility (Numerical)|
 AOR_AOR|Area of Responsibility (Abbreviation)|
 AOR_AORName|Area of Responsibility|
 air_Country|Airport Country|(missing values filled)
 air2_AirportID|Airport ID (numerical)|
 air2_AirportName|Airport Name|(cleaned, missing values filled)
-air2_City|Airport City |
+air2_City|Airport City |(cleaned)
 st2_StateID|State ID (Numerical)|
-st2_StateAbbr|State Abbreviation|
+st2_StateAbbr|State Abbreviation|(cleaned)
 aor2_AORID|Area of Responsibility (Numerical)|
 aor2_AOR|Area of Responsibility (Abbreviation)|
 aor2_AORName|Area of Responsibility|

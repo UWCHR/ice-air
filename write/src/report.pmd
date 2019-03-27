@@ -85,8 +85,8 @@ The `MissionID` and `MissionNumber` also present limitations for detailed analys
 
 ```python, MissionID_versus_MissionNumber, echo=True
 
-assert sum(df.groupby(['MissionID', 'MissionNumber'])['MissionNumber'].nunique() > 1) == 0
-assert sum(df.groupby(['MissionNumber', 'MissionID'])['MissionID'].nunique() > 1) == 0
+assert sum(df.groupby(['MissionID'])['MissionNumber'].nunique() > 1) == 0
+assert sum(df.groupby(['MissionNumber'])['MissionID'].nunique() > 1) == 0
 assert sum(df.groupby(['MissionNumber', 'MissionID'])['MissionDate'].nunique() > 1) == 0
 assert sum(df.groupby(['MissionID', 'MissionNumber'])['MissionDate'].nunique() > 1) == 0
 

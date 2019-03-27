@@ -11,13 +11,14 @@ all: \
 	output/ice-air-report.html
 
 clean:
-	rm output/*
+	rm -r output/*
 
 output/ice-air-report.html: \
 		src/report.pmd \
 		input/ice-air.csv.gz \
 		input/clean_stats.yaml\
-		input/dtypes.yaml
+		input/dtypes.yaml \
+		hand/data.yaml
 	pweave src/report.pmd -f md2html -o output/ice-air-report.html
 
 

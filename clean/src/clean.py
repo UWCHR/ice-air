@@ -217,8 +217,8 @@ if __name__ == "__main__":
 
     with open(args.bad_statuses, 'w') as outfile:
         yaml.dump(bad_statuses, outfile,
-            default_flow_style=False,
-            allow_unicode=True)
+                  default_flow_style=False,
+                  allow_unicode=True)
 
     airports_to_merge = pd.read_csv(args.airports_to_merge)
     df = pd.merge(df, airports_to_merge,
@@ -227,16 +227,16 @@ if __name__ == "__main__":
                   how='left')
     df = df.drop(['ICAOCode'], axis=1)
     df = df.rename({'LongitudeDecimalDegrees': 'air_LongitudeDecimalDegrees',
-                    'LatitudeDecimalDegrees': 'air_LatitudeDecimalDegrees',}, axis=1)
-    print(df.columns)
+                    'LatitudeDecimalDegrees': 'air_LatitudeDecimalDegrees',},
+                   axis=1)
     df = pd.merge(df, airports_to_merge,
                   left_on='PULOC',
                   right_on='ICAOCode',
                   how='left')
     df = df.drop(['ICAOCode'], axis=1)
     df = df.rename({'LongitudeDecimalDegrees': 'air2_LongitudeDecimalDegrees',
-                    'LatitudeDecimalDegrees': 'air2_LatitudeDecimalDegrees',}, axis=1)
-    print(df.columns)
+                    'LatitudeDecimalDegrees': 'air2_LatitudeDecimalDegrees',},
+                   axis=1)
 
     df['NonCriminal'] = df['Criminality'] == 'NC'
     df['NonCriminal'] = df['NonCriminal'].astype('category')
@@ -256,6 +256,10 @@ if __name__ == "__main__":
     dtypes['Juvenile'] = 'bool'
     dtypes['CountryOfCitizenship'] = 'category'
     dtypes['NonCriminal'] = 'bool'
+    dtypes['air_LongitudeDecimalDegrees'] = 'float'
+    dtypes['air_LatitudeDecimalDegrees'] = 'float'
+    dtypes['air2_LongitudeDecimalDegrees'] = 'float'
+    dtypes['air2_LatitudeDecimalDegrees'] = 'float'
 
     with open(args.dtypes_out, 'w') as outfile:
         yaml.dump(dtypes, outfile,

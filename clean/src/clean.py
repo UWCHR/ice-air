@@ -28,6 +28,7 @@ def _get_args():
     parser.add_argument("--fy19", required=True)
     parser.add_argument("--clean", required=True)
     parser.add_argument("--status", required=True)
+    parser.add_argument("--airports_to_merge", required=True)
     parser.add_argument("--bad_airports", required=True)
     parser.add_argument("--airport_dict", required=True)
     parser.add_argument("--bad_statuses", required=True)
@@ -215,9 +216,27 @@ if __name__ == "__main__":
     bad_statuses = list(status_counts[status_counts > 0].index)
 
     with open(args.bad_statuses, 'w') as outfile:
-            yaml.dump(bad_statuses, outfile,
-                      default_flow_style=False,
-                      allow_unicode=True)
+        yaml.dump(bad_statuses, outfile,
+            default_flow_style=False,
+            allow_unicode=True)
+
+    airports_to_merge = pd.read_csv(args.airports_to_merge)
+    df = pd.merge(df, airports_to_merge,
+                  left_on='PULOC',
+                  right_on='ICAOCode',
+                  how='left')
+    df = df.drop(['ICAOCode'], axis=1)
+    df = df.rename({'LongitudeDecimalDegrees': 'air_LongitudeDecimalDegrees',
+                    'LatitudeDecimalDegrees': 'air_LatitudeDecimalDegrees',}, axis=1)
+    print(df.columns)
+    df = pd.merge(df, airports_to_merge,
+                  left_on='PULOC',
+                  right_on='ICAOCode',
+                  how='left')
+    df = df.drop(['ICAOCode'], axis=1)
+    df = df.rename({'LongitudeDecimalDegrees': 'air2_LongitudeDecimalDegrees',
+                    'LatitudeDecimalDegrees': 'air2_LatitudeDecimalDegrees',}, axis=1)
+    print(df.columns)
 
     df['NonCriminal'] = df['Criminality'] == 'NC'
     df['NonCriminal'] = df['NonCriminal'].astype('category')

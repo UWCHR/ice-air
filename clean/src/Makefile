@@ -9,13 +9,14 @@
 
 all: \
 	output/ice-air.csv.gz
-	
+
 PHONY: all
 
 output/ice-air.csv.gz: \
 	src/clean.py \
 	hand/clean.yaml \
 	hand/bad_airports.csv \
+	hand/airports_to_merge.csv\
 	input/dtypes.yaml \
 	input/status.csv \
 	input/ARTS_Passenger_Data_FY11.csv.gz \
@@ -39,6 +40,7 @@ output/ice-air.csv.gz: \
 		--fy19=input/ARTS_Passenger_Data_FY19.csv.gz \
 		--clean=hand/clean.yaml \
 		--status=input/status.csv \
+		--airports_to_merge=hand/airports_to_merge.csv \
 		--bad_airports=hand/bad_airports.csv \
 		--bad_statuses=output/bad_statuses.yaml \
 		--airport_dict=output/airport_dict.yaml \

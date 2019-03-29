@@ -185,6 +185,7 @@ FY 2012 had the highest passenger volume in the dataset, with <%= r_t_annual.loc
 
 <div align='center'>
 <p><strong>Figure 1: ICE Air Annual Passengers</strong></p>
+
 ```python, trend_plot, echo=False
 
 def removal_transfer_bar(data, title=str, xlabel=str, ylabel=str):
@@ -213,9 +214,7 @@ removal_transfer_bar(r_t_annual,
 ```
 </div>
 
-Passengers 
-
-As revealed by the ARTS data, ICE Air is global in scale. In total, over the period covered by the ARTS dataset, ICE Air operations have been conducted to or from <%= len(usa_pu.union(usa_drop)) %> airports in the U.S. and its territories; and to <% len(foreign_pu.union(foreign_drop)) %> airports in <%= total_countries - 1 %> other countries worldwide.
+In total, over the period covered by the ARTS dataset, ICE Air operations have been conducted to or from <%= len(usa_pu.union(usa_drop)) %> airports in the U.S. and its territories; and to <% len(foreign_pu.union(foreign_drop)) %> airports in <%= total_countries - 1 %> other countries worldwide.
 
 ICE Air's reach has expanded with time. During Fiscal Year 2018, the last year for which complete data is available, ICE Air operations were carried out in <%= expansion.loc[2018, 'Destination Countries'] %> countries, including the United States; passengers were picked up at <%= expansion.loc[2018, 'Pickup Airports'] %> different airports and dropped off at <%= expansion.loc[2018, 'Dropoff Airports'] %> airports. As seen in the chart below, the reach of ICE Air has grown steadily since falling off during FY 2013; with operations in FY 2018 representing its maximum extent in terms of unique dropoff airports and destination countries (including the U.S.).
 

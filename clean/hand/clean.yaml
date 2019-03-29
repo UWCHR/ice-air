@@ -54,6 +54,10 @@ air2_AirportName:
 
 DropLoc:
     'LYPR': 'BKPR'
+    'SPIM': 'SPJC'
+
+PULOC:
+    'SPIM': 'SPJC'
 
 Juvenile:
     'Yes': True

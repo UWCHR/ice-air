@@ -181,14 +181,14 @@ if __name__ == "__main__":
                regex=True,
                inplace=True)
 
+    df['CountryOfCitizenship'].astype('str', inplace=True)
+    df['CountryOfCitizenship'] = df['CountryOfCitizenship'].str.upper()
+    df['CountryOfCitizenship'].fillna('UNKNOWN', inplace=True)
+
     for key in clean.keys():
         print(f'Cleaning {key}')
         df[key] = df[key].replace(clean[key])
         df[key] = df[key].astype('category')
-
-    df['CountryOfCitizenship'].astype('str', inplace=True)
-    df['CountryOfCitizenship'] = df['CountryOfCitizenship'].str.upper()
-    df['CountryOfCitizenship'].fillna('UNKNOWN', inplace=True)
 
     age_high_bound = 99
     age_low_bound = 0

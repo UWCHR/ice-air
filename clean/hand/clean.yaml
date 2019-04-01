@@ -39,6 +39,7 @@ Criminality:
 
 CountryOfCitizenship:
     'CAMODIA': 'CAMBODIA'
+    'DOMNICAN REPUBLIC': 'DOMINICAN REPUBLIC'
     'EL SAL': 'EL SALVADOR'
     'MEXIC': 'MEXICO'
     'MONGOLA': 'MONGOLIA'
@@ -47,8 +48,8 @@ CountryOfCitizenship:
     'ST KITTS-NEVIS': 'ST. KITTS-NEVIS'
     'ST LUCIA': 'ST. LUCIA'
     'ST VINCENT': 'ST. VINCENT & THE GRENADINES'
-    'DOMNICAN REPUBLIC': 'DOMINICAN REPUBLIC'
-
+    'TRINIDAD': 'TRINIDAD & TOBAGO'
+    
 air2_AirportName:
     'Bole International Airport': 'Addis Ababa Bole International Airport'
 
@@ -102,5 +103,13 @@ Status:
     'XFO': '16'
     'XNTA': 'NTA'
     .NAN: 'NO STATUS'
+
+air_Country:
+    'Equatorl Guinea': 'Equatorial Guinea'
+    'Lomé': 'Togo'
+
+air2_Country:
+    'Equatorl Guinea': 'Equatorial Guinea'
+    'Lomé': 'Togo'
 
 ...

@@ -11,8 +11,6 @@ import yaml
 import matplotlib.pyplot as plt
 from tabulate import tabulate
 
-plt.style.use('ggplot')
-
 with open('input/dtypes.yaml', 'r') as yamlfile:
     column_types = yaml.load(yamlfile)
 
@@ -205,6 +203,7 @@ def removal_transfer_bar(data, title=str, xlabel=str, ylabel=str):
 #    ax.set_title(title, fontsize=18)
     ax.tick_params(labelsize=14)
     plt.xticks(rotation=0)
+    plt.legend(fontsize=14)
 #    ax.set_facecolor('#EEEEEE')
 #    ax.grid(color='#FFFFFF')
     
@@ -287,17 +286,17 @@ def country_of_citizenship_trend(data, title=str, filename=str, xlabel=str, ylab
     data.plot(kind='bar', stacked=True, legend=True, ax=ax).legend(bbox_to_anchor=(1,1))
 
     
-#    ax.set_axisbelow(True)
-#    ax.set_facecolor('#EEEEEE')
-#    ax.grid(color='#FFFFFF')
+    ax.set_axisbelow(True)
+    ax.set_facecolor('#EEEEEE')
+    ax.grid(color='#FFFFFF')
     ax.set_ylabel(ylabel, fontsize=16)
     ax.set_xlabel(xlabel, fontsize=16)
-#   ax.set_title(title, fontsize=18)
+#    ax.set_title(title, fontsize=18)
     ax.tick_params(labelsize=14)
     plt.xticks(rotation=0)
 
     fig.set_size_inches(10, 8)
-#   return fig, ax
+#    return fig, ax
 
 country_of_citizenship_trend(top_5_data,
                              title=f'ICE Air {df_to_analyze.name.title()} by Country of Citizenship \n (Top 5 any year)',

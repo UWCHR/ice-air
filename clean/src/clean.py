@@ -1,4 +1,3 @@
-#
 # :date: 2019-02-01
 # :author: PN
 # :copyright: GPL v2 or later
@@ -6,10 +5,10 @@
 # ice-air/clean/src/clean.py
 #
 #
-import pandas as pd
-import numpy as np
 import argparse
 import sys
+import pandas as pd
+import numpy as np
 import yaml
 if sys.version_info[0] < 3:
     raise "Must be using Python 3"

@@ -1,222 +1,888 @@
-BKPR: Pristina International Airport
-DAAG: Houari Boumediene Airport
-DFFD: Ouagadougou Airport
-DGAA: Kotoka International Airport
-DIAP: Port Bouet Airport
-DNMM: Murtala Muhammed International Airport
-DRRN: Diori Hamani International Airport
-DXXX: Lomé–Tokoin Airport
-EDDF: Frankfurt am Main International Airport
-EGGW: London Luton Airport
-EGSS: London Heathrow Airport
-EPWA: Warsaw Chopin Airport
-EYVI: Vilnius International Airport
-FALA: Lanseria Airport
-FCBB: Maya-Maya Airport
-FGSL: Malabo Santa Isabel Airport
-FKKD: Douala International Airport
-FKYS: Yaoundé Nsimalen International Airport
-FLKK: Kenneth Kaunda International/Lusaka Airport
-FOOL: Libreville International Airport
-FTTJ: N'Djamena International Airport
-FVHA: Harare International Airport
-FWKI: Lilongwe - Kamuzu International Airport
-FYWH: Hosea Kutako International Airport
-FZAA: Ndjili International Airport
-GABS: Senou Airport
-GBYD: Banjul International Airport
-GFLL: Lungi International Airport
-GLRB: Roberts International Airport
-GMMN: Mohammed V International Airport
-GOOY: Léopold Sédar Senghor International Airport
-GQNO: Nouakchott-Oumtounsy International Airport
-GUCY: Conakry Airport
-GVAC: Amílcar Cabral International Airport
-GVNP: Praia International Airport
-HAAB: Addis Ababa Bole International Airport
-HBBA: Bujumbura International Airport
-HCMM: Aden Adde International Airport
-HECA: Cairo International Airport
-HKJK: Jomo Kenyatta International Airport
-HRYR: Kigali International Airport
-HSSJ: Juba Airport
-HSSS: Khartoum International Airport
-HTDA: Julius Nyerere International Airport
-HUEN: Entebbe International Airport
-KABI: Abilene Regional Airport
-KABQ: Albuquerque International Sunport Airport
-KAEX: Alexandria International Airport
-KALB: Albany International Airport
-KATL: Hartsfield Jackson Atlanta International Airport
-KAUS: Austin Bergstrom International Airport
-KBDL: Bradley International Airport
-KBED: Laurence G Hanscom Field
-KBFI: Boeing Field King County International Airport
-KBFL: Meadows Field
-KBLV: Mid America St Louis/Scott AFB
-KBNA: Nashville International Airport
-KBOI: Boise Air Terminal/Gowen field
-KBOS: General Edward Lawrence Logan International Airport
-KBRO: Brownsville South Padre Island International Airport
-KBUF: Buffalo Niagara International Airport
-KBWI: Baltimore/Washington International Thurgood Marshall Airport
-KCHS: Charleston International Airport
-KCLE: Cleveland Hopkins International Airport
-KCLT: Charlotte Douglas International Airport
-KCMH: Port Columbus International Airport
-KCOS: City of Colorado Springs Municipal Airport
-KCRP: Corpus Christi International Airport
-KCSG: Columbus Metropolitan Airport
-KCVG: Cincinnati Northern Kentucky International Airport
-KDAL: Dallas Love Field
-KDEN: Denver International Airport
-KDFW: Dallas Fort Worth International Airport
-KDTW: Detroit Metropolitan Wayne County Airport
-KELP: El Paso International Airport
-KEWR: Newark Liberty International Airport
-KFTW: Fort Worth Meacham International Airport
-KGFK: Grand Forks International Airport
-KGRK: Robert Gray  Army Air Field Airport
-KGYY: Gary Chicago International Airport
-KHRL: Valley International Airport
-KHST: Homestead ARB Airport
-KIAD: Washington Dulles International Airport
-KIAG: Niagara Falls International Airport
-KIAH: George Bush Intercontinental Houston Airport
-KIWA: Phoenix-Mesa-Gateway Airport
-KJAX: Jacksonville International Airport
-KKBL: Hamid Karzai International Airport
-KLAS: McCarran International Airport
-KLAW: Lawton Fort Sill Regional Airport
-KLIT: Adams Field
-KLRD: Laredo International Airport
-KMCI: Kansas City International Airport
-KMDT: Harrisburg International Airport
-KMDW: Chicago Midway International Airport
-KMEM: Memphis International Airport
-KMHR: Sacramento Mather Airport
-KMIA: Miami International Airport
-KMSP: Minneapolis-St Paul International/Wold-Chamberlain Airport
-KMWA: Williamson County Regional Airport
-KNJK: El Centro Naf Airport
-KNTD: Point Mugu Naval Air Station (Naval Base Ventura Co)
-KNYL: Yuma MCAS/Yuma International Airport
-KOAK: Metropolitan Oakland International Airport
-KOMA: Eppley Airfield
-KONT: Ontario International Airport
-KOPF: Opa-Locka Executive Airport
-KORD: Chicago O'Hare International Airport
-KPAE: Snohomish County (Paine Field) Airport
-KPDX: Portland International Airport
-KPSM: Portsmouth International Airport
-KRFD: Chicago Rockford International Airport
-KRIC: Richmond International Airport
-KRNO: Reno Tahoe International Airport
-KROW: Roswell International Air Center Airport
-KSAN: San Diego International Airport
-KSAT: San Antonio International Airport
-KSDM: Brown Field Municipal Airport
-KSKF: Lackland Air Force Base (Kelly Field Annex) Airport
-KSLC: Salt Lake City International Airport
-KSMF: Sacramento International Airport
-KSTL: Lambert St Louis International Airport
-KTEB: Teterboro Airport
-KTOL: Toledo Express Airport
-KTUS: Tucson International Airport
-KTWF: Joslin Field Magic Valley Regional Airport
-KVCV: Southern California Logistics Airport
-KYIP: Willow Run Airport
-KYKM: Yakima Air Terminal
-KYNG: Youngston Warren Regional Airport
-LATI: Tirana International Airport Mother Teresa
-LEMD: Adolfo Suarez Madrid-Barajas Airport
-LFPB: Le Bourget International Airport
-LHBP: Budapest Liszt Ferenc international Airport
-LIRA: Ciampino Airport
-LKPR: Ruzyn-¢ International Airport
-LLBG: Ben Gurion International Airport
-LPPD: João Paulo II Airport
-LQSA: Sarajevo International Airport
-LRBS: Bâneasa International Airport
-LROP: Henri Coandâ International Airport
-LTBA: Atatürk International Airport 
-LUKK: Chisinau International Airport
-LWSK: Skopje Alexander the Great Airport
-LYBE: Belgrade Nikola Tesla Airport
-LYPG: Podgorica Airport
-LZIB: M. R. Štefánik Airport
-MDSD: Las Americas International Airport
-MGGT: La Aurora Airport
-MHLM: Ramon Villeda Morales International Airport
-MHSC: Coronel Enrique Soto Cano Air Base
-MHTG: Toncontín International Airport
-MKJP: Norman Manley International Airport
-MMMD: Manuel Crescencio Rejón International Airport
-MMMX: Licenciado Benito Juarez International Airport
-MNMG: Augusto C. Sandino (Managua) International Airport
-MPTO: Panama International Airport
-MSLP: El Salvador International Airport
-MTPP: Toussaint Louverture International Airport
-MUHA: Jose Marti International Airport 
-MYNN: Lynden Pindling International Airport
-MZBZ: Philip S. W. Goldson International Airport
-NFTF: Fua'amotu International Airport
-NSFA: Faleolo International Airport
-NZWN: Wellington International Airport
-OAKB: Kabul International Airport
-OJAI: Queen Alia International Airport
-OJAM: Amman Civil Airport
-OLBA: Beirut Rafic Hariri International Airport
-OMDW: Dubai International Airport
-OPRN: Islamabad International Airport
-ORBI: Baghdad International Airport
-OYSN: Sana'a International Airport
-PHNL: Honolulu International Airport
-PKMJ: Marshall Islands International Airport
-RCTP: Taiwan Taoyuan International Airport
-RJBB: Kansai International Airport
-RPLL: Ninoy Aquino International Airport
-SAEZ: Ezeiza International Airport
-SBBR: Brasilia International Airport
-SBCF: Tancredo Neves International Airport
-SBGR: Guarulhos–Governador André Franco Montoro International Airport 
-SEGU: Simon Bolivar International Airport
-SKBO: El Dorado International Airport
-SLLP: El Alto International Airport 
-SLVR: Viru Viru International Airport
-SMJP: Johan Adolf Pengel International Airport
-SPJC: Jorge Chavez International Airport
-SUMU: Carrasco International Airport
-SYCJ: Cheddi Jagan International Airport
-TAPA: V.C. Bird International Airport
-TBPB: Grantley Adams International Airport
-TDPD: Melville Hall Airport
-TGPY: Grenada International Airport
-TIST: Cyril E. King Airport
-TJBQ: Rafael Hernandez Airport
-TJSJ: Luis Munoz Marin International Airport
-TKPK: Robert L. Bradshaw International Airport
-TLPL: Hewanorra International Airport
-TTPP: Piarco International Airport
-TVSC: Canouan Airport
-TVSV: E. T. Joshua Airport
-TXKF: L.F. Wade International International Airport
-UGTB: Tbilisi International Airport
-UKBB: Boryspil International Airport
-UKKK: Kiev Zhuliany International Airport
-UTDD: Dushanbe Airport
-UTTT: Toshkent Xalqaro
-UUEE: Sheremetyevo International Airport
-UUWW: Vnukovo International Airport
-UWKD: Kazan International Airport
-VCBI: Bandaranaike International Colombo Airport
-VDPP: Phnom Penh International Airport
-VGHS: Dhaka Shahjalal International Airport
-VIDP: Indira Gandhi International Airport
-VNKT: Tribhuvan International Airport
-VTBS: Suvarnabhumi Airport
-VVTS: Tan So'n Nhat International Airport
-VYYY: Yangon International Airport
-YSSY: Sydney Kingsford Smith Airport
-ZBAA: Beijing Capital International Airport
-ZSFZ: Fuzhou Changle International Airport
+BKPR:
+  AirportName: Pristina International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+DAAG:
+  AirportName: Houari Boumediene Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+DFFD:
+  AirportName: Ouagadougou Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+DGAA:
+  AirportName: Kotoka International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+DIAP:
+  AirportName: Port Bouet Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+DNMM:
+  AirportName: Murtala Muhammed International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+DRRN:
+  AirportName: Diori Hamani International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+DXXX:
+  AirportName: Lomé–Tokoin Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+EDDF:
+  AirportName: Frankfurt am Main International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+EGGW:
+  AirportName: London Luton Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+EGSS:
+  AirportName: London Heathrow Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+EPWA:
+  AirportName: Warsaw Chopin Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+EYVI:
+  AirportName: Vilnius International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+FALA:
+  AirportName: Lanseria Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+FCBB:
+  AirportName: Maya-Maya Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+FGSL:
+  AirportName: Malabo Santa Isabel Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -80.278
+FKKD:
+  AirportName: Douala International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+FKYS:
+  AirportName: Yaoundé Nsimalen International Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+FLKK:
+  AirportName: Kenneth Kaunda International/Lusaka Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+FOOL:
+  AirportName: Libreville International Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+FTTJ:
+  AirportName: N'Djamena International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+FVHA:
+  AirportName: Harare International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+FWKI:
+  AirportName: Lilongwe - Kamuzu International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -80.278
+FYWH:
+  AirportName: Hosea Kutako International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+FZAA:
+  AirportName: Ndjili International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+GABS:
+  AirportName: Senou Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+GBYD:
+  AirportName: Banjul International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+GFLL:
+  AirportName: Lungi International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+GLRB:
+  AirportName: Roberts International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+GMMN:
+  AirportName: Mohammed V International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+GOOY:
+  AirportName: Léopold Sédar Senghor International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+GQNO:
+  AirportName: Nouakchott-Oumtounsy International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+GUCY:
+  AirportName: Conakry Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+GVAC:
+  AirportName: Amílcar Cabral International Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+GVNP:
+  AirportName: Praia International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+HAAB:
+  AirportName: Addis Ababa Bole International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+HBBA:
+  AirportName: Bujumbura International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+HCMM:
+  AirportName: Aden Adde International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+HECA:
+  AirportName: Cairo International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+HKJK:
+  AirportName: Jomo Kenyatta International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+HRYR:
+  AirportName: Kigali International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+HSSJ:
+  AirportName: Juba Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+HSSS:
+  AirportName: Khartoum International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+HTDA:
+  AirportName: Julius Nyerere International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+HUEN:
+  AirportName: Entebbe International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -80.278
+KABI:
+  AirportName: Abilene Regional Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+KABQ:
+  AirportName: Albuquerque International Sunport Airport
+  LatitudeDecimalDegrees: 40.692
+  LongitudeDecimalDegrees: -74.169
+KAEX:
+  AirportName: Alexandria International Airport
+  LatitudeDecimalDegrees: 41.261
+  LongitudeDecimalDegrees: -80.679
+KALB:
+  AirportName: Albany International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -97.426
+KATL:
+  AirportName: Hartsfield Jackson Atlanta International Airport
+  LatitudeDecimalDegrees: 35.042
+  LongitudeDecimalDegrees: -89.977
+KAUS:
+  AirportName: Austin Bergstrom International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KBDL:
+  AirportName: Bradley International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KBED:
+  AirportName: Laurence G Hanscom Field
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+KBFI:
+  AirportName: Boeing Field King County International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -97.426
+KBFL:
+  AirportName: Meadows Field
+  LatitudeDecimalDegrees: 47.53
+  LongitudeDecimalDegrees: -122.302
+KBLV:
+  AirportName: Mid America St Louis/Scott AFB
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KBNA:
+  AirportName: Nashville International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -97.426
+KBOI:
+  AirportName: Boise Air Terminal/Gowen field
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KBOS:
+  AirportName: General Edward Lawrence Logan International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KBRO:
+  AirportName: Brownsville South Padre Island International Airport
+  LatitudeDecimalDegrees: 42.74800000000001
+  LongitudeDecimalDegrees: -73.803
+KBUF:
+  AirportName: Buffalo Niagara International Airport
+  LatitudeDecimalDegrees: 33.64
+  LongitudeDecimalDegrees: -84.427
+KBWI:
+  AirportName: Baltimore/Washington International Thurgood Marshall Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KCHS:
+  AirportName: Charleston International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -97.426
+KCLE:
+  AirportName: Cleveland Hopkins International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -97.426
+KCLT:
+  AirportName: Charlotte Douglas International Airport
+  LatitudeDecimalDegrees: 35.214
+  LongitudeDecimalDegrees: -80.943
+KCMH:
+  AirportName: Port Columbus International Airport
+  LatitudeDecimalDegrees: 39.99800000000001
+  LongitudeDecimalDegrees: -82.89200000000002
+KCOS:
+  AirportName: City of Colorado Springs Municipal Airport
+  LatitudeDecimalDegrees: 40.788
+  LongitudeDecimalDegrees: -111.978
+KCRP:
+  AirportName: Corpus Christi International Airport
+  LatitudeDecimalDegrees: 27.77
+  LongitudeDecimalDegrees: -97.501
+KCSG:
+  AirportName: Columbus Metropolitan Airport
+  LatitudeDecimalDegrees: 40.19300000000001
+  LongitudeDecimalDegrees: -76.763
+KCVG:
+  AirportName: Cincinnati Northern Kentucky International Airport
+  LatitudeDecimalDegrees: 39.046
+  LongitudeDecimalDegrees: -84.662
+KDAL:
+  AirportName: Dallas Love Field
+  LatitudeDecimalDegrees: 32.847
+  LongitudeDecimalDegrees: -96.852
+KDEN:
+  AirportName: Denver International Airport
+  LatitudeDecimalDegrees: 37.721
+  LongitudeDecimalDegrees: -122.221
+KDFW:
+  AirportName: Dallas Fort Worth International Airport
+  LatitudeDecimalDegrees: 32.896
+  LongitudeDecimalDegrees: -97.037
+KDTW:
+  AirportName: Detroit Metropolitan Wayne County Airport
+  LatitudeDecimalDegrees: 29.534
+  LongitudeDecimalDegrees: -98.47
+KELP:
+  AirportName: El Paso International Airport
+  LatitudeDecimalDegrees: 44.88
+  LongitudeDecimalDegrees: -93.217
+KEWR:
+  AirportName: Newark Liberty International Airport
+  LatitudeDecimalDegrees: 35.042
+  LongitudeDecimalDegrees: -89.977
+KFTW:
+  AirportName: Fort Worth Meacham International Airport
+  LatitudeDecimalDegrees: 40.692
+  LongitudeDecimalDegrees: -74.169
+KGFK:
+  AirportName: Grand Forks International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+KGRK:
+  AirportName: Robert Gray  Army Air Field Airport
+  LatitudeDecimalDegrees: 31.067
+  LongitudeDecimalDegrees: -97.829
+KGYY:
+  AirportName: Gary Chicago International Airport
+  LatitudeDecimalDegrees: 35.042
+  LongitudeDecimalDegrees: -89.977
+KHRL:
+  AirportName: Valley International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -97.426
+KHST:
+  AirportName: Homestead ARB Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+KIAD:
+  AirportName: Washington Dulles International Airport
+  LatitudeDecimalDegrees: 38.944
+  LongitudeDecimalDegrees: -77.456
+KIAG:
+  AirportName: Niagara Falls International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+KIAH:
+  AirportName: George Bush Intercontinental Houston Airport
+  LatitudeDecimalDegrees: 35.042
+  LongitudeDecimalDegrees: -89.977
+KIWA:
+  AirportName: Phoenix-Mesa-Gateway Airport
+  LatitudeDecimalDegrees: 27.544
+  LongitudeDecimalDegrees: -99.461
+KJAX:
+  AirportName: Jacksonville International Airport
+  LatitudeDecimalDegrees: 35.042
+  LongitudeDecimalDegrees: -89.977
+KKBL:
+  AirportName: Hamid Karzai International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KLAS:
+  AirportName: McCarran International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -97.426
+KLAW:
+  AirportName: Lawton Fort Sill Regional Airport
+  LatitudeDecimalDegrees: 32.116
+  LongitudeDecimalDegrees: -110.941
+KLIT:
+  AirportName: Adams Field
+  LatitudeDecimalDegrees: 40.19300000000001
+  LongitudeDecimalDegrees: -76.763
+KLRD:
+  AirportName: Laredo International Airport
+  LatitudeDecimalDegrees: 43.078056
+  LongitudeDecimalDegrees: -70.82333299999998
+KMCI:
+  AirportName: Kansas City International Airport
+  LatitudeDecimalDegrees: 41.616389
+  LongitudeDecimalDegrees: -87.412778
+KMDT:
+  AirportName: Harrisburg International Airport
+  LatitudeDecimalDegrees: 40.692
+  LongitudeDecimalDegrees: -74.169
+KMDW:
+  AirportName: Chicago Midway International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KMEM:
+  AirportName: Memphis International Airport
+  LatitudeDecimalDegrees: 27.544
+  LongitudeDecimalDegrees: -99.461
+KMHR:
+  AirportName: Sacramento Mather Airport
+  LatitudeDecimalDegrees: 32.656667
+  LongitudeDecimalDegrees: -114.606111
+KMIA:
+  AirportName: Miami International Airport
+  LatitudeDecimalDegrees: 15.452
+  LongitudeDecimalDegrees: -87.92299999999999
+KMSP:
+  AirportName: Minneapolis-St Paul International/Wold-Chamberlain Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KMWA:
+  AirportName: Williamson County Regional Airport
+  LatitudeDecimalDegrees: 37.755
+  LongitudeDecimalDegrees: -89.011111
+KNJK:
+  AirportName: El Centro Naf Airport
+  LatitudeDecimalDegrees: 40.788
+  LongitudeDecimalDegrees: -111.978
+KNTD:
+  AirportName: Point Mugu Naval Air Station (Naval Base Ventura Co)
+  LatitudeDecimalDegrees: 32.116
+  LongitudeDecimalDegrees: -110.941
+KNYL:
+  AirportName: Yuma MCAS/Yuma International Airport
+  LatitudeDecimalDegrees: 47.53
+  LongitudeDecimalDegrees: -122.302
+KOAK:
+  AirportName: Metropolitan Oakland International Airport
+  LatitudeDecimalDegrees: 27.544
+  LongitudeDecimalDegrees: -99.461
+KOMA:
+  AirportName: Eppley Airfield
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KONT:
+  AirportName: Ontario International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+KOPF:
+  AirportName: Opa-Locka Executive Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -80.278
+KORD:
+  AirportName: Chicago O'Hare International Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+KPAE:
+  AirportName: Snohomish County (Paine Field) Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KPDX:
+  AirportName: Portland International Airport
+  LatitudeDecimalDegrees: 32.733000000000004
+  LongitudeDecimalDegrees: -117.189
+KPSM:
+  AirportName: Portsmouth International Airport
+  LatitudeDecimalDegrees: 27.544
+  LongitudeDecimalDegrees: -99.461
+KRFD:
+  AirportName: Chicago Rockford International Airport
+  LatitudeDecimalDegrees: 26.228
+  LongitudeDecimalDegrees: -97.654
+KRIC:
+  AirportName: Richmond International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KRNO:
+  AirportName: Reno Tahoe International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KROW:
+  AirportName: Roswell International Air Center Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KSAN:
+  AirportName: San Diego International Airport
+  LatitudeDecimalDegrees: 39.858
+  LongitudeDecimalDegrees: -104.667
+KSAT:
+  AirportName: San Antonio International Airport
+  LatitudeDecimalDegrees: 30.494
+  LongitudeDecimalDegrees: -81.688
+KSDM:
+  AirportName: Brown Field Municipal Airport
+  LatitudeDecimalDegrees: 32.572222
+  LongitudeDecimalDegrees: -116.980278
+KSKF:
+  AirportName: Lackland Air Force Base (Kelly Field Annex) Airport
+  LatitudeDecimalDegrees: 32.116
+  LongitudeDecimalDegrees: -110.941
+KSLC:
+  AirportName: Salt Lake City International Airport
+  LatitudeDecimalDegrees: 27.544
+  LongitudeDecimalDegrees: -99.461
+KSMF:
+  AirportName: Sacramento International Airport
+  LatitudeDecimalDegrees: 38.695
+  LongitudeDecimalDegrees: -121.591
+KSTL:
+  AirportName: Lambert St Louis International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -97.426
+KTEB:
+  AirportName: Teterboro Airport
+  LatitudeDecimalDegrees: 40.85
+  LongitudeDecimalDegrees: -74.061
+KTOL:
+  AirportName: Toledo Express Airport
+  LatitudeDecimalDegrees: 35.042
+  LongitudeDecimalDegrees: -89.977
+KTUS:
+  AirportName: Tucson International Airport
+  LatitudeDecimalDegrees: 27.544
+  LongitudeDecimalDegrees: -99.461
+KTWF:
+  AirportName: Joslin Field Magic Valley Regional Airport
+  LatitudeDecimalDegrees: 42.481667
+  LongitudeDecimalDegrees: -114.487778
+KVCV:
+  AirportName: Southern California Logistics Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KYIP:
+  AirportName: Willow Run Airport
+  LatitudeDecimalDegrees: 42.238
+  LongitudeDecimalDegrees: -83.53
+KYKM:
+  AirportName: Yakima Air Terminal
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+KYNG:
+  AirportName: Youngston Warren Regional Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+LATI:
+  AirportName: Tirana International Airport Mother Teresa
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LEMD:
+  AirportName: Adolfo Suarez Madrid-Barajas Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+LFPB:
+  AirportName: Le Bourget International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LHBP:
+  AirportName: Budapest Liszt Ferenc international Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+LIRA:
+  AirportName: Ciampino Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+LKPR:
+  AirportName: Ruzyn-¢ International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LLBG:
+  AirportName: Ben Gurion International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LPPD:
+  AirportName: João Paulo II Airport
+  LatitudeDecimalDegrees: 40.19300000000001
+  LongitudeDecimalDegrees: -76.763
+LQSA:
+  AirportName: Sarajevo International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+LRBS:
+  AirportName: Bâneasa International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LROP:
+  AirportName: Henri Coandâ International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LTBA:
+  AirportName: Atatürk International Airport 
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LUKK:
+  AirportName: Chisinau International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+LWSK:
+  AirportName: Skopje Alexander the Great Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LYBE:
+  AirportName: Belgrade Nikola Tesla Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LYPG:
+  AirportName: Podgorica Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+LZIB:
+  AirportName: M. R. Štefánik Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+MDSD:
+  AirportName: Las Americas International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+MGGT:
+  AirportName: La Aurora Airport
+  LatitudeDecimalDegrees: 34.056
+  LongitudeDecimalDegrees: -117.601
+MHLM:
+  AirportName: Ramon Villeda Morales International Airport
+  LatitudeDecimalDegrees: 34.056
+  LongitudeDecimalDegrees: -117.601
+MHSC:
+  AirportName: Coronel Enrique Soto Cano Air Base
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+MHTG:
+  AirportName: Toncontín International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+MKJP:
+  AirportName: Norman Manley International Airport
+  LatitudeDecimalDegrees: 29.534
+  LongitudeDecimalDegrees: -98.47
+MMMD:
+  AirportName: Manuel Crescencio Rejón International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+MMMX:
+  AirportName: Licenciado Benito Juarez International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+MNMG:
+  AirportName: Augusto C. Sandino (Managua) International Airport
+  LatitudeDecimalDegrees: 20.937
+  LongitudeDecimalDegrees: -89.65700000000002
+MPTO:
+  AirportName: Panama International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+MSLP:
+  AirportName: El Salvador International Airport
+  LatitudeDecimalDegrees: 32.82
+  LongitudeDecimalDegrees: -97.362
+MTPP:
+  AirportName: Toussaint Louverture International Airport
+  LatitudeDecimalDegrees: 29.534
+  LongitudeDecimalDegrees: -98.47
+MUHA:
+  AirportName: Jose Marti International Airport 
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+MYNN:
+  AirportName: Lynden Pindling International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+MZBZ:
+  AirportName: Philip S. W. Goldson International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+NFTF:
+  AirportName: Fua'amotu International Airport
+  LatitudeDecimalDegrees: 32.572222
+  LongitudeDecimalDegrees: -116.980278
+NSFA:
+  AirportName: Faleolo International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+NZWN:
+  AirportName: Wellington International Airport
+  LatitudeDecimalDegrees: 32.572222
+  LongitudeDecimalDegrees: -116.980278
+OAKB:
+  AirportName: Kabul International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+OJAI:
+  AirportName: Queen Alia International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+OJAM:
+  AirportName: Amman Civil Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+OLBA:
+  AirportName: Beirut Rafic Hariri International Airport
+  LatitudeDecimalDegrees: 40.85
+  LongitudeDecimalDegrees: -74.061
+OMDW:
+  AirportName: Dubai International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+OPRN:
+  AirportName: Islamabad International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+ORBI:
+  AirportName: Baghdad International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+OYSN:
+  AirportName: Sana'a International Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+PHNL:
+  AirportName: Honolulu International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+PKMJ:
+  AirportName: Marshall Islands International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+RCTP:
+  AirportName: Taiwan Taoyuan International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+RJBB:
+  AirportName: Kansai International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+RPLL:
+  AirportName: Ninoy Aquino International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+SAEZ:
+  AirportName: Ezeiza International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+SBBR:
+  AirportName: Brasilia International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+SBCF:
+  AirportName: Tancredo Neves International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+SBGR:
+  AirportName: Guarulhos–Governador André Franco Montoro International Airport 
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+SEGU:
+  AirportName: Simon Bolivar International Airport
+  LatitudeDecimalDegrees: 37.721
+  LongitudeDecimalDegrees: -122.221
+SKBO:
+  AirportName: El Dorado International Airport
+  LatitudeDecimalDegrees: 29.534
+  LongitudeDecimalDegrees: -98.47
+SLLP:
+  AirportName: El Alto International Airport 
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+SLVR:
+  AirportName: Viru Viru International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+SMJP:
+  AirportName: Johan Adolf Pengel International Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+SPJC:
+  AirportName: Jorge Chavez International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+SUMU:
+  AirportName: Carrasco International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+SYCJ:
+  AirportName: Cheddi Jagan International Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+TAPA:
+  AirportName: V.C. Bird International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+TBPB:
+  AirportName: Grantley Adams International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -80.278
+TDPD:
+  AirportName: Melville Hall Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+TGPY:
+  AirportName: Grenada International Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+TIST:
+  AirportName: Cyril E. King Airport
+  LatitudeDecimalDegrees: 18.337
+  LongitudeDecimalDegrees: -64.973
+TJBQ:
+  AirportName: Rafael Hernandez Airport
+  LatitudeDecimalDegrees: 18.495
+  LongitudeDecimalDegrees: -67.12899999999999
+TJSJ:
+  AirportName: Luis Munoz Marin International Airport
+  LatitudeDecimalDegrees: 18.439
+  LongitudeDecimalDegrees: -66.002
+TKPK:
+  AirportName: Robert L. Bradshaw International Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -80.278
+TLPL:
+  AirportName: Hewanorra International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+TTPP:
+  AirportName: Piarco International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+TVSC:
+  AirportName: Canouan Airport
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -80.278
+TVSV:
+  AirportName: E. T. Joshua Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+TXKF:
+  AirportName: L.F. Wade International International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+UGTB:
+  AirportName: Tbilisi International Airport
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+UKBB:
+  AirportName: Boryspil International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+UKKK:
+  AirportName: Kiev Zhuliany International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+UTDD:
+  AirportName: Dushanbe Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+UTTT:
+  AirportName: Toshkent Xalqaro
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+UUEE:
+  AirportName: Sheremetyevo International Airport
+  LatitudeDecimalDegrees: 43.107
+  LongitudeDecimalDegrees: -78.946
+UUWW:
+  AirportName: Vnukovo International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+UWKD:
+  AirportName: Kazan International Airport
+  LatitudeDecimalDegrees: 40.19300000000001
+  LongitudeDecimalDegrees: -76.763
+VCBI:
+  AirportName: Bandaranaike International Colombo Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+VDPP:
+  AirportName: Phnom Penh International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+VGHS:
+  AirportName: Dhaka Shahjalal International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+VIDP:
+  AirportName: Indira Gandhi International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+VNKT:
+  AirportName: Tribhuvan International Airport
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+VTBS:
+  AirportName: Suvarnabhumi Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+VVTS:
+  AirportName: Tan So'n Nhat International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+VYYY:
+  AirportName: Yangon International Airport
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+YSSY:
+  AirportName: Sydney Kingsford Smith Airport
+  LatitudeDecimalDegrees: 32.572222
+  LongitudeDecimalDegrees: -116.980278
+ZBAA:
+  AirportName: Beijing Capital International Airport
+  LatitudeDecimalDegrees: 47.53
+  LongitudeDecimalDegrees: -122.302
+ZSFZ:
+  AirportName: Fuzhou Changle International Airport
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548

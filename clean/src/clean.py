@@ -268,13 +268,25 @@ if __name__ == "__main__":
     # We could standardize all airport metadata in this task, including
     # longitude/latitude, if desired, especially since some is broken.
 
-    pickup_names = df[['PULOC', 'air_AirportName']].drop_duplicates()
-    pickup_names.set_index('PULOC', inplace=True)
-    dropoff_names = df[['DropLoc', 'air2_AirportName']].drop_duplicates()
-    dropoff_names.set_index('DropLoc', inplace=True)
+    pickup_data = df[['PULOC',
+                      'air_AirportName',
+                      'air_LongitudeDecimalDegrees',
+                      'air_LatitudeDecimalDegrees']].drop_duplicates()
+    pickup_data.set_index('PULOC', inplace=True)
+    pickup_data.columns = ['AirportName',
+                           'LongitudeDecimalDegrees',
+                           'LatitudeDecimalDegrees']
+    dropoff_data = df[['DropLoc',
+                       'air2_AirportName',
+                       'air2_LongitudeDecimalDegrees',
+                       'air2_LatitudeDecimalDegrees']].drop_duplicates()
+    dropoff_data.set_index('DropLoc', inplace=True)
+    dropoff_data.columns = ['AirportName',
+                            'LongitudeDecimalDegrees',
+                            'LatitudeDecimalDegrees']
 
-    pickup_dict = pickup_names.to_dict()['air_AirportName']
-    dropoff_dict = dropoff_names.to_dict()['air2_AirportName']
+    pickup_dict = pickup_data.to_dict('index')
+    dropoff_dict = dropoff_data.to_dict('index')
     airport_dict = {**pickup_dict, **dropoff_dict}
 
     with open(args.airport_dict, 'w') as outfile:

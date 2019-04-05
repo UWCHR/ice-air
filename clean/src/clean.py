@@ -226,15 +226,15 @@ if __name__ == "__main__":
                   how='left')
     df = df.drop(['ICAOCode'], axis=1)
     df = df.rename({'LongitudeDecimalDegrees': 'air_LongitudeDecimalDegrees',
-                    'LatitudeDecimalDegrees': 'air_LatitudeDecimalDegrees',},
+                    'LatitudeDecimalDegrees': 'air_LatitudeDecimalDegrees'},
                    axis=1)
     df = pd.merge(df, airports_to_merge,
-                  left_on='PULOC',
+                  left_on='DropLoc',
                   right_on='ICAOCode',
                   how='left')
     df = df.drop(['ICAOCode'], axis=1)
     df = df.rename({'LongitudeDecimalDegrees': 'air2_LongitudeDecimalDegrees',
-                    'LatitudeDecimalDegrees': 'air2_LatitudeDecimalDegrees',},
+                    'LatitudeDecimalDegrees': 'air2_LatitudeDecimalDegrees'},
                    axis=1)
 
     df['NonCriminal'] = df['Criminality'] == 'NC'

@@ -204,8 +204,8 @@ def removal_transfer_bar(data, title=str, xlabel=str, ylabel=str):
     ax.tick_params(labelsize=14)
     plt.xticks(rotation=0)
     plt.legend(fontsize=14)
-#    ax.set_facecolor('#EEEEEE')
-#    ax.grid(color='#FFFFFF')
+    ax.set_facecolor('#EEEEEE')
+    ax.grid(color='#FFFFFF')
     
     fig.set_size_inches(10, 8)
 

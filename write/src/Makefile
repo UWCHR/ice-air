@@ -8,18 +8,18 @@
 .PHONY: all clean
 
 all: \
-	output/ice-air-report.html
+	output/ice-air-data-appendix.html
 
 clean:
 	rm -r output/*
 
-output/ice-air-report.html: \
-		src/report.pmd \
+output/ice-air-data-appendix.html: \
+		src/data-appendix.pmd \
 		input/ice-air.csv.gz \
 		input/clean_stats.yaml\
 		input/dtypes.yaml \
-		hand/data.yaml
-	pweave src/report.pmd -f md2html -o output/ice-air-report.html
+		hand/arts_cols.yaml
+	pweave src/data-appendix.pmd -f md2html -o output/ice-air-data-appendix.html
 
 
 # done.

@@ -667,13 +667,386 @@ img {max-width : 100%}
             <div class = "col-md-12 twelve columns">
 
 
-<h1>ICE Air: Data Appendix</h1>
+<div class="highlight"><pre><span></span><span class="c1"># Author: University of Washington Center for Human Rights</span>
+<span class="c1"># Title: ICE Air Data Appendix</span>
+<span class="c1"># Date: 2019-04-24</span>
+<span class="c1"># License: GPL 3.0 or greater</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+</pre></div>
+
+<h1>ICE Air Data Appendix</h1>
+<p>This is an appendix to the report <a href="">Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation</a>, which uses data from ICE's Alien Repatriation Tracking System (ARTS) released by ICE Enforcement and Removal Operations pursuant to a Freedom of Information Act request by the <a href="https://jsis.washington.edu/humanrights/">University of Washington Center for Human Rights</a>. This appendix is intended to provide readers with greater detail on the contents, structure, and limitations of this dataset, and the process our researchers performed to render it suitable for social scientific analysis.</p>
 <h2>The ARTS dataset</h2>
 
-<p>This report uses data from ICE's Alien Repatriation Tracking System (ARTS) released by ICE Enforcement and Removal Operations pursuant to a Freedom of Information Act (FOIA) request by the University of Washington Center for Human Rights. This appendix is intended to provide readers with greater detail on the contents, structure, and limitations of this dataset, and the process our researchers performed to render it suitable for social scientific analysis.</p>
+<div class="highlight"><pre><span></span><span class="c1"># Get optimal data types before reading in the ARTS dataset</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input/dtypes.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">yamlfile</span><span class="p">:</span>
+    <span class="n">column_types</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">yamlfile</span><span class="p">)</span>
+<span class="n">read_csv_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sep&#39;</span><span class="p">:</span> <span class="s1">&#39;|&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;quotechar&#39;</span><span class="p">:</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;compression&#39;</span><span class="p">:</span> <span class="s1">&#39;gzip&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;encoding&#39;</span><span class="p">:</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;dtype&#39;</span><span class="p">:</span> <span class="n">column_types</span><span class="p">,</span>
+                 <span class="s1">&#39;parse_dates&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;MissionDate&#39;</span><span class="p">],</span>
+                 <span class="s1">&#39;infer_datetime_format&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;input/ice-air.csv.gz&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">read_csv_opts</span><span class="p">)</span>
+
+<span class="c1"># The ARTS Data Dictionary as released by ICE</span>
+<span class="n">data_dict</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;input/ARTS_Data_Dictionary.csv.gz&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;gzip&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
+<span class="n">data_dict</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">,</span> <span class="s1">&#39;Definition&#39;</span><span class="p">]</span>
+
+<span class="c1"># A YAML file containing the field names in the original ARTS dataset</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;hand/arts_cols.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">yamlfile</span><span class="p">:</span>
+    <span class="n">arts_cols</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">yamlfile</span><span class="p">)</span>
+
+<span class="c1"># Asserting characteristics of key fields</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">]))</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionNumber&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionID&#39;</span><span class="p">]))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionNumber&#39;</span><span class="p">]))</span>
+</pre></div>
+
+
+
 <p>Following cleaning by UWCHR as detailed below, the ARTS dataset contains 1732625 records relating to ICE Air Operations charter flights during the period from October 1, 2010 to December 5, 2018, including full data for U.S. Federal Government Fiscal Years 2011 through 2018. Each record in the dataset relates to a single passenger on a single ICE Air mission.</p>
-<p>The ARTS dataset is made up of 43 fields, defined in a data dictionary provided by ICE (see project <a href="https://github.com/UWCHR/ice-air/blob/master/README.md">README</a> or <code>import/output/ARTS_Data_Dictionary.csv.gz</code>); however, as described below, the content of these fields does not always conform to the definitions provided. The first 25 fields relate to passenger and mission characteristics; the latter 18 fields, marked by various prefixes, relate to characteristics of the airports and locations associated with each record. (Additional fields generated by UWCHR in the process of analysis of the dataset are not enumerated here.) There is no indication that the content of any of these fields was withheld or redacted by ICE upon release of the dataset. However, according to a <a href="https://www.oig.dhs.gov/sites/default/files/assets/Mgmt/2015/OIG_15-57_Apr15.pdf">2015 audit of ICE Air by the Department of Homeland Security Office of Inspector General (OIG)</a>, the ARTS database does include additional fields which were not released to UWCHR, including passenger A-Numbers and Fingerprint IDs; and details on the cost of individual flights.</p>
-<p>The ARTS dataset uses three key fields to identify passengers (<code>AlienMasterID</code>) and missions (<code>MissionID</code> and <code>MissionNumber</code>). The <code>AlienMasterID</code> field is made up of 1732625 unique values. <code>AlienMasterID</code> values are numeric strings starting at 5000 and incrementing to 2047246, with some values skipped. Each <code>AlienMasterID</code> value is used only once; repeat passengers on multiple flights cannot be identified based solely on this field. The <code>MissionID</code> and <code>MissionNumber</code> fields each contain 14961 values; like <code>AlienMasterID</code>, these are also numeric strings that increase incrementally over time.</p>
+<p>The ARTS dataset is made up of 43 fields, defined in a data dictionary provided by ICE; however, as described below, the content of these fields does not always conform to the definitions provided:</p>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Field</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Status</td>
+      <td>Criminal Status</td>
+    </tr>
+    <tr>
+      <td>Sex</td>
+      <td>Sex</td>
+    </tr>
+    <tr>
+      <td>Convictions</td>
+      <td>Convictions</td>
+    </tr>
+    <tr>
+      <td>GangMember</td>
+      <td>Gang Member</td>
+    </tr>
+    <tr>
+      <td>ClassLvl</td>
+      <td>Class Level</td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td>Age</td>
+    </tr>
+    <tr>
+      <td>MissionDate</td>
+      <td>Mission Date</td>
+    </tr>
+    <tr>
+      <td>MissionNumber</td>
+      <td>Mission Number (i.e., Flight Number)</td>
+    </tr>
+    <tr>
+      <td>PULOC</td>
+      <td>Pick up location</td>
+    </tr>
+    <tr>
+      <td>DropLoc</td>
+      <td>Drop off location</td>
+    </tr>
+    <tr>
+      <td>StrikeFromList</td>
+      <td>Was Alien struck from mission</td>
+    </tr>
+    <tr>
+      <td>ReasonStruck</td>
+      <td>Reason Struck</td>
+    </tr>
+    <tr>
+      <td>R-T</td>
+      <td>Removal or Transfer</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>Criminality Code</td>
+    </tr>
+    <tr>
+      <td>CountryOfCitizenship</td>
+      <td>Country of Citizenship</td>
+    </tr>
+    <tr>
+      <td>Juvenile</td>
+      <td>Is Alien a Juvenile</td>
+    </tr>
+    <tr>
+      <td>MissionWeek</td>
+      <td>Mission Week</td>
+    </tr>
+    <tr>
+      <td>MissionQuarter</td>
+      <td>Mission Quarter</td>
+    </tr>
+    <tr>
+      <td>MissionYear</td>
+      <td>Mission Year</td>
+    </tr>
+    <tr>
+      <td>MissionMonth</td>
+      <td>Mission Month</td>
+    </tr>
+    <tr>
+      <td>Criminality</td>
+      <td>Criminality</td>
+    </tr>
+    <tr>
+      <td>FamilyUnitFlag</td>
+      <td>Family Unit Flag</td>
+    </tr>
+    <tr>
+      <td>UnaccompaniedFlag</td>
+      <td>Unaccompanied Flag</td>
+    </tr>
+    <tr>
+      <td>AlienMasterID</td>
+      <td>Unique value assigned by ARTS for Alien</td>
+    </tr>
+    <tr>
+      <td>MissionID</td>
+      <td>Unique value assigned by ARTS for mission</td>
+    </tr>
+    <tr>
+      <td>air_AirportID</td>
+      <td>Airport ID (numerical)</td>
+    </tr>
+    <tr>
+      <td>air_AirportName</td>
+      <td>Airport Name</td>
+    </tr>
+    <tr>
+      <td>air_City</td>
+      <td>Airport City</td>
+    </tr>
+    <tr>
+      <td>st_StateID</td>
+      <td>State ID (Numerical)</td>
+    </tr>
+    <tr>
+      <td>st_StateAbbr</td>
+      <td>State Abbreviation</td>
+    </tr>
+    <tr>
+      <td>AOR_AORID</td>
+      <td>Area of Responsibility (Numerical)</td>
+    </tr>
+    <tr>
+      <td>AOR_AOR</td>
+      <td>Area of Responsibility (Abbreviation)</td>
+    </tr>
+    <tr>
+      <td>AOR_AORName</td>
+      <td>Area of Responsibility</td>
+    </tr>
+    <tr>
+      <td>air_Country</td>
+      <td>Airport Country</td>
+    </tr>
+    <tr>
+      <td>air2_AirportID</td>
+      <td>Airport ID (numerical)</td>
+    </tr>
+    <tr>
+      <td>air2_AirportName</td>
+      <td>Airport Name</td>
+    </tr>
+    <tr>
+      <td>air2_City</td>
+      <td>Airport City</td>
+    </tr>
+    <tr>
+      <td>st2_StateID</td>
+      <td>State ID (Numerical)</td>
+    </tr>
+    <tr>
+      <td>st2_StateAbbr</td>
+      <td>State Abbreviation</td>
+    </tr>
+    <tr>
+      <td>aor2_AORID</td>
+      <td>Area of Responsibility (Numerical)</td>
+    </tr>
+    <tr>
+      <td>aor2_AOR</td>
+      <td>Area of Responsibility (Abbreviation)</td>
+    </tr>
+    <tr>
+      <td>aor2_AORName</td>
+      <td>Area of Responsibility</td>
+    </tr>
+    <tr>
+      <td>air2_Country</td>
+      <td>Airport Country</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The first 25 fields relate to passenger and mission characteristics; the latter 18 fields, marked by various prefixes, relate to characteristics of the airports and locations associated with each record. (Additional fields generated by UWCHR in the process of analysis of the dataset are not enumerated here.) There is no indication that the content of any of these fields was withheld or redacted by ICE upon release of the dataset. However, according to a <a href="https://www.oig.dhs.gov/sites/default/files/assets/Mgmt/2015/OIG_15-57_Apr15.pdf">2015 audit of ICE Air by the Department of Homeland Security Office of Inspector General (OIG)</a>, the ARTS database does include additional fields which were not released to UWCHR, including passenger A-Numbers and Fingerprint IDs; and details on the cost of individual flights.</p>
+<p>The ARTS dataset uses three key fields to identify passengers (<code>AlienMasterID</code>) and missions (<code>MissionID</code> and <code>MissionNumber</code>). The <code>AlienMasterID</code> field is made up of 1732625 unique values. <code>AlienMasterID</code> values are numeric strings starting at 5000 and incrementing to 2047246, with some values skipped. Each <code>AlienMasterID</code> value is used only once; repeat passengers on multiple flights cannot be identified based solely on this field. Below we will display a subset of columns relating to passenger characteristics for the most recent records in the dataset.</p>
+
+<div class="highlight"><pre><span></span><span class="n">selected_passenger_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">,</span> <span class="s1">&#39;Status&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Convictions&#39;</span><span class="p">,</span> <span class="s1">&#39;GangMember&#39;</span><span class="p">,</span> <span class="s1">&#39;ClassLvl&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span>
+<span class="s1">&#39;PULOC&#39;</span><span class="p">,</span> <span class="s1">&#39;DropLoc&#39;</span><span class="p">,</span> <span class="s1">&#39;StrikeFromList&#39;</span><span class="p">,</span> <span class="s1">&#39;ReasonStruck&#39;</span><span class="p">,</span> <span class="s1">&#39;R-T&#39;</span><span class="p">,</span> <span class="s1">&#39;CountryOfCitizenship&#39;</span><span class="p">]</span>
+
+<span class="n">sample_records</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">selected_passenger_cols</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>AlienMasterID</th>
+      <th>Status</th>
+      <th>Sex</th>
+      <th>Convictions</th>
+      <th>GangMember</th>
+      <th>Age</th>
+      <th>PULOC</th>
+      <th>DropLoc</th>
+      <th>R-T</th>
+      <th>CountryOfCitizenship</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2047241</td>
+      <td>8F</td>
+      <td>M</td>
+      <td>NC</td>
+      <td>N</td>
+      <td>22.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+    <tr>
+      <td>2047242</td>
+      <td>8F</td>
+      <td>M</td>
+      <td>NC</td>
+      <td>N</td>
+      <td>20.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+    <tr>
+      <td>2047243</td>
+      <td>8F</td>
+      <td>M</td>
+      <td>Illegal Entry</td>
+      <td>N</td>
+      <td>32.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+    <tr>
+      <td>2047245</td>
+      <td>16</td>
+      <td>M</td>
+      <td>Illegal Entry</td>
+      <td>N</td>
+      <td>24.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+    <tr>
+      <td>2047246</td>
+      <td>16</td>
+      <td>M</td>
+      <td>NC</td>
+      <td>N</td>
+      <td>27.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code>MissionID</code> and <code>MissionNumber</code> fields each contain 14961 values; like <code>AlienMasterID</code>, these are also numeric strings that increase incrementally over time. Below we will display records for a single ICE Air mission</p>
+
+<div class="highlight"><pre><span></span><span class="c1"># sample_mission_id = 47425</span>
+<span class="c1"># sample_records = df[df[&#39;MissionID&#39; == sample_mission_id]]</span>
+<span class="n">sample_records</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;MissionDate&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionID&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionNumber&#39;</span><span class="p">,</span> <span class="s1">&#39;PULOC&#39;</span><span class="p">,</span> <span class="s1">&#39;DropLoc&#39;</span><span class="p">])[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>MissionDate</th>
+      <th>MissionID</th>
+      <th>MissionNumber</th>
+      <th>PULOC</th>
+      <th>DropLoc</th>
+      <th>AlienMasterID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KMSP</td>
+      <td>KAEX</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KMSP</td>
+      <td>KBRO</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KOMA</td>
+      <td>KAEX</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KOMA</td>
+      <td>KBRO</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KBRO</td>
+      <td>KAEX</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2>Data Cleaning</h2>
 
 <p>The raw ARTS dataset was released by ICE as 9 XLSX format files, these were combined into a single dataset containing 1763020 records. For space reasons, the raw files are not stored in the project's Git repository, but are available via <a href="https://drive.google.com/drive/folders/1DFhlKSI1u9yrPqPmLKW0o2IKUsUhSEIl?usp=sharing">UWCHR's Google Drive</a>. Prior to analysis, the ARTS dataset was converted from XLSX to CSV format and cleaned to standardize fields and remove some records with missing data. </p>
@@ -708,9 +1081,9 @@ img {max-width : 100%}
 <h2>Notes</h2>
     <HR/>
     <div class="footer">
-      <p>Published from <a href="src/report.pmd">src/report.pmd</a>
+      <p>Published from <a href="src/data-appendix.pmd">src/data-appendix.pmd</a>
     using <a href="http://mpastell.com/pweave">Pweave</a> 0.30.3
-    on 10-04-2019.<p></div>
+    on 12-04-2019.<p></div>
 
             </div>
         </div>

@@ -1,0 +1,106 @@
+```python, imports, echo=False
+# Author: University of Washington Center for Human Rights
+# Title: ICE Air Data Appendix
+# Date: 2019-04-24
+# License: GPL 3.0 or greater
+
+import pandas as pd
+import numpy as np
+import yaml
+import matplotlib.pyplot as plt
+
+with open('input/dtypes.yaml', 'r') as yamlfile:
+    column_types = yaml.load(yamlfile)
+read_csv_opts = {'sep': '|',
+                 'quotechar': '"',
+                 'compression': 'gzip',
+                 'encoding': 'utf-8',
+                 'dtype': column_types,
+                 'parse_dates': ['MissionDate'],
+                 'infer_datetime_format': True}
+df = pd.read_csv('input/ice-air.csv.gz', **read_csv_opts)
+
+```
+
+```python, footnote_functions, echo=False
+
+# Functions for HTML formatted footnotes
+
+fn_count = 1
+fn_buffer = []
+
+def fn(ref_text=str):
+    global fn_count, fn_buffer
+    ftn_sup = f'<a href="#_ftn{fn_count}" name="_ftnref{fn_count}"><sup>[{fn_count}]</sup></a>'
+    ftn_ref = f'<a href="#_ftnref{fn_count}" name="_ftn{fn_count}"><sup>[{fn_count}]</sup></a> {ref_text}'
+    fn_buffer.append(ftn_ref)
+    fn_count = fn_count + 1
+    print(ftn_sup)
+
+def print_fn_refs():
+    global fn_buffer
+    for fn in fn_buffer:
+        print(fn)
+        print()
+
+```
+
+# The ARTS dataset
+
+The ARTS dataset contains <%= round((len(set(df['AlienMasterID'])) / 1000000), 2) %> million records of passengers on nearly <%= int(round((len(set(df['MissionID']))/1000), 1))%>,000 ICE Air Operations missions during the period from <%= print(df['MissionDate'].min().strftime('%B %-d, %Y')) %> to <%= print(df['MissionDate'].max().strftime('%B %-d, %Y')) %>.
+
+```python, removal_transfer_trends, echo=False
+
+removal_percent = round((len(df.loc[df['R-T'] == 'R']) / len(df) * 100), 2)
+transfer_percent = round((len(df.loc[df['R-T'] == 'T']) / len(df) * 100), 2)
+
+df.set_index('MissionDate', inplace=True)
+
+removals = df['R-T'] == 'R'
+transfers = df['R-T'] == 'T'
+
+annual_removals = df[removals]['AlienMasterID'].resample('AS-OCT').nunique()
+annual_removals.name = 'Total removals'
+annual_transfers = df[transfers]['AlienMasterID'].resample('AS-OCT').nunique()
+annual_transfers.name = 'Total transfers'
+
+r_t_annual = pd.DataFrame({'Removals': annual_removals['2010':'2017'], 'Transfers': annual_transfers['2010':'2017']})
+r_t_annual.index = [f'FY{str(x)[2:4]}' for x in r_t_annual.index.year + 1]
+
+```
+
+<p><strong>Figure 1: ICE Air annual passengers, removals plus transfers<%= fn('Chart elaborated by UWCHR with data from ICE Air ARTS dataset.') %></strong></p>
+
+<div align='center'>
+
+```python, removal_transfer_trend_plot, echo=False
+
+def removal_transfer_bar(data, title=str, xlabel=str, ylabel=str):
+    
+    fig, ax = plt.subplots()
+    
+    data.plot(kind='bar', stacked=True, legend=True, ax=ax).legend(bbox_to_anchor=(1,1))
+    
+    ax.set_axisbelow(True)
+    ax.set_ylabel(ylabel, fontsize=16)
+    ax.set_xlabel(xlabel, fontsize=16)
+    
+#    ax.set_title(title, fontsize=18)
+    ax.tick_params(labelsize=14)
+    plt.xticks(rotation=0)
+    plt.legend(fontsize=14)
+    ax.set_facecolor('#EEEEEE')
+    ax.grid(color='#FFFFFF')
+    
+    fig.set_size_inches(10, 8)
+
+removal_transfer_bar(r_t_annual,
+                     title=f'ICE Air Annual Passengers',
+                     ylabel=f'Total Passengers',
+                     xlabel='Fiscal Year');
+
+```
+
+</div>
+
+<%= print_fn_refs() %>

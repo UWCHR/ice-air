@@ -1,3 +1,7 @@
+# Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation
+
+*Please see the UWCHR’s companion report, *“King County Collaboration with ICE Air Deportation Flights at Boeing Field”,* for a detailed explanation of Immigration and Customs Enforcement Air Operations in King County. For further background on the Alien Repatriation Tracking System (ARTS) database discussed here and our research methods to interpret it, please see the Data Appendix to this report. We anticipate publishing future research on this topic.*
+
 ```python, imports, echo=False
 # Author: University of Washington Center for Human Rights
 # Title: ICE Air Data Appendix
@@ -45,34 +49,47 @@ def print_fn_refs():
 
 ```
 
-# The ARTS dataset
+Concern about the human rights implications of the detention and deportation of immigrants has spread across the United States. Dedicated activists and researchers have exposed problems throughout the many processes of immigration enforcement, from [racial profiling in immigration policing](https://www.propublica.org/article/racial-profiling-ice-immigration-enforcement-pennsylvania); [retaliatory enforcement against human rights defenders](https://www.youtube.com/watch?v=B7md6cgz3YY); [abuse](https://www.amnestyusa.org/reports/usa-jailed-without-justice/), [medical neglect](https://www.hrw.org/news/2018/06/20/us-poor-medical-care-deaths-immigrant-detention), and [death in detention](https://www.aclu.org/report/code-red-fatal-consequences-dangerously-substandard-medical-care-immigration-detention); the [separation of minors from their families](https://www.newyorker.com/news/dispatch/the-uncounted-families-torn-apart-at-the-border-by-the-trump-administration); the [mental health impacts of deportation](https://onlinelibrary.wiley.com/doi/epdf/10.1002/ajcp.12256); and many other concerns. But until now, relatively little attention has been paid to the final link in the immigration enforcement chain: the process of deportation itself.
 
-The ARTS dataset contains <%= round((len(set(df['AlienMasterID'])) / 1000000), 2) %> million records of passengers on nearly <%= int(round((len(set(df['MissionID']))/1000), 1))%>,000 ICE Air Operations missions during the period from <%= print(df['MissionDate'].min().strftime('%B %-d, %Y')) %> to <%= print(df['MissionDate'].max().strftime('%B %-d, %Y')) %>.
+And yet, it is here that this long series of indignities and illegalities is rendered most concrete. As its official name---removal---suggests, this process involves the physical expulsion of a person from the United States. Moreover, at times this process [may even lead to that person’s death](https://rewire.news/article/2017/09/21/deported-death-cases-reveal-danger-u-s-immigration-policy/).
+
+Deportation relies on a complex network of public and private institutions, but in most cases its final phase is carried out, at least in part, aboard a plane.<%= fn("An exception to this is Mexican nationals, who are often deported across the US border by land. Even for such cases, however, ICE Air runs removal missions that transfer Mexicans apprehended elsewhere to US border cities from which they are bussed across the border.") %> Over the past decade, the institutional infrastructure behind these flights has shifted from a government operation run by the US Marshals Service on government planes, to a sprawling, semi-secret network of flights on privately-owned aircraft chartered by Immigration and Customs Enforcement Air Operations (known colloquially as “ICE Air”). This report aims to peel back the secrecy that has surrounded the operations of ICE Air, in order to lay bare the structures that empower and conceal these abuses.
+
+At the request of immigrant community organizations in Washington state, in 2018 the University of Washington Center for Human Rights filed a Freedom of Information Act (FOIA) request for data about deportation flights operating at the King County International Airport (Boeing Field), and obtained an extract from ICE’s Alien Repatriation Tracking System (ARTS) specific to that airport. Recognizing the importance of understanding these patterns at a national level, we then filed a request for the entire ARTS database.<%= fn("We are grateful for the supportive interventions by the offices of Sen. Maria Cantwell and Rep. Pramila Jayapal when this request was initially ignored by ICE.") %> In December 2018, we obtained the national dataset analyzed in this report. We believe this is the first time any portion of the ARTS database has been made public, and that its release can shed significant light on both the structure of the ICE Air network and the collaboration of public authorities in its operations.
+
+To examine the dataset and its human rights implications, the UW Center for Human Rights commissioned a team of student researchers<%= fn("These students included Zinaida Carroll, Julia Gentner, Sasha Jenkins, Eleanore Johnson, Ariella Kleiman, Shawna Krueger, Jackie Montstream, Sorana Nance, Colin Newton, Grace Sorensen, Grace Stephenson, Upandha Udalagama, and Julianne Werner. Additional research was performed by Emily Willard, Miguel Mariscal, and Guy Oron.") %> who, jointly with Center faculty and staff, conducted research on ICE Air operations in early 2019. This research involved quantitative data analysis; the analysis of documents obtained through online research and public records requests under the Freedom of Information Act, Washington State’s Public Records Act, and access to information laws in Guatemala, Honduras, and El Salvador; and interviews with immigrant rights advocates, former deportees and family members, local elected officials, an employee of an air charter company that contracts with ICE, and an ICE employee from the Office of Acquisition Management who oversees the contracting process. This research remains ongoing, and we anticipate releasing future findings as they become available. 
+
+As part of our effort to share this information as broadly as possible, we are also publishing the dataset itself alongside this report.<%= fn('The dataset and code used to output this report will be made available at the time of publication via GitHub at the following link: https://github.com/UWCHR/ice-air') %>
 
 ```python, removal_transfer_trends, echo=False
+
+earliest_record = df['MissionDate'].min().strftime('%B %-d, %Y')
+latest_record = df['MissionDate'].max().strftime('%B %-d, %Y')
 
 removal_percent = round((len(df.loc[df['R-T'] == 'R']) / len(df) * 100), 2)
 transfer_percent = round((len(df.loc[df['R-T'] == 'T']) / len(df) * 100), 2)
 
-df.set_index('MissionDate', inplace=True)
+# df.set_index('MissionDate', inplace=True)
 
 removals = df['R-T'] == 'R'
 transfers = df['R-T'] == 'T'
 
-annual_removals = df[removals]['AlienMasterID'].resample('AS-OCT').nunique()
+annual_removals = df[removals].resample('AS-OCT', on='MissionDate')['AlienMasterID'].nunique()
 annual_removals.name = 'Total removals'
-annual_transfers = df[transfers]['AlienMasterID'].resample('AS-OCT').nunique()
+annual_transfers = df[transfers].resample('AS-OCT', on='MissionDate')['AlienMasterID'].nunique()
 annual_transfers.name = 'Total transfers'
 
 r_t_annual = pd.DataFrame({'Removals': annual_removals['2010':'2017'], 'Transfers': annual_transfers['2010':'2017']})
 r_t_annual.index = [f'FY{str(x)[2:4]}' for x in r_t_annual.index.year + 1]
 
 ```
+# The ARTS dataset
+
+The ARTS dataset contains <%= round((len(set(df['AlienMasterID'])) / 1000000), 2) %> million records of passengers on nearly <%= int(round((len(set(df['MissionID']))/1000), 1))%>,000 ICE Air Operations missions during the period from <%= print(earliest_record) %> to <%= print(latest_record) %>. Most of these (<%= removal_percent %>) are removal flights, where passengers are flown to other countries (or, in the case of the majority of Mexican nationals, flown to a US border city from which they are transported by land into Mexico.) <%= transfer_percent %> of them, however, are internal transfers, whereby detainees are moved around the US, potentially multiple times prior to their ultimate deportation. Due to limitations of the dataset, it is difficult to discern which internal transfer flights are simply the first leg in a scheduled deportation, as opposed to the relocation of a detained person to a new detention center. For this reason, we refer to all flights in the ARTS dataset as “deportation flights.” (For details on the uses and limitations of the data set, see the Data Appendix.)
 
 <p><strong>Figure 1: ICE Air annual passengers, removals plus transfers<%= fn('Chart elaborated by UWCHR with data from ICE Air ARTS dataset.') %></strong></p>
 
 <div align='center'>
-
 ```python, removal_transfer_trend_plot, echo=False
 
 def removal_transfer_bar(data, title=str, xlabel=str, ylabel=str):
@@ -100,7 +117,39 @@ removal_transfer_bar(r_t_annual,
                      xlabel='Fiscal Year');
 
 ```
-
 </div>
+```python, ice_air_extent, echo=False
+
+usa_pu = set(df.loc[df['air_Country'] == 'USA']['PULOC'].dropna())
+usa_drop = set(df.loc[df['air2_Country'] == 'USA']['DropLoc'].dropna())
+foreign_pu = set(df.loc[df['air_Country'] != 'USA']['PULOC'].dropna())
+foreign_drop = set(df.loc[df['air2_Country'] != 'USA']['DropLoc'].dropna())
+
+pickup_countries = set(df['air_Country'].dropna())
+dropoff_countries = set(df['air2_Country'].dropna())
+total_countries = len(set(df['air_Country']).union(set(df['air2_Country'])))
+
+assert sum(df['DropLoc'].isnull()) == 0
+assert sum(df['PULOC'].isnull()) == 0
+
+droplocs_per_fy = df.resample('AS-OCT', on='MissionDate')['DropLoc']
+pulocs_per_fy = df.resample('AS-OCT', on='MissionDate')['PULOC']
+drop_countries_per_fy = df.resample('AS-OCT', on='MissionDate')['air2_Country']
+pu_countries_per_fy = df.resample('AS-OCT', on='MissionDate')['air_Country']
+
+unique_droplocs = droplocs_per_fy.nunique()
+unique_pulocs = pulocs_per_fy.nunique()
+unique_countries = drop_countries_per_fy.nunique()
+expansion = pd.DataFrame({'Unique Pickup Airports': unique_pulocs,
+                          'Unique Dropoff Airports': unique_droplocs,
+                          'Unique Destination Countries': unique_countries})
+expansion.index = expansion.index.year + 1
+expansion.index.name = 'FY'
+
+```
+The ARTS dataset also reveals the extent of local collaboration across the country and world required to operate this network. In the US, participating airports include ICE Air’s five main hubs (Mesa, AZ; Brownsville, TX; Miami, FL; San Antonio, TX; and Alexandria, LA); as well as <%= len(usa_pu.union(usa_drop)) - 5 %> other airports scattered across the country, some in “sanctuary” jurisdictions<%= df('While there is no consistent legal definition of “sanctuary” as used in contemporary immigration policy, the term generally refers to the crafting of local laws, ordinances, or practices designed to limit the extent to which local governments collaborate with federal authorities in immigration enforcement.') %> like Seattle, WA; Oakland, CA; or Minneapolis, MN. From these sites, deportees are transported to a growing network of international destinations, which almost doubled in number from 2010 to 2018.<%= fn('During Fiscal Year 2018, the last year for which complete data is available, ICE Air operations were carried out in <%= expansion.loc[2018, 'Unique Destination Countries'] %> countries, including the US; passengers were picked up at <%= expansion.loc[2018, 'Unique Pickup Airports'] %> different airports and dropped off at <%= expansion.loc[2018, 'Unique Dropoff Airports'] %> airports.') %> In total, over the period covered by the ARTS dataset, ICE Air operations involve <%= len(usa_pu.union(usa_drop)) %> airports in the US and its territories, and <%= len(foreign_pu.union(foreign_drop)) %> airports in <%= total_countries %> other countries worldwide. See Figure 2 below for an illustration of the ICE Air network’s reach in North and Central America.
+
+<p><strong>Figure 2: ICE Air total passengers per airport and flight paths<%= fn('C Figure elaborated by UWCHR with data from ICE Air ARTS dataset and the Global Airport Database: http://www.partow.net/miscellaneous/airportdatabase/index.html. International airports not depicted account for a relatively small proportion of total passengers. Due to the limitations of the ARTS dataset, “flight paths” as depicted here represent passenger pickup and drop-off locations, not exact flight itineraries; “flight paths” do not necessarily depict the shortest connection on a global map projection.
+') %></strong></p>
 
 <%= print_fn_refs() %>

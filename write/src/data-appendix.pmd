@@ -113,7 +113,7 @@ with open('input/clean_stats.yaml', 'r') as yamlfile:
 
 ```
 
-The raw ARTS dataset was released by ICE as <%= clean_stats['number_of_input_files'] %> XLSX format files, these were combined into a single dataset containing <%= clean_stats['input_records'] %> records. For space reasons, the raw files are not stored in the project's Git repository, but are available via [UWCHR's Google Drive](https://drive.google.com/drive/folders/1DFhlKSI1u9yrPqPmLKW0o2IKUsUhSEIl?usp=sharing). Prior to analysis, the ARTS dataset was converted from XLSX to CSV format and cleaned to standardize fields and remove some records with missing data. 
+The raw ARTS dataset was released by ICE as <%= clean_stats['number_of_input_files'] %> XLSX format files, these were combined into a single dataset containing <%= clean_stats['input_records'] %> records. For space reasons, the raw files are not stored in the project's Git repository, but are available via [UWCHR's Google Drive](https://drive.google.com/open?id=1GVeLTfCm846YkZKWPlK0HF5eRxxYqPsF). Prior to analysis, the ARTS dataset was converted from XLSX to CSV format and cleaned to standardize fields and remove some records with missing data. 
 
 The cleaning process is fully documented in code; see the `clean/` directory in the [project repository](https://github.com/UWCHR/ice-air). Selected data cleaning steps are described below:
 

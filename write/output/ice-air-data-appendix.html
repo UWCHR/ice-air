@@ -1049,7 +1049,7 @@ img {max-width : 100%}
 
 <h2>Data Cleaning</h2>
 
-<p>The raw ARTS dataset was released by ICE as 9 XLSX format files, these were combined into a single dataset containing 1763020 records. For space reasons, the raw files are not stored in the project's Git repository, but are available via <a href="https://drive.google.com/drive/folders/1DFhlKSI1u9yrPqPmLKW0o2IKUsUhSEIl?usp=sharing">UWCHR's Google Drive</a>. Prior to analysis, the ARTS dataset was converted from XLSX to CSV format and cleaned to standardize fields and remove some records with missing data. </p>
+<p>The raw ARTS dataset was released by ICE as 9 XLSX format files, these were combined into a single dataset containing 1763020 records. For space reasons, the raw files are not stored in the project's Git repository, but are available via <a href="https://drive.google.com/open?id=1GVeLTfCm846YkZKWPlK0HF5eRxxYqPsF">UWCHR's Google Drive</a>. Prior to analysis, the ARTS dataset was converted from XLSX to CSV format and cleaned to standardize fields and remove some records with missing data. </p>
 <p>The cleaning process is fully documented in code; see the <code>clean/</code> directory in the <a href="https://github.com/UWCHR/ice-air">project repository</a>. Selected data cleaning steps are described below:</p>
 <ul>
 <li><strong>Duplicate <code>AlienMasterID</code> values and airport metadata:</strong> In the raw ARTS dataset, 29465 <code>AlienMasterID</code> values are repeated up to 2 times. Upon close inspection, it becomes apparent that these records are repeated because of inconsistencies in certain airport metadata values (fields starting with the prefixes <code>air_</code> or <code>air2_</code>), resulting in the duplication of some passenger records, probably due to a database merge by ICE prior to release. (For example, all records for Yuma International Airport in Yuma, AZ are duplicated, with one version of the records incorrectly listing "AR" as the state associated with the airport.) 29465 duplicate <code>AlienMasterID</code> values were dropped and erroneous or missing airport metadata was corrected; see <code>ice-air/clean/hand/bad_airports.csv</code> for values that were substituted. Airport metadata fields not used in the present analysis, such as numeric codes for US states, were not cleaned.</li>
@@ -1083,7 +1083,7 @@ img {max-width : 100%}
     <div class="footer">
       <p>Published from <a href="src/data-appendix.pmd">src/data-appendix.pmd</a>
     using <a href="http://mpastell.com/pweave">Pweave</a> 0.30.3
-    on 12-04-2019.<p></div>
+    on 22-04-2019.<p></div>
 
             </div>
         </div>

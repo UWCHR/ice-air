@@ -12,6 +12,7 @@ import pandas as pd
 import numpy as np
 import yaml
 import matplotlib.pyplot as plt
+from tabulate import tabulate
 
 with open('input/dtypes.yaml', 'r') as yamlfile:
     column_types = yaml.load(yamlfile)
@@ -59,7 +60,7 @@ At the request of immigrant community organizations in Washington state, in 2018
 
 To examine the dataset and its human rights implications, the UW Center for Human Rights commissioned a team of student researchers<%= fn("These students included Zinaida Carroll, Julia Gentner, Sasha Jenkins, Eleanore Johnson, Ariella Kleiman, Shawna Krueger, Jackie Montstream, Sorana Nance, Colin Newton, Grace Sorensen, Grace Stephenson, Upandha Udalagama, and Julianne Werner. Additional research was performed by Emily Willard, Miguel Mariscal, and Guy Oron.") %> who, jointly with Center faculty and staff, conducted research on ICE Air operations in early 2019. This research involved quantitative data analysis; the analysis of documents obtained through online research and public records requests under the Freedom of Information Act, Washington State’s Public Records Act, and access to information laws in Guatemala, Honduras, and El Salvador; and interviews with immigrant rights advocates, former deportees and family members, local elected officials, an employee of an air charter company that contracts with ICE, and an ICE employee from the Office of Acquisition Management who oversees the contracting process. This research remains ongoing, and we anticipate releasing future findings as they become available. 
 
-As part of our effort to share this information as broadly as possible, we are also publishing the dataset itself alongside this report.<%= fn('The dataset and code used to output this report will be made available at the time of publication via GitHub at the following link: https://github.com/UWCHR/ice-air') %>
+As part of our effort to share this information as broadly as possible, we are also publishing the dataset itself alongside this report.<%= fn('The dataset and code used to output this report will be made available at the time of publication via GitHub at the following link: [https://github.com/UWCHR/ice-air](https://github.com/UWCHR/ice-air') %>
 
 ```python, removal_transfer_trends, echo=False
 
@@ -83,38 +84,39 @@ r_t_annual = pd.DataFrame({'Removals': annual_removals['2010':'2017'], 'Transfer
 r_t_annual.index = [f'FY{str(x)[2:4]}' for x in r_t_annual.index.year + 1]
 
 ```
-# The ARTS dataset
+## The ARTS dataset
 
-The ARTS dataset contains <%= round((len(set(df['AlienMasterID'])) / 1000000), 2) %> million records of passengers on nearly <%= int(round((len(set(df['MissionID']))/1000), 1))%>,000 ICE Air Operations missions during the period from <%= print(earliest_record) %> to <%= print(latest_record) %>. Most of these (<%= removal_percent %>) are removal flights, where passengers are flown to other countries (or, in the case of the majority of Mexican nationals, flown to a US border city from which they are transported by land into Mexico.) <%= transfer_percent %> of them, however, are internal transfers, whereby detainees are moved around the US, potentially multiple times prior to their ultimate deportation. Due to limitations of the dataset, it is difficult to discern which internal transfer flights are simply the first leg in a scheduled deportation, as opposed to the relocation of a detained person to a new detention center. For this reason, we refer to all flights in the ARTS dataset as “deportation flights.” (For details on the uses and limitations of the data set, see the Data Appendix.)
+The ARTS dataset contains <%= round((len(set(df['AlienMasterID'])) / 1000000), 2) %> million records of passengers on nearly <%= int(round((len(set(df['MissionID']))/1000), 1))%>,000 ICE Air Operations missions during the period from <%= print(earliest_record) %> to <%= print(latest_record) %>. Most of these (<%= removal_percent %>)% are removal flights, where passengers are flown to other countries (or, in the case of the majority of Mexican nationals, flown to a US border city from which they are transported by land into Mexico.) <%= transfer_percent %>% of them, however, are internal transfers, whereby detainees are moved around the US, potentially multiple times prior to their ultimate deportation. Due to limitations of the dataset, it is difficult to discern which internal transfer flights are simply the first leg in a scheduled deportation, as opposed to the relocation of a detained person to a new detention center. For this reason, we refer to all flights in the ARTS dataset as “deportation flights.” (For details on the uses and limitations of the data set, see the Data Appendix.)
 
 <p><strong>Figure 1: ICE Air annual passengers, removals plus transfers<%= fn('Chart elaborated by UWCHR with data from ICE Air ARTS dataset.') %></strong></p>
 
 <div align='center'>
 ```python, removal_transfer_trend_plot, echo=False
 
-def removal_transfer_bar(data, title=str, xlabel=str, ylabel=str):
-    
-    fig, ax = plt.subplots()
-    
-    data.plot(kind='bar', stacked=True, legend=True, ax=ax).legend(bbox_to_anchor=(1,1))
-    
-    ax.set_axisbelow(True)
-    ax.set_ylabel(ylabel, fontsize=16)
-    ax.set_xlabel(xlabel, fontsize=16)
-    
-#    ax.set_title(title, fontsize=18)
-    ax.tick_params(labelsize=14)
-    plt.xticks(rotation=0)
-    plt.legend(fontsize=14)
-    ax.set_facecolor('#EEEEEE')
-    ax.grid(color='#FFFFFF')
-    
-    fig.set_size_inches(10, 8)
+def removal_transfer_bar(data, title=str, filename=str, xlabel=str, ylabel=str):
+
+	fig, ax = plt.subplots()
+
+	data.plot(kind='bar', stacked=True, legend=True, ax=ax).legend(bbox_to_anchor=(1,1))
+
+	ax.set_axisbelow(True)
+	ax.set_ylabel(ylabel, fontsize=16)
+	ax.set_xlabel(xlabel, fontsize=16)
+	ax.tick_params(labelsize=14)
+	#    ax.set_title(title, fontsize=18)
+	plt.xticks(rotation=0)
+	plt.legend(fontsize=14)
+	ax.set_facecolor('#EEEEEE')
+	ax.grid(color='#FFFFFF')
+
+	fig.set_size_inches(10, 8)
+	fig.savefig(f'output/{filename}.png', dpi=100);
 
 removal_transfer_bar(r_t_annual,
-                     title=f'ICE Air Annual Passengers',
-                     ylabel=f'Total Passengers',
-                     xlabel='Fiscal Year');
+					 filename='ICE_Air_Annual_Passengers',
+                     title='ICE Air Annual Passengers',
+                     ylabel='Total Passengers',
+                     xlabel='Fiscal Year')
 
 ```
 </div>
@@ -146,10 +148,205 @@ expansion = pd.DataFrame({'Unique Pickup Airports': unique_pulocs,
 expansion.index = expansion.index.year + 1
 expansion.index.name = 'FY'
 
-```
-The ARTS dataset also reveals the extent of local collaboration across the country and world required to operate this network. In the US, participating airports include ICE Air’s five main hubs (Mesa, AZ; Brownsville, TX; Miami, FL; San Antonio, TX; and Alexandria, LA); as well as <%= len(usa_pu.union(usa_drop)) - 5 %> other airports scattered across the country, some in “sanctuary” jurisdictions<%= df('While there is no consistent legal definition of “sanctuary” as used in contemporary immigration policy, the term generally refers to the crafting of local laws, ordinances, or practices designed to limit the extent to which local governments collaborate with federal authorities in immigration enforcement.') %> like Seattle, WA; Oakland, CA; or Minneapolis, MN. From these sites, deportees are transported to a growing network of international destinations, which almost doubled in number from 2010 to 2018.<%= fn('During Fiscal Year 2018, the last year for which complete data is available, ICE Air operations were carried out in <%= expansion.loc[2018, 'Unique Destination Countries'] %> countries, including the US; passengers were picked up at <%= expansion.loc[2018, 'Unique Pickup Airports'] %> different airports and dropped off at <%= expansion.loc[2018, 'Unique Dropoff Airports'] %> airports.') %> In total, over the period covered by the ARTS dataset, ICE Air operations involve <%= len(usa_pu.union(usa_drop)) %> airports in the US and its territories, and <%= len(foreign_pu.union(foreign_drop)) %> airports in <%= total_countries %> other countries worldwide. See Figure 2 below for an illustration of the ICE Air network’s reach in North and Central America.
+# Asserts for figures cited in footnote below
+assert expansion.loc[2018, "Unique Destination Countries"] == 69
+assert expansion.loc[2018, "Unique Pickup Airports"] == 41
+assert expansion.loc[2018, "Unique Dropoff Airports"] == 108
 
-<p><strong>Figure 2: ICE Air total passengers per airport and flight paths<%= fn('C Figure elaborated by UWCHR with data from ICE Air ARTS dataset and the Global Airport Database: http://www.partow.net/miscellaneous/airportdatabase/index.html. International airports not depicted account for a relatively small proportion of total passengers. Due to the limitations of the ARTS dataset, “flight paths” as depicted here represent passenger pickup and drop-off locations, not exact flight itineraries; “flight paths” do not necessarily depict the shortest connection on a global map projection.
-') %></strong></p>
+```
+The ARTS dataset also reveals the extent of local collaboration across the country and world required to operate this network. In the US, participating airports include ICE Air’s five main hubs (Mesa, AZ; Brownsville, TX; Miami, FL; San Antonio, TX; and Alexandria, LA); as well as <%= len(usa_pu.union(usa_drop)) - 5 %> other airports scattered across the country, some in “sanctuary” jurisdictions<%= fn('While there is no consistent legal definition of “sanctuary” as used in contemporary immigration policy, the term generally refers to the crafting of local laws, ordinances, or practices designed to limit the extent to which local governments collaborate with federal authorities in immigration enforcement.') %> like Seattle, WA; Oakland, CA; or Minneapolis, MN. From these sites, deportees are transported to a growing network of international destinations, which almost doubled in number from 2010 to 2018.<%= fn('During Fiscal Year 2018, the last year for which complete data is available, ICE Air operations were carried out in 69 countries, including the US; passengers were picked up at 41 different airports and dropped off at 108 airports.') %> In total, over the period covered by the ARTS dataset, ICE Air operations involve <%= len(usa_pu.union(usa_drop)) %> airports in the US and its territories, and <%= len(foreign_pu.union(foreign_drop)) %> airports in <%= total_countries %> other countries worldwide. See Figure 2 below for an illustration of the ICE Air network’s reach in North and Central America.
+
+<p><strong>Figure 2: ICE Air total passengers per airport and flight paths<%= fn('Figure elaborated by UWCHR with data from ICE Air ARTS dataset and the [Global Airport Database](http://www.partow.net/miscellaneous/airportdatabase/index.html). International airports not depicted account for a relatively small proportion of total passengers. Due to the limitations of the ARTS dataset, “flight paths” as depicted here represent passenger pickup and drop-off locations, not exact flight itineraries; “flight paths” do not necessarily depict the shortest connection on a global map projection.') %></strong></p>
+
+<div align='center'>
+
+```python, ice_air_map, echo=False
+
+```
+
+</div>
+
+## “Off the books” flights?
+
+```python, ice_ero_removals, echo=False
+
+# Data from ICE ERO’s Year-End Reports for Fiscal Years 2011-2018: https://www.ice.gov/statistics
+ice_ero_totals = [396906,
+                  409849,
+                  368644,
+                  315943,
+                  235413,
+                  240255,
+                  226119,
+                  256086]
+data = {'ICE Air (ARTS) Removals':
+		list(annual_removals['2010':'2017']),
+		'ICE ERO Total Removals':
+		ice_ero_totals}
+index = annual_removals['2010':'2017'].index
+ice_total_comparison = pd.DataFrame(data, index=index)
+ice_total_comparison.sort_index(inplace=True)
+ice_total_comparison.index = [f'FY{str(x)[2:4]}' for x in ice_total_comparison.index.year + 1]
+ice_total_comparison['Percent'] = ice_total_comparison['ICE Air (ARTS) Removals'] / ice_total_comparison['ICE ERO Total Removals']
+
+```
+
+At the same time, this dataset offers only a partial picture of deportation in the United States today. The removals in the ARTS dataset make up between <%= int(round((ice_total_comparison['Percent'] * 100).min())) %>%-<%= int(round((ice_total_comparison['Percent'] * 100).max())) %>% of total removals reported annually by ICE’s division of Enforcement and Removal Operations (ERO)---the branch of the agency responsible for deportations---leading to questions about what accounts for the remaining deportations (see Figure 3 below).<%= fn('ICE explains how it counts removals as follows: “ICE removals include removals and returns where aliens were turned over to ICE for removal efforts. This includes aliens processed for Expedited Removal (ER) or Voluntary Return (VR) that are turned over to ICE for detention. Aliens processed for ER and not detained by ERO or VRs after June 1st, 2013 and not detained by ICE are primarily processed by the US Border Patrol. CBP should be contacted for those statistics.” See footnote 11, p. 10 of ICE’s [Fiscal Year 2018 ICE Enforcement and Removal Operations Report](https://www.ice.gov/doclib/about/offices/ero/pdf/eroFY2018Report.pdf).') %> The agency offers no explanation for this discrepancy; indeed, although a [2015 report on ICE Air by the Department of Homeland Security’s Office of the Inspector General](https://www.oig.dhs.gov/assets/Mgmt/2015/OIG_15-57_Apr15.pdf) suggests the ARTS database contains fields not released to us,<%= fn('For example, the OIG notes “ARTS captures information such as the dates, routes, detainees, delays or cancelations (sic), and costs associated with each chartered flight mission;” (p. 3) the dataset we received did not contain any information about delays, cancellations, or costs.') %> the copy we received was not accompanied by any accounting for information withheld under FOIA exemptions.
+
+<p><strong>Figure 3: ICE Air (ARTS) removals versus total reported ICE ERO removals<%= fn('Chart elaborated by UWCHR with data from [ICE ERO’s Year-End Reports for Fiscal Years 2011-2018](https://www.ice.gov/statistics).') %></strong></p>
+
+<div align='center'>
+
+```python, ice_ero_chart, echo=False
+
+def ice_total_bar(data, title=str, filename=str, xlabel=str, ylabel=str):
+    
+    fig, ax = plt.subplots()
+    
+    data.plot(kind='bar', legend=True, ax=ax).legend(bbox_to_anchor=(1,1))
+    
+    ax.set_axisbelow(True)
+    ax.set_ylabel(ylabel, fontsize=16)
+    ax.set_xlabel(xlabel, fontsize=16)
+    
+    ax.set_title(title, fontsize=18)
+    ax.tick_params(labelsize=14)
+    plt.xticks(rotation=0)
+    ax.set_facecolor('#EEEEEE')
+    ax.grid(color='#FFFFFF')
+    plt.legend(fontsize=14)
+    
+    fig.set_size_inches(10, 8)
+    fig.savefig(f'output/{filename}.png', dpi=100)
+
+ice_total_bar(ice_total_comparison[['ICE Air (ARTS) Removals', 'ICE ERO Total Removals']],
+                     title=f'ICE Air removals versus total reported ICE ERO removals',
+                     filename=f'total_removals_comparison',
+                     ylabel=f'Total Removals',
+                     xlabel='Fiscal Year');
+
+```
+
+</div>
+
+```python, ice_ero_country_of_citzenship, echo=False
+
+ice_ero_fy17_fy18 = pd.read_csv('input/FY2017andFY2018ICERemovalsbyCountryofCitizenship.csv')
+ice_ero_fy17_fy18['Source'] = 'ERO'
+
+removals = df['R-T'] == 'R'
+removal_df = df[removals]
+removal_df.set_index('MissionDate', inplace=True)
+
+coc_removals_by_fy = removal_df.groupby([pd.Grouper(freq='AS-OCT'), 'CountryOfCitizenship'])['AlienMasterID'].nunique()
+coc_removals_by_fy = coc_removals_by_fy.reset_index()
+coc_removals_by_fy['CountryOfCitizenship'] = coc_removals_by_fy['CountryOfCitizenship'].copy().astype(str)
+coc_removals_by_fy.set_index('MissionDate', inplace=True)
+coc_removals_by_fy = coc_removals_by_fy.loc['2016':'2017']
+coc_removals_by_fy['FY'] = [f'20{str(x)[2:4]}' for x in coc_removals_by_fy.index.year + 1]
+coc_removals_by_fy = coc_removals_by_fy.reset_index()
+coc_removals_by_fy = coc_removals_by_fy.drop('MissionDate', axis=1)
+coc_removals_by_fy = coc_removals_by_fy.pivot(index='CountryOfCitizenship', columns='FY')
+coc_removals_by_fy.columns = coc_removals_by_fy.columns.droplevel()
+coc_removals_by_fy = coc_removals_by_fy.reset_index()
+coc_removals_by_fy['Source'] = 'ARTS'
+coc_removals_by_fy = coc_removals_by_fy.set_index(['CountryOfCitizenship', 'Source'])
+ice_ero_fy17_fy18 = ice_ero_fy17_fy18.set_index(['CountryOfCitizenship', 'Source'])
+table = pd.concat([coc_removals_by_fy, ice_ero_fy17_fy18])
+table = table.reset_index()
+table = table.groupby(['CountryOfCitizenship', 'Source']).sum()
+selected_nationalities = ['MEXICO', 'SOMALIA', 'CAMBODIA', 'CUBA', 'ERITREA']
+table = table.unstack().loc[selected_nationalities]
+table = table.fillna('0')
+
+```
+
+Our research team considered multiple possible reasons for the apparent absence of so many deportations from the dataset. On the one hand, some removals of Mexicans apprehended near the border do not involve air travel, and therefore would not appear in the ARTS dataset; but the gap is also evident in ICE ERO’s reported deportations of Somalis, Cambodians, and others who cannot conceivably have been deported by land. For example, in FY 2017 and FY 2018, ICE ERO reported the removals of <%= int(table.loc['ERITREA','2017']['ERO']) %> and <%= int(table.loc['ERITREA','2018']['ERO']) %> Eritreans, respectively, but <%= int(table.loc['ERITREA','2017']['ARTS']) + int(table.loc['ERITREA','2018']['ARTS'])  %> removals of Eritreans appear in the ARTS database; how, then, were those people transported?
+
+<p><strong>Table 1: Comparison of ICE Air (ARTS) and ICE ERO reported removal figures for selected nationalities<%= fn('Table elaborated by UWCHR with data from ICE Air ARTS dataset and [Fiscal Year 2018 ICE Enforcement and Removal Operations Report, Appendix B: FY2017 and FY2018 Removals by Country of Citizenship](https://www.ice.gov/doclib/about/offices/ero/pdf/eroFY2018Report.pdf).') %></strong></p>
+
+<%= print(tabulate(table, headers=table.columns, tablefmt="html")) %>
+
+Some passengers continue to be deported on commercial airlines; a second hypothesis we considered was that commercial flights not included in the ARTS database could account for the discrepancy with ERO’s totals. Yet it appears that only small numbers of deportations take place on commercial flights: a [2019 report by the US Office of the Inspector General](https://www.oig.dhs.gov/sites/default/files/assets/2019-03/OIG-19-28-Mar19.pdf) notes that in fiscal year 2017, “ICE Air coordinated the removal of 8,288 aliens via commercial flights and the removal or transfer of 181,317 aliens via charter flights,” giving a sense of the relative proportion of commercial vs. charter flights. While ICE has never offered a clear accounting of its use of commercial flights for deportation, other reports seem to confirm that [charters outpace commercial flights by a ratio of roughly 20 to 1](https://www.ksat.com/news/national/ice-air-how-us-deportation-flights-work).
+
+A third explanation could be that the ARTS database only captures certain classes of deportation flights. Although ICE does not publicly explain its recordkeeping, our review of available agency contracts confirms that it divides charter flights into several categories. The most common are daily scheduled large aircraft (DSLA) flights, which embark to Western hemisphere destinations, mostly in Latin America. Long range international charters (LRIC) depart less frequently to farther-away locations like Somalia and Azerbaijan. And a third class is designated “special high-risk charters” (SHRC) because of characteristics of the deportees---for example, those who have resisted deportation on previous attempts---or complex circumstances surrounding permissions to land in transit or destination countries. While the ARTS database clearly contains DSLA flights and some other flights long-range destinations which could be considered LRIC or SHRC, it does not note which type of charter each record corresponds to, making it impossible to test this hypothesis.
+
+Further complicating analysis is the fact that deportation flights can operate under a range of contractors and FAA-assigned call signs. Many, likely most, flights operated for US Immigration and Customs Enforcement are assigned the prefix RPN, an abbreviation for “repatriate.”<%= fn('See the Federal Aviation Administration *[Air Traffic Control Policy](https://www.faa.gov/documentLibrary/media/Order/7340.2E_Basic.pdf)*, page 3-1-101.') %> The call sign, together with a flight number, is used to identify the aircraft in radio voice communications with air traffic personnel, and may also appear on airport invoices for fuel and landing fees. Using free flight tracker websites,<%= fn('These include [flightaware.com](https://flightaware.com), [radarbox24.com](https://fradarbox24.com), and others.') %> it is easy to track the arrival, departure, and scheduling of all RPN flights, and to determine the unique tail number of the aircraft operating the flight---and using that number, to look up the plane’s registered owner. However, by cross-checking the ARTS dataset against locally-held flight records provided by various US airports, it appears that deportation flights operated by Omni Air International do not begin with the RPN prefix, and are therefore more readily confused with other private charter flights operated by the same company.
+
+ICE is also known to engage in sloppy recordkeeping, as [DHS’s 2015 OIG audit of ICE Air](https://www.oig.dhs.gov/assets/Mgmt/2015/OIG_15-57_Apr15.pdf) concluded. Worse yet, it routinely conceals its records from the public, in violation of FOIA, and has [failed to provide information to Congress](https://jsis.washington.edu/humanrights/2018/12/05/secret-police/) even when legally mandated to do so. Under FOIA, for example, UWCHR researchers requested the Quarterly Operational Summary Safety Reports that contractors are required to provide to ICE; these contain additional data about all flights, aircraft, and passengers in ICE Air deportations.<%= fn('Under [ICE’s draft Statement of Work](https://govtribe.com/opportunity/federal-contract-opportunity/request-for-information-ice-air-operations-consolidated-contract-rfiiceoaq2015flights), released as part of the contracts solicitation process, a requirement is established that contractors provide the agency with “Quarterly operational summary Safety Reports (including total number of flights per quarter, total number of flight hours per quarter by CLIN,# total number of flights designated by origin-destination pairs, details of any aircraft accidents or incidents including flight crewmembers involved / aircraft type/ registration number / dates / location / number of passengers).”') %> ICE responded that no such records exist, and/or that if they did, law enforcement and national security exclusions might preclude their release.
+
+```python, criminal_convictions_percent, echo=False
+
+df.set_index('MissionDate', inplace=True)
+criminality = df.groupby([pd.Grouper(freq='AS-OCT'), 'R-T'])['Criminality'].value_counts().unstack()
+criminality['total'] = criminality.sum(axis=1)
+# '2017' here refers to 2017-10-01, the start of FY 2018
+crim_rt = criminality.loc['2017']['NC'] / criminality.loc['2017']['total'] * 100
+
+```
+
+In the absence of transparency surrounding these processes, troubling questions arise, not only about the treatment and ultimate fate of thousands of people, but about the accuracy of all information provided by the US government about immigration enforcement. ICE ERO’s website announcing FY 2018 removals, for example, boasts a graphic of a plane in flight, with the unsubstantiated claim “57% convicted criminals” alongside it; the ARTS dataset, by contrast, shows that <%= round(crim_rt.unstack()['2017']['R'][0]) %>% of those removed in FY 2018 had no criminal record. ICE’s statistics may or may not be accurate, but there is no way to know given that as many as half of deportations are not accounted for. By concealing such basic facts about immigration enforcement efforts, ICE precludes the possibility of accountability. 
+
+## The business of deportation
+
+Since 2018, ICE has contracted with a single principal air broker, Classic Air Charter (CAC), which is responsible for arranging the bulk of ICE Air flights. Prior to this, ICE Air was administered through five separate contracts---one for each hub airport---with a competitor company, CSI Aviation. Although ICE’s current contract with CAC has not been made public, the [Government Accountability Office’s resolution of a February 2018 protest](https://www.gao.gov/products/B-415631,B-415631.3,B-415631.4#mt=e-report) filed by a competitor company described its value at &#32;646 million, and stated that it encompassed daily scheduled large aircraft flights (DSLA) and special high risk charters (SHRC). In 2015, the [Department of Homeland Security’s Office of the Inspector General reported](https://www.oig.dhs.gov/assets/Mgmt/2015/OIG_15-57_Apr15.pdf) that “ICE Air pays, on average, &#32;8,419 per flight hour for charter flights regardless of the number of passengers on the plane.”
+
+Under this contract, CAC subcontracts with other private companies to run the flights. The two most frequently-used aviation subcontractors are [Swift Air](https://www.flyswiftair.com/) and [World Atlantic Airlines](https://www.flywaa.com/#tf-home).<%= fn('Interview with Benjamin Shih, Section Chief of Detention, Compliance, and Removals in ICE’s Office of Acquisition Management, March 1, 2019.') %> Swift, with a fleet dominated by Boeing 737s, is a key player in the private charter market; aside from deportation flights, the company offers VIP charters for executives, [rock stars](https://www.travelandleisure.com/culture-design/celebrity-travel/rolling-stones-tour-plane), and [collegiate sports teams](http://aviationtribune.com/airlines/north-america/swift-air-to-grow-sports-travel-market-dedicated-fleet/). In December 2018, Swift was [purchased by iAero Group](https://www.flyswiftair.com/iaerogroup/). World Atlantic Airlines, also known as Caribbean Sun Airlines, primarily flies McDonnell Douglas MD-80s. Other airlines are also used, sometimes as subcontractors to these companies, sometimes as their competitors for subcontracts from CAC, and sometimes under direct contract with ICE. For example, ICE’s flights to Havana, Cuba are operated by under a direct [contract between ICE and Zephyr Aviation](https://www.usaspending.gov/#/award/23820160), and our cross-checking of the ARTS database against local airports’ records has uncovered additional flights run by Omni Air International, a Department of Defense contractor whose contract with DHS has not been publicly disclosed.
+
+<p><strong>Figure 4: Selected ICE Air contracting relationships</strong></p>
+
+<img src='UWCHR-ICEAir-Chart-National.jpg'>
+
+These airlines, in turn, must also contract out for a range of services to operate deportation flights. First, per ICE policy, all deportation flights require security and medical personnel not typical on other private charters.<%= fn("See ICE Air's *[Charter Task Order Statement of Work](https://govtribe.com/opportunity/federal-contract-opportunity/request-for-information-ice-air-operations-consolidated-contract-rfiiceoaq2015flights)*" ) %> Second, all airlines must contract with Fixed Base Operators (FBOs) to arrange for the logistics of arrivals and departures at participating US airports.<%= fn('This describes the contracting relationships as of April 2019. In the March 2019 interview, Benjamin Shih emphasized that ICE had initially relied up on multiple private brokers, rather than a single one, and might again move to such a model.') %> FBOs typically rent hangar space from municipal airports, for whom such rental income may constitute a considerable source of revenue. In addition, the airports charge FBOs for fuel and other costs, and are tasked with the oversight of their operations, including the performance of financial audits, safety inspections, and issuance of fuelling permits. 
+
+Per ICE’s [draft Statement of Work](https://govtribe.com/opportunity/federal-contract-opportunity/request-for-information-ice-air-operations-consolidated-contract-rfiiceoaq2015flights), published prior to the signing of the current broker contract, flights are staffed by a pilot, flight attendants, security guards, and a flight nurse, as well as an ICE agent or agents; the number of guards required varies by the type of flight. Contractors are required to provide metal handcuffs, waist chains and leg irons for the shackling of passengers, who are restrained upon boarding and kept chained throughout the flight. The flight attendants or crew are not allowed to interact directly with the deportees; guards and the ICE agents who accompany every flight are responsible for the supervision of those on board.<%= 'On this point, the [draft Statement of Work](https://govtribe.com/opportunity/federal-contract-opportunity/request-for-information-ice-air-operations-consolidated-contract-rfiiceoaq2015flights) reads, “Guard crew duties may normally include, but are not limited to, the following tasks: searching the aircraft for contraband, searching alien nationals for contraband, loading and unloading alien nationals (including those handicapped and/or requiring special assistance) and property onto and off the aircraft, feeding alien nationals in flight and assisting in cabin cleanup afterwards, identifying proper documentation, escorting to rest rooms, assisting with perimeter security when requested, restraining alien nationals or removing restraints, and ensuring general security and safety of alien nationals when onboard the aircraft. Guard crew personnel shall be under the operational control of the contractor either as an employee or acting as a de facto employee by a subcontract relationship. ICE Officer(s) will be responsible for the custody of any alien national passengers.”' %> Passengers are allowed up to travel with 40 pounds of luggage, typically their possessions returned to them by the detention center in a plastic bag.
+
+## Human rights concerns
+
+Deportation tears families and communities apart, disrupting the international right to family unity.<%= fn(' International human rights law recognizes the family as the fundamental group unit of society, entitled to protection and assistance. This is established in such instruments as Article 16(3) of the 1948 Universal Declaration of Human Rights (UDHR), Article 23(1) of the 1966 International Covenant on Civil and Political Rights (ICCPR), and Article 10(1) of the 1966 International Covenant on Economic, Social and Cultural Rights (ICESCR).') %> Encouraging the mass deportation of migrants often contributes to the violation of other rights, including the right to be free from discrimination, or to equal protection of the laws. Until now, the role of deportation flights in contributing to human rights abuses has been mostly ignored. However, as explored below, under certain circumstances ICE Air’s deportation flights involve their own specific rights abuses.
+
+### Physical abuse and ill-treatment
+
+In recent years, allegations of egregious physical abuse on ICE Air flights have surfaced in several cases. The most notorious of these involved a failed 2017 flight to Somalia, in which 92 deportees were reportedly subjected to horrific conditions when the flight was waylaid in Dakar, Senegal, where it remained on the tarmac, with its deportee passengers bound and shackled, for almost 23 hours. For reasons that have never been clarified, the flight was unable to continue to its intended destination of Mogadishu and instead returned to the United States, where dozens of its former passengers joined in a [class action lawsuit against the federal government](https://www.documentcloud.org/documents/4391195-Somali-TRO-Complaint-December-19.html). Numerous passengers provided sworn testimony describing physical beatings, the use of straitjackets, verbal abuse and threats, and the denial of access to restrooms, which forced passengers to soil themselves in their seats. In April 2019, [ICE announced the imminent deportation of the passengers](https://theintercept.com/2019/04/09/somalis-ice-deportation-flights/), despite several having appeals pending before US courts.
+
+Similarly, passengers from Nepal, Bangladesh, and India reported abuses including punching and kicking that left some passengers bloodied and crying on a [2016 ICE Air flight to Bangladesh](https://www.theguardian.com/us-news/2016/may/27/south-asian-migrants-body-bags-deportation-us). They described deportees who resisted boarding the plane being given electric shocks and forcibly placed in “body bags,”<%= fn('These were most likely ICE’s “humane restraint blankets,” which were replaced in 2017 with a new, [straitjacket-like full-body restraint called “The Wrap.”](https://legacy.tyt.com/2018/08/16/ice-orders-dozens-of-straitjacket-like-restraints/)') %> then carried or tossed aboard, reportedly landing in some cases with a thud “like they were sacks of vegetables,” [in the words of one passenger, Dalim Ahmed](https://www.latimes.com/projects/la-fg-immigration-trek-america-bangladesh/). ICE has denied the use of tasers on this flight; while the Office of the Inspector General is said to have opened an investigation, we filed a FOIA request for its findings and were told that no record exists of any investigation.
+
+While these accounts are shocking, they are relatively few and far between when one considers the volume of daily deportation flights. However, given the lack of effective oversight of ICE Air, it is likely that many other abuses may go unreported. In fact, the only reason the egregious abuses on the December 2017 flight to Somalia came to light is because that flight was returned to the United States.
+
+Among the former deportees we interviewed, accounts of more routine ill-treatment were common, including the use of racist epithets and insults, and rough physical treatment upon boarding. A Salvadoran national, for example, described being called “scum,” accused of “taking our jobs,” and watching other deportees stumble on the tarmac when shoved while wearing leg shackles at King County International Airport in Seattle.
+
+### Due process violations
+
+Attorneys representing immigrants have long complained that some of their clients are deported prior to the conclusion of their legal proceedings, rendering moot other rights protections under law. Some such cases have come to light previously, under rare circumstances where lawyers learned of deportations as they were happening and brought them to the attention of judges who then sought to pull passengers from planes or even reverse flights in midair.<%= fn('See [this case](https://www.cnn.com/2018/08/09/politics/judge-halts-deportations-sessions/index.html), in which a judge ordered the US government to “turn the plane around”; [or this one](https://www.kshb.com/news/local-news/lawrence-chemist-facing-deportation-to-bangladesh-gets-reprieve-until-2022), where a passenger was taken off a Bangladesh-bound flight from El Paso when it stopped to refuel in Hawaii; [or this one](https://truthout.org/video/cambodians-who-fled-genocide-now-face-raids-and-deportation-under-trump/), in which a Cambodian man was already on a plane for the first leg of his deportation journey, but was then not put on his connecting (deportation) flight.') %> The lack of assigned counsel in deportation proceedings means that much more frequently, deportees lack representation. In other cases, attorneys only learn of their client’s deportation after it is complete.
+
+The ICE Air database reveals, for the first time, of how widespread these due process violations may be. These violations are occurring despite the fact that ICE itself tracks information about the status of legal proceedings, and thus should be entirely preventable. The dataset contains one column, titled “Status,” bearing alphanumeric codes that catalog the status of each passenger’s deportation proceedings. These same codes also appear in other ICE records; [in a recent article, migration experts Donald Kerwin, Daniela Alulema and Siqi Tu offer an explanation](https://doi.org/10.1177/233150241500300402) of their meaning. Examining these codes permits us to see how many passengers were put on removal flights while they may still have had appeals pending, and how many were removed without access to the courts at all.
+
+```python, status_codes, echo=False
+
+pending = ['2A', '2B', '8A', '8B', '8D']
+benefit = ['5C', '5D']
+expedited_admin_rein = ['8F', '8G', '8H', '8I', '11', '16']
+
+status_fy = removal_df.drop_duplicates(subset='AlienMasterID').resample('AS-OCT')['Status'].value_counts().unstack()
+total = removal_df.drop_duplicates(subset='AlienMasterID').resample('AS-OCT')['AlienMasterID'].nunique()
+percent = status_fy[expedited_admin_rein].sum(axis=1)/ total * 100
+percent.index = [f'FY{str(x)[2:4]}' for x in percent.index.year + 1]
+
+```
+
+For example, the dataset reveals that during FY 2011-2018, some <%= sum(removal_df['Status'].isin(pending)) %> people were deported despite still having a pending legal process;<%= fn(' ARTS removal records marked with status codes “2A” (“Deportable - Under Adjudication by IJ”); “2B” (“Deportable - Under Adjudication by BIA”); “8A” (“Excludable/Inadmissible - Hearing Not Commenced”); “8B” (“Excludable/Inadmissible - Under Adjudication by and Immigration Judge”); or “8D” (“Excludable/Inadmissible - Under Adjudication by BIA”). Status code descriptions from Kerwin et al.') %> <%= sum(removal_df['Status'].isin(benefit)) %> were removed despite having been granted a benefit that should block their deportation.<%= fn('ARTS removal records marked with status codes “5C” (“Relief Granted - Withholding of Deportation/Removal”); or “5D” (“Final Order of Deportation/Removal - Deferred Action Granted”). Status code descriptions from Kerwin et al.') %> In these cases, the deportation was not lawful.
+
+This could be the result of ICE’s lack of meaningful regulation of deportation decision-making. In a [2017 investigation of ICE’s deportation procedures](https://www.oig.dhs.gov/sites/default/files/assets/2017/OIG-17-51-Apr17.pdf), DHS’s own Office of the Inspector General concluded that inadequate guidelines were provided to officers in the field, even about matters as serious as when in the process to designate someone for deportation. “DOs [Deportation Officers] are often allowed to act autonomously… even [in] deciding which aliens to recommend for scheduled deportation charters,” the agency found.
+
+Additionally, for an ever-expanding category of migrants, US laws also allow deportation without access to the courts. According to the ARTS database, <%= sum(removal_df['Status'].isin(expedited_admin_rein)) %> people were removed through processes of expedited removal,<%= fn('Expedited removal is a process whereby the Department of Homeland Security removes an individual without granting them access to a hearing before an immigration judge or access to an appeal before the Bureau of Immigration Appeals. Expedited removals are marked with with status codes “8F”, “8G”, “8H”, or “8I” in the ARTS dataset.') %> administrative removal,<%= fn('Administrative removal is the process whereby the Department of Homeland Security removes noncitizens who are also not permanent residents who have been convicted of an aggravated felony under 8 USC. § 1228(b), INA § 238(b); the process occurs without a hearing before an immigration judge.') %> or reinstatement of removal<%= fn('Reinstatement of removal orders are applied to cases of individuals who were previously removed and re-entered without authorization; under the IIRIRA, they can be summarily deported without an opportunity to present their case before a court.') %> ---three forms of summary deportation in which individuals are denied access to the courts. Created by the *Illegal Immigration Reform and Immigrant Responsibility Act of 1996*, these three processes fast-track deportations for certain categories of individuals; their use has been steadily expanded in recent years.<%= fn('See, for example, the most recent case---where in the [February 2017 “Kelly Memorandum,”](https://www.dhs.gov/sites/default/ files/publications/17_0220_S1_Enforcement-of-the-Immigration-Laws-to-Serve-the-National-Interest.pdf) DHS Secretary John Kelly ordered, invoking his “sole and unreviewable discretion,” the expansion of the category of individuals to whom expedited removal would apply.') %> As a result, the dataset shows that in FY 2018, nearly <%= int(round(percent['FY18'])) %>% of removals on ICE Air were of people whose cases were deemed ineligible for judicial review.<%= fn('ARTS removal records marked with status codes “8F” (“Expedited Removal”); “8G” (“Expedited Removal - Credible Fear Referral”); “8H” (“Expedited Removal - Status Claim Referral”); “8I”(“Inadmissible - ICE Fugitive - Expedited Removal”);“11” (“Administrative Deportation/Removal”); or “16” (“Reinstated Final Order”). Status code descriptions from Kerwin et al.') %>
+
+[According to legal scholar Daniel Kanstroom](https://scholarlycommons.law.wlu.edu/wlulr/vol75/iss3/5), this use of expedited removal “raises major due process concerns because arrest, detention, being placed in expedited removal, and ultimately removal with a five-year ban on return, are all in the hands of executive agents. In asylum cases, an immigration judge may be involved but even then federal review is essentially precluded. In most cases, a person subject to expedited removal is detained, has no right to counsel, often has no time to communicate with her family members or to seek legal counsel and has no right to appeal.”
+
+### Lack of travel documents
+
+One critical stage of the deportation process is the securing of travel documents---typically a passport or ID card---from a deportee’s country of origin. A person deported without documents attesting to their identity runs the risk of becoming stateless, may face arrest or discrimination in the receiving country, and typically lacks the ability to access services or employment. [ICE’s own policies therefore require that travel documents be secured prior to deportation](https://www.ice.gov/doclib/foia/dro_policy_memos/09684drofieldpolicymanual.pdf),<%= fn('See ICE’s *[Detention and Deportation Officer’s Field Manual Update](https://www.ice.gov/doclib/foia/dro_policy_memos/09684drofieldpolicymanual.pdf)*, pages 77-84.') %> yet there is evidence---both in past research and in the ICE dataset---that the agency sometimes fails to follow its own guidelines, deporting people with fraudulent or nonexistent documents, at times even to countries other than their countries of origin.<%= fn('For example, a [report by Families for Freedom](https://familiesforfreedom.org/sites/default/files/resources/Smuggled%20into%20Exile%20Final.pdf) includes the case of a man deported to Cameroon on clearly fraudulent documents which not only described his age as that of a toddler, identified him as a Cameroonian citizen when he was not, and included a photograph taken of another person. Similarly, a [2007 report by the Office of the Inspector General](https://www.oig.dhs.gov/assets/Mgmt/OIG_07-28_Feb07.pdf) found that ICE frequently filed incomplete requests for travel documents: United States Department of Homeland Security Office of the Inspector General, ICE's compliance with detention limits for aliens with a final order of removal From the United States (Report No. OIG-07-28), February 9, 2007, https://www.oig.dhs.gov/assets/Mgmt/ OIG_07-28_Feb07.pdf. Also, see Aviva Stahl, “[How US immigration officers use dubious identity papers to deport people](http://america.aljazeera.com/articles/2015/9/30/ do-us-immigration-officers-use-invalid-identity-papers-to-deport-people.html),” Al Jazeera, September 30, 2015.') %> An attorney representing clients from the failed 2017 deportation flight to Somalia, for example, told us that the court order to review each case individually uncovered several individuals from that flight who had been issued false travel documents by the Somali government, likely under pressure from ICE.
+
+The ICE Air dataset includes <%= int(sum(removal_df[removal_df['Status'] == '5F'])) %> cases in which individuals were removed despite the agency’s own records indicating that in these cases they were “unable to obtain travel documents.” Due to ICE’s aforementioned use of fraudulent documents, the actual number of irregular cases may be higher.
+
 
 <%= print_fn_refs() %>

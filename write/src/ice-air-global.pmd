@@ -91,7 +91,7 @@ The ARTS dataset contains <%= round((len(set(df['AlienMasterID'])) / 1000000), 2
 <p><strong>Figure 1: ICE Air annual passengers, removals plus transfers<%= fn('Chart elaborated by UWCHR with data from ICE Air ARTS dataset.') %></strong></p>
 
 <div align='center'>
-```python, removal_transfer_trend_plot, echo=False
+```python, removal_transfer_trend_plot, echo=False,
 
 def removal_transfer_bar(data, title=str, filename=str, xlabel=str, ylabel=str):
 
@@ -110,7 +110,7 @@ def removal_transfer_bar(data, title=str, filename=str, xlabel=str, ylabel=str):
 	ax.grid(color='#FFFFFF')
 
 	fig.set_size_inches(10, 8)
-	fig.savefig(f'output/{filename}.png', dpi=100);
+#	fig.savefig(f'output/{filename}.png', dpi=100);
 
 removal_transfer_bar(r_t_annual,
 					 filename='ICE_Air_Annual_Passengers',
@@ -344,9 +344,132 @@ Additionally, for an ever-expanding category of migrants, US laws also allow dep
 
 ### Lack of travel documents
 
-One critical stage of the deportation process is the securing of travel documents---typically a passport or ID card---from a deportee’s country of origin. A person deported without documents attesting to their identity runs the risk of becoming stateless, may face arrest or discrimination in the receiving country, and typically lacks the ability to access services or employment. [ICE’s own policies therefore require that travel documents be secured prior to deportation](https://www.ice.gov/doclib/foia/dro_policy_memos/09684drofieldpolicymanual.pdf),<%= fn('See ICE’s *[Detention and Deportation Officer’s Field Manual Update](https://www.ice.gov/doclib/foia/dro_policy_memos/09684drofieldpolicymanual.pdf)*, pages 77-84.') %> yet there is evidence---both in past research and in the ICE dataset---that the agency sometimes fails to follow its own guidelines, deporting people with fraudulent or nonexistent documents, at times even to countries other than their countries of origin.<%= fn('For example, a [report by Families for Freedom](https://familiesforfreedom.org/sites/default/files/resources/Smuggled%20into%20Exile%20Final.pdf) includes the case of a man deported to Cameroon on clearly fraudulent documents which not only described his age as that of a toddler, identified him as a Cameroonian citizen when he was not, and included a photograph taken of another person. Similarly, a [2007 report by the Office of the Inspector General](https://www.oig.dhs.gov/assets/Mgmt/OIG_07-28_Feb07.pdf) found that ICE frequently filed incomplete requests for travel documents: United States Department of Homeland Security Office of the Inspector General, ICE's compliance with detention limits for aliens with a final order of removal From the United States (Report No. OIG-07-28), February 9, 2007, https://www.oig.dhs.gov/assets/Mgmt/ OIG_07-28_Feb07.pdf. Also, see Aviva Stahl, “[How US immigration officers use dubious identity papers to deport people](http://america.aljazeera.com/articles/2015/9/30/ do-us-immigration-officers-use-invalid-identity-papers-to-deport-people.html),” Al Jazeera, September 30, 2015.') %> An attorney representing clients from the failed 2017 deportation flight to Somalia, for example, told us that the court order to review each case individually uncovered several individuals from that flight who had been issued false travel documents by the Somali government, likely under pressure from ICE.
+One critical stage of the deportation process is the securing of travel documents---typically a passport or ID card---from a deportee’s country of origin. A person deported without documents attesting to their identity runs the risk of becoming stateless, may face arrest or discrimination in the receiving country, and typically lacks the ability to access services or employment. [ICE’s own policies therefore require that travel documents be secured prior to deportation](https://www.ice.gov/doclib/foia/dro_policy_memos/09684drofieldpolicymanual.pdf),<%= fn('See ICE’s *[Detention and Deportation Officer’s Field Manual Update](https://www.ice.gov/doclib/foia/dro_policy_memos/09684drofieldpolicymanual.pdf)*, pages 77-84.') %> yet there is evidence---both in past research and in the ICE dataset---that the agency sometimes fails to follow its own guidelines, deporting people with fraudulent or nonexistent documents, at times even to countries other than their countries of origin. <%= fn('For example, a [report by Families for Freedom](https://familiesforfreedom.org/sites/default/files/resources/Smuggled%20into%20Exile%20Final.pdf) includes the case of a man deported to Cameroon on clearly fraudulent documents which not only described his age as that of a toddler, identified him as a Cameroonian citizen when he was not, and included a photograph taken of another person. Similarly, a [2007 report by the Office of the Inspector General](https://www.oig.dhs.gov/assets/Mgmt/OIG_07-28_Feb07.pdf) found that ICE frequently filed incomplete requests for travel documents: United States Department of Homeland Security Office of the Inspector General, ICE’s compliance with detention limits for aliens with a final order of removal From the United States (Report No. OIG-07-28), February 9, 2007, https://www.oig.dhs.gov/assets/Mgmt/ OIG_07-28_Feb07.pdf. Also, see Aviva Stahl, “[How US immigration officers use dubious identity papers to deport people](http://america.aljazeera.com/articles/2015/9/30/ do-us-immigration-officers-use-invalid-identity-papers-to-deport-people.html),” Al Jazeera, September 30, 2015.') %> An attorney representing clients from the failed 2017 deportation flight to Somalia, for example, told us that the court order to review each case individually uncovered several individuals from that flight who had been issued false travel documents by the Somali government, likely under pressure from ICE.
 
-The ICE Air dataset includes <%= int(sum(removal_df[removal_df['Status'] == '5F'])) %> cases in which individuals were removed despite the agency’s own records indicating that in these cases they were “unable to obtain travel documents.” Due to ICE’s aforementioned use of fraudulent documents, the actual number of irregular cases may be higher.
+The ICE Air dataset includes <%= sum(removal_df['Status'] == '5F') %> cases in which individuals were removed despite the agency’s own records indicating that in these cases they were “unable to obtain travel documents.” Due to ICE’s aforementioned use of fraudulent documents, the actual number of irregular cases may be higher.
 
+### Refoulement
+
+As human rights advocates have made clear, the flawed process of adjudicating asylum claims in this country already denies protection to many migrants for whom return to their country of origin may be life-threatening. International refugee law prohibits *refoulement,* the forcible return of people to persecution on account of race, religion, nationality, membership of a particular social group, or political opinion, to a situation where they would be at risk of torture or cruel, inhuman, or degrading treatment. However, the ICE Air dataset makes clear the extent to which people are deported to countries experiencing levels of violence and abuse that raise grave concerns.
+
+For example, the dataset reflects growing numbers of removals to Somalia, a nation in which large swaths of territory remain under the control of the terrorist group Al-Shabaab. In response to the Kenyan government’s decision to deport undocumented Somalis in 2014, the United Nations High Commission for Refugees [issued a report urging restrictions on deportations to Somalia](https://www.refworld.org/docid/52d7fc5f4.html). Human Rights Watch, among other organizations, [also has suggested](https://www.hrw.org/news/2014/04/11/kenya-halt-crackdown-somalis) that the return of Somalis to a country facing such instability constitutes refoulement. Yet US deportations to Somalia have escalated in recent years, and include [individuals who have specific reason to fear retaliation](https://theintercept.com/2018/03/31/ice-detention-immigration-somalia-refugee/) by Al-Shabaab. The ARTS database notes the removal of <%= sum(removal_df['CountryOfCitizenship'] == 'SOMALIA') %> Somalis.
+
+In recent years, the Trump administration has increased the numbers of people [deported to Mauritania](https://www.cincinnati.com/story/news/2018/10/11/2-more-men-face-u-s-deportation-mauritania-cincinnati/1602133002/), where slavery is practiced by the ruling Arab Maghreb caste against black Mauritanians, who are not considered citizens. [Amnesty International has criticized this practice](https://www.amnestyusa.org/press-releases/amnesty-international-usa-calls-on-the-trump-administration-to-halt-possible-deportation-of-mauritanian-asylees-living-in-the-united-states/), insisting, “These are people that have built lives and communities in the United States, started families, raised American children, and would now face the threat of slavery, torture, and death in Mauritania.” ICE is deporting them anyway; <%= sum(df['CountryOfCitizenship'] == "MAURITANIA") %> records in the database are of Mauritanian nationals.
+
+```python, country_of_citizenship_dart, echo=False
+
+g = removal_df.groupby([pd.Grouper(freq='AS-OCT', sort=True), 'CountryOfCitizenship'])['AlienMasterID', 'MissionID'].nunique()
+country_of_citizenship_by_year = g.reset_index()
+country_of_citizenship_by_year.rename({'MissionDate': 'FY'}, axis='columns', inplace=True)
+country_of_citizenship_by_year.set_index('FY', inplace=True)
+country_of_citizenship_by_year.sort_values(by='AlienMasterID', ascending=False, inplace=True)
+country_of_citizenship_by_year = country_of_citizenship_by_year['2010':'2017']
+
+in_top_5 = list()
+for year in country_of_citizenship_by_year.index.unique():
+    temp = country_of_citizenship_by_year.loc[f'{year}'][['CountryOfCitizenship', 'AlienMasterID']]
+    temp_top_5 = temp[0:5]
+    in_top_5.extend(list(temp_top_5['CountryOfCitizenship']))
+
+top_5_df = pd.DataFrame()
+
+for year in country_of_citizenship_by_year.index.unique():
+    temp = country_of_citizenship_by_year.loc[f'{year}'][['CountryOfCitizenship', 'AlienMasterID']]
+    temp_top_5 = temp[0:5]
+    if len(temp) > 5:
+        all_other_count = sum(temp['AlienMasterID'][5:])
+    else:
+        all_other_count = 0
+    other_df = pd.DataFrame([['ALL OTHERS', all_other_count]],
+                            columns=['CountryOfCitizenship',
+                                     'AlienMasterID'],
+                            index=[year])
+    temp_top_5 = temp_top_5.append(other_df)
+    top_5_df = top_5_df.append(temp_top_5)
+
+top_5_df.sort_index(inplace=True)
+top_5_df.index = [f'FY{str(x)[2:4]}' for x in top_5_df.index.year + 1]
+
+top_5_data = pd.pivot_table(data=top_5_df,
+                       index=top_5_df.index,
+                       columns='CountryOfCitizenship',
+                       values='AlienMasterID',
+                       aggfunc=np.sum,
+                       fill_value=0)
+
+top_5_data = top_5_data.reindex(top_5_data.sum().sort_values(ascending=False).index, axis=1)
+cols = list(top_5_data.columns)
+cols.remove('ALL OTHERS')
+cols.append('ALL OTHERS')
+top_5_data = top_5_data[cols]
+top_5_data.columns = top_5_data.columns.str.title()
+top_5_data.columns.name = 'Country of Citizenship'
+
+cent_am = ['MEXICO', 'GUATEMALA', 'HONDURAS', 'EL SALVADOR']
+cent_am = [i.title() for i in cent_am]
+cent_am_percent = int(round((top_5_data[cent_am].sum(axis=1) / top_5_data.sum(axis=1)).mean() * 100))
+
+```
+
+Of course, many other deportees are also returned to countries where their lives are in danger, often due to circumstances that fit awkwardly, if at all, into contemporary Department of Justice guidelines for the granting of asylum.<%= fn('These guidelines can be found at the [Department of Justice website](https://www.justice.gov/eoir/office-of-policy).') %> Recent DOJ guidelines, for example, render it increasingly difficult for Central Americans and Mexicans---who together make up over <%= cent_am_percent %>% of those on ICE Air removal flights, as seen in Figure 5 below---to qualify for asylum when presenting claims related to gender-based violence or targeting by gangs, resulting in some migrants’ deportation to their deaths.<%= fn('See the following cases: Stillman, B. (2018, January 15). [When deportation is a death sentence](https://www.newyorker.com/magazine/2018/01/15/when-deportation-is-a-death-sentence). The New Yorker; Vasquez, T. (2017, September 21). [Deported to death: Cases that reveal the danger of US immigration policy](https://rewire.news/article/2017/09/21/deported-death-cases-reveal-danger-u-s-immigration-policy/). Rewire News.; Sieff, K. (2018, December 26). [When death awaits deported asylum seekers](https://www.washingtonpost.com/graphics/2018/world/when-death-awaits-deported-asylum-seekers/?utm_term=.f8985b0ff038). The Washington Post.') %> Such cases involve no less an egregious dereliction of responsibilities by US immigration authorities than those remanding migrants to war zones.
+
+<p><strong>Figure 5: ICE Air removals by country of citizenship (Top 5 any year)<%= fn('Chart elaborated by UWCHR with data from ICE Air ARTS dataset. The chart depicts removal totals for all nationalities which enter the top 5 removal totals by countries of citizenship during any year between FY 2011-2018.') %></strong></p>
+
+<div align='center'>
+```python, country_of_citizenship_dart, echo=False
+
+def country_of_citizenship_trend(data, title=str, filename=str, xlabel=str, ylabel=str):
+    
+    fig, ax = plt.subplots()
+    
+    data.plot(kind='bar', stacked=True, legend=True, ax=ax).legend(bbox_to_anchor=(1,1))
+
+    ax.set_axisbelow(True)
+    ax.set_facecolor('#EEEEEE')
+    ax.grid(color='#FFFFFF')
+    ax.set_ylabel(ylabel, fontsize=16)
+    ax.set_xlabel(xlabel, fontsize=16)
+    ax.set_title(title, fontsize=18)
+    ax.tick_params(labelsize=14)
+    plt.xticks(rotation=0)
+    plt.legend(fontsize=14)
+
+    fig.set_size_inches(10, 8)
+    fig.savefig(f'output/{filename}.png', dpi=100)
+
+country_of_citizenship_trend(top_5_data,
+                             title=f'ICE Air Removals by Country of Citizenship \n (Top 5 any year)',
+                             filename=f'top5_total_removal_nationalities_any_year',
+                             ylabel=f'Total Removals',
+                             xlabel='Fiscal Year');
+
+```
+</div>
+
+## Towards Accountability
+
+We are unaware of any efforts to date to hold anyone accountable for abuses by ICE Air or its contractors. ICE Air’s hybrid structure---its operations are in some ways public, in others private; at times commercial, at others government; on occasion domestic, sometimes international---also makes it easy for those responsible for these flights to escape accountability given the limited reach of regulations governing international air travel.
+
+### Accountability within ICE
+
+ICE has taken no discernible action to respond to allegations of abuse within ICE Air operations. In fact, it is not clear ICE is aware of abuses, as it lacks serious reporting mechanisms that would alert the agency to their occurrence.
+
+Unlike other federal agencies, [ICE lacks an independent ombudsperson](https://scholarlycommons.pacific.edu/mlr/vol40/iss1/9) to receive complaints by detainees or inform Congress of concerns. And ICE’s internal investigations do not inspire confidence: the Government Accountability Office reported that between 2014-2016 [more than two-thirds of ICE misconduct cases reported resulted in no action](https://www.gao.gov/products/GAO-18-405). Additionally, an independent report submitted to the DHS Civil Rights and Liberties Office in May 2017 found that [under two percent of all complaints received by the agency led to an investigation](http://www.endisolation.org/sexual-assault-in-immigration-detention/).
+
+It is unclear whether deportees aboard flights are even able to file one of these complaints. The process by which detainees make complaints regarding abuses to ICE is stipulated in the [ICE Manual for Performance-Based National Detention Standards](https://www.ice.gov/doclib/detention-standards/2011/4-1.pdf), which establishes that detainees can internally file complaints to the facilities in which they are held or with an ICE field office, and that they “shall be informed about the facility’s informal and formal grievance system in a language or manner they understand.” Because there is no specific mention of these same requirements outside of detention facilities,<%= fn('The grievance system outlined in this manual includes the right to complain to the DHS Inspector General, the DHS Civil Rights and Liberties offices, the ICE Office of Professional Responsibility, or finally, file a lawsuit.') %> it is questionable whether deportees on flights are made aware of their right to file a complaint, let alone able to access the process whereby they might do so.
+
+What’s more, ICE Air’s contracting system would seem to discourage the reporting of incidents of abuse. In an interview, Benjamin Shih, Section Chief of Detention, Compliance, and Removals in ICE’s Office of Acquisition Management explained that ICE evaluates contractor performance using a Quality Assurance Surveillance Plan (QASP). The QASP measures performance according to standards for maintaining aircraft availability, on-time departures, readiness of crew, safety reports, accident/incident reports, invoicing, and protection of sensitive information, including passenger manifests. These performance metrics are almost entirely focused on efficiency and aircraft safety. While issues of passenger mistreatment could be reported in the QASP’s “accident/incident reports” section, given that ICE typically sanctions contractors for poor performance by withholding payment for a flight, there is a built-in disincentive for contractors to report challenges of this nature.
+
+According to Shih, ICE oversight of those contractors’ subcontractors is even further removed. ICE maintains “privity of contract,” meaning that the actions of subcontractors are the sole responsibility of the contractor. [The contract between ICE and CSI](https://www.ice.gov/doclib/foia/contracts/hsceop07a00041orderhscecr08jcl020csi.pdf) required that “if the Contractor utilizes multiple subcontractors to fulfill the scope of the contract, subcontractors are expected to cooperate with each other to fulfill the requirements of the contract.”<%= fn('US Immigration and Custom Enforcement, “FY 2008 MIRP Performance Work Statement,” 2008, [https://www.ice.gov/doclib/foia/contracts/hsceop07a00041orderhscecr08jcl020csi.pdf](https://www.ice.gov/doclib/foia/contracts/hsceop07a00041orderhscecr08jcl020csi.pdf), p. 12.') %> Yet the only mechanism by which ICE ensures that the subcontractor is fulfilling such requirements is through a “Summary Contract Report” submitted by the primary contractor to ICE.<%= fn('Ibid., p. 7.') %> It is unclear what this summary must include in regards to treatment of passengers. Under FOIA, UWCHR researchers requested copies of quarterly operational summary reports and were told that no such documents existed. 
+
+Relatedly, UWCHR requested copies of Significant Incident Reports filed to the ICE Reporting and Operations Center (IROC) using the electronic Significant Event Notification (SEN) system about the use of force on removal flights from October 2010 to the present; ICE responded that no such records exist. According to the [U.S. Department of Homeland Security Privacy Impact Assessment for the Significant Event Notification (SEN) System (2010)](https://www.dhs.gov/publication/dhsicepia-023-significant-event-notification-system), the Significant Event Notification (SEN) System is is used by ICE ERO personnel to report such incidents, yet ICE responded that no such records exist.
+
+### Accountability by the federal government
+
+The federal government has failed to hold ICE accountable for known rights violations in many areas, and its Air Operations are no exception. In part, this is due to Congress’ shirking its duties to exercise meaningful oversight of the executive branch. But in part, it also responds to significant gaps in aviation law, which has arisen primarily in response to the needs generated by commercial flights. 
+
+
+
+## Notes
 
 <%= print_fn_refs() %>

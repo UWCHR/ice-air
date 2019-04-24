@@ -13,8 +13,8 @@ Tasks in this project are designed to be executed using the recursive make tool 
 - `import/` - Convenience task for importing ICE Air ARTS dataset. Input files in `import/input/` have been previously renamed to remove spaces in filenames, converted to CSV with pipe separator (`|`), and compressed using Gzip. Input files are symlinked to `import/output/` and then to `input/` of downstream tasks for modification and analysis. Original Excel files as released by ICE can be found on [UWCHR's Google Drive](https://drive.google.com/open?id=1GVeLTfCm846YkZKWPlK0HF5eRxxYqPsF). These raw files are excluded from the repository due to their size.
 - `optimize/` - Determines optimal Python/Pandas data types for each field in the original dataset and outputs this as a YAML dictionary used and modified in downstream tasks.
 - `clean/` - Standardizes selected field values in `clean/hand/clean.yaml`; fixes missing and bad airport data; removes duplicate passenger records.
-- `analyze/` - Contains exploratory notebooks and R Markdown. `analyze/output/` contains various figures and data subsets; currently none of these are used in any downstream tasks.
-- `write/` - Writes out data appendix and analysis report to HTML using [Pweave](http://mpastell.com/pweave/). All analysis, figure generation, etc. takes place in `write/src/report.pmd`.
+- `analyze/` - Contains exploratory Jupyter notebooks and R Markdown. `analyze/output/` contains various versions of figures and data subsets; currently none of these are used in any downstream tasks.
+- `write/` - Writes out reports to HTML using [Pweave](http://mpastell.com/pweave/). All analysis, figure generation, etc. takes place in `write/src/`.
 - `share/` - Contains various hand-written files and resources shared by multiple other tasks, 
 
 ## TO-DO

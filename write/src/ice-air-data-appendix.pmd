@@ -1,6 +1,6 @@
 ```python, imports, echo=True
 # Author: University of Washington Center for Human Rights
-# Title: ICE Air Data Appendix
+# Title: Hidden in Plain Sight: ICE Air Data Appendix
 # Date: 2019-04-24
 # License: GPL 3.0 or greater
 
@@ -11,11 +11,34 @@ import matplotlib.pyplot as plt
 
 ```
 
-# ICE Air Data Appendix
+```python, footnote_functions, echo=False
 
-This is an appendix to the report [Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation](https://jsis.washington.edu/humanrights/2019/04/23/ice-air/), which uses data from ICE's Alien Repatriation Tracking System (ARTS) released by ICE Enforcement and Removal Operations pursuant to a Freedom of Information Act request by the [University of Washington Center for Human Rights](https://jsis.washington.edu/humanrights/). This appendix is intended to provide readers with greater detail on the contents, structure, and limitations of this dataset, and the process our researchers performed to render it suitable for social scientific analysis.
+# Functions for HTML formatted footnotes
 
-## The ARTS dataset
+fn_count = 1
+fn_buffer = []
+
+def fn(ref_text=str):
+    global fn_count, fn_buffer
+    ftn_sup = f'<a href="#_ftn{fn_count}" name="_ftnref{fn_count}"><sup>[{fn_count}]</sup></a>'
+    ftn_ref = f'<a href="#_ftnref{fn_count}" name="_ftn{fn_count}"><sup>[{fn_count}]</sup></a> {ref_text}'
+    fn_buffer.append(ftn_ref)
+    fn_count = fn_count + 1
+    print(ftn_sup)
+
+def print_fn_refs():
+    global fn_buffer
+    for fn in fn_buffer:
+        print(fn)
+        print()
+
+```
+
+# Hidden in Plain Sight: ICE Air Data Appendix
+
+This is an appendix to the report [Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation](https://jsis.washington.edu/humanrights/2019/04/23/ice-air/), which uses data from ICE's Alien Repatriation Tracking System (ARTS) released by ICE Enforcement and Removal Operations pursuant to a Freedom of Information Act request by the [University of Washington Center for Human Rights](https://jsis.washington.edu/humanrights/). This appendix intended to provide readers with greater detail on the contents, structure, and limitations of this dataset, and the process our researchers performed to render it suitable for social scientific analysis. The appendix is a living document that will be updated over time in order to make ICE Air data as widely-accessible and transparently-documented as possible.
+
+The [project repository](https://github.com/UWCHR/ice-air) contains all the data and code used for the production of the report.
 
 ```python, data_import_and_global_vars, echo=True
 
@@ -48,30 +71,9 @@ assert len(set(df['MissionID'])) == len(set(df['MissionNumber']))
 
 ```
 
-```python, footnote_functions, echo=False
+## The ARTS dataset
 
-# Functions for HTML formatted footnotes
-
-fn_count = 1
-fn_buffer = []
-
-def fn(ref_text=str):
-    global fn_count, fn_buffer
-    ftn_sup = f'<a href="#_ftn{fn_count}" name="_ftnref{fn_count}"><sup>[{fn_count}]</sup></a>'
-    ftn_ref = f'<a href="#_ftnref{fn_count}" name="_ftn{fn_count}"><sup>[{fn_count}]</sup></a> {ref_text}'
-    fn_buffer.append(ftn_ref)
-    fn_count = fn_count + 1
-    print(ftn_sup)
-
-def print_fn_refs():
-    global fn_buffer
-    for fn in fn_buffer:
-        print(fn)
-        print()
-
-```
-
-According to a [2015 audit of ICE Air by the Department of Homeland Security Office of Inspector General (OIG)](https://www.oig.dhs.gov/sites/default/files/assets/Mgmt/2015/OIG_15-57_Apr15.pdf), the ARTS dataset was created by an ICE contractor at an unknown date and transitioned to government personnell in May 2014.<%= fn('The DHS OIG explains the ARTS database as such: "ICE Air records data pertaining to charter flights and detainees in the Alien Repatriation Trackgin System (ARTS). A contractor who managed the program%lsquo;s daily activities created the ARTS database to provide a historical record of charter flights, monthly statistical reports, and data responses to ICE required under the contract. ARTS captures information such as the dates, routes, detainees, delays or cancelations, and costs associated with each charter flight."') %> The identity of the contractor which originally created the database is not currently known.
+According to a [2015 audit of ICE Air by the Department of Homeland Security Office of Inspector General (OIG)](https://www.oig.dhs.gov/sites/default/files/assets/Mgmt/2015/OIG_15-57_Apr15.pdf), the ARTS dataset was created by an ICE contractor at an unknown date and transitioned to government personnell in May 2014.<%= fn('The DHS OIG explains the ARTS database as such: "ICE Air records data pertaining to charter flights and detainees in the Alien Repatriation Trackgin System (ARTS). A contractor who managed the program%rsquo;s daily activities created the ARTS database to provide a historical record of charter flights, monthly statistical reports, and data responses to ICE required under the contract. ARTS captures information such as the dates, routes, detainees, delays or cancelations, and costs associated with each charter flight."') %> The identity of the contractor which originally created the database is not currently known.
 
 Following cleaning by UWCHR as detailed below, the ARTS dataset contains <%= len(df) %> records relating to ICE Air Operations charter flights during the period from <%= print(df['MissionDate'].min().strftime('%B %-d, %Y')) %> to <%= print(df['MissionDate'].max().strftime('%B %-d, %Y')) %>, including full data for U.S. Federal Government Fiscal Years 2011 through 2018. Each record in the dataset relates to a single passenger on a single ICE Air mission.
 
@@ -94,17 +96,20 @@ sample_records = df.loc[:, selected_passenger_cols].tail().dropna(axis=1)
 
 <% print(sample_records.to_html(border=0, index=False)) %>
 
-The `MissionID` and `MissionNumber` fields each contain <%= len(set(df['MissionID'])) %> values; like `AlienMasterID`, these are also numeric strings that increase incrementally over time. Below we will display records for a single ICE Air mission using the Pandas `groupby` function, which groups records by specified characteristics. We can include here other fields such as 'R-T', 'CountryOfCitizenship', etc.:
+The `MissionID` and `MissionNumber` fields each contain <%= len(set(df['MissionID'])) %> values; like `AlienMasterID`, these are also numeric strings that increase incrementally over time. Below we will display records for a single ICE Air mission<%= fn('The 2015 audit by the DHS OIG defines an ICE Air mission as such: "A mission begins when the aircraft departs from its initial location and ends when the aircraft reaches its final destination. Depending on the need, a mission can contain one or more stops to destinations within the United States, internationally, or a combination." In a footnote, the DHS OIG specifies, "The definition for the term &ldquo;mission&rdquo; is derived from the definition used in the former Office of Detention and Removal Operations&rsquo; *Policy and Procedure Manual (June 2008)." UWCHR researchers have not been able to locate this reference.') %> using the Pandas `groupby` function, which groups records by specified characteristics. We can include here other fields such as `R-T`, `CountryOfCitizenship`, etc.:
 
 ```python, mission_sample, echo=True
 
-# sample_mission_id = 47425
-# sample_records = df[df['MissionID' == sample_mission_id]]
-sample_records = df.groupby(['MissionDate', 'MissionID', 'MissionNumber', 'PULOC', 'DropLoc'])['AlienMasterID'].nunique().reset_index().tail()
+sample_mission_id = 47425
+sample_records = df[df['MissionID'] == sample_mission_id]
+sample_records = sample_records.groupby(['MissionDate', 'MissionID', 'MissionNumber', 'PULOC', 'DropLoc'])['AlienMasterID'].nunique().reset_index()
+sample_records = sample_records.rename({'AlienMasterID': 'PassengerCount'}, axis=1)
 
 ```
 
 <% print(sample_records.to_html(border=0, index=False)) %>
+
+While mission records allow us to determine the numbers of individuals (summarized in the grouping above) moved between each pickup and dropoff location involved in a mission, we are not able to reconstruct the exact itinerary of the flight from these records. See below for more on the limitations of the `MissionID` and `MissionNumber` keys.
 
 ## Data cleaning
 

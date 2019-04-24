@@ -87,27 +87,29 @@ The ARTS dataset uses three key fields to identify passengers (`AlienMasterID`) 
 
 ```python, passenger_sample, echo=True
 
-selected_passenger_cols = ['AlienMasterID', 'Status', 'Sex', 'Convictions', 'GangMember', 'ClassLvl', 'Age',
-'PULOC', 'DropLoc', 'StrikeFromList', 'ReasonStruck', 'R-T', 'CountryOfCitizenship']
+selected_cols = ['AlienMasterID', 'Status', 'Sex',
+    'Convictions', 'GangMember', 'Age', 'PULOC', 'DropLoc',
+    'R-T', 'CountryOfCitizenship']
 
-sample_records = df.loc[:, selected_passenger_cols].tail().dropna(axis=1)
+sample_records = df.loc[:, selected_cols].tail().dropna(axis=1)
 
 ```
 
 <% print(sample_records.to_html(border=0, index=False)) %>
 
-The `MissionID` and `MissionNumber` fields each contain <%= len(set(df['MissionID'])) %> values; like `AlienMasterID`, these are also numeric strings that increase incrementally over time. Below we will display records for a single ICE Air mission<%= fn('The 2015 audit by the DHS OIG defines an ICE Air mission as such: "A mission begins when the aircraft departs from its initial location and ends when the aircraft reaches its final destination. Depending on the need, a mission can contain one or more stops to destinations within the United States, internationally, or a combination." In a footnote, the DHS OIG specifies, "The definition for the term &ldquo;mission&rdquo; is derived from the definition used in the former Office of Detention and Removal Operations&rsquo; *Policy and Procedure Manual (June 2008)." UWCHR researchers have not been able to locate this reference.') %> using the Pandas `groupby` function, which groups records by specified characteristics. We can include here other fields such as `R-T`, `CountryOfCitizenship`, etc.:
+The `MissionID` and `MissionNumber` fields each contain <%= len(set(df['MissionID'])) %> values; like `AlienMasterID`, these are also numeric strings that increase incrementally over time. Below we will display records for a single ICE Air mission<%= fn('The 2015 audit by the DHS OIG defines an ICE Air mission: "A mission begins when the aircraft departs from its initial location and ends when the aircraft reaches its final destination. Depending on the need, a mission can contain one or more stops to destinations within the United States, internationally, or a combination." In a footnote, the DHS OIG specifies, "The definition for the term &ldquo;mission&rdquo; is derived from the definition used in the former Office of Detention and Removal Operations&rsquo; *Policy and Procedure Manual (June 2008)." UWCHR researchers have not been able to locate this reference.') %> using the Pandas `groupby` function, which groups records by specified characteristics. We can include here other fields such as `R-T`, `CountryOfCitizenship`, etc.:
 
 ```python, mission_sample, echo=True
 
 sample_mission_id = 47425
 sample_records = df[df['MissionID'] == sample_mission_id]
-sample_records = sample_records.groupby(['MissionDate', 'MissionID', 'MissionNumber', 'PULOC', 'DropLoc'])['AlienMasterID'].nunique().reset_index()
-sample_records = sample_records.rename({'AlienMasterID': 'PassengerCount'}, axis=1)
+sample_groupby = sample_records.groupby(['MissionDate', 'MissionID', 'MissionNumber', 'PULOC', 'DropLoc'])
+sample_table = sample_groupby['AlienMasterID'].nunique().reset_index()
+sample_table = sample_table.rename({'AlienMasterID': 'PassengerCount'}, axis=1)
 
 ```
 
-<% print(sample_records.to_html(border=0, index=False)) %>
+<% print(sample_table.to_html(border=0, index=False)) %>
 
 While mission records allow us to determine the numbers of individuals (summarized in the grouping above) moved between each pickup and dropoff location involved in a mission, we are not able to reconstruct the exact itinerary of the flight from these records. See below for more on the limitations of the `MissionID` and `MissionNumber` keys.
 

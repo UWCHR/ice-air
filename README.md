@@ -15,7 +15,7 @@ Tasks in this project are designed to be executed using the recursive make tool 
 - `clean/` - Standardizes selected field values in `clean/hand/clean.yaml`; fixes missing and bad airport data; removes duplicate passenger records.
 - `analyze/` - Contains exploratory Jupyter notebooks and R Markdown. `analyze/output/` contains various versions of figures and data subsets; currently none of these are used in any downstream tasks.
 - `write/` - Writes out reports to HTML using [Pweave](http://mpastell.com/pweave/). All analysis, figure generation, etc. takes place in `write/src/`.
-- `share/` - Contains various hand-written files and resources shared by multiple other tasks, 
+- `share/` - Contains various hand-written files and resources shared by multiple other tasks.
 
 # ARTS PASSENGER DATA DICTIONARY
 

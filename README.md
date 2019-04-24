@@ -17,12 +17,6 @@ Tasks in this project are designed to be executed using the recursive make tool 
 - `write/` - Writes out reports to HTML using [Pweave](http://mpastell.com/pweave/). All analysis, figure generation, etc. takes place in `write/src/`.
 - `share/` - Contains various hand-written files and resources shared by multiple other tasks, 
 
-## TO-DO
-
-- [ ] Clean analysis notebooks for publication
-  - Move relevant code into report
-- [ ] Write data appendix report
-
 # ARTS PASSENGER DATA DICTIONARY
 
 Field|Description|(UWCHR notes)

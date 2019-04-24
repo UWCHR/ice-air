@@ -38,13 +38,13 @@ output/ice-air-king-county.html: \
 	pweave src/ice-air-king-county.pmd -f md2html -o output/ice-air-king-county.html
 
 output/ice-air-data-appendix.html: \
-		src/data-appendix.pmd \
+		src/ice-air-data-appendix.pmd \
 		input/ice-air.csv.gz \
 		input/clean_stats.yaml\
 		input/dtypes.yaml \
 		input/status.csv \
 		hand/arts_cols.yaml
-	pweave src/data-appendix.pmd -f md2html -o output/ice-air-data-appendix.html
+	pweave src/ice-air-data-appendix.pmd -f md2html -o output/ice-air-data-appendix.html
 
 output/UWCHR-ICEAir-Chart-National.jpg: \
 		input/UWCHR-ICEAir-Chart-National.jpg

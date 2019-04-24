@@ -668,7 +668,7 @@ img {max-width : 100%}
 
 
 <div class="highlight"><pre><span></span><span class="c1"># Author: University of Washington Center for Human Rights</span>
-<span class="c1"># Title: ICE Air Data Appendix</span>
+<span class="c1"># Title: Hidden in Plain Sight: ICE Air Data Appendix</span>
 <span class="c1"># Date: 2019-04-24</span>
 <span class="c1"># License: GPL 3.0 or greater</span>
 
@@ -678,9 +678,11 @@ img {max-width : 100%}
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 </pre></div>
 
-<h1>ICE Air Data Appendix</h1>
-<p>This is an appendix to the report <a href="https://jsis.washington.edu/humanrights/2019/04/23/ice-air/">Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation</a>, which uses data from ICE's Alien Repatriation Tracking System (ARTS) released by ICE Enforcement and Removal Operations pursuant to a Freedom of Information Act request by the <a href="https://jsis.washington.edu/humanrights/">University of Washington Center for Human Rights</a>. This appendix is intended to provide readers with greater detail on the contents, structure, and limitations of this dataset, and the process our researchers performed to render it suitable for social scientific analysis.</p>
-<h2>The ARTS dataset</h2>
+
+
+<h1>Hidden in Plain Sight: ICE Air Data Appendix</h1>
+<p>This is an appendix to the report <a href="https://jsis.washington.edu/humanrights/2019/04/23/ice-air/">Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation</a>, which uses data from ICE's Alien Repatriation Tracking System (ARTS) released by ICE Enforcement and Removal Operations pursuant to a Freedom of Information Act request by the <a href="https://jsis.washington.edu/humanrights/">University of Washington Center for Human Rights</a>. This appendix intended to provide readers with greater detail on the contents, structure, and limitations of this dataset, and the process our researchers performed to render it suitable for social scientific analysis. The appendix is a living document that will be updated over time in order to make ICE Air data as widely-accessible and transparently-documented as possible.</p>
+<p>The <a href="https://github.com/UWCHR/ice-air">project repository</a> contains all the data and code used for the production of the report.</p>
 
 <div class="highlight"><pre><span></span><span class="c1"># Get optimal data types before reading in the ARTS dataset</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input/dtypes.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">yamlfile</span><span class="p">:</span>
@@ -710,8 +712,7 @@ img {max-width : 100%}
 <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionID&#39;</span><span class="p">]))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionNumber&#39;</span><span class="p">]))</span>
 </pre></div>
 
-
-
+<h2>The ARTS dataset</h2>
 <p>According to a <a href="https://www.oig.dhs.gov/sites/default/files/assets/Mgmt/2015/OIG_15-57_Apr15.pdf">2015 audit of ICE Air by the Department of Homeland Security Office of Inspector General (OIG)</a>, the ARTS dataset was created by an ICE contractor at an unknown date and transitioned to government personnell in May 2014.<a href="#_ftn1" name="_ftnref1"><sup>[1]</sup></a> The identity of the contractor which originally created the database is not currently known.</p>
 <p>Following cleaning by UWCHR as detailed below, the ARTS dataset contains 1732625 records relating to ICE Air Operations charter flights during the period from October 1, 2010 to December 5, 2018, including full data for U.S. Federal Government Fiscal Years 2011 through 2018. Each record in the dataset relates to a single passenger on a single ICE Air mission.</p>
 <p>The ARTS dataset is made up of 43 fields, defined in a data dictionary provided by ICE; however, as described below, the content of these fields does not always conform to the definitions provided:</p>
@@ -986,11 +987,12 @@ img {max-width : 100%}
   </tbody>
 </table>
 
-<p>The <code>MissionID</code> and <code>MissionNumber</code> fields each contain 14961 values; like <code>AlienMasterID</code>, these are also numeric strings that increase incrementally over time. Below we will display records for a single ICE Air mission using the Pandas <code>groupby</code> function, which groups records by specified characteristics. We can include here other fields such as 'R-T', 'CountryOfCitizenship', etc.:</p>
+<p>The <code>MissionID</code> and <code>MissionNumber</code> fields each contain 14961 values; like <code>AlienMasterID</code>, these are also numeric strings that increase incrementally over time. Below we will display records for a single ICE Air mission<a href="#_ftn2" name="_ftnref2"><sup>[2]</sup></a> using the Pandas <code>groupby</code> function, which groups records by specified characteristics. We can include here other fields such as <code>R-T</code>, <code>CountryOfCitizenship</code>, etc.:</p>
 
-<div class="highlight"><pre><span></span><span class="c1"># sample_mission_id = 47425</span>
-<span class="c1"># sample_records = df[df[&#39;MissionID&#39; == sample_mission_id]]</span>
-<span class="n">sample_records</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;MissionDate&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionID&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionNumber&#39;</span><span class="p">,</span> <span class="s1">&#39;PULOC&#39;</span><span class="p">,</span> <span class="s1">&#39;DropLoc&#39;</span><span class="p">])[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><span class="n">sample_mission_id</span> <span class="o">=</span> <span class="mi">47425</span>
+<span class="n">sample_records</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionID&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">sample_mission_id</span><span class="p">]</span>
+<span class="n">sample_records</span> <span class="o">=</span> <span class="n">sample_records</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;MissionDate&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionID&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionNumber&#39;</span><span class="p">,</span> <span class="s1">&#39;PULOC&#39;</span><span class="p">,</span> <span class="s1">&#39;DropLoc&#39;</span><span class="p">])[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">sample_records</span> <span class="o">=</span> <span class="n">sample_records</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">:</span> <span class="s1">&#39;PassengerCount&#39;</span><span class="p">},</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 <table border="0" class="dataframe">
@@ -1001,53 +1003,54 @@ img {max-width : 100%}
       <th>MissionNumber</th>
       <th>PULOC</th>
       <th>DropLoc</th>
-      <th>AlienMasterID</th>
+      <th>PassengerCount</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>2018-12-05</td>
-      <td>47439</td>
-      <td>190342</td>
-      <td>KMSP</td>
-      <td>KAEX</td>
-      <td>24</td>
+      <td>2018-12-04</td>
+      <td>47425</td>
+      <td>190331</td>
+      <td>KBFI</td>
+      <td>KELP</td>
+      <td>47</td>
     </tr>
     <tr>
-      <td>2018-12-05</td>
-      <td>47439</td>
-      <td>190342</td>
-      <td>KMSP</td>
-      <td>KBRO</td>
-      <td>18</td>
+      <td>2018-12-04</td>
+      <td>47425</td>
+      <td>190331</td>
+      <td>KBFI</td>
+      <td>KIWA</td>
+      <td>19</td>
     </tr>
     <tr>
-      <td>2018-12-05</td>
-      <td>47439</td>
-      <td>190342</td>
-      <td>KOMA</td>
-      <td>KAEX</td>
-      <td>5</td>
+      <td>2018-12-04</td>
+      <td>47425</td>
+      <td>190331</td>
+      <td>KELP</td>
+      <td>KIWA</td>
+      <td>51</td>
     </tr>
     <tr>
-      <td>2018-12-05</td>
-      <td>47439</td>
-      <td>190342</td>
-      <td>KOMA</td>
-      <td>KBRO</td>
-      <td>12</td>
+      <td>2018-12-04</td>
+      <td>47425</td>
+      <td>190331</td>
+      <td>KIWA</td>
+      <td>KBFI</td>
+      <td>14</td>
     </tr>
     <tr>
-      <td>2018-12-05</td>
-      <td>47439</td>
-      <td>190342</td>
-      <td>KBRO</td>
-      <td>KAEX</td>
-      <td>1</td>
+      <td>2018-12-04</td>
+      <td>47425</td>
+      <td>190331</td>
+      <td>KIWA</td>
+      <td>KELP</td>
+      <td>15</td>
     </tr>
   </tbody>
 </table>
 
+<p>While mission records allow us to determine the numbers of individuals (summarized in the grouping above) moved between each pickup and dropoff location involved in a mission, we are not able to reconstruct the exact itinerary of the flight from these records. See below for more on the limitations of the <code>MissionID</code> and <code>MissionNumber</code> keys.</p>
 <h2>Data cleaning</h2>
 
 <p>The raw ARTS dataset was released by ICE as 9 XLSX format files, these were combined into a single dataset containing 1763020 records. For space reasons, the raw files are not stored in the project's Git repository, but are available via <a href="https://drive.google.com/open?id=1GVeLTfCm846YkZKWPlK0HF5eRxxYqPsF">UWCHR's Google Drive</a>. Prior to analysis, the ARTS dataset was converted from XLSX to CSV format and cleaned to standardize fields and remove some records with missing data. </p>
@@ -1080,7 +1083,8 @@ img {max-width : 100%}
 <li>Notably, two ARTS fields that would likely be of great interest to researchers and advocates, <code>FamilyUnitFlag</code> and <code>UnaccompaniedFlag</code> (presumably relating to family groups and unaccompanied minors), are entirely unused in this dataset: not a single record is flagged with either of these values. As noted above, there is no indication that these values have been redacted or withheld by ICE, suggesting that they are simply not used.</li>
 </ul>
 <h2>Notes</h2>
-<p><a href="#_ftnref1" name="_ftn1"><sup>[1]</sup></a> The DHS OIG explains the ARTS database as such: "ICE Air records data pertaining to charter flights and detainees in the Alien Repatriation Trackgin System (ARTS). A contractor who managed the program%lsquo;s daily activities created the ARTS database to provide a historical record of charter flights, monthly statistical reports, and data responses to ICE required under the contract. ARTS captures information such as the dates, routes, detainees, delays or cancelations, and costs associated with each charter flight."</p>
+<p><a href="#_ftnref1" name="_ftn1"><sup>[1]</sup></a> The DHS OIG explains the ARTS database as such: "ICE Air records data pertaining to charter flights and detainees in the Alien Repatriation Trackgin System (ARTS). A contractor who managed the program%rsquo;s daily activities created the ARTS database to provide a historical record of charter flights, monthly statistical reports, and data responses to ICE required under the contract. ARTS captures information such as the dates, routes, detainees, delays or cancelations, and costs associated with each charter flight."</p>
+<p><a href="#_ftnref2" name="_ftn2"><sup>[2]</sup></a> The 2015 audit by the DHS OIG defines an ICE Air mission as such: "A mission begins when the aircraft departs from its initial location and ends when the aircraft reaches its final destination. Depending on the need, a mission can contain one or more stops to destinations within the United States, internationally, or a combination." In a footnote, the DHS OIG specifies, "The definition for the term &ldquo;mission&rdquo; is derived from the definition used in the former Office of Detention and Removal Operations&rsquo; *Policy and Procedure Manual (June 2008)." UWCHR researchers have not been able to locate this reference.</p>
     <HR/>
     <div class="footer">
       <p>Published from <a href="src/ice-air-data-appendix.pmd">src/ice-air-data-appendix.pmd</a>

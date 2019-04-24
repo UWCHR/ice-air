@@ -1,1 +1,1091 @@
-../write/output/ice-air-data-appendix.html
+
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/LaTeX", "output/HTML-CSS"],
+    "HTML-CSS": { availableFonts: ["TeX"] }
+    });
+</script>
+
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<style>
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(http://fonts.gstatic.com/s/raleway/v9/-_Ctzj9b56b8RgXW8FArifk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(http://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(http://fonts.gstatic.com/s/raleway/v9/xkvoNo9fC8O2RDydKj12b_k_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+}
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+h1 { font-size: 3.6rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.4rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.2rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.8rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 2.4rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+p {
+  margin-top: 0; }
+a {
+  color: #1EAEDB; }
+a:hover {
+  color: #0FA0CE; }
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+ul {
+  list-style: circle inside; }
+ol {
+  list-style: decimal inside; }
+ol, ul {
+  padding-left: 0;
+  margin-top: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li {
+  margin-bottom: 1rem; }
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 2.5rem; }
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
+@media (min-width: 400px) {}
+@media (min-width: 550px) {}
+@media (min-width: 750px) {}
+@media (min-width: 1000px) {}
+@media (min-width: 1200px) {}
+
+</style>
+
+<style>
+.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mb { color: #666666 } /* Literal.Number.Bin */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sa { color: #BA2121 } /* Literal.String.Affix */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.dl { color: #BA2121 } /* Literal.String.Delimiter */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.fm { color: #0000FF } /* Name.Function.Magic */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.vm { color: #19177C } /* Name.Variable.Magic */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
+
+
+
+
+
+<style>
+h1.title {margin-top : 20px}
+img {max-width : 100%}
+
+#From nbconvert
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+</style>
+
+</HEAD>
+<BODY>
+    <div class ="container">
+        <div class = "row">
+            <div class = "col-md-12 twelve columns">
+
+
+<div class="highlight"><pre><span></span><span class="c1"># Author: University of Washington Center for Human Rights</span>
+<span class="c1"># Title: ICE Air Data Appendix</span>
+<span class="c1"># Date: 2019-04-24</span>
+<span class="c1"># License: GPL 3.0 or greater</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">yaml</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+</pre></div>
+
+<h1>ICE Air Data Appendix</h1>
+<p>This is an appendix to the report <a href="">Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation</a>, which uses data from ICE's Alien Repatriation Tracking System (ARTS) released by ICE Enforcement and Removal Operations pursuant to a Freedom of Information Act request by the <a href="https://jsis.washington.edu/humanrights/">University of Washington Center for Human Rights</a>. This appendix is intended to provide readers with greater detail on the contents, structure, and limitations of this dataset, and the process our researchers performed to render it suitable for social scientific analysis.</p>
+<h2>The ARTS dataset</h2>
+
+<div class="highlight"><pre><span></span><span class="c1"># Get optimal data types before reading in the ARTS dataset</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;input/dtypes.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">yamlfile</span><span class="p">:</span>
+    <span class="n">column_types</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">yamlfile</span><span class="p">)</span>
+<span class="n">read_csv_opts</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;sep&#39;</span><span class="p">:</span> <span class="s1">&#39;|&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;quotechar&#39;</span><span class="p">:</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;compression&#39;</span><span class="p">:</span> <span class="s1">&#39;gzip&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;encoding&#39;</span><span class="p">:</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;dtype&#39;</span><span class="p">:</span> <span class="n">column_types</span><span class="p">,</span>
+                 <span class="s1">&#39;parse_dates&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;MissionDate&#39;</span><span class="p">],</span>
+                 <span class="s1">&#39;infer_datetime_format&#39;</span><span class="p">:</span> <span class="bp">True</span><span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;input/ice-air.csv.gz&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">read_csv_opts</span><span class="p">)</span>
+
+<span class="c1"># The ARTS Data Dictionary as released by ICE</span>
+<span class="n">data_dict</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;input/ARTS_Data_Dictionary.csv.gz&#39;</span><span class="p">,</span> <span class="n">compression</span><span class="o">=</span><span class="s1">&#39;gzip&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">)</span>
+<span class="n">data_dict</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Field&#39;</span><span class="p">,</span> <span class="s1">&#39;Definition&#39;</span><span class="p">]</span>
+
+<span class="c1"># A YAML file containing the field names in the original ARTS dataset</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;hand/arts_cols.yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">yamlfile</span><span class="p">:</span>
+    <span class="n">arts_cols</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">yamlfile</span><span class="p">)</span>
+
+<span class="c1"># Asserting characteristics of key fields</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">]))</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionNumber&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionID&#39;</span><span class="p">]))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;MissionNumber&#39;</span><span class="p">]))</span>
+</pre></div>
+
+
+
+<p>Following cleaning by UWCHR as detailed below, the ARTS dataset contains 1732625 records relating to ICE Air Operations charter flights during the period from October 1, 2010 to December 5, 2018, including full data for U.S. Federal Government Fiscal Years 2011 through 2018. Each record in the dataset relates to a single passenger on a single ICE Air mission.</p>
+<p>The ARTS dataset is made up of 43 fields, defined in a data dictionary provided by ICE; however, as described below, the content of these fields does not always conform to the definitions provided:</p>
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Field</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Status</td>
+      <td>Criminal Status</td>
+    </tr>
+    <tr>
+      <td>Sex</td>
+      <td>Sex</td>
+    </tr>
+    <tr>
+      <td>Convictions</td>
+      <td>Convictions</td>
+    </tr>
+    <tr>
+      <td>GangMember</td>
+      <td>Gang Member</td>
+    </tr>
+    <tr>
+      <td>ClassLvl</td>
+      <td>Class Level</td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td>Age</td>
+    </tr>
+    <tr>
+      <td>MissionDate</td>
+      <td>Mission Date</td>
+    </tr>
+    <tr>
+      <td>MissionNumber</td>
+      <td>Mission Number (i.e., Flight Number)</td>
+    </tr>
+    <tr>
+      <td>PULOC</td>
+      <td>Pick up location</td>
+    </tr>
+    <tr>
+      <td>DropLoc</td>
+      <td>Drop off location</td>
+    </tr>
+    <tr>
+      <td>StrikeFromList</td>
+      <td>Was Alien struck from mission</td>
+    </tr>
+    <tr>
+      <td>ReasonStruck</td>
+      <td>Reason Struck</td>
+    </tr>
+    <tr>
+      <td>R-T</td>
+      <td>Removal or Transfer</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>Criminality Code</td>
+    </tr>
+    <tr>
+      <td>CountryOfCitizenship</td>
+      <td>Country of Citizenship</td>
+    </tr>
+    <tr>
+      <td>Juvenile</td>
+      <td>Is Alien a Juvenile</td>
+    </tr>
+    <tr>
+      <td>MissionWeek</td>
+      <td>Mission Week</td>
+    </tr>
+    <tr>
+      <td>MissionQuarter</td>
+      <td>Mission Quarter</td>
+    </tr>
+    <tr>
+      <td>MissionYear</td>
+      <td>Mission Year</td>
+    </tr>
+    <tr>
+      <td>MissionMonth</td>
+      <td>Mission Month</td>
+    </tr>
+    <tr>
+      <td>Criminality</td>
+      <td>Criminality</td>
+    </tr>
+    <tr>
+      <td>FamilyUnitFlag</td>
+      <td>Family Unit Flag</td>
+    </tr>
+    <tr>
+      <td>UnaccompaniedFlag</td>
+      <td>Unaccompanied Flag</td>
+    </tr>
+    <tr>
+      <td>AlienMasterID</td>
+      <td>Unique value assigned by ARTS for Alien</td>
+    </tr>
+    <tr>
+      <td>MissionID</td>
+      <td>Unique value assigned by ARTS for mission</td>
+    </tr>
+    <tr>
+      <td>air_AirportID</td>
+      <td>Airport ID (numerical)</td>
+    </tr>
+    <tr>
+      <td>air_AirportName</td>
+      <td>Airport Name</td>
+    </tr>
+    <tr>
+      <td>air_City</td>
+      <td>Airport City</td>
+    </tr>
+    <tr>
+      <td>st_StateID</td>
+      <td>State ID (Numerical)</td>
+    </tr>
+    <tr>
+      <td>st_StateAbbr</td>
+      <td>State Abbreviation</td>
+    </tr>
+    <tr>
+      <td>AOR_AORID</td>
+      <td>Area of Responsibility (Numerical)</td>
+    </tr>
+    <tr>
+      <td>AOR_AOR</td>
+      <td>Area of Responsibility (Abbreviation)</td>
+    </tr>
+    <tr>
+      <td>AOR_AORName</td>
+      <td>Area of Responsibility</td>
+    </tr>
+    <tr>
+      <td>air_Country</td>
+      <td>Airport Country</td>
+    </tr>
+    <tr>
+      <td>air2_AirportID</td>
+      <td>Airport ID (numerical)</td>
+    </tr>
+    <tr>
+      <td>air2_AirportName</td>
+      <td>Airport Name</td>
+    </tr>
+    <tr>
+      <td>air2_City</td>
+      <td>Airport City</td>
+    </tr>
+    <tr>
+      <td>st2_StateID</td>
+      <td>State ID (Numerical)</td>
+    </tr>
+    <tr>
+      <td>st2_StateAbbr</td>
+      <td>State Abbreviation</td>
+    </tr>
+    <tr>
+      <td>aor2_AORID</td>
+      <td>Area of Responsibility (Numerical)</td>
+    </tr>
+    <tr>
+      <td>aor2_AOR</td>
+      <td>Area of Responsibility (Abbreviation)</td>
+    </tr>
+    <tr>
+      <td>aor2_AORName</td>
+      <td>Area of Responsibility</td>
+    </tr>
+    <tr>
+      <td>air2_Country</td>
+      <td>Airport Country</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The first 25 fields relate to passenger and mission characteristics; the latter 18 fields, marked by various prefixes, relate to characteristics of the airports and locations associated with each record. (Additional fields generated by UWCHR in the process of analysis of the dataset are not enumerated here.) There is no indication that the content of any of these fields was withheld or redacted by ICE upon release of the dataset. However, according to a <a href="https://www.oig.dhs.gov/sites/default/files/assets/Mgmt/2015/OIG_15-57_Apr15.pdf">2015 audit of ICE Air by the Department of Homeland Security Office of Inspector General (OIG)</a>, the ARTS database does include additional fields which were not released to UWCHR, including passenger A-Numbers and Fingerprint IDs; and details on the cost of individual flights.</p>
+<p>The ARTS dataset uses three key fields to identify passengers (<code>AlienMasterID</code>) and missions (<code>MissionID</code> and <code>MissionNumber</code>). The <code>AlienMasterID</code> field is made up of 1732625 unique values. <code>AlienMasterID</code> values are numeric strings starting at 5000 and incrementing to 2047246, with some values skipped. Each <code>AlienMasterID</code> value is used only once; repeat passengers on multiple flights cannot be identified based solely on this field. Below we will display a subset of columns relating to passenger characteristics for the most recent records in the dataset.</p>
+
+<div class="highlight"><pre><span></span><span class="n">selected_passenger_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">,</span> <span class="s1">&#39;Status&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Convictions&#39;</span><span class="p">,</span> <span class="s1">&#39;GangMember&#39;</span><span class="p">,</span> <span class="s1">&#39;ClassLvl&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span>
+<span class="s1">&#39;PULOC&#39;</span><span class="p">,</span> <span class="s1">&#39;DropLoc&#39;</span><span class="p">,</span> <span class="s1">&#39;StrikeFromList&#39;</span><span class="p">,</span> <span class="s1">&#39;ReasonStruck&#39;</span><span class="p">,</span> <span class="s1">&#39;R-T&#39;</span><span class="p">,</span> <span class="s1">&#39;CountryOfCitizenship&#39;</span><span class="p">]</span>
+
+<span class="n">sample_records</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">selected_passenger_cols</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>AlienMasterID</th>
+      <th>Status</th>
+      <th>Sex</th>
+      <th>Convictions</th>
+      <th>GangMember</th>
+      <th>Age</th>
+      <th>PULOC</th>
+      <th>DropLoc</th>
+      <th>R-T</th>
+      <th>CountryOfCitizenship</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2047241</td>
+      <td>8F</td>
+      <td>M</td>
+      <td>NC</td>
+      <td>N</td>
+      <td>22.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+    <tr>
+      <td>2047242</td>
+      <td>8F</td>
+      <td>M</td>
+      <td>NC</td>
+      <td>N</td>
+      <td>20.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+    <tr>
+      <td>2047243</td>
+      <td>8F</td>
+      <td>M</td>
+      <td>Illegal Entry</td>
+      <td>N</td>
+      <td>32.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+    <tr>
+      <td>2047245</td>
+      <td>16</td>
+      <td>M</td>
+      <td>Illegal Entry</td>
+      <td>N</td>
+      <td>24.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+    <tr>
+      <td>2047246</td>
+      <td>16</td>
+      <td>M</td>
+      <td>NC</td>
+      <td>N</td>
+      <td>27.0</td>
+      <td>KIAH</td>
+      <td>MGGT</td>
+      <td>R</td>
+      <td>GUATEMALA</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <code>MissionID</code> and <code>MissionNumber</code> fields each contain 14961 values; like <code>AlienMasterID</code>, these are also numeric strings that increase incrementally over time. Below we will display records for a single ICE Air mission</p>
+
+<div class="highlight"><pre><span></span><span class="c1"># sample_mission_id = 47425</span>
+<span class="c1"># sample_records = df[df[&#39;MissionID&#39; == sample_mission_id]]</span>
+<span class="n">sample_records</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;MissionDate&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionID&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionNumber&#39;</span><span class="p">,</span> <span class="s1">&#39;PULOC&#39;</span><span class="p">,</span> <span class="s1">&#39;DropLoc&#39;</span><span class="p">])[</span><span class="s1">&#39;AlienMasterID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+<table border="0" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>MissionDate</th>
+      <th>MissionID</th>
+      <th>MissionNumber</th>
+      <th>PULOC</th>
+      <th>DropLoc</th>
+      <th>AlienMasterID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KMSP</td>
+      <td>KAEX</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KMSP</td>
+      <td>KBRO</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KOMA</td>
+      <td>KAEX</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KOMA</td>
+      <td>KBRO</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>2018-12-05</td>
+      <td>47439</td>
+      <td>190342</td>
+      <td>KBRO</td>
+      <td>KAEX</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Data cleaning</h2>
+
+<p>The raw ARTS dataset was released by ICE as 9 XLSX format files, these were combined into a single dataset containing 1763020 records. For space reasons, the raw files are not stored in the project's Git repository, but are available via <a href="https://drive.google.com/open?id=1GVeLTfCm846YkZKWPlK0HF5eRxxYqPsF">UWCHR's Google Drive</a>. Prior to analysis, the ARTS dataset was converted from XLSX to CSV format and cleaned to standardize fields and remove some records with missing data. </p>
+<p>The cleaning process is fully documented in code; see the <code>clean/</code> directory in the <a href="https://github.com/UWCHR/ice-air">project repository</a>. Selected data cleaning steps are described below:</p>
+<ul>
+<li><strong>Duplicate <code>AlienMasterID</code> values and airport metadata:</strong> In the raw ARTS dataset, 29465 <code>AlienMasterID</code> values are repeated up to 2 times. Upon close inspection, it becomes apparent that these records are repeated because of inconsistencies in certain airport metadata values (fields starting with the prefixes <code>air_</code> or <code>air2_</code>), resulting in the duplication of some passenger records, probably due to a database merge by ICE prior to release. (For example, all records for Yuma International Airport in Yuma, AZ are duplicated, with one version of the records incorrectly listing "AR" as the state associated with the airport.) 29465 duplicate <code>AlienMasterID</code> values were dropped and erroneous or missing airport metadata was corrected; see <code>ice-air/clean/hand/bad_airports.csv</code> for values that were substituted. Airport metadata fields not used in the present analysis, such as numeric codes for US states, were not cleaned.</li>
+<li><strong>Passenger characteristics:</strong> The ARTS dataset includes several fields with unstandardized values. UWCHR has cleaned or partially cleaned several of these fields for analysis; original values to be cleaned and their subsitutions are documented in the file <code>ice-air/clean/hand/clean.yaml</code>. Fields not used in the present analysis were not cleaned. See below for discussion of some of these fields.</li>
+<li><strong>Missing data:</strong> 808 passenger records with missing pickup locations and 122 records with missing dropoff airports were dropped from the dataset. Records with missing data in other fields were not dropped.</li>
+</ul>
+<h2>Limitations of the dataset</h2>
+<p>While this dataset provides the first public view into the operations of ICE Air, it raises as many questions as it answers. In part, this is because it was released without an explanation of the context in which it is used: as noted in the report, we know some deportation flights are on commercial airlines, which appear not to be listed here, and others are charter flights whose records are similarly absent from this set. It is important, therefore, to be conscious of the limitations to the conclusions we can draw from this data alone, to “ground-truth” any observations by comparing to the lived experiences of immigrant communities, and to continue to demand full transparency from federal and local governments about the mechanics of deportations.</p>
+<p><strong>There are also several specific elements of this dataset’s design which limit its usefulness.</strong></p>
+<p>First, it does not permit the tracking of individual passengers; it is very likely that some individuals are repeated in the collection, but it it not possible to identify this because each individual is not assigned a consistent identifier in this dataset. </p>
+<p>According to the 2015 DHS OIG audit, the ARTS database reviewed by OIG includes fields for passenger A-Numbers and Fingerprint IDs, which would permit tracking of repeat passengers, though the OIG also notes inconsistencies in the usage of these identifiers. Unfortunately, these fields were not included in the database shared with UWCHR. There is no inherent way to track repeat passengers on multiple flights in the ARTS dataset as released to the UWCHR by ICE; close analysis of specific combinations of passenger characteristics (i.e. age, nationality, criminal conviction status) does suggest that passengers are represented multiple times in the dataset, but systematically isolating repeat passengers without access to additional unique ID fields would be prohibitively difficult.</p>
+<p>Second, the database does not track flight itineraries. Each record represents an individual passenger on an ICE Air mission, but reconstructing the flight path for a single mission or passenger is not possible. While the database contains fields labeled <code>MissionID</code> and <code>MissionNumber</code> that might initially appear useful for such purposes, they too introduce limitations. While <code>MissionID</code> and <code>MissionNumber</code> values differ, their functions in the dataset appear to be completely equivalent: combinations of these values are strictly one-to-one, and they are not hierarchical (see code snippet below). Both values consist of numeric strings which increase incrementally, with some values skipped. Contrary to the ARTS data dictionary released by ICE, the <code>MissionNumber</code> field appears to bear no relation to actual flight numbers.</p>
+
+<div class="highlight"><pre><span></span><span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;MissionID&#39;</span><span class="p">])[</span><span class="s1">&#39;MissionNumber&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;MissionNumber&#39;</span><span class="p">])[</span><span class="s1">&#39;MissionID&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;MissionNumber&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionID&#39;</span><span class="p">])[</span><span class="s1">&#39;MissionDate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="nb">sum</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;MissionID&#39;</span><span class="p">,</span> <span class="s1">&#39;MissionNumber&#39;</span><span class="p">])[</span><span class="s1">&#39;MissionDate&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+
+<p>ICE Air missions as represented by the <code>MissionID</code> and <code>MissionNumber</code> fields never span more than one day, though multiple missions may occur on a given date. The <code>MissionDate</code> field only records the day of the mission; the dataset does not include any other time data, such as takeoff or landing timestamps. Each mission can include multiple combinations of pickup and drop-off locations, represented by the <code>PULOC</code> and <code>DropLoc</code> fields. These values encode the pickup and drop-off location for each passenger on the mission, not the flight itinerary of the mission. Therefore, while each mission may include multiple flight legs, it is not possible to use this version of the ARTS database to conclusively reconstruct itineraries or calculate the total number of legs on flights operated by ICE Air.</p>
+<p>Third, ICE agents’ entry of data is inconsistent. Many of the fields are unstandardized and present significant challenges for cleaning and analysis, especially the <code>Status</code>, <code>GangMember</code>, and <code>Convictions</code> fields, which include many unique and often irrelevant values. (This concern was also noted by the DHS OIG in its 2015 audit; in several cases, data entry processes seem to have become more standardized over time, which may obscure real trends in the data.)</p>
+<p><strong>Several of these fields merit additional explanation:</strong></p>
+<ul>
+<li>The <code>Status</code> field, despite being defined in the ARTS Data Dictionary as relating to "Criminal Status", appears to relate to the status of a passeger's deportation proceedings. Some values in this field conform to a set of 29 alphanumeric codes used by ICE categorize the status of removal processes (see Kerwin et al., 2015, for a description of each of these codes <em>include table in report</em>), others consist of unstandardized text descriptions, including unrelated or irrelevant values. Analysis of the distribution of <code>Status</code> values prior to data cleaning shows that the 29 standardized codes were used very rarely prior to FY 2013; after FY 2013 the standardized values are more frequent. We have translated unstandardized values with more than 100 ocurrences into their standardized equivalents, where possible; see cleaning description below. In total this field contains more than 937 unique values, after cleaning.</li>
+<li>The <code>Convictions</code>, <code>Criminality</code> and <code>Code</code> fields all represent different ways of coding a passenger's criminal status. <code>Convictions</code> is an unstructured field with 14709 unique values, presumably representing each passenger's most serious criminal conviction. The <code>Criminality</code> field is more structured and was easily cleaned into a binary category where "NC" represents passengers without a criminal conviction and "C" represents passengers with a criminal conviction. However, it is important to note that this field is not always consistent with the <code>Convictions</code> field, and it contains 21163 missing values, especially in the earlier period of the dataset. The <code>Code</code> field consists of a relatively structured set of alphabetic codes which also appear to relate to criminal status, but their meaning is unclear.</li>
+<li>The <code>Age</code> and <code>Juvenile</code> fields are relatively self-explanatory. <code>Juvenile</code> is a binary field where all passengers aged 17 or younger are marked True; the values in this field are consistent with the numeric values in <code>Age</code>. Values below 0 or above 99 in <code>Age</code> were set as null values in the cleaning process.</li>
+<li>Notably, two ARTS fields that would likely be of great interest to researchers and advocates, <code>FamilyUnitFlag</code> and <code>UnaccompaniedFlag</code> (presumably relating to family groups and unaccompanied minors), are entirely unused in this dataset: not a single record is flagged with either of these values. As noted above, there is no indication that these values have been redacted or withheld by ICE, suggesting that they are simply not used.</li>
+</ul>
+    <HR/>
+    <div class="footer">
+      <p>Published from <a href="src/data-appendix.pmd">src/data-appendix.pmd</a>
+    using <a href="http://mpastell.com/pweave">Pweave</a> 0.30.3
+    on 23-04-2019.<p></div>
+
+            </div>
+        </div>
+    </div>
+  </BODY>
+</HTML>

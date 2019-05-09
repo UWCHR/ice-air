@@ -267,23 +267,30 @@ if __name__ == "__main__":
     # Creating a standard set of airport codes and names
     # We could standardize all airport metadata in this task, including
     # longitude/latitude, if desired, especially since some is broken.
-
+    dict_cols = ['AirportName',
+                 'LongitudeDecimalDegrees',
+                 'LatitudeDecimalDegrees',
+                 'State',
+                 'City',
+                 'Country']
     pickup_data = df[['PULOC',
                       'air_AirportName',
                       'air_LongitudeDecimalDegrees',
-                      'air_LatitudeDecimalDegrees']].drop_duplicates()
+                      'air_LatitudeDecimalDegrees',
+                      'st_StateAbbr',
+                      'air_City',
+                      'air_Country']].drop_duplicates()
     pickup_data.set_index('PULOC', inplace=True)
-    pickup_data.columns = ['AirportName',
-                           'LongitudeDecimalDegrees',
-                           'LatitudeDecimalDegrees']
+    pickup_data.columns = dict_cols
     dropoff_data = df[['DropLoc',
                        'air2_AirportName',
                        'air2_LongitudeDecimalDegrees',
-                       'air2_LatitudeDecimalDegrees']].drop_duplicates()
+                       'air2_LatitudeDecimalDegrees',
+                       'st2_StateAbbr',
+                       'air2_City',
+                       'air2_Country']].drop_duplicates()
     dropoff_data.set_index('DropLoc', inplace=True)
-    dropoff_data.columns = ['AirportName',
-                            'LongitudeDecimalDegrees',
-                            'LatitudeDecimalDegrees']
+    dropoff_data.columns = dict_cols
 
     pickup_dict = pickup_data.to_dict('index')
     dropoff_dict = dropoff_data.to_dict('index')

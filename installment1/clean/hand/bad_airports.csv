@@ -1,14 +1,14 @@
-airport_code,airport_name,airport_country,airport_city,airport_state
-FCBB,Maya-Maya Airport,Republic of the Congo,,
-HBBA,Bujumbura International Airport,Burundi,,
-FYWH,Hosea Kutako International Airport,Namibia,,
-KMHR,Sacramento Mather Airport,USA,Sacramento,CA
-KALB,Albany International Airport,USA,Albany,NY
-NSFA,Faleolo International Airport,Samoa,,
-KMDW,Chicago Midway International Airport,USA,Chicago,IL
-SBCF,Tancredo Neves International Airport,Brazil,,
-KNYL,Yuma MCAS/Yuma International Airport,USA,Yuma,AZ
-KFTW,Fort Worth Meacham International Airport,USA,Fort Worth,TX
-BKPR,Pristina International Airport,Kosovo,Pristina,
-HAAB,Addis Ababa Bole International Airport,Ethiopia,Addis Ababa,
-ORBI,Baghdad International Airport,Iraq,Baghdad,
+airport_code,airport_name,airport_country,airport_city,airport_state,fixed
+FCBB,Maya-Maya Airport,Republic of the Congo,,,True
+HBBA,Bujumbura International Airport,Burundi,,,True
+FYWH,Hosea Kutako International Airport,Namibia,,,True
+KMHR,Sacramento Mather Airport,USA,Sacramento,CA,True
+KALB,Albany International Airport,USA,Albany,NY,True
+NSFA,Faleolo International Airport,Samoa,,,True
+KMDW,Chicago Midway International Airport,USA,Chicago,IL,True
+SBCF,Tancredo Neves International Airport,Brazil,,,True
+KNYL,Yuma MCAS/Yuma International Airport,USA,Yuma,AZ,True
+KFTW,Fort Worth Meacham International Airport,USA,Fort Worth,TX,True
+BKPR,Pristina International Airport,Kosovo,Pristina,,True
+HAAB,Addis Ababa Bole International Airport,Ethiopia,Addis Ababa,,True
+ORBI,Baghdad International Airport,Iraq,Baghdad,,True

@@ -1,8 +1,8 @@
-# :date: 2019-02-01
+# :date: 2019-09-24
 # :author: PN
 # :copyright: GPL v2 or later
 #
-# ice-air/clean/src/clean.py
+# ice-air/installment2/clean/src/clean.py
 #
 #
 import argparse
@@ -81,11 +81,17 @@ if __name__ == "__main__":
              arts_fy18,
              arts_fy19]
 
-    df = pd.concat(files)
+    df = pd.concat(files, sort=False)
     df_obj = df.select_dtypes(include=['object']).copy()
     input_records = len(df)
-    input_unique_AlienMasterID = len(set(df['AlienMasterID']))
-    duplicate_AlienMasterID = len(df) - len(set(df['AlienMasterID']))
+
+    # AlienMasterID redacted in installment2, therefore we replace with
+    # unique, arbitrary ID values here. We know from installment1 that
+    # AlienMasterID is not particularly meaningful.
+
+    df['AlienMasterID'] = range(len(df))
+    df['AlienMasterID'] = df['AlienMasterID'].astype(int)
+    dtypes['AlienMasterID'] = 'int'
 
     # Convert 'object' columns to categories, where efficient.
     # Implementation via https://www.dataquest.io/blog/pandas-big-data/
@@ -104,11 +110,11 @@ if __name__ == "__main__":
     del df_obj, converted_obj
 
     predrop = len(df)
-    df = df.drop_duplicates(subset=['AlienMasterID'])
+    df = df[~df['air_AirportID'].isin([29.0, 90.0, 165.0])]
+    df = df[~df['air2_AirportID'].isin([29.0, 90.0, 165.0])]
     postdrop = len(df)
-    dropped_duplicate_AlienMasterID = predrop - postdrop
-    print(f'Dropped {dropped_duplicate_AlienMasterID} records with duplicated AlienMasterID.')
-    assert len(df) == len(set(df.AlienMasterID))
+    dropped_bad_airports = predrop - postdrop
+    print(f'Dropped {dropped_bad_airports} records with bad airport metadata.')
     del predrop, postdrop
 
     predrop = len(df)
@@ -306,9 +312,7 @@ if __name__ == "__main__":
 
     clean_stats = dict(number_of_input_files=len(files),
                        input_records=input_records,
-                       input_unique_AlienMasterID=input_unique_AlienMasterID,
-                       duplicate_AlienMasterID=duplicate_AlienMasterID,
-                       dropped_duplicate_AlienMasterID=dropped_duplicate_AlienMasterID,
+                       dropped_bad_airports=dropped_bad_airports,
                        null_puloc=null_puloc,
                        null_droploc=null_droploc,
                        age_high_bound=age_high_bound,

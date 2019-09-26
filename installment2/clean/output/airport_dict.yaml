@@ -16,8 +16,8 @@ DBBB:
   AirportName: Cotonou International Airport
   City: Contonou
   Country: Benin
-  LatitudeDecimalDegrees: .nan
-  LongitudeDecimalDegrees: .nan
+  LatitudeDecimalDegrees: 6.357
+  LongitudeDecimalDegrees: 2.384
   State: .nan
 DFFD:
   AirportName: Ouagadougou Airport
@@ -114,8 +114,8 @@ FEFF:
   AirportName: .nan
   City: .nan
   Country: .nan
-  LatitudeDecimalDegrees: .nan
-  LongitudeDecimalDegrees: .nan
+  LatitudeDecimalDegrees: 4.398
+  LongitudeDecimalDegrees: 18.519
   State: .nan
 FGSL:
   AirportName: Malabo Santa Isabel Airport
@@ -149,8 +149,8 @@ FNLU:
   AirportName: Luanda International Airport
   City: Luanda
   Country: Angola
-  LatitudeDecimalDegrees: .nan
-  LongitudeDecimalDegrees: .nan
+  LatitudeDecimalDegrees: -8.857999999999997
+  LongitudeDecimalDegrees: 13.231
   State: .nan
 FOOL:
   AirportName: Libreville International Airport
@@ -174,11 +174,11 @@ FVHA:
   LongitudeDecimalDegrees: 31.093000000000004
   State: .nan
 FVRG:
-  AirportName: .nan
-  City: .nan
-  Country: .nan
-  LatitudeDecimalDegrees: .nan
-  LongitudeDecimalDegrees: .nan
+  AirportName: Robert Gabriel Mugabe Airport
+  City: Harare
+  Country: Zimbabwe
+  LatitudeDecimalDegrees: -17.931805999999998
+  LongitudeDecimalDegrees: 31.092846999999995
   State: .nan
 FWKI:
   AirportName: Lilongwe - Kamuzu International Airport
@@ -237,11 +237,11 @@ GMMN:
   LongitudeDecimalDegrees: -7.587999999999999
   State: .nan
 GOBD:
-  AirportName: Dakar International Airport
-  City: Dakar
+  AirportName: Blaise Diagne International Airport
+  City: Diass
   Country: Senegal
-  LatitudeDecimalDegrees: .nan
-  LongitudeDecimalDegrees: .nan
+  LatitudeDecimalDegrees: 14.671110999999998
+  LongitudeDecimalDegrees: -17.066944
   State: .nan
 GOOY:
   AirportName: Léopold Sédar Senghor International Airport
@@ -814,8 +814,8 @@ KPVD:
   AirportName: .nan
   City: .nan
   Country: .nan
-  LatitudeDecimalDegrees: .nan
-  LongitudeDecimalDegrees: .nan
+  LatitudeDecimalDegrees: 41.724
+  LongitudeDecimalDegrees: -71.428
   State: .nan
 KRFD:
   AirportName: Chicago Rockford International Airport

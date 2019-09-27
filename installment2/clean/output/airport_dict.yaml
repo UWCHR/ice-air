@@ -1252,11 +1252,11 @@ OYSN:
   LongitudeDecimalDegrees: 44.219722
   State: .nan
 PHNL:
-  AirportName: Honolulu International Airport
+  AirportName: Daniel K. Inouye International Airport
   City: Honolulu
   Country: USA
-  LatitudeDecimalDegrees: 21.316
-  LongitudeDecimalDegrees: -157.92700000000005
+  LatitudeDecimalDegrees: 21.318610999999997
+  LongitudeDecimalDegrees: -157.9225
   State: HI
 PKMJ:
   AirportName: Marshall Islands International Airport

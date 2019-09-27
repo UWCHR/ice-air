@@ -144,6 +144,8 @@ if __name__ == "__main__":
     air2_countries = list(df['air2_Country'].cat.categories)
     air_cities = list(df['air_City'].cat.categories)
     air2_cities = list(df['air2_City'].cat.categories)
+    air_states = list(df['st_StateAbbr'].cat.categories)
+    air2_states = list(df['st2_StateAbbr'].cat.categories)
 
     air_names.extend(list(bad['airport_name'].dropna()))
     air2_names.extend(list(bad['airport_name'].dropna()))
@@ -151,6 +153,8 @@ if __name__ == "__main__":
     air2_countries.extend(list(bad['airport_country'].dropna()))
     air_cities.extend(list(bad['airport_city'].dropna()))
     air2_cities.extend(list(bad['airport_city'].dropna()))
+    air_states.extend(list(bad['airport_state'].dropna()))
+    air2_states.extend(list(bad['airport_state'].dropna()))
 
     df['air_AirportName'].cat.set_categories(set(air_names), inplace=True)
     df['air2_AirportName'].cat.set_categories(set(air2_names), inplace=True)
@@ -158,6 +162,8 @@ if __name__ == "__main__":
     df['air2_Country'].cat.set_categories(set(air2_countries), inplace=True)
     df['air_City'].cat.set_categories(set(air_cities), inplace=True)
     df['air2_City'].cat.set_categories(set(air2_cities), inplace=True)
+    df['st_StateAbbr'].cat.set_categories(set(air_states), inplace=True)
+    df['st2_StateAbbr'].cat.set_categories(set(air2_states), inplace=True)
 
     for index, row in bad.iterrows():
         code = row['airport_code']
@@ -177,23 +183,17 @@ if __name__ == "__main__":
     with open(args.clean, 'r') as yamlfile:
         clean = yaml.load(yamlfile)
 
-    # Want to be careful that this is not deleting anything we want to keep
-    # Also we will want to move this into a pre-import step for public repo
-    # And it takes a long time to regex entire DF, we probably only need to
-    # do the `Status` and `GangMember` fields.
-    df.replace(to_replace='[0-9]{8,9}',
-               value='POSSIBLE A NUMBER DELETED',
-               regex=True,
-               inplace=True)
-
     df['CountryOfCitizenship'].astype('str', inplace=True)
     df['CountryOfCitizenship'] = df['CountryOfCitizenship'].str.upper()
     df['CountryOfCitizenship'].fillna('UNKNOWN', inplace=True)
 
     for key in clean.keys():
-        print(f'Cleaning {key}')
-        df[key] = df[key].replace(clean[key])
-        df[key] = df[key].astype('category')
+        if key == 'airport_codes':
+            pass
+        else:
+            print(f'Cleaning {key}')
+            df[key] = df[key].replace(clean[key])
+            df[key] = df[key].astype('category')
 
     age_high_bound = 99
     age_low_bound = 0

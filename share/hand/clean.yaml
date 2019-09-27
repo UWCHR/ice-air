@@ -114,4 +114,14 @@ air2_Country:
     'Equatorl Guinea': 'Equatorial Guinea'
     'Lomé': 'Togo'
 
+airport_codes:
+    '*Add ELP stop*': .NAN
+    '*Times Updated*': .NAN
+    '16': .NAN
+    '69': .NAN # KIAH?
+    '72': .NAN # KJAX?
+    'DEN': 'KDEN'
+    'ELP': 'KELP'
+    'MIA': 'KMIA'
+
 ...

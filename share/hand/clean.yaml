@@ -115,7 +115,7 @@ air2_Country:
     'Lomé': 'Togo'
 
 airport_codes:
-    '*Add ELP stop*': .NAN
+    '*Add ELP stop*': .NAN # KELP?
     '*Times Updated*': .NAN
     '16': .NAN
     '69': .NAN # KIAH?

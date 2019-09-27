@@ -120,8 +120,16 @@ airport_codes:
     '16': .NAN
     '69': .NAN # KIAH?
     '72': .NAN # KJAX?
-    'DEN': 'KDEN'
-    'ELP': 'KELP'
-    'MIA': 'KMIA'
+    'DEN': 'KDEN' # Check?
+    'ELP': 'KELP' # Check?
+    'MIA': 'KMIA' # Check?
+    'KAX': 'KAEX' # Check?
+    'KCSH': 'KCHS' # Check?
+    'KHNL': 'PHNL' # Check?
+    'KKBL': 'KBKL' # Check?
+    'KMGT': 'MGGT' # Check?
+    'LBTA': 'LTBA' # Check?
+    'TBPD': 'TBPB' # Check?
+    'TPBP': 'TBPB' # Check?
 
 ...

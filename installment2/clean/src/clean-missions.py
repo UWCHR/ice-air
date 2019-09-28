@@ -107,29 +107,40 @@ if __name__ == "__main__":
     with open(args.clean, 'r') as yamlfile:
         clean = yaml.load(yamlfile)
 
-    df['MissionTotalCost'] = df['MissionTotalCost'].astype(object)
-    df['MissionTotalCost'] = df['MissionTotalCost'].fillna(0)
-    df['MissionTotalCost'] = df['MissionTotalCost'].str.replace(',', '')
-    df['MissionTotalCost'] = df['MissionTotalCost'].astype(float)
-    dtypes['MissionTotalCost'] = 'float'
+    cost_cols = ['MissionTotalCost',
+                 'msnFlightODCCost',
+                 'msnProposedFines',
+                 'msnEnforcedFines']
 
-    df['msnFlightODCCost'] = df['msnFlightODCCost'].astype(object)
-    df['msnFlightODCCost'] = df['msnFlightODCCost'].fillna(0.00)
-    df['msnFlightODCCost'] = df['msnFlightODCCost'].str.replace(',', '')
-    df['msnFlightODCCost'] = df['msnFlightODCCost'].astype(float)
-    dtypes['msnFlightODCCost'] = 'float'
+    for col in cost_cols:
+        df[col] = df[col].astype(object)
+        df[col] = df[col].fillna(0)
+        df[col] = df[col].str.replace(',', '')
+        df[col] = df[col].astype(float)
+        dtypes[col] = 'float'
 
-    df['msnProposedFines'] = df['msnProposedFines'].astype(object)
-    df['msnProposedFines'] = df['msnProposedFines'].fillna(0.00)
-    df['msnProposedFines'] = df['msnProposedFines'].str.replace(',', '')
-    df['msnProposedFines'] = df['msnProposedFines'].astype(float)
-    dtypes['msnProposedFines'] = 'float'
+    with open(args.clean, 'r') as yamlfile:
+        clean = yaml.load(yamlfile)
 
-    df['msnEnforcedFines'] = df['msnEnforcedFines'].astype(object)
-    df['msnEnforcedFines'] = df['msnEnforcedFines'].fillna(0.00)
-    df['msnEnforcedFines'] = df['msnEnforcedFines'].str.replace(',', '')
-    df['msnEnforcedFines'] = df['msnEnforcedFines'].astype(float)
-    dtypes['msnEnforcedFines'] = 'float'
+    stop_cols = ['MsnStart',
+                 'MsnStpOne',
+                 'MsnStpTwo',
+                 'MsnStpThree',
+                 'MsnStpFour',
+                 'MsnStpFive',
+                 'MsnStpSix',
+                 'MsnStpSeven',
+                 'MsnStpEight',
+                 'MsnEnd']
+
+    for key in clean.keys():
+        if key != 'airport_codes':
+            pass
+        else:
+            for col in stop_cols:
+                print(f'Cleaning {col}')
+                df[col] = df[col].replace(clean[key])
+                df[col] = df[col].astype('category')
 
     to_csv_opts = {'sep': '|',
                    'quotechar': '"',

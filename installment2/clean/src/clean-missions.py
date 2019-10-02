@@ -88,6 +88,9 @@ if __name__ == "__main__":
     df_obj = df.select_dtypes(include=['object']).copy()
     input_records = len(df)
 
+    df['msnVendor'] = df['msnVendor'].str.upper()
+    df['MsnTailNumber'] = df['MsnTailNumber'].str.upper()
+
     # Convert 'object' columns to categories, where efficient.
     # Implementation via https://www.dataquest.io/blog/pandas-big-data/
     df_obj = df.select_dtypes(include=['object']).copy()

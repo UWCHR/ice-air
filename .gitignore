@@ -2,3 +2,5 @@
 !/.gitignore
 !/.gitattributes
 analyze/output/figures/*
+*.xlsx
+*.pdf

@@ -18,17 +18,20 @@ Tasks in this project are designed to be executed using the recursive make tool 
 
 ## Project structure
 
+### Data
+
 Datasets and high level resources:
 
-- `installment1/` - Dataset released to UWCHR via FOIA in December 2018. Contains ICE Air ARTS passenger data for 2010-10-01 through 2018-12-5.
+- `installment1/` - Dataset released to UWCHR via FOIA in December 2018. Contains ICE Air ARTS passenger data for 2010-10-01 through 2018-12-05.
 - `installment2/` - Dataset released to UWCHR via FOIA in August 2019. Contains ICE Air ARTS passenger and mission data for 2010-10-01 through 2018-05-03.
+- `compare/` - Project for comparing contents of ICE Air ARTS installments 1 and 2.
 - `kykm/` - Dataset of community observations of ICE Air flights at Yakima Air Terminal (KYMK).
 - `share/` - Various hand-written files and resources shared by multiple other tasks.
 - `docs/` - HTML documentation published at https://uwchr.github.io/ice-air/
 
 ### Task structure
 
-Project-level tasks (not all tasks will be present in all projects); the following describes 
+Project-level tasks (not all tasks will be present in all projects).
 
 - `import/` - Convenience task for importing ICE Air ARTS dataset. Input files in `import/input/` have been previously renamed to remove spaces in filenames, converted to CSV with pipe separator (`|`), and compressed using Gzip. Input files are symlinked to `import/output/` and then to `input/` of downstream tasks for modification and analysis. Original Excel files as released by ICE can be found on [UWCHR's Google Drive](https://drive.google.com/open?id=1GVeLTfCm846YkZKWPlK0HF5eRxxYqPsF). These raw files are excluded from the repository due to their size.
 - `optimize/` - Determines optimal Python/Pandas data types for each field in the original dataset and outputs this as a YAML dictionary used and modified in downstream tasks.
@@ -39,4 +42,4 @@ Project-level tasks (not all tasks will be present in all projects); the followi
 
 # To-do
 
-[ ] - Update data appendix for `installment2/`
+[] - Update data appendix for `installment2/`

@@ -44,4 +44,4 @@ Project-level tasks, in order of workflow (not all tasks will be present in all 
 
 # To-do
 
-- [] Update data appendix for `installment2/`
+- [ ] Update data appendix for `installment2/`

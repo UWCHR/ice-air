@@ -42,4 +42,4 @@ Project-level tasks (not all tasks will be present in all projects).
 
 # To-do
 
-[] - Update data appendix for `installment2/`
+- [] Update data appendix for `installment2/`

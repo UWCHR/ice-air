@@ -1,0 +1,213 @@
+Date,Flight,Departure,STD,Arrival,STA,Aircraft,Status,Duration,Airline,ArrivalLoc,ArrivalIATA,ArrivalICAO,DepartureLoc,DepartureIATA,DepartureICAO
+2020-04-15,WQ3509,Guatemala City(GUA/MGGT),19:15 CST,"Alexandria, LA(AEX/KAEX)",,B734 (N430XA),Landed,02h40m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-04-14,WQ3535,Guatemala City(GUA/MGGT),17:30 CST,"Brownsville, TX(BRO/KBRO)",,B733 (N626SW),Landed,02h13m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-04-14,WQ3534,"Brownsville, TX(BRO/KBRO)",15:05 CDT,Guatemala City(GUA/MGGT),,B733 (N626SW),Landed,02h09m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-04-13,WQ3553,"Alexandria, LA(AEX/KAEX)",13:35 CDT,Guatemala City(GUA/MGGT),,B734 (N803TJ),Landed,02h34m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-04-13,WQ3554,Guatemala City(GUA/MGGT),,"Brownsville, TX(BRO/KBRO)",,B734 (N803TJ),Landed,01h56m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-04-13,WQ3520,Guatemala City(GUA/MGGT),,"Brownsville, TX(BRO/KBRO)",,B734 (N418US),Landed,01h55m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-04-13,WQ3519,"El Paso, TX(ELP/KELP)",12:45 MDT,Guatemala City(GUA/MGGT),,B734 (N418US),Landed,03h14m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-04-07,WQ3528,"Brownsville, TX(BRO/KBRO)",09:35 CDT,Guatemala City(GUA/MGGT),,B734 (N458UW),Landed,02h10m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-04-07,WQ3529,Guatemala City(GUA/MGGT),12:00 CST,"San Antonio, TX(SAT/KSAT)",,B734 (N458UW),Landed 16:05 CDT,02h38m,SwiftAir/iAero,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-04-03,WQ3528,"Brownsville, TX(BRO/KBRO)",14:35 CDT,Guatemala City(GUA/MGGT),,B733 (N531AU),Landed,02h04m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-04-03,WQ3529,Guatemala City(GUA/MGGT),17:55 CST,"Phoenix, AZ(AZA/KIWA)",,B733 (N531AU),Landed 21:47 MST,04h18m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-04-02,WQ3526,Guatemala City(GUA/MGGT),17:00 CST,"Phoenix, AZ(AZA/KIWA)",,B733 (N531AU),Landed 19:51 MST,04h12m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-04-02,WQ3525,"Brownsville, TX(BRO/KBRO)",14:35 CDT,Guatemala City(GUA/MGGT),,B733 (N531AU),Landed,02h07m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-30,WQ3565,"El Paso, TX (ELP/KELP)",03:15 MDT,Guatemala City (GUA/MGGT),,B734 (N458UW),Landed,03h20m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-03-30,WQ3502,"Brownsville, TX (BRO/KBRO)",06:35 CDT,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,02h08m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-30,WQ3503,Guatemala City (GUA/MGGT),09:00 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N529AU),Landed 12:04 MST,04h13m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-03-30,WQ3566,Guatemala City (GUA/MGGT),,"San Antonio, TX (SAT/KSAT)",,B734 (N458UW),Landed 14:27 CDT,02h36m,SwiftAir/iAero,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-03-27,WQ3614,Guatemala City (GUA/MGGT),09:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N529AU),Landed 14:18 MST,04h01m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-03-27,WQ3611,"Alexandria, LA (AEX/KAEX)",05:05 CDT,Guatemala City (GUA/MGGT),,B734 (N285XA),Landed,02h36m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-03-27,WQ3613,"Brownsville, TX (BRO/KBRO)",06:45 CDT,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,02h09m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-27,WQ3612,Guatemala City (GUA/MGGT),08:00 CST,"Alexandria, LA (AEX/KAEX)",,B734 (N285XA),Landed,02h36m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-03-26,WQ3512,Guatemala City (GUA/MGGT),09:10 CST,"Phoenix, AZ (AZA/KIWA)",,B734 (N313XA),Landed 12:59 MST,03h45m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-03-26,WQ3598,Guatemala City (GUA/MGGT),08:00 CST,"Brownsville, TX (BRO/KBRO)",,B738 (N626SW),Landed,02h03m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-26,WQ3595,"Brownsville, TX (BRO/KBRO)",05:25 CDT,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,02h10m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-26,WQ3511,"El Paso, TX (ELP/KELP)",04:25 MDT,Guatemala City (GUA/MGGT),,B734 (N313XA),Landed,03h17m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-03-25,WQ3529,"San Antonio, TX (SAT/KSAT)",06:10 CDT,Guatemala City (GUA/MGGT),,B734,Landed,02h26m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"San Antonio, TX",SAT,KSAT
+2020-03-25,WQ3556,"Houston, TX (IAH/KIAH)",05:15 CDT,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,02h20m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Houston, TX",IAH,KIAH
+2020-03-25,WQ3555,Guatemala City (GUA/MGGT),08:05 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N626SW),Landed,02h14m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-25,WQ3530,Guatemala City (GUA/MGGT),11:00 CST,"Phoenix, AZ (AZA/KIWA)",,B734 (N804TJ),Landed 13:51 MST,03h49m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-03-23,WQ3550,Guatemala City (GUA/MGGT),10:00 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N626SW),Landed,02h08m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-23,WQ3549,"El Paso, TX (ELP/KELP)",05:15 MDT,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,03h14m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-03-20,WQ3513,"Phoenix, AZ (AZA/KIWA)",06:00 MST,Guatemala City (GUA/MGGT),,B733,Landed,03h46m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-03-20,WQ3514,Guatemala City (GUA/MGGT),12:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733,Landed,04h01m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-03-19,WQ3593,"Brownsville, TX (BRO/KBRO)",09:00 CDT,Guatemala City (GUA/MGGT),,B733 (N627SW),Landed,02h06m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-19, WAL408,"San Antonio, TX(SAT/KSAT)",,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,,World Atlantic,Guatemala City,GUA,MGGT,"San Antonio, TX",SAT,KSAT
+2020-03-19,WQ3595,Guatemala City (GUA/MGGT),11:35 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N627SW),Landed,02h16m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-16,WQ3542,"El Paso, TX (ELP/KELP)",08:25 MDT,Guatemala City (GUA/MGGT),,B733 (N627SW),Landed,03h29m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-03-16,WQ3543,Guatemala City (GUA/MGGT),14:15 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N627SW),Landed,02h10m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-13,WQ3514,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N529AU),Landed 16:20 MST,03h48m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-03-13,WQ3513,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,04h03m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-03-13,WQ3580,Guatemala City (GUA/MGGT),10:00 CST,"Alexandria, LA (AEX/KAEX)",,B738 (N917XA),Landed,02h34m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-03-13,WQ3579,"Alexandria, LA (AEX/KAEX)",07:05 CDT,Guatemala City (GUA/MGGT),,B738 (N917XA),Landed,02h29m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-03-12, WAL408,"Brownsville, TX(BRO/KBRO)",09:10 CDT,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,02h02m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-12, WAL408,Guatemala City(GUA/MGGT),,"San Antonio, TX(SAT/KSAT)",,MD83 (N804WA),Landed 16:57 CDT,02h37m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-03-12,WQ3554,"El Paso, TX (ELP/KELP)",05:15 MDT,Guatemala City (GUA/MGGT),,B733 (N627SW),Landed,03h17m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-03-12,WQ3555,Guatemala City (GUA/MGGT),,"Brownsville, TX (BRO/KBRO)",,B733 (N627SW),Landed,02h22m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-11,WQ3582,"Houston, TX (IAH/KIAH)",08:40 CDT,Guatemala City (GUA/MGGT),,B734,Landed,02h22m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Houston, TX",IAH,KIAH
+2020-03-11, WAL408,"Brownsville, TX(BRO/KBRO)",07:35 CDT,Guatemala City(GUA/MGGT),,MD83 ,Landed,02h00m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-11, WAL408,Guatemala City(GUA/MGGT),10:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 ,Landed,02h41m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-03-11,WQ3532,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B738 (N624XA),Landed 17:37 MST,04h01m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-03-11,WQ3577,"Alexandria, LA (AEX/KAEX)",06:05 CDT,Guatemala City (GUA/MGGT),,B738 (N917XA),Landed,02h16m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-03-11,WQ3531,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B738 (N624XA),Landed,03h36m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-03-11,WQ3578,Guatemala City (GUA/MGGT),09:00 CST,"El Paso, TX (ELP/KELP)",,B738 (N917XA),Landed 12:37 MDT,03h36m,SwiftAir/iAero,"El Paso, TX",ELP,KELP,Guatemala City,GUA,MGGT
+2020-03-11,WQ3583,Guatemala City (GUA/MGGT),11:30 CST,"Brownsville, TX (BRO/KBRO)",,B734,Landed,02h13m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-10,WQ3552,"Brownsville, TX (BRO/KBRO)",08:25 CDT,Guatemala City (GUA/MGGT),,B734 (N441US),Landed,02h11m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-10, WAL708,"Miami, FL(MIA/KMIA)",11:35 EDT,Guatemala City(GUA/MGGT),,MD83 (N807TR),Landed,,World Atlantic,Guatemala City,GUA,MGGT,"Miami, FL",MIA,KMIA
+2020-03-10, WAL708,Guatemala City(GUA/MGGT),13:10 CST,"Miami, FL(MIA/KMIA)",,MD83 (N807TR),Landed 17:15 EDT,02h16m,World Atlantic,"Miami, FL",MIA,KMIA,Guatemala City,GUA,MGGT
+2020-03-10,WQ3553,Guatemala City (GUA/MGGT),11:00 CST,"Brownsville, TX (BRO/KBRO)",,B734 (N441US),Landed,02h37m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-09,WQ3543,Guatemala City (GUA/MGGT),13:35 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N627SW),Landed,02h19m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-09,WQ3542,"El Paso, TX (ELP/KELP)",08:25 MDT,Guatemala City (GUA/MGGT),,B733 (N627SW),Landed,03h14m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-03-06,WQ3515,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N531AU),Landed,04h14m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-03-06,WQ3514,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N531AU),Landed,03h51m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-03-05, WAL408,"Brownsville, TX(BRO/KBRO)",08:35 CST,Guatemala City(GUA/MGGT),,MD83 ,Landed,02h03m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-05, WAL408,Guatemala City(GUA/MGGT),12:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 ,Landed,02h32m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-03-05,WQ3578,Guatemala City (GUA/MGGT),10:00 CST,"Houston, TX (IAH/KIAH)",,B733 (N626SW),Landed 12:57 CST,02h33m,SwiftAir/iAero,"Houston, TX",IAH,KIAH,Guatemala City,GUA,MGGT
+2020-03-05,WQ3561,Guatemala City (GUA/MGGT),11:10 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N627SW),Landed,02h17m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-05,WQ3560,"El Paso, TX (ELP/KELP)",05:25 MST,Guatemala City (GUA/MGGT),,B733 (N627SW),Landed,03h25m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-03-05,WQ3577,"Alexandria, LA (AEX/KAEX)",06:05 CST,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,02h36m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-03-04,WQ3589,"Brownsville, TX (BRO/KBRO)",06:25 CST,Guatemala City (GUA/MGGT),,B734 (N441US),Landed,02h09m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-04,WQ3590,Guatemala City (GUA/MGGT),10:00 CST,"Brownsville, TX (BRO/KBRO)",,B734 (N441US),Landed,02h12m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-04, WAL708,Guatemala City(GUA/MGGT),12:10 CST,"Miami, FL(MIA/KMIA)",,MD83 (N807TR),Landed 18:08 EST,02h00m,World Atlantic,"Miami, FL",MIA,KMIA,Guatemala City,GUA,MGGT
+2020-03-04,WQ3528,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B738 (N624XA),Landed,03h56m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-03-04,WQ3529,Guatemala City (GUA/MGGT),13:40 CST,"Phoenix, AZ (AZA/KIWA)",,B738 (N624XA),Landed,04h05m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-03-04, WAL708,"Alexandria, LA(AEX/KAEX)",06:20 CST,Guatemala City(GUA/MGGT),,MD83 (N807TR),Landed,02h35m,World Atlantic,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-03-03, WAL608,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 (N806WA),Landed,02h04m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-03-03, WAL608,Guatemala City(GUA/MGGT),11:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N806WA),Landed 14:35 CST,02h29m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-03-02,WQ3537,Guatemala City (GUA/MGGT),13:10 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N627SW),Landed,02h11m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-03-02,WQ3536,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B733 (N627SW),Landed,03h09m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-02-28, WAL608,Guatemala City(GUA/MGGT),10:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N806WA),Landed 13:25 CST,02h37m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-28, WAL608,"San Antonio, TX(SAT/KSAT)",,Guatemala City(GUA/MGGT),,MD83 (N806WA),Landed,,World Atlantic,Guatemala City,GUA,MGGT,"San Antonio, TX",SAT,KSAT
+2020-02-28,WQ3531,"Phoenix, AZ (AZA/KIWA)",,Guatemala City (GUA/MGGT),,B738 (N276EA),Landed,,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-28,WQ3532,Guatemala City (GUA/MGGT),11:10 CST,"Phoenix, AZ (AZA/KIWA)",,B738 (N276EA),Landed,04h13m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-27, WAL408,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,02h41m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-27,WQ3530,Guatemala City (GUA/MGGT),12:10 CST,"Phoenix, AZ (AZA/KIWA)",,B738 (N276EA),Landed,04h21m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-27,WQ3520,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N531AU),Landed,04h20m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-27,WQ3568,"Alexandria, LA (AEX/KAEX)",06:05 CST,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,02h37m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-02-27,WQ3529,"Phoenix, AZ (AZA/KIWA)",06:00 MST,Guatemala City (GUA/MGGT),,B738 (N276EA),Landed,03h36m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-27,WQ3519,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B733 (N531AU),Landed,03h15m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-02-27,WQ3569,Guatemala City (GUA/MGGT),10:00 CST,"Alexandria, LA (AEX/KAEX)",,B733 (N626SW),Landed,02h37m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-02-26, WAL708,Guatemala City(GUA/MGGT),,"Miami, FL(MIA/KMIA)",,MD83 (N807TR),Landed,02h07m,World Atlantic,"Miami, FL",MIA,KMIA,Guatemala City,GUA,MGGT
+2020-02-26, WAL708,"Miami, FL(MIA/KMIA)",11:35 EST,Guatemala City(GUA/MGGT),,MD83 (N807TR),Landed,04h28m,World Atlantic,Guatemala City,GUA,MGGT,"Miami, FL",MIA,KMIA
+2020-02-26,WQ3503,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B738 (N624XA),Landed,03h41m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-26,WQ3504,Guatemala City (GUA/MGGT),,"Phoenix, AZ (AZA/KIWA)",,B738 (N624XA),Landed,01h47m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-26,WQ3566,"Houston, TX (IAH/KIAH)",08:10 CST,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,02h25m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Houston, TX",IAH,KIAH
+2020-02-26,WQ3567,Guatemala City (GUA/MGGT),12:00 CST,"Alexandria, LA (AEX/KAEX)",,B733 (N626SW),Landed,02h37m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-02-25, WAL408,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,02h02m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-25, WAL408,Guatemala City(GUA/MGGT),11:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N804WA),Landed 14:08 CST,02h34m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-24,WQ3534,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B733 (N627SW),Landed,03h15m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-02-24,WQ3535,Guatemala City (GUA/MGGT),13:10 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N627SW),Landed,02h14m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-02-21, WAL608,Guatemala City(GUA/MGGT),12:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N806WA),Landed 16:02 CST,02h37m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-21,WQ3507,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N531AU),Landed,04h16m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-21,WQ3506,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N531AU),Landed,03h42m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-21, WAL608,"Brownsville, TX(BRO/KBRO)",08:35 CST,Guatemala City(GUA/MGGT),,MD83 (N806WA),Landed,02h01m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-20, WAL608,"Brownsville, TX(BRO/KBRO)",08:35 CST,Guatemala City(GUA/MGGT),,MD83 (N806WA),Landed,02h01m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-20, WAL608,Guatemala City(GUA/MGGT),12:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N806WA),Landed 15:24 CST,02h36m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-20,WQ3585,"Phoenix, AZ (AZA/KIWA)",08:05 MST,Guatemala City (GUA/MGGT),,B734 (N418US),Landed,03h49m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-20,WQ3583,Guatemala City (GUA/MGGT),14:15 CST,"Alexandria, LA (AEX/KAEX)",,B734 (N418US),Landed,02h31m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-02-20,WQ3518,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B738 (N276EA),Landed,03h14m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-02-20,WQ3519,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B738 (N276EA),Landed 17:37 MST,03h51m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-19, WAL408,Guatemala City(GUA/MGGT),13:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N804WA),Landed 17:35 CST,02h29m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-19,WQ3577,"Alexandria, LA (AEX/KAEX)",07:05 CST,Guatemala City (GUA/MGGT),,B734 (N418US),Landed,02h35m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-02-19,WQ3540,"Houston, TX (IAH/KIAH)",08:15 CST,Guatemala City (GUA/MGGT),,B733 (N627SW),Landed,02h24m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Houston, TX",IAH,KIAH
+2020-02-19, WAL408,"Phoenix, AZ(AZA/KIWA)",06:50 MST,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,03h49m,World Atlantic,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-19,WQ3541,Guatemala City (GUA/MGGT),12:05 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N627SW),Landed,02h09m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-02-18, WAL408,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,02h10m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-18, WAL708,"Alexandria, LA(AEX/KAEX)",09:25 CST,Guatemala City(GUA/MGGT),,MD83 (N807TR),Landed,02h27m,World Atlantic,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-02-18, WAL708,Guatemala City(GUA/MGGT),13:20 CST,"Miami, FL(MIA/KMIA)",,MD83 (N807TR),Landed 16:24 EST,02h07m,World Atlantic,"Miami, FL",MIA,KMIA,Guatemala City,GUA,MGGT
+2020-02-18, WAL408,Guatemala City(GUA/MGGT),,"San Antonio, TX(SAT/KSAT)",,MD83 (N804WA),Landed 14:49 CST,02h41m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-17,WQ3534,Guatemala City (GUA/MGGT),12:40 CST,"Brownsville, TX (BRO/KBRO)",,B733,Landed,01h59m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-02-17,WQ3533,"El Paso, TX (ELP/KELP)",,Guatemala City (GUA/MGGT),,B733 (N627SW),Landed,,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-02-14,WQ3508,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,03h51m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-14,WQ3509,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N626SW),Landed 16:13 MST,04h02m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-13,WQ3556,Guatemala City (GUA/MGGT),14:55 CST,"Alexandria, LA (AEX/KAEX)",,B734 (N418US),Landed,02h20m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-02-13,WQ3519,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N529AU),Landed 17:37 MST,04h05m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-13, WAL708,Guatemala City(GUA/MGGT),,"San Antonio, TX(SAT/KSAT)",,MD83 (N807TR),Landed 15:47 CST,02h24m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-13, WAL708,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 (N807TR),Landed,02h07m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-13,WQ3518,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,03h27m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-02-13,WQ3589,"Phoenix, AZ (AZA/KIWA)",08:05 MST,Guatemala City (GUA/MGGT),,B734 (N418US),Landed,04h07m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-12,WQ3530,"Brownsville, TX (BRO/KBRO)",08:25 CST,Guatemala City (GUA/MGGT),,B733 (N531AU),Landed,02h12m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-12,WQ3504,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,04h17m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-12,WQ3564,"Alexandria, LA (AEX/KAEX)",07:05 CST,Guatemala City (GUA/MGGT),,B738 (N276EA),Landed,02h33m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-02-12,WQ3505,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N626SW),Landed,04h19m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-12,WQ3531,Guatemala City (GUA/MGGT),12:00 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N531AU),Landed,02h04m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-02-11, WAL708,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 ,Landed,02h06m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-11, WAL408,"Miami, FL(MIA/KMIA)",10:35 EST,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,04h20m,World Atlantic,Guatemala City,GUA,MGGT,"Miami, FL",MIA,KMIA
+2020-02-11, WAL708,Guatemala City(GUA/MGGT),,"San Antonio, TX(SAT/KSAT)",,MD83 (N807TR),Landed 13:53 CST,02h18m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-11, WAL7O8,Guatemala City(GUA/MGGT),,"San Antonio, TX(SAT/KSAT)",,MD83 ,Landed,02h23m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-11, WAL408,Guatemala City(GUA/MGGT),,"Miami, FL(MIA/KMIA)",,MD83 (N804WA),Landed,02h14m,World Atlantic,"Miami, FL",MIA,KMIA,Guatemala City,GUA,MGGT
+2020-02-10, WAL608,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 (N806WA),Landed,02h03m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-10,WQ3533,Guatemala City (GUA/MGGT),12:10 CST,"Brownsville, TX (BRO/KBRO)",,B733,Landed,02h10m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-02-10,WQ3532,"El Paso, TX (ELP/KELP)",06:25 MST,Guatemala City (GUA/MGGT),,B733 (N531AU),Landed,03h17m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-02-10, WAL608,Guatemala City(GUA/MGGT),11:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N806WA),Landed 13:01 CST,02h37m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-07, WAL708,Guatemala City(GUA/MGGT),12:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 ,Landed,02h39m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-07, WAL708,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 ,Landed,02h03m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-07,WQ3509,Guatemala City (GUA/MGGT),13:40 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N626SW),Landed 17:38 MST,04h30m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-07,WQ3508,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,03h53m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-06, WAL608,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 ,Landed,02h03m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-06, WAL608,Guatemala City(GUA/MGGT),11:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N806WA),Landed 14:59 CST,02h33m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-06,WQ3518,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,03h07m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-02-06,WQ3519,Guatemala City (GUA/MGGT),,"Phoenix, AZ (AZA/KIWA)",,B733 (N626SW),Landed,04h45m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-06,WQ3563,"Alexandria, LA (AEX/KAEX)",06:05 CST,Guatemala City (GUA/MGGT),,B738 (N276EA),Landed,02h45m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-02-06,WQ3564,Guatemala City (GUA/MGGT),10:00 CST,"Alexandria, LA (AEX/KAEX)",,B738 (N276EA),Landed,02h23m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-02-05, WAL408,"Houston, TX(IAH/KIAH)",08:20 CST,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,02h30m,World Atlantic,Guatemala City,GUA,MGGT,"Houston, TX",IAH,KIAH
+2020-02-05,WQ3504,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,04h08m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-02-05,WQ3586,Guatemala City (GUA/MGGT),10:00 CST,"Brownsville, TX (BRO/KBRO)",,B734 (N441US),Landed,01h57m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-02-05,WQ3585,"Brownsville, TX (BRO/KBRO)",06:35 CST,Guatemala City (GUA/MGGT),,B734,Landed,02h08m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-05,WQ3505,Guatemala City (GUA/MGGT),14:05 CST,"Phoenix, AZ (AZA/KIWA)",,B733,Landed,04h19m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-02-05, WAL408,Guatemala City(GUA/MGGT),12:10 CST,"Miami, FL(MIA/KMIA)",,MD83 (N804WA),Landed,02h01m,World Atlantic,"Miami, FL",MIA,KMIA,Guatemala City,GUA,MGGT
+2020-02-04, WAL608,Guatemala City(GUA/MGGT),,"San Antonio, TX(SAT/KSAT)",,MD83 (N806WA),Landed 14:32 CST,00h00m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-02-04, WAL408,Guatemala City(GUA/MGGT),,"Alexandria, LA(AEX/KAEX)",,MD83 (N804WA),Landed,02h21m,World Atlantic,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-02-04, WAL408,"Miami, FL(MIA/KMIA)",10:35 EST,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,04h26m,World Atlantic,Guatemala City,GUA,MGGT,"Miami, FL",MIA,KMIA
+2020-02-04, WAL608,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 (N806WA),Landed,02h08m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-03,WQ3545,"El Paso, TX (ELP/KELP)",06:25 MST,Guatemala City (GUA/MGGT),,B738 (N917XA),Landed,03h20m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-02-03,WQ3535,"Brownsville, TX (BRO/KBRO)",06:35 CST,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,02h11m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-02-03,WQ3546,Guatemala City (GUA/MGGT),13:13 CST,"Brownsville, TX (BRO/KBRO)",,B738 (N917XA),Landed,02h01m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-02-03,WQ3536,Guatemala City (GUA/MGGT),10:00 CST,"Brownsville, TX (BRO/KBRO)",,B733 (N626SW),Landed,02h12m,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-01-31,WQ3508,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N531AU),Landed,03h51m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-01-31,WQ3509,Guatemala City (GUA/MGGT),13:40 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N531AU),Landed,04h43m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-01-30,WQ3517,Guatemala City (GUA/MGGT),,"Phoenix, AZ (AZA/KIWA)",,B733 (N531AU),Landed 18:19 MST,04h34m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-01-30, WAL608,Guatemala City(GUA/MGGT),11:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N806WA),Landed 14:58 CST,02h27m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-01-30, WAL608,"Brownsville, TX(BRO/KBRO)",,Guatemala City(GUA/MGGT),,MD83 (N806WA),Landed,,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-01-30,WQ3448,Guatemala City (GUA/MGGT),10:00 CST,"Alexandria, LA (AEX/KAEX)",,B738 (N820TJ),Landed,02h36m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-01-30,WQ3447,"Alexandria, LA (AEX/KAEX)",06:05 CST,Guatemala City (GUA/MGGT),,B738 (N820TJ),Landed,02h30m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-01-30,WQ3516,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B733 (N531AU),Landed,03h15m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-01-29,WQ3505,Guatemala City (GUA/MGGT),13:45 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N529AU),Landed 18:05 MST,04h28m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-01-29,WQ3504,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,03h53m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-01-29,WQ3565,Guatemala City (GUA/MGGT),12:00 CST,"Alexandria, LA (AEX/KAEX)",,B734 (N418US),Landed,02h37m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-01-29,WQ3567,"Houston, TX (IAH/KIAH)",08:10 CST,Guatemala City (GUA/MGGT),,B734 (N418US),Landed,02h22m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Houston, TX",IAH,KIAH
+2020-01-28, WAL888,Guatemala City(GUA/MGGT),13:10 CST,"Miami, FL(MIA/KMIA)",,MD83 ,Landed,01h59m,World Atlantic,"Miami, FL",MIA,KMIA,Guatemala City,GUA,MGGT
+2020-01-28, WAL888,"Miami, FL(MIA/KMIA)",10:35 EST,Guatemala City(GUA/MGGT),,MD83 ,Landed,04h29m,World Atlantic,Guatemala City,GUA,MGGT,"Miami, FL",MIA,KMIA
+2020-01-28, WAL708,Guatemala City(GUA/MGGT),11:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 ,Landed,02h34m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-01-28, WAL708,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 ,Landed,02h03m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-01-27,WQ3572,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N529AU),Landed 16:58 MST,04h14m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-01-27,WQ3571,"Brownsville, TX (BRO/KBRO)",09:45 CST,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,02h06m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-01-24,WQ3510,Guatemala City (GUA/MGGT),14:50 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N531AU),Landed,04h20m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-01-24, WAL708,Guatemala City(GUA/MGGT),12:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 ,Landed,05h46m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-01-24,WQ3509,"Phoenix, AZ (AZA/KIWA)",08:40 MST,Guatemala City (GUA/MGGT),,B733 (N531AU),Landed,03h57m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-01-23,WQ3517,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B733,Landed,03h16m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-01-23,WQ3553,Guatemala City (GUA/MGGT),10:00 CST,"Alexandria, LA (AEX/KAEX)",,B738 (N820TJ),Landed,02h27m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-01-23,WQ3529,"Phoenix, AZ (AZA/KIWA)",06:00 MST,Guatemala City (GUA/MGGT),,B738 (N276EA),Landed,03h43m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-01-23,WQ3552,"Alexandria, LA (AEX/KAEX)",06:05 CST,Guatemala City (GUA/MGGT),,B738 (N820TJ),Landed,02h35m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-01-23,WQ3518,Guatemala City (GUA/MGGT),13:10 CST,"El Paso, TX (ELP/KELP)",,B733 (N531AU),Landed 18:31 MST,03h42m,SwiftAir/iAero,"El Paso, TX",ELP,KELP,Guatemala City,GUA,MGGT
+2020-01-23,WQ3530,Guatemala City (GUA/MGGT),16:00 CST,"Miami, FL (MIA/KMIA)",,B738 (N276EA),Landed 21:07 EST,02h59m,SwiftAir/iAero,"Miami, FL",MIA,KMIA,Guatemala City,GUA,MGGT
+2020-01-22,WQ3504,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,03h45m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-01-22,WQ3505,Guatemala City (GUA/MGGT),13:50 CST,"Phoenix, AZ (AZA/KIWA)",,B733,Landed,04h22m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-01-21, WAL708,"Brownsville, TX(BRO/KBRO)",08:45 CST,Guatemala City(GUA/MGGT),,MD83 ,Landed,01h59m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO
+2020-01-21, WAL408,"Miami, FL(MIA/KMIA)",10:35 EST,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,04h21m,World Atlantic,Guatemala City,GUA,MGGT,"Miami, FL",MIA,KMIA
+2020-01-21, WAL408,Guatemala City(GUA/MGGT),,"Miami, FL(MIA/KMIA)",,MD83 (N804WA),Landed 17:34 EST,02h01m,World Atlantic,"Miami, FL",MIA,KMIA,Guatemala City,GUA,MGGT
+2020-01-21, WAL708,Guatemala City(GUA/MGGT),12:10 CST,"San Antonio, TX(SAT/KSAT)",,MD83 ,Landed,02h40m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-01-20,WQ3540,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B733 (N626SW),Landed,03h19m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-01-20,WQ3541,Guatemala City (GUA/MGGT),,"Brownsville, TX (BRO/KBRO)",,B733 (N626SW),Landed,,SwiftAir/iAero,"Brownsville, TX",BRO,KBRO,Guatemala City,GUA,MGGT
+2020-01-17,WQ3601,Guatemala City (GUA/MGGT),12:10 CST,"Alexandria, LA (AEX/KAEX)",,B738 (N624XA),Landed 15:01 CST,02h51m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-01-17,WQ3600,"Alexandria, LA (AEX/KAEX)",08:15 CST,Guatemala City (GUA/MGGT),,B738,Landed,02h32m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-01-17,WQ3507,"Phoenix, AZ (AZA/KIWA)",07:00 MST,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,04h02m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Phoenix, AZ",AZA,KIWA
+2020-01-17,WQ3508,Guatemala City (GUA/MGGT),13:10 CST,"Phoenix, AZ (AZA/KIWA)",,B733 (N529AU),Landed,04h11m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-01-17, WAL708,Guatemala City(GUA/MGGT),11:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 ,Landed,05h30m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-01-16, WAL408,Guatemala City(GUA/MGGT),13:00 CST,"San Antonio, TX(SAT/KSAT)",,MD83 (N804WA),Landed 16:19 CST,02h36m,World Atlantic,"San Antonio, TX",SAT,KSAT,Guatemala City,GUA,MGGT
+2020-01-16,WQ3516,Guatemala City (GUA/MGGT),,"Phoenix, AZ (AZA/KIWA)",,B733,Landed,04h06m,SwiftAir/iAero,"Phoenix, AZ",AZA,KIWA,Guatemala City,GUA,MGGT
+2020-01-16,WQ3547,"Alexandria, LA (AEX/KAEX)",06:05 CST,Guatemala City (GUA/MGGT),,B738 (N624XA),Landed,02h33m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"Alexandria, LA",AEX,KAEX
+2020-01-16,WQ3548,Guatemala City (GUA/MGGT),10:00 CST,"Alexandria, LA (AEX/KAEX)",,B738,Landed,02h35m,SwiftAir/iAero,"Alexandria, LA",AEX,KAEX,Guatemala City,GUA,MGGT
+2020-01-16,WQ3243,"El Paso, TX (ELP/KELP)",07:25 MST,Guatemala City (GUA/MGGT),,B733 (N529AU),Landed,03h23m,SwiftAir/iAero,Guatemala City,GUA,MGGT,"El Paso, TX",ELP,KELP
+2020-01-16, WAL408,"Brownsville, TX(BRO/KBRO)",07:35 CST,Guatemala City(GUA/MGGT),,MD83 (N804WA),Landed,02h06m,World Atlantic,Guatemala City,GUA,MGGT,"Brownsville, TX",BRO,KBRO

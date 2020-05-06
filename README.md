@@ -25,7 +25,8 @@ Datasets and high level resources:
 - `installment1/` - Dataset released to UWCHR via FOIA in December 2018. Contains ICE Air ARTS passenger data for 2010-10-01 through 2018-12-05.
 - `installment2/` - Dataset released to UWCHR via FOIA in August 2019. Contains ICE Air ARTS passenger and mission data for 2010-10-01 through 2018-05-03.
 - `compare/` - Project for comparing contents of ICE Air ARTS installments 1 and 2.
-- `kykm/` - Dataset of community observations of ICE Air flights at Yakima Air Terminal (KYMK).
+- `kykm/` - Small task for dataset of community observations of ICE Air flights at Yakima Air Terminal (KYMK).
+- `radarbox/` - Task for data on Swift Air (SWQ) and World Atlatic (WAL) flights using commercial flight tracker records from Radarbox.com
 - `share/` - Various hand-written files and resources shared by multiple other tasks.
 - `docs/` - HTML documentation published at https://uwchr.github.io/ice-air/
 
@@ -39,9 +40,10 @@ Project-level tasks, in order of workflow (not all tasks will be present in all 
 - `clean/` - Standardizes selected field values in `clean/hand/clean.yaml`; fixes missing and bad airport data; removes duplicate passenger records. Outputs full ICE Air ARTS datasets, after cleaning, as Gzipped CSV files.
 - `analyze/` - Contains various exploratory Jupyter notebooks and R Markdown. These notebooks and their outputs are exploratory and do not necessarily reflect the findings of UWCHR's report.
   - `analyze/output/` contains various versions of figures and data subsets; currently none of these are used in any downstream tasks.
-- `write/` - Writes out reports to HTML using [Pweave](http://mpastell.com/pweave/).
+- `write/` - Writes out final reports to HTML using [Pweave](http://mpastell.com/pweave/).
   - All analysis, figure generation, etc. takes place in `write/src/`.
 
 # To-do
 
 - [ ] Update data appendix for `installment2/`
+- [ ] Convert `installment1/` and `installment2/` tasks `optimize/` and `clean/` to output feather format files

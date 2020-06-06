@@ -1,0 +1,339 @@
+\title{World Atlantic Airlines ICE Air Flights via Brownsville International Airport}
+\author{Phil Neff, Program Coordinator\\University of Washington Center for Human Rights (UWCHR)}
+\maketitle
+
+\section{Introduction}
+
+This memo analyzes U.S. Immigration & Customs Enforcement Air Operations (ICE Air) deportation and immigration detention transfer flights operated by [World Atlantic Airlines (WAL)](https://www.flywaa.com/#tf-home) via [Brownsville/South Padre Island International Airport (KBRO)](https://www.airnav.com/airport/KBRO) in Brownsville, TX. This analysis uses data from ICE Air's Alien Repatriation Tracking System (ARTS) database, released to the University of Washington Center for Human Rights under the Freedom of Information Act. For more on ICE Air and the ARTS database, see UWCHR's 2019 report, ["Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation"](https://jsis.washington.edu/humanrights/2019/04/23/ice-air/). The data and code used to produce this memo can be reviewed on [GitHub](https://github.com/UWCHR/ice-air).
+
+\section{ARTS Mission Data}
+
+```python, mission_data, echo=True
+
+import pandas as pd
+import numpy as np
+import yaml
+
+with open(f'../input/mission-dtypes.yaml', 'r') as yamlfile:
+    mission_dtypes = yaml.load(yamlfile)
+
+with open('../input/airport_dict.yaml', 'r') as yamlfile:
+    airport_dict = yaml.load(yamlfile)
+
+read_csv_opts = {'sep': '|',
+                 'quotechar': '"',
+                 'compression': 'gzip',
+                 'encoding': 'utf-8',
+                 'parse_dates': ['MissionDate'],
+                 'infer_datetime_format': True}
+
+df = pd.read_csv(f'../input/ice-air-missions.csv.gz',
+                 **read_csv_opts,
+                 dtype=mission_dtypes)
+
+```
+
+The ARTS data includes information on <%= len(set(df.MissionID)) %> ICE Air missions from <%= print(df.MissionDate.min().strftime('%B %-d, %Y')) %> to <%= print(df.MissionDate.max().strftime('%B %-d, %Y')) %>. Each mission is associated with a unique identifier (`MissionID`), aircraft tail number (`MsnTailNumber`), and date (`MissionDate`), as well as additional information including an itinerary of up to ten airports, number of passengers, cost, etc.
+
+\section{Flights operated by World Atlantic}
+
+The dataset does not directly encode the airline operating each mission. The `msnVendor` field represents the air charter brokers contracted by ICE Air to arrange flights. Classic Air Charter is the current contractor for ICE Air. However, we can use publicly available flight tracking websites to collect aircraft tail numbers associated with a given airline, such as World Atlantic Airlines (Caribbean Sun). Using data gathered from [RadarBox](https://www.radarbox.com/), we generate a list of tail numbers used by World Atlantic Airlines (WAL) during the first months of 2020, as well as additional aircraft known to be associated with WAL:
+
+```python, wal_data, echo=True
+
+wal = pd.read_csv(f'../input/RadarBoxWAL20200116-20200417.csv.gz',
+                  sep='|',
+                  quotechar='"')
+
+wal_tails = wal['Aircraft'].unique()
+
+def extract(string, start='(', stop=')'):
+    return string[string.index(start)+1:string.index(stop)]
+
+cleaned = []
+for i in wal_tails:
+    try: 
+        j = extract(i)
+        cleaned.append(j)
+    except ValueError:
+        pass
+wal_tails = cleaned
+del cleaned
+
+# Adding known tail numbers
+wal_tails.extend(['N802WA', 'N803WA', 'N807WA'])
+
+```
+
+We can verify that each of these tail numbers is associated with a World Atlantic or Caribbean Sun aircraft using the website [FlightAware](https://flightaware.com/):
+
+```python, print_urls, echo=False
+
+url = f'https://flightaware.com/live/flight/'
+l = [f'- [{x}](url{x})\n' for x in wal_tails]
+
+```
+
+<% print(*l) %>
+
+We then limit our analysis to records with `MsnTailNumber` values matching these tail numbers:
+
+```python, limit_df, echo=True
+
+pre_drop = len(df)
+df = df[df['MsnTailNumber'].isin(wal_tails)]
+post_drop = len(df)
+
+```
+
+This excludes <%= pre_drop - post_drop %> records, leaving us with <%= df['MissionID'].nunique() %> missions associated with known WAL tail numbers. 
+
+\section{WAL itineraries via KBRO}
+
+We search the fields associated with mission itineraries to generate a summary of total number of mission stops per airport for known WAL flights, and to flag all missions with at least one stop at KBRO:
+
+```python, stop_cols, echo=True
+
+stop_cols = ['MsnStart',
+             'MsnStpOne',
+             'MsnStpTwo',
+             'MsnStpThree',
+             'MsnStpFour',
+             'MsnStpFive',
+             'MsnStpSix',
+             'MsnStpSeven',
+             'MsnStpEight',
+             'MsnEnd']
+
+stop_count = df.loc[:, stop_cols].melt()['value'].value_counts()
+
+targets = ['KBRO']
+func = [lambda x: x.isin(targets)]
+target_found = df[stop_cols].apply(func).sum(axis=1) > 0
+
+df['kbro_stop'] = target_found
+
+```
+
+We find a total of <%= stop_count['KBRO'] %> stops at KBRO (including initial and final stops). KBRO is ranked #<%= int(stop_count.rank(ascending=False)['KBRO']) %> among all airports for stop frequency:
+
+```python, top_stops, echo=False
+print('Top 10 stops for WAL missions')
+print('-----------------------------')
+print(stop_count.head(10))
+
+```
+
+<%= print(sum(target_found)) %> ICE Air missions by WAL aircraft involve at least one stop at KBRO. This represents <%= round(len(df[target_found]) / len(df) * 100, 2) %>% of all known WAL ICE Air missions. WAL flights via KBRO transported <%= print(f"{df['MissionPassengers'].sum():,.0f}") %> passengers, at a total reported cost of $<%= print(f"{df['MissionTotalCost'].sum():,.2f}") %>.
+
+The proportion of WAL ICE Air missions involving KBRO has increased in recent years:
+
+```python, kbro_freq_chart, echo=False, wrap=True, fig=True
+
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+import matplotlib.colors as colors
+from matplotlib.pyplot import cm
+from mpl_toolkits.axes_grid1 import make_axes_locatable
+from matplotlib.ticker import (MultipleLocator,
+                               FormatStrFormatter,
+                               AutoMinorLocator,
+                               NullLocator)
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+
+groups = [pd.Grouper(freq='AS-OCT'), 'kbro_stop']
+g = df.set_index('MissionDate').groupby(groups)
+data = g['MissionNumber'].nunique().unstack()
+data.index = [f'FY{x.year}' for x in data.index]
+
+fig, ax = plt.subplots(figsize=(10,6))
+
+data.plot(kind='bar',
+          ax=ax,
+          figsize=(10,8))
+
+ax.set_facecolor('#DDDDDD')
+ax.set_axisbelow(True)
+ax.yaxis.grid(color='#FFFFFF')
+
+ax.yaxis.set_minor_locator(MultipleLocator(50))
+ax.yaxis.set_major_locator(MultipleLocator(100))
+plt.xticks(rotation=0, fontsize=14)
+
+sup = 'ICE Air missions with known World Atlantic tail numbers'
+plt.suptitle(sup, fontsize=18)
+title = 'Itineraries with at least one stop at KBRO'
+plt.title(title, fontsize=16, pad=12)
+plt.ylabel('Missions', fontsize=14)
+plt.xlabel('', fontsize=12)
+txt='Data Source: ICE ARTS database'
+plt.figtext(1, -.00, txt, wrap=True,
+            horizontalalignment='right',
+            fontsize=12)
+
+plt.show();
+
+```
+
+As seen in the above chart, during FY2018, <%= round(data.loc['FY2018', True] / data.loc['FY2018'].sum() * 100, 2) %>% of ICE Air missions by known WAL aircraft involved at least one stop at KBRO. <%= sum(df['MsnStart'] == 'KBRO') %> missions originated at KBRO and <%= sum(df['MsnEnd'] == 'KBRO') %> ended there.
+
+\section{Conclusion}
+
+Brownsville/South Padre Island International Airport (KBRO) has been a major hub in World Atlantic Airlines' ICE Air deportation and immigration detention transfer flights since at least FY2013. From FY2013 to FY2018 an increasing proportion of WAL IC Air missions involved stops at KBRO. For many of these missions, KBRO was either the start or end point of the mission.
+
+\appendix
+\section{Maps of WAL flights via KBRO}
+
+```python, airport_dict_setup, echo=False
+
+pgum = {'AirportName': 'Antonio B. Won Pat International Airport',
+  'City': 'Barrigada and Tamuning',
+  'Country': 'Guam',
+  'LatitudeDecimalDegrees': 13.484,
+  'LongitudeDecimalDegrees': 144.797,
+  'State': np.nan}
+
+msss = {'AirportName': 'Ilopango International Airport',
+  'City': 'San Salvador',
+  'Country': 'El Salvador',
+  'LatitudeDecimalDegrees': 13.691667,
+  'LongitudeDecimalDegrees': -89.125556,
+  'State': np.nan}
+
+airport_dict['PGUM'] = pgum
+airport_dict['MSSS'] = msss
+
+```
+
+```python, map_data_setup, echo=False
+
+target_code = 'KBRO'
+target_lon = airport_dict[target_code]['LongitudeDecimalDegrees']
+target_lat = airport_dict[target_code]['LatitudeDecimalDegrees']
+target_name = airport_dict[target_code]['AirportName']
+
+missions_to_plot = df[target_found]
+missions = missions_to_plot
+missions.set_index('MissionDate', inplace=True)
+
+missions.loc[:,stop_cols] = missions.loc[:, stop_cols].apply(lambda x: x.astype(object)).copy()
+missions.loc[:,stop_cols] = missions.loc[:,stop_cols].fillna('-').copy()
+
+grouper = stop_cols.copy()
+grouper.append(pd.Grouper(freq='AS-OCT'))
+
+var = 'MissionID'
+g = missions.groupby(grouper)[var].nunique().reset_index()
+g.set_index('MissionDate',inplace=True)
+g = g.replace('-', np.nan)
+
+```
+
+```python, maps, echo=False, fig=True
+
+from collections import Counter
+import cartopy.crs as ccrs
+import cartopy.io.shapereader as shpreader
+import cartopy.feature as cfeature
+
+
+for year in range(2012, 2019):
+    
+    loop_count = g.loc[str(year)].sort_values(by=var, ascending=True)
+    loop_count = loop_count.loc[str(year)].replace({'-': np.nan})
+    loop_count = loop_count.loc[str(year)].sort_values(by=var, ascending=True)
+
+    cm_lon=-109
+    ax_proj = ccrs.PlateCarree(central_longitude=cm_lon)
+
+    fig, ax = plt.subplots(
+        1, 1, figsize=(12, 8),
+        subplot_kw=dict(projection=ax_proj))
+    
+    ax.set_global()
+    ax.coastlines(alpha=.4)
+    ax.add_feature(cfeature.BORDERS, alpha=.4)
+    ax.add_feature(cfeature.STATES, alpha=.2)
+    ax.add_feature(cfeature.OCEAN)
+    ax.add_feature(cfeature.LAND)
+
+    # Extent of continental US + Central America
+    ax.set_extent([-128, -62, 10, 50])
+
+    limit = len(loop_count)
+    counter = 0
+
+    color=cm.viridis(np.linspace(0,1,g[var].max()+1))
+
+    for i, row in loop_count.iterrows():
+        if counter > limit:
+            break
+        c=color[round(row[var])]
+        itinerary = row[stop_cols]
+        itinerary.dropna(inplace=True)
+        len_stops = len(itinerary)
+        for i in range(len_stops): # Add something to stop when reaching last airport
+            try:
+                point_1_code = itinerary[i]
+                point_1_lon = airport_dict[point_1_code]['LongitudeDecimalDegrees']
+                point_1_lat = airport_dict[point_1_code]['LatitudeDecimalDegrees']
+
+                point_2_code = itinerary[i+1]
+                point_2_lon = airport_dict[point_2_code]['LongitudeDecimalDegrees']
+                point_2_lat = airport_dict[point_2_code]['LatitudeDecimalDegrees']
+
+                if point_1_code == point_2_code:
+                    break
+
+                if point_1_lon < 0 and point_2_lon > 0 and point_2_lon > 45:
+                    point_2_lon = point_2_lon - 360
+
+                if point_1_lon > 0 and point_2_lon < 0 and point_2_lon > 45:
+                    point_2_lon = point_2_lon + 360
+
+                npts = 2
+                x, y = np.linspace(point_1_lon, point_2_lon, npts), np.linspace(point_1_lat, point_2_lat, npts)
+
+                plt.plot(x, y,
+                color=c, linewidth=2, alpha=.5, transform=ccrs.Geodetic())
+    
+
+            except:
+    #             print(f'Could not plot {point_1_code}->{point_2_code}')
+                pass
+        counter=counter + 1
+
+    
+    plt.plot(target_lon,
+             target_lat,
+             mfc='#FFFFFF',
+             mec='#000000',
+             markersize=10,
+             marker='o',
+             transform=ccrs.Geodetic())
+
+    crs = ccrs.Geodetic()
+    transform = crs._as_mpl_transform(ax)
+    
+    plt.annotate(target_code, (target_lon, target_lat),
+                 xytext=(target_lon-7, target_lat-7),
+                 fontsize=14,
+                 arrowprops=dict(facecolor='white',
+                            arrowstyle="simple",
+                            connectionstyle="arc3,rad=-0.2",
+                            alpha=1,
+                                ),
+                 annotation_clip=False,
+                 xycoords=transform)
+    
+    sm = plt.cm.ScalarMappable(cmap='viridis', norm=plt.Normalize(vmin = g[var].min(), vmax=g[var].max()))
+    sm._A = []
+    
+    label='Number of Missions per Itinerary'
+    plt.colorbar(sm, shrink=.8, label=label)
+
+    plt.title(label=f'WAL ICE Air missions via KBRO, FY{year+1}', size=18)
+    plt.show()
+
+```

@@ -30,7 +30,7 @@
 
         \hypersetup
         {   pdfauthor = {Pweave},
-            pdftitle={Published from memo.pmd},
+            pdftitle={Published from wal-kbro-memo.pmd},
             colorlinks=TRUE,
             linkcolor=black,
             citecolor=blue,
@@ -144,7 +144,7 @@
 
         
 \begin{document}
-\title{World Atlantic Airlines ICE Air Flights via Brownsville International Airport}\author{Phil Neff, Program Coordinator\\University of Washington Center for Human Rights (UWCHR)}\maketitle
+\title{World Atlantic Airlines ICE Air Flights via Brownsville International Airport}\author{Phil Neff, Program Coordinator\\University of Washington Center for Human Rights\\philneff@uw.edu}\maketitle
 
 \section{Introduction}
 
@@ -153,15 +153,20 @@ Operations (ICE Air) deportation and immigration detention transfer
 flights operated by \href{https://www.flywaa.com/\#tf-home}{World
 Atlantic Airlines (WAL)} via
 \href{https://www.airnav.com/airport/KBRO}{Brownsville/South Padre
-Island International Airport (KBRO)} in Brownsville, TX. This analysis
-uses data from ICE Air's Alien Repatriation Tracking System (ARTS)
-database, released to the University of Washington Center for Human
-Rights under the Freedom of Information Act. For more on ICE Air and the
-ARTS database, see UWCHR's 2019 report,
+Island International Airport (KBRO)} in Brownsville, TX.
+
+This analysis uses data from ICE Air's Alien Repatriation Tracking
+System (ARTS) database, released to the
+\href{https://jsis.washington.edu/humanrights/}{University of Washington
+Center for Human Rights} (UWCHR) under the Freedom of Information Act.
+For more on ICE Air and the ARTS database, see UWCHR's 2019 report,
 \href{https://jsis.washington.edu/humanrights/2019/04/23/ice-air/}{``Hidden
-in Plain Sight: ICE Air and the Machinery of Mass Deportation''}. The
-data and code used to produce this memo can be reviewed on
-\href{https://github.com/UWCHR/ice-air}{GitHub}.
+in Plain Sight: ICE Air and the Machinery of Mass Deportation''}.
+
+Analysis for this report was done using Python. Long code sections for
+charts and maps displayed in this memo have been hidden. The full data
+and code used to produce this memo can be reviewed on
+\href{https://github.com/UWCHR/ice-air/tree/master/installment2/write/src}{GitHub}.
 
 \section{ARTS Mission Data}
 
@@ -330,16 +335,19 @@ via KBRO transported 443,853 passengers, at a total reported cost of
 The proportion of WAL ICE Air missions involving KBRO has increased in
 recent years:
 
-\includegraphics[width= \linewidth]{figures/memo_kbro_freq_chart_1.pdf}
+\includegraphics[width= \linewidth]{figures/wal-kbro-memo_kbro_freq_chart_1.pdf}
 
-As seen in the above chart, during FY2018, 69.88\% of ICE Air missions
-by known WAL aircraft involved at least one stop at KBRO. 1061 missions
-originated at KBRO and 1064 ended there.
+As seen in the above chart, from FY2016-FY2018 a majority of known WAL
+ICE Air flights involved stops at KBRO. During FY2018, 69.88\% of ICE
+Air missions by known WAL aircraft involved at least one stop at KBRO.
+1061 missions originated at KBRO and 1064 ended there. See Appendix A
+below for maps of all WAL missions involving KBRO per fiscal year,
+emphasizing most frequent itineraries.
 
 \section{Conclusion}
 
 Brownsville/South Padre Island International Airport (KBRO) has been a
-major hub in World Atlantic Airlines' ICE Air deportation and
+major hub for World Atlantic Airlines' ICE Air deportation and
 immigration detention transfer flights since at least FY2013. From
 FY2013 to FY2018 an increasing proportion of WAL IC Air missions
 involved stops at KBRO. For many of these missions, KBRO was either the
@@ -352,27 +360,15 @@ start or end point of the mission.
 
 
 
-\begin{Verbatim}[commandchars=\\\{\},frame=leftline,fontsize=\small, xleftmargin=0.5em]
-/home/philneff/anaconda3/lib/python3.7/site-
-packages/pandas/core/indexing.py:966: SettingWithCopyWarning:
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation:
-https://pandas.pydata.org/pandas-
-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  self.obj[item] = s
-\end{Verbatim}
 
 
-
-\includegraphics[width= \linewidth]{figures/memo_maps_1.pdf}
-\includegraphics[width= \linewidth]{figures/memo_maps_2.pdf}
-\includegraphics[width= \linewidth]{figures/memo_maps_3.pdf}
-\includegraphics[width= \linewidth]{figures/memo_maps_4.pdf}
-\includegraphics[width= \linewidth]{figures/memo_maps_5.pdf}
-\includegraphics[width= \linewidth]{figures/memo_maps_6.pdf}
-\includegraphics[width= \linewidth]{figures/memo_maps_7.pdf}
+\includegraphics[width= \linewidth]{figures/wal-kbro-memo_maps_1.pdf}
+\includegraphics[width= \linewidth]{figures/wal-kbro-memo_maps_2.pdf}
+\includegraphics[width= \linewidth]{figures/wal-kbro-memo_maps_3.pdf}
+\includegraphics[width= \linewidth]{figures/wal-kbro-memo_maps_4.pdf}
+\includegraphics[width= \linewidth]{figures/wal-kbro-memo_maps_5.pdf}
+\includegraphics[width= \linewidth]{figures/wal-kbro-memo_maps_6.pdf}
+\includegraphics[width= \linewidth]{figures/wal-kbro-memo_maps_7.pdf}
 
 
 \end{document}

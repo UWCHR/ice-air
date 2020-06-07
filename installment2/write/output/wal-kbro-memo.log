@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.5)  5 JUN 2020 23:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.5)  6 JUN 2020 17:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**memo.tex
-(./memo.tex
+**wal-kbro-memo.tex
+(./wal-kbro-memo.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-06-03>
 (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
@@ -296,8 +296,8 @@ File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count269
 \l__pdf_internal_box=\box48
 )
-(./memo.aux)
-\openout1 = `memo.aux'.
+(./wal-kbro-memo.aux)
+\openout1 = `wal-kbro-memo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
 LaTeX Font Info:    ... okay on input line 146.
@@ -317,7 +317,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
 LaTeX Font Info:    ... okay on input line 146.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
 46.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -360,9 +361,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 146.
 LaTeX Info: Redefining \pageref on input line 146.
 LaTeX Info: Redefining \nameref on input line 146.
- (./memo.out) (./memo.out)
+ (./wal-kbro-memo.out) (./wal-kbro-memo.out)
 \@outlinefile=\write4
-\openout4 = `memo.out'.
+\openout4 = `wal-kbro-memo.out'.
 
 
 *geometry* driver: auto-detecting
@@ -402,112 +403,113 @@ LaTeX Info: Redefining \nameref on input line 146.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-69.
+74.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 233.
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 238.
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 2
-45.
+50.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [2]
-<figures/memo_kbro_freq_chart_1.pdf, id=50, 690.60512pt x 583.56018pt>
-File: figures/memo_kbro_freq_chart_1.pdf Graphic file (type pdf)
-<use figures/memo_kbro_freq_chart_1.pdf>
-Package pdftex.def Info: figures/memo_kbro_freq_chart_1.pdf  used on input line
- 333.
+<figures/wal-kbro-memo_kbro_freq_chart_1.pdf, id=58, 690.60512pt x 583.56018pt>
+
+File: figures/wal-kbro-memo_kbro_freq_chart_1.pdf Graphic file (type pdf)
+<use figures/wal-kbro-memo_kbro_freq_chart_1.pdf>
+Package pdftex.def Info: figures/wal-kbro-memo_kbro_freq_chart_1.pdf  used on i
+nput line 338.
 (pdftex.def)             Requested size: 469.47046pt x 396.6999pt.
  [3]
-<figures/memo_maps_1.pdf, id=55, 636.72462pt x 397.4078pt>
-File: figures/memo_maps_1.pdf Graphic file (type pdf)
-<use figures/memo_maps_1.pdf>
-Package pdftex.def Info: figures/memo_maps_1.pdf  used on input line 369.
+<figures/wal-kbro-memo_maps_1.pdf, id=63, 636.72462pt x 397.4078pt>
+File: figures/wal-kbro-memo_maps_1.pdf Graphic file (type pdf)
+<use figures/wal-kbro-memo_maps_1.pdf>
+Package pdftex.def Info: figures/wal-kbro-memo_maps_1.pdf  used on input line 3
+65.
 (pdftex.def)             Requested size: 469.47046pt x 293.01598pt.
-<figures/memo_maps_2.pdf, id=56, 636.72462pt x 397.4078pt>
-File: figures/memo_maps_2.pdf Graphic file (type pdf)
-<use figures/memo_maps_2.pdf>
-Package pdftex.def Info: figures/memo_maps_2.pdf  used on input line 370.
+<figures/wal-kbro-memo_maps_2.pdf, id=64, 636.72462pt x 397.4078pt>
+File: figures/wal-kbro-memo_maps_2.pdf Graphic file (type pdf)
+<use figures/wal-kbro-memo_maps_2.pdf>
+Package pdftex.def Info: figures/wal-kbro-memo_maps_2.pdf  used on input line 3
+66.
 (pdftex.def)             Requested size: 469.47046pt x 293.01598pt.
-<figures/memo_maps_3.pdf, id=57, 636.72462pt x 397.4078pt>
-File: figures/memo_maps_3.pdf Graphic file (type pdf)
-<use figures/memo_maps_3.pdf>
-Package pdftex.def Info: figures/memo_maps_3.pdf  used on input line 371.
+<figures/wal-kbro-memo_maps_3.pdf, id=65, 636.72462pt x 397.4078pt>
+File: figures/wal-kbro-memo_maps_3.pdf Graphic file (type pdf)
+<use figures/wal-kbro-memo_maps_3.pdf>
+Package pdftex.def Info: figures/wal-kbro-memo_maps_3.pdf  used on input line 3
+67.
 (pdftex.def)             Requested size: 469.47046pt x 293.01598pt.
-<figures/memo_maps_4.pdf, id=58, 636.72462pt x 397.4078pt>
-File: figures/memo_maps_4.pdf Graphic file (type pdf)
-<use figures/memo_maps_4.pdf>
-Package pdftex.def Info: figures/memo_maps_4.pdf  used on input line 372.
+<figures/wal-kbro-memo_maps_4.pdf, id=66, 636.72462pt x 397.4078pt>
+File: figures/wal-kbro-memo_maps_4.pdf Graphic file (type pdf)
+<use figures/wal-kbro-memo_maps_4.pdf>
+Package pdftex.def Info: figures/wal-kbro-memo_maps_4.pdf  used on input line 3
+68.
 (pdftex.def)             Requested size: 469.47046pt x 293.01598pt.
-<figures/memo_maps_5.pdf, id=59, 636.72462pt x 397.4078pt>
-File: figures/memo_maps_5.pdf Graphic file (type pdf)
-<use figures/memo_maps_5.pdf>
-Package pdftex.def Info: figures/memo_maps_5.pdf  used on input line 373.
+<figures/wal-kbro-memo_maps_5.pdf, id=67, 636.72462pt x 397.4078pt>
+File: figures/wal-kbro-memo_maps_5.pdf Graphic file (type pdf)
+<use figures/wal-kbro-memo_maps_5.pdf>
+Package pdftex.def Info: figures/wal-kbro-memo_maps_5.pdf  used on input line 3
+69.
 (pdftex.def)             Requested size: 469.47046pt x 293.01598pt.
-<figures/memo_maps_6.pdf, id=60, 636.72462pt x 397.4078pt>
-File: figures/memo_maps_6.pdf Graphic file (type pdf)
-<use figures/memo_maps_6.pdf>
-Package pdftex.def Info: figures/memo_maps_6.pdf  used on input line 374.
+<figures/wal-kbro-memo_maps_6.pdf, id=68, 636.72462pt x 397.4078pt>
+File: figures/wal-kbro-memo_maps_6.pdf Graphic file (type pdf)
+<use figures/wal-kbro-memo_maps_6.pdf>
+Package pdftex.def Info: figures/wal-kbro-memo_maps_6.pdf  used on input line 3
+70.
 (pdftex.def)             Requested size: 469.47046pt x 293.01598pt.
-<figures/memo_maps_7.pdf, id=61, 636.72462pt x 397.4078pt>
-File: figures/memo_maps_7.pdf Graphic file (type pdf)
-<use figures/memo_maps_7.pdf>
-Package pdftex.def Info: figures/memo_maps_7.pdf  used on input line 375.
+<figures/wal-kbro-memo_maps_7.pdf, id=69, 636.72462pt x 397.4078pt>
+File: figures/wal-kbro-memo_maps_7.pdf Graphic file (type pdf)
+<use figures/wal-kbro-memo_maps_7.pdf>
+Package pdftex.def Info: figures/wal-kbro-memo_maps_7.pdf  used on input line 3
+71.
 (pdftex.def)             Requested size: 469.47046pt x 293.01598pt.
 
-[4 <./figures/memo_kbro_freq_chart_1.pdf>] [5 <./figures/memo_maps_1.pdf> <./fi
-gures/memo_maps_2.pdf
+[4 <./figures/wal-kbro-memo_kbro_freq_chart_1.pdf>] [5 <./figures/wal-kbro-memo
+_maps_1.pdf> <./figures/wal-kbro-memo_maps_2.pdf
 
-pdfTeX warning: pdflatex (file ./figures/memo_maps_2.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->] [6 <./figures/memo_maps_3.pdf> <./figures/memo_maps_4.pdf
+pdfTeX warning: pdflatex (file ./figures/wal-kbro-memo_maps_2.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>] [6 <./figures/wal-kbro-memo_maps_3.pdf> <./figures/wal-kbro-memo_maps_4.pdf
 
-pdfTeX warning: pdflatex (file ./figures/memo_maps_4.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./figures/wal-kbro-memo_maps_4.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
 >]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 378.
- [7 <./figures/memo_maps_5.pdf> <./figures/memo_maps_6.pdf
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 374.
+ [7 <./figures/wal-kbro-memo_maps_5.pdf> <./figures/wal-kbro-memo_maps_6.pdf
 
-pdfTeX warning: pdflatex (file ./figures/memo_maps_6.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->] [8 <./figures/memo_maps_7.pdf>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 378.
- (./memo.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 378.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 378.
-
-
-Package rerunfilecheck Warning: File `memo.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `memo.out':
-(rerunfilecheck)             Before: 093FFCA837F23F4D7383943A5BAAFBD6;227
-(rerunfilecheck)             After:  EB2F799709983AFD6B01496FA6C1016A;336.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 378.
+pdfTeX warning: pdflatex (file ./figures/wal-kbro-memo_maps_6.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>] [8 <./figures/wal-kbro-memo_maps_7.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 374.
+ (./wal-kbro-memo.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 374.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 374.
+Package rerunfilecheck Info: File `wal-kbro-memo.out' has not changed.
+(rerunfilecheck)             Checksum: EB2F799709983AFD6B01496FA6C1016A;336.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 374.
  ) 
 Here is how much of TeX's memory you used:
- 7374 strings out of 480478
- 110156 string characters out of 5899581
- 389022 words of memory out of 5000000
- 23242 multiletter control sequences out of 15000+600000
+ 7376 strings out of 480478
+ 110746 string characters out of 5899581
+ 389076 words of memory out of 5000000
+ 23244 multiletter control sequences out of 15000+600000
  543913 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,37p,326b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,6n,37p,335b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2020/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2
 020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2020/texm
 f-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2020/texmf-dist/
 fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2020/texmf-dist/fonts/t
 ype1/urw/palatino/uplr8a.pfb>
-Output written on memo.pdf (8 pages, 840453 bytes).
+Output written on wal-kbro-memo.pdf (8 pages, 840629 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
+ 496 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
  15 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

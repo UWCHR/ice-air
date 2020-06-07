@@ -149,7 +149,7 @@ import matplotlib.ticker as ticker
 groups = [pd.Grouper(freq='AS-OCT'), 'kbro_stop']
 g = df.set_index('MissionDate').groupby(groups)
 data = g['MissionNumber'].nunique().unstack()
-data.index = [f'FY{x.year}' for x in data.index]
+data.index = [f'FY{x.year+1}' for x in data.index]
 
 fig, ax = plt.subplots(figsize=(10,6))
 
@@ -180,11 +180,11 @@ plt.show();
 
 ```
 
-As seen in the above chart, from FY2016-FY2018 a majority of known WAL ICE Air flights involved stops at KBRO. During FY2018, <%= round(data.loc['FY2018', True] / data.loc['FY2018'].sum() * 100, 2) %>% of ICE Air missions by known WAL aircraft involved at least one stop at KBRO. <%= sum(df['MsnStart'] == 'KBRO') %> missions originated at KBRO and <%= sum(df['MsnEnd'] == 'KBRO') %> ended there. See Appendix A below for maps of all WAL missions involving KBRO per fiscal year, emphasizing most frequent itineraries. 
+As seen in the above chart, from FY2017-FY2016 a majority of known WAL ICE Air flights involved stops at KBRO. During FY2019, <%= round(data.loc['FY2019', True] / data.loc['FY2019'].sum() * 100, 2) %>% of ICE Air missions by known WAL aircraft involved at least one stop at KBRO. <%= sum(df['MsnStart'] == 'KBRO') %> missions originated at KBRO and <%= sum(df['MsnEnd'] == 'KBRO') %> ended there. See Appendix A below for maps of all WAL missions involving KBRO per fiscal year, emphasizing most frequent itineraries. 
 
 \section{Conclusion}
 
-Brownsville/South Padre Island International Airport (KBRO) has been a major hub for World Atlantic Airlines' ICE Air deportation and immigration detention transfer flights since at least FY2013. From FY2013 to FY2018 an increasing proportion of WAL IC Air missions involved stops at KBRO. For many of these missions, KBRO was either the start or end point of the mission.
+Brownsville/South Padre Island International Airport (KBRO) has been a major hub for World Atlantic Airlines' ICE Air deportation and immigration detention transfer flights since at least FY2014. From FY2014 to FY2019 an increasing proportion of WAL IC Air missions involved stops at KBRO. For many of these missions, KBRO was either the start or end point of the mission.
 
 \appendix
 \section{Maps of WAL flights via KBRO}

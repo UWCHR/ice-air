@@ -128,7 +128,7 @@ print(stop_count.head(10))
 
 ```
 
-<%= print(sum(target_found)) %> ICE Air missions by WAL aircraft involve at least one stop at KBRO. This represents <%= round(len(df[target_found]) / len(df) * 100, 2) %>% of all known WAL ICE Air missions. WAL flights via KBRO transported <%= print(f"{df['MissionPassengers'].sum():,.0f}") %> passengers, at a total reported cost of $<%= print(f"{df['MissionTotalCost'].sum():,.2f}") %>.
+<%= print(sum(target_found)) %> ICE Air missions by WAL aircraft involve at least one stop at KBRO. This represents <%= round(len(df[target_found]) / len(df) * 100, 2) %>% of all known WAL ICE Air missions. WAL flights via KBRO transported <%= print(f"{df.loc[target_found, 'MissionPassengers'].sum():,.0f}") %> passengers, at a total reported cost of $<%= print(f"{df.loc[target_found, 'MissionTotalCost'].sum():,.2f}") %>.
 
 The proportion of WAL ICE Air missions involving KBRO has increased in recent years:
 

@@ -28,7 +28,7 @@ output/wal-kbro-memo.pdf: \
 	mv src/wal-kbro-memo.out output/.
 	mv src/wal-kbro-memo.aux output/.
 	mv src/wal-kbro-memo.log output/.
-	mv src/wal-kbro-memo.pdf output/.
+	mv src/wal-kbro-memo.pdf output/wal-kbro-memo-final.pdf
 
 
 # done.

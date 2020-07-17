@@ -4,3 +4,4 @@
 analyze/output/figures/*
 *.xlsx
 *.pdf
+!installment2/write/output/wal-kbro-memo-final.pdf

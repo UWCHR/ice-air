@@ -1,0 +1,87 @@
+Date,Flight count,Flight number,Tail number,Operator,Owner,Previous Airport,Next Airport,From NWDC - Boarded Plane,From Plane - Boarded Bus to NWDC
+"Tuesday, May 7, 2019",1,RPN529,N529AU,"US DHS ICE ""Repatriate""",Swift Air LLC,KIWA,KELP,92,40
+"Sunday, May 12, 2019",2,SWQ3571,N441US,"Swift Air ""Swiftflight""",Swift Air LLC,KELP,KIWA,0,90
+"Tuesday, May 14, 2019",3,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,70,0
+"Saturday, May 18, 2019",4,SWQ3577,N625SW,"Swift Air ""Swiftflight""",Swift Air LLC,KDEN,KIWA,0,35
+"Tuesday, May 21, 2019",5,SWQ3500,N625SW,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,61,40
+"Sunday, May 26, 2019",6,SWQ3586,N625SW,"Swift Air ""Swiftflight""",Swift Air LLC,KELP,KONT,0,50
+"Tuesday, May 28, 2019",7,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,60,1
+"Tuesday, June 4, 2019",8,SWQ3501,N441US,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,39,73
+"Tuesday, June 11, 2019",9,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,76,50
+"Sunday, June 16, 2019",10,WAL408,N804WA,World Atlantic Airlines,World Atlantic Leasing LLC,KIAH,KSAT,0,61
+"Tuesday, June 18, 2019",11,SWQ3501,?,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,91,0
+"Saturday, June 22, 2019",12,SWQ3762,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KDEN,KIWA,0,91
+"Tuesday, June 25, 2019",13,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,67,0
+"Tuesday, July 2, 2019",14,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,81,52
+"Tuesday, July 9, 2019",15,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,37,0
+"Thursday, July 11, 2019",16,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KDEN,KIWA,0,30
+"Tuesday, July 16, 2019",17,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,52,1
+"Tuesday, July 23, 2019",18,SWQ3550,?,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,89,48
+"Tuesday, July 30, 2019",19,SWQ3501,N625SW,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,83,86
+"Tuesday, August 6, 2019",20,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,78,1
+"Wednesday, August 7, 2019",21,WAL508,N805WA,World Atlantic Airlines,World Atlantic Leasing LLC,KDEN,KSAT,0,67
+"Monday, August 12, 2019",22,WAL108,N801WA,World Atlantic Airlines,World Atlantic Leasing LLC,KONT,KBRO,0,60
+"Tuesday, August 13, 2019",23,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,55,1
+"Tuesday, August 20, 2019",24,SWQ3501,N629SW,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,88,18
+"Tuesday, August 27, 2019",25,SWQ3501,N629SW,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,60,0
+"Friday, August 30, 2019",26,SWQ3567,N625SW,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KDEN,0,78
+"Tuesday, September 3, 2019",27,SWQ3501,N803TJ,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,74,1
+"Saturday, September 7, 2019",28,WAL888,N808WA,World Atlantic Airlines,World Atlantic Leasing LLC,KSAT,KBRO,0,76
+"Tuesday, September 10, 2019",29,SWQ3501,N803TJ,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,40,2
+"Tuesday, September 17, 2019",30,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,,
+"Tuesday, September 24, 2019",31,SWQ3501,N629SW,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,56,0
+"Monday, September 30, 2019",32,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KLAS,68,0
+"Tuesday, October 8, 2019",33,SWQ3510,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,63,49
+"Tuesday, October 15, 2019",34,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,62,2
+"Tuesday, October 22, 2019",35,SWQ3501,N531AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,35,2
+"Tuesday, October 29, 2019",36,SWQ3501,N531AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,77,3
+"Tuesday, November 5, 2019",37,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,61,2
+"Tuesday, November 12, 2019",38,SWQ3501,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,49,0
+"Tuesday, November 19, 2019'",39,SWQ3501,N538CC,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,49,3
+"Tuesday, November 26, 2019",40,SWQ3501,-,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,75,1
+"Tuesday, December 3, 2019",41,SWQ3503,N529AU,"Swift Air ""Swiftflight""",Swift Air LLC,KIWA,KELP,32,1
+"Tuesday, December 10, 2019",42,SWQ3503,N917XA,iAero Airways ,"""Swiftflight""",KIWA,KELP,51,1
+"Tuesday, December 17, 2019",43,SWQ3503,N917XA,iAero Airways ,"""Swiftflight""",KIWA,KELP,37,3
+"Monday, December 23, 2019",44,SWQ3503,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KELP,40,0
+"Monday, December 30, 2019",45,SWQ3501,N277EA,iAero Airways ,"""Swiftflight""",KIWA,KLAS,32,0
+"Tuesday, January 7, 2020",46,SWQ3501,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KELP,43,1
+"Tuesday, January 14, 2020",,SWQ3501,,FLIGHT CANCELLED after flight plan was filed,,,,0,0
+"Tuesday, January 21, 2020",47,SWQ3501,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KELP,88,1
+"Tuesday, January 28, 2020",48,SWQ3501,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KELP,34,14
+"Tuesday, February 4, 2020",49,SWQ3501,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KELP,48,1
+"Tuesday, February 11, 2020",50,SWQ3501,N277EA,iAero Airways ,"""Swiftflight""",KIWA,KLAS,37,0
+"Tuesday, February 18, 2020",51,SWQ3522,N276EA,iAero Airways ,"""Swiftflight""",KIWA,KLAS,39,1
+"Tuesday, February 25, 2020",52,SWQ3501,N276EA,iAero Airways ,"""Swiftflight""",KIWA,KLAS,61,0
+"Sunday, March 1, 2020",53,SWQ3851,,iAero Airways ,"""Swiftflight""",KELP,KIWA,0,133
+"Tuesday, March 3, 2020",54,SWQ3501,N531AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,48,2
+"Tuesday, March 10, 2020",55,SWQ3504,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,47,3
+"Tuesday, March 17, 2020",56,SWQ3504,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,33,0
+"Tuesday, March 24, 2020",57,SWQ3501,N313XA,iAero Airways ,"""Swiftflight""",KIWA,KLAS,51,0
+"Tuesday, March 31, 2020",58,SWQ3504,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,51,0
+"Tuesday, April 7, 2020",NO FLIGHT,,,,,,,0,0
+"Tuesday, April 14, 2020",59,SWQ3504,N458UW,iAero Airways ,"""Swiftflight""",KDEN,KLAS,51,0
+"Tuesday, April 21, 2020",60,SWQ3503,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,43,1
+"Tuesday, April 28, 2020",61,SWQ3501,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,42,1
+"Tuesday, May 5, 2020",62,SWQ3501,N529AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,26,4
+"Tuesday, May 12, 2020",63,SWQ3501,N531AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,28,0
+"Tuesday, May 19, 2020",64,SWQ3501,N538CC,iAero Airways ,"""Swiftflight""",KIWA,KLAS,48,0
+"Tuesday, May 26, 2020.",65,SWQ3501,N803TJ,iAero Airways ,"""Swiftflight""",KIWA,KLAS,22,4
+"Tuesday, June 2, 2020",66,SWQ3501,N531AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,19,0
+"Tuesday, June 9, 2020",67,SWQ3501,N803TJ,iAero Airways ,"""Swiftflight""",KIWA,KLAS,22,0
+"Tuesday, June 16, 2020",68,SWQ3503,N531AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,16,0
+"Tuesday, June 23, 2020",69,SWQ3501,N803TJ,iAero Airways ,"""Swiftflight""",KIWA,KLAS,21,1
+"Tuesday, June 30, 2020",70,SWQ3501,N531AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,26,1
+"Tuesday, July 7, 2020",71,SWQ3505,N531AU,iAero Airways ,"""Swiftflight""",KIWA,KLAS,21,0
+"Monday, July 13, 2020",72,SWQ3503,N531AU,iAero Airways ,"""Swiftflight""",KLAS,KELP,13,0
+"Monday, July 20, 2020",73,SWQ3501,N531AU,iAero Airways ,"""Swiftflight""",KLAS,KELP,20,1
+"Monday, July 27, 2020",74,SWQ3502,N531AU,iAero Airways ,"""Swiftflight""",KLAS,KELP,31,0
+"Monday, August 3, 2020",75,SWQ3502,N627SW,iAero Airways ,"""Swiftflight""",KLAS,KELP,24,0
+"Monday, August 10, 2020",76,SWQ3502,N625SW,iAero Airways ,"""Swiftflight""",KLAS,KELP,45,0
+"Tuesday, August 18, 2020",77,SWQ3505,N531AU,iAero Airways ,"""Swiftflight""",KLAS,KELP,23,2
+"Week of Aug 24th - NO FLIGHT - there was a flight from Phoenix to Las Vegas to El Paso, as usual ... it just didn't fly to Yakima.",,,,,,,,0,0
+"Tuesday, September 1, 2020",78,SWQ3508,N624XA,iAero Airways ,"""Swiftflight""",KLAS,KELP,46,2
+"Tuesday, September 8, 2020",79,SWQ3505,N531AU,iAero Airways ,"""Swiftflight""",KLAS,KELP,27,0
+"Tuesday, September 15, 2020",80,SWQ2505,N531AU,iAero Airways ,"""Swiftflight""",KLAS,KELP,36,0
+"Tuesday, September 22, 2020",81,SWQ3506,N531AU,iAero Airways ,"""Swiftflight""",KLAS,KELP,21,1
+"Tuesday, September 29, 2020",82,SWQ3505,N285XA,iAero Airways ,"""Swiftflight""",KLAS,KELP,0,0
+"Tuesday, October 6, 2020",83,SWQ3505,N440US,iAero Airways ,"""Swiftflight""",KLAS,KELP,28,0

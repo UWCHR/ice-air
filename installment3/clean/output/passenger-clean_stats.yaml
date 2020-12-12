@@ -1,0 +1,7 @@
+age_high_bound: 99
+age_low_bound: 0
+dropped_bad_airports: 107
+input_records: 341290
+null_droploc: 40
+null_puloc: 61
+output_len: 341082

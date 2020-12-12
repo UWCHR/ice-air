@@ -1,0 +1,812 @@
+ADDIS ABABA BOLE INTERNATIONAL AIRPORT:
+  AirportName: Addis Ababa Bole International Airport
+  City: Bole
+  Country: Ethiopia
+  LatitudeDecimalDegrees: .nan
+  LongitudeDecimalDegrees: .nan
+  State: .nan
+BANDARANAIKE INTERNATIONAL COLOMBO AIRPORT:
+  AirportName: Bandaranaike International Colombo Airport
+  City: Colombo
+  Country: Sri Lanka
+  LatitudeDecimalDegrees: .nan
+  LongitudeDecimalDegrees: .nan
+  State: .nan
+DBBB:
+  AirportName: Cotonou International Airport
+  City: Contonou
+  Country: Benin
+  LatitudeDecimalDegrees: 6.357
+  LongitudeDecimalDegrees: 2.384
+  State: .nan
+DFFD:
+  AirportName: Ouagadougou Airport
+  City: Ouagadougou
+  Country: Burkina Faso
+  LatitudeDecimalDegrees: 12.353
+  LongitudeDecimalDegrees: -1.5119999999999998
+  State: .nan
+DGAA:
+  AirportName: Kotoka International Airport
+  City: Accra
+  Country: Ghana
+  LatitudeDecimalDegrees: 5.603
+  LongitudeDecimalDegrees: -0.168
+  State: .nan
+DIAP:
+  AirportName: Port Bouet Airport
+  City: Abidjan
+  Country: Ivory Coast
+  LatitudeDecimalDegrees: 5.26
+  LongitudeDecimalDegrees: -3.926
+  State: .nan
+DNMM:
+  AirportName: Murtala Muhammed International Airport
+  City: Lagos
+  Country: Nigeria
+  LatitudeDecimalDegrees: 6.577000000000001
+  LongitudeDecimalDegrees: 3.321
+  State: .nan
+DRRN:
+  AirportName: Diori Hamani International Airport
+  City: Niamey
+  Country: Niger
+  LatitudeDecimalDegrees: 13.481
+  LongitudeDecimalDegrees: 2.184
+  State: .nan
+DXXX:
+  AirportName: Lomé–Tokoin Airport
+  City: Togo
+  Country: Togo
+  LatitudeDecimalDegrees: 6.166
+  LongitudeDecimalDegrees: 1.254
+  State: .nan
+EGSS:
+  AirportName: London Heathrow Airport
+  City: London
+  Country: United Kingdom
+  LatitudeDecimalDegrees: 51.885
+  LongitudeDecimalDegrees: 0.235
+  State: .nan
+EHAM:
+  AirportName: Amsterdam Airport Schiphol
+  City: Amsterdam
+  Country: Netherlands
+  LatitudeDecimalDegrees: 52.309
+  LongitudeDecimalDegrees: 4.7639999999999985
+  State: .nan
+FALA:
+  AirportName: Lanseria Airport
+  City: Johannesburg
+  Country: South Africa
+  LatitudeDecimalDegrees: -25.938
+  LongitudeDecimalDegrees: 27.926
+  State: .nan
+FCBB:
+  AirportName: Maya-Maya Airport
+  City: .nan
+  Country: Republic of the Congo
+  LatitudeDecimalDegrees: -4.252
+  LongitudeDecimalDegrees: 15.253
+  State: .nan
+FKKD:
+  AirportName: Douala International Airport
+  City: Douala
+  Country: Cameroon
+  LatitudeDecimalDegrees: 4.006
+  LongitudeDecimalDegrees: 9.719
+  State: .nan
+FNLU:
+  AirportName: Luanda International Airport
+  City: Luanda
+  Country: Angola
+  LatitudeDecimalDegrees: -8.857999999999997
+  LongitudeDecimalDegrees: 13.231
+  State: .nan
+FOOL:
+  AirportName: Libreville International Airport
+  City: Libreville
+  Country: Gabon
+  LatitudeDecimalDegrees: 0.458
+  LongitudeDecimalDegrees: 9.412
+  State: .nan
+FZAA:
+  AirportName: Ndjili International Airport
+  City: Kinshasa
+  Country: Democratic Republic of Congo
+  LatitudeDecimalDegrees: -4.386
+  LongitudeDecimalDegrees: 15.444
+  State: .nan
+GABS:
+  AirportName: Senou Airport
+  City: Bamako
+  Country: Mali
+  LatitudeDecimalDegrees: 12.533
+  LongitudeDecimalDegrees: -7.95
+  State: .nan
+GBYD:
+  AirportName: Banjul International Airport
+  City: Banjul
+  Country: Gambia
+  LatitudeDecimalDegrees: 13.338
+  LongitudeDecimalDegrees: -16.652
+  State: .nan
+GFLL:
+  AirportName: Lungi International Airport
+  City: Freetown
+  Country: Sierra Leone
+  LatitudeDecimalDegrees: 8.616
+  LongitudeDecimalDegrees: -13.195
+  State: .nan
+GLRB:
+  AirportName: Roberts International Airport
+  City: Monrovia
+  Country: Liberia
+  LatitudeDecimalDegrees: 6.234
+  LongitudeDecimalDegrees: -10.362
+  State: .nan
+GOOY:
+  AirportName: Dakar International Airport
+  City: Dakar
+  Country: Senegal
+  LatitudeDecimalDegrees: 14.739
+  LongitudeDecimalDegrees: -17.49
+  State: .nan
+GQNO:
+  AirportName: Nouakchott-Oumtounsy International Airport
+  City: Nouakchott
+  Country: Mauritania
+  LatitudeDecimalDegrees: 18.31
+  LongitudeDecimalDegrees: -15.969722
+  State: .nan
+GUCY:
+  AirportName: Conakry Airport
+  City: Conakry
+  Country: Guinea
+  LatitudeDecimalDegrees: 9.576889
+  LongitudeDecimalDegrees: -13.611961
+  State: .nan
+GVNP:
+  AirportName: Praia International Airport
+  City: Praia
+  Country: Cape Verde
+  LatitudeDecimalDegrees: 14.9242
+  LongitudeDecimalDegrees: -23.4939
+  State: .nan
+HCMM:
+  AirportName: Aden Adde International Airport
+  City: Mogadishu
+  Country: Somalia
+  LatitudeDecimalDegrees: 2.014
+  LongitudeDecimalDegrees: 45.305
+  State: .nan
+HKJK:
+  AirportName: Jomo Kenyatta International Airport
+  City: Nairobi
+  Country: Kenya
+  LatitudeDecimalDegrees: -1.318611
+  LongitudeDecimalDegrees: 36.925833
+  State: .nan
+HRYR:
+  AirportName: Kigali International Airport
+  City: Kigali
+  Country: Rwanda
+  LatitudeDecimalDegrees: -1.969
+  LongitudeDecimalDegrees: 30.139
+  State: .nan
+HSSJ:
+  AirportName: Juba Airport
+  City: Juba
+  Country: South Sudan
+  LatitudeDecimalDegrees: 4.872
+  LongitudeDecimalDegrees: 31.601
+  State: .nan
+HSSS:
+  AirportName: Khartoum International Airport
+  City: Khartoum
+  Country: Sudan
+  LatitudeDecimalDegrees: 15.589
+  LongitudeDecimalDegrees: 32.553000000000004
+  State: .nan
+HTDA:
+  AirportName: Julius Nyerere International Airport
+  City: Dar es Salaam
+  Country: Tanzania
+  LatitudeDecimalDegrees: -6.877999999999999
+  LongitudeDecimalDegrees: 39.203
+  State: .nan
+HUEN:
+  AirportName: Entebbe International Airport
+  City: Entebbe
+  Country: Uganda
+  LatitudeDecimalDegrees: 0.042
+  LongitudeDecimalDegrees: 32.443000000000005
+  State: .nan
+KABQ:
+  AirportName: Albuquerque International Sunport Airport
+  City: Albuquerque
+  Country: USA
+  LatitudeDecimalDegrees: 35.039333
+  LongitudeDecimalDegrees: -106.610778
+  State: NM
+KAEX:
+  AirportName: Alexandria International Airport
+  City: Alexandria
+  Country: USA
+  LatitudeDecimalDegrees: 31.327
+  LongitudeDecimalDegrees: -92.548
+  State: LA
+KATL:
+  AirportName: Hartsfield Jackson Atlanta International Airport
+  City: Atlanta
+  Country: USA
+  LatitudeDecimalDegrees: 33.64
+  LongitudeDecimalDegrees: -84.427
+  State: GA
+KBFI:
+  AirportName: Boeing Field King County International Airport
+  City: Seattle
+  Country: USA
+  LatitudeDecimalDegrees: 47.53
+  LongitudeDecimalDegrees: -122.302
+  State: WA
+KBFL:
+  AirportName: Meadows Field
+  City: Bakersfield
+  Country: USA
+  LatitudeDecimalDegrees: 35.433
+  LongitudeDecimalDegrees: -119.057
+  State: CA
+KBRO:
+  AirportName: Brownsville South Padre Island International Airport
+  City: Brownsville
+  Country: USA
+  LatitudeDecimalDegrees: 25.907
+  LongitudeDecimalDegrees: -97.426
+  State: TX
+KBUF:
+  AirportName: Buffalo Niagara International Airport
+  City: Buffalo
+  Country: USA
+  LatitudeDecimalDegrees: 42.94
+  LongitudeDecimalDegrees: -78.732
+  State: NY
+KCHS:
+  AirportName: Charleston International Airport
+  City: Charleston
+  Country: USA
+  LatitudeDecimalDegrees: 32.899
+  LongitudeDecimalDegrees: -80.04
+  State: SC
+KCOS:
+  AirportName: City of Colorado Springs Municipal Airport
+  City: Colorado Springs
+  Country: USA
+  LatitudeDecimalDegrees: 38.806
+  LongitudeDecimalDegrees: -104.7
+  State: CO
+KCSG:
+  AirportName: Columbus Metropolitan Airport
+  City: Columbus
+  Country: USA
+  LatitudeDecimalDegrees: 32.5163333
+  LongitudeDecimalDegrees: -84.9388611
+  State: GA
+KDAL:
+  AirportName: Dallas Love Field
+  City: Dallas
+  Country: USA
+  LatitudeDecimalDegrees: 32.847
+  LongitudeDecimalDegrees: -96.852
+  State: TX
+KDEN:
+  AirportName: Denver International Airport
+  City: Denver
+  Country: USA
+  LatitudeDecimalDegrees: 39.858
+  LongitudeDecimalDegrees: -104.667
+  State: CO
+KDFW:
+  AirportName: Dallas Fort Worth International Airport
+  City: Dallas-Fort Worth
+  Country: USA
+  LatitudeDecimalDegrees: 32.896
+  LongitudeDecimalDegrees: -97.037
+  State: TX
+KDLF:
+  AirportName: Laughlin AFB
+  City: De Rio
+  Country: USA
+  LatitudeDecimalDegrees: .nan
+  LongitudeDecimalDegrees: .nan
+  State: TX
+KELP:
+  AirportName: El Paso International Airport
+  City: El Paso
+  Country: USA
+  LatitudeDecimalDegrees: 31.807
+  LongitudeDecimalDegrees: -106.378
+  State: TX
+KEWR:
+  AirportName: Newark Liberty International Airport
+  City: Newark
+  Country: USA
+  LatitudeDecimalDegrees: 40.692
+  LongitudeDecimalDegrees: -74.169
+  State: NJ
+KFTW:
+  AirportName: Fort Worth Meacham International Airport
+  City: Fort Worth
+  Country: USA
+  LatitudeDecimalDegrees: 32.82
+  LongitudeDecimalDegrees: -97.362
+  State: TX
+KGYY:
+  AirportName: Gary Chicago International Airport
+  City: Gary
+  Country: USA
+  LatitudeDecimalDegrees: 41.616389
+  LongitudeDecimalDegrees: -87.412778
+  State: IN
+KHRL:
+  AirportName: Valley International Airport
+  City: Harlingen
+  Country: USA
+  LatitudeDecimalDegrees: 26.228
+  LongitudeDecimalDegrees: -97.654
+  State: TX
+KIAH:
+  AirportName: George Bush Intercontinental Houston Airport
+  City: Houston
+  Country: USA
+  LatitudeDecimalDegrees: 29.98
+  LongitudeDecimalDegrees: -95.34
+  State: TX
+KIWA:
+  AirportName: Phoenix-Mesa-Gateway Airport
+  City: Mesa
+  Country: USA
+  LatitudeDecimalDegrees: 33.3078333
+  LongitudeDecimalDegrees: -111.6554722
+  State: AZ
+KJAX:
+  AirportName: Jacksonville International Airport
+  City: Jacksonville
+  Country: USA
+  LatitudeDecimalDegrees: 30.494
+  LongitudeDecimalDegrees: -81.688
+  State: FL
+KLAS:
+  AirportName: McCarran International Airport
+  City: Las Vegas
+  Country: USA
+  LatitudeDecimalDegrees: 36.08
+  LongitudeDecimalDegrees: -115.152
+  State: NV
+KLRD:
+  AirportName: Laredo International Airport
+  City: Laredo
+  Country: USA
+  LatitudeDecimalDegrees: 27.544
+  LongitudeDecimalDegrees: -99.461
+  State: TX
+KMCI:
+  AirportName: Kansas City International Airport
+  City: Kansas City
+  Country: USA
+  LatitudeDecimalDegrees: 39.297
+  LongitudeDecimalDegrees: -94.714
+  State: MO
+KMDT:
+  AirportName: Harrisburg International Airport
+  City: Harrisburg
+  Country: USA
+  LatitudeDecimalDegrees: 40.19300000000001
+  LongitudeDecimalDegrees: -76.763
+  State: PA
+KMEM:
+  AirportName: Memphis International Airport
+  City: Memphis
+  Country: USA
+  LatitudeDecimalDegrees: 35.042
+  LongitudeDecimalDegrees: -89.977
+  State: TN
+KMIA:
+  AirportName: Miami International Airport
+  City: Miami
+  Country: USA
+  LatitudeDecimalDegrees: 25.793000000000006
+  LongitudeDecimalDegrees: -80.291
+  State: FL
+KMSP:
+  AirportName: Minneapolis-St Paul International/Wold-Chamberlain Airport
+  City: Minneapolis
+  Country: USA
+  LatitudeDecimalDegrees: 44.88
+  LongitudeDecimalDegrees: -93.217
+  State: MN
+KNYL:
+  AirportName: Yuma MCAS/Yuma International Airport
+  City: Yuma
+  Country: USA
+  LatitudeDecimalDegrees: 32.656667
+  LongitudeDecimalDegrees: -114.606111
+  State: AZ
+KOAK:
+  AirportName: Metropolitan Oakland International Airport
+  City: Oakland
+  Country: USA
+  LatitudeDecimalDegrees: 37.721
+  LongitudeDecimalDegrees: -122.221
+  State: CA
+KOMA:
+  AirportName: Eppley Airfield
+  City: Omaha
+  Country: USA
+  LatitudeDecimalDegrees: 41.302
+  LongitudeDecimalDegrees: -95.894
+  State: NE
+KONT:
+  AirportName: Ontario International Airport
+  City: Ontario
+  Country: USA
+  LatitudeDecimalDegrees: 34.056
+  LongitudeDecimalDegrees: -117.601
+  State: CA
+KORD:
+  AirportName: Chicago O'Hare International Airport
+  City: Chicago
+  Country: USA
+  LatitudeDecimalDegrees: 41.979
+  LongitudeDecimalDegrees: -87.904
+  State: IL
+KPSM:
+  AirportName: Portsmouth International Airport
+  City: Portsmouth, NH
+  Country: USA
+  LatitudeDecimalDegrees: 43.078056
+  LongitudeDecimalDegrees: -70.82333299999998
+  State: .nan
+KPVD:
+  AirportName: T.F. Green Airport
+  City: Providence
+  Country: USA
+  LatitudeDecimalDegrees: 41.724
+  LongitudeDecimalDegrees: -71.428
+  State: RI
+KRIC:
+  AirportName: Richmond International Airport
+  City: Richmond
+  Country: USA
+  LatitudeDecimalDegrees: 37.505
+  LongitudeDecimalDegrees: -77.319
+  State: VA
+KRNO:
+  AirportName: Reno Tahoe International Airport
+  City: Reno
+  Country: USA
+  LatitudeDecimalDegrees: 39.49800000000001
+  LongitudeDecimalDegrees: -119.768
+  State: NV
+KSAN:
+  AirportName: San Diego International Airport
+  City: San Diego
+  Country: USA
+  LatitudeDecimalDegrees: 32.733000000000004
+  LongitudeDecimalDegrees: -117.189
+  State: CA
+KSAT:
+  AirportName: San Antonio International Airport
+  City: San Antonio
+  Country: USA
+  LatitudeDecimalDegrees: 29.534
+  LongitudeDecimalDegrees: -98.47
+  State: TX
+KSLC:
+  AirportName: Salt Lake City International Airport
+  City: Salt Lake City
+  Country: USA
+  LatitudeDecimalDegrees: 40.788
+  LongitudeDecimalDegrees: -111.978
+  State: UT
+KTOL:
+  AirportName: Toledo Express Airport
+  City: Toledo
+  Country: USA
+  LatitudeDecimalDegrees: 41.586806
+  LongitudeDecimalDegrees: -83.807833
+  State: OH
+KTUS:
+  AirportName: Tucson International Airport
+  City: Tucson
+  Country: USA
+  LatitudeDecimalDegrees: 32.116
+  LongitudeDecimalDegrees: -110.941
+  State: AZ
+KVCV:
+  AirportName: Southern California Logistics Airport
+  City: Victorville
+  Country: USA
+  LatitudeDecimalDegrees: 34.593
+  LongitudeDecimalDegrees: -117.379
+  State: CA
+KYKM:
+  AirportName: Yakima Air Terminal
+  City: Yakima
+  Country: USA
+  LatitudeDecimalDegrees: 46.568056
+  LongitudeDecimalDegrees: -120.544167
+  State: WA
+KYNG:
+  AirportName: Youngston Warren Regional Airport
+  City: Vienna Center
+  Country: USA
+  LatitudeDecimalDegrees: 41.261
+  LongitudeDecimalDegrees: -80.679
+  State: .nan
+LFPB:
+  AirportName: Le Bourget International Airport
+  City: Paris
+  Country: France
+  LatitudeDecimalDegrees: 48.969
+  LongitudeDecimalDegrees: 2.441
+  State: .nan
+LOWW:
+  AirportName: Vienna International Airport
+  City: Schwechat
+  Country: Austria
+  LatitudeDecimalDegrees: 48.11
+  LongitudeDecimalDegrees: 16.57
+  State: .nan
+LPPT:
+  AirportName: Humberto Delgado Airport
+  City: Lisboa
+  Country: Portugal
+  LatitudeDecimalDegrees: .nan
+  LongitudeDecimalDegrees: .nan
+  State: .nan
+MDSD:
+  AirportName: Las Americas International Airport
+  City: Santo Domingo
+  Country: Dominican Republic
+  LatitudeDecimalDegrees: 18.429
+  LongitudeDecimalDegrees: -69.669
+  State: .nan
+MGGT:
+  AirportName: La Aurora Airport
+  City: Guatemala City
+  Country: Guatemala
+  LatitudeDecimalDegrees: 14.583
+  LongitudeDecimalDegrees: -90.528
+  State: .nan
+MHLM:
+  AirportName: Ramon Villeda Morales International Airport
+  City: San Pedro Sula
+  Country: Honduras
+  LatitudeDecimalDegrees: 15.452
+  LongitudeDecimalDegrees: -87.92299999999999
+  State: .nan
+MKJP:
+  AirportName: Norman Manley International Airport
+  City: Kingston
+  Country: Jamaica
+  LatitudeDecimalDegrees: 17.936
+  LongitudeDecimalDegrees: -76.78699999999998
+  State: .nan
+MMGL:
+  AirportName: Miguel Hidalgo y Costilla International Airport
+  City: Guadalajara
+  Country: Mexico
+  LatitudeDecimalDegrees: .nan
+  LongitudeDecimalDegrees: .nan
+  State: .nan
+MNMG:
+  AirportName: Augusto C. Sandino (Managua) International Airport
+  City: Managua
+  Country: Nicaragua
+  LatitudeDecimalDegrees: 12.140999999999998
+  LongitudeDecimalDegrees: -86.16799999999998
+  State: .nan
+MSLP:
+  AirportName: El Salvador International Airport
+  City: San Salvador
+  Country: El Salvador
+  LatitudeDecimalDegrees: 13.441
+  LongitudeDecimalDegrees: -89.056
+  State: .nan
+MTPP:
+  AirportName: Toussaint Louverture International Airport
+  City: Port-Of-Prince
+  Country: Haiti
+  LatitudeDecimalDegrees: 18.58
+  LongitudeDecimalDegrees: -72.293
+  State: .nan
+MUHA:
+  AirportName: Jose Marti International Airport 
+  City: La Habana
+  Country: Cuba
+  LatitudeDecimalDegrees: 22.989
+  LongitudeDecimalDegrees: -82.40899999999998
+  State: .nan
+MYNN:
+  AirportName: Lynden Pindling International Airport
+  City: Nassau
+  Country: Bahamas
+  LatitudeDecimalDegrees: 25.039
+  LongitudeDecimalDegrees: -77.46600000000002
+  State: .nan
+NSFA:
+  AirportName: Faleolo International Airport
+  City: .nan
+  Country: Samoa
+  LatitudeDecimalDegrees: -13.83
+  LongitudeDecimalDegrees: -172.00799999999995
+  State: .nan
+OAKB:
+  AirportName: Kabul International Airport
+  City: Kabul
+  Country: Afghanistan
+  LatitudeDecimalDegrees: 34.566
+  LongitudeDecimalDegrees: 69.212
+  State: .nan
+OJAI:
+  AirportName: Queen Alia International Airport
+  City: Amman
+  Country: Jordan
+  LatitudeDecimalDegrees: 31.722
+  LongitudeDecimalDegrees: 35.993
+  State: .nan
+OPRN:
+  AirportName: Islamabad International Airport
+  City: Islamabad
+  Country: Pakistan
+  LatitudeDecimalDegrees: 33.616
+  LongitudeDecimalDegrees: 73.09899999999998
+  State: .nan
+ORBI:
+  AirportName: Baghdad International Airport
+  City: Baghdad
+  Country: Iraq
+  LatitudeDecimalDegrees: 33.2625
+  LongitudeDecimalDegrees: 44.234444
+  State: .nan
+SBBR:
+  AirportName: Brasilia International Airport
+  City: Brasilia
+  Country: Brazil
+  LatitudeDecimalDegrees: -15.862
+  LongitudeDecimalDegrees: -47.913
+  State: .nan
+SBCF:
+  AirportName: Tancredo Neves International Airport
+  City: .nan
+  Country: Brazil
+  LatitudeDecimalDegrees: -19.634
+  LongitudeDecimalDegrees: -43.969
+  State: .nan
+SEGU:
+  AirportName: Simon Bolivar International Airport
+  City: Guayaquill
+  Country: Ecuador
+  LatitudeDecimalDegrees: -2.158
+  LongitudeDecimalDegrees: -79.884
+  State: .nan
+SEQM:
+  AirportName: Mariscal Sucre International
+  City: Quito
+  Country: Ecuador
+  LatitudeDecimalDegrees: .nan
+  LongitudeDecimalDegrees: .nan
+  State: .nan
+SKBO:
+  AirportName: El Dorado International Airport
+  City: Bogota
+  Country: Colombia
+  LatitudeDecimalDegrees: 4.7010000000000005
+  LongitudeDecimalDegrees: -74.14699999999998
+  State: .nan
+SPJC:
+  AirportName: Jorge Chavez International Airport
+  City: Callao
+  Country: Peru
+  LatitudeDecimalDegrees: -12.021944
+  LongitudeDecimalDegrees: -77.11444399999998
+  State: .nan
+TBPB:
+  AirportName: Grantley Adams International Airport
+  City: Seawell
+  Country: Barbados
+  LatitudeDecimalDegrees: 13.074000000000002
+  LongitudeDecimalDegrees: -59.492
+  State: .nan
+TJSJ:
+  AirportName: Luis Munoz Marin International Airport
+  City: San Juan
+  Country: USA
+  LatitudeDecimalDegrees: 18.439
+  LongitudeDecimalDegrees: -66.002
+  State: PR
+TKPK:
+  AirportName: Robert L. Bradshaw International Airport
+  City: Basseterre
+  Country: St. Kitts
+  LatitudeDecimalDegrees: 17.311
+  LongitudeDecimalDegrees: -62.719
+  State: .nan
+TLPL:
+  AirportName: Hewanorra International Airport
+  City: Vieux Fort
+  Country: St. Lucia
+  LatitudeDecimalDegrees: 13.733
+  LongitudeDecimalDegrees: -60.953
+  State: .nan
+UDYZ:
+  AirportName: Zvartnots International Airport
+  City: Yerevan
+  Country: Armenia
+  LatitudeDecimalDegrees: 40.147222
+  LongitudeDecimalDegrees: 44.395833
+  State: .nan
+UGTB:
+  AirportName: Tbilisi International Airport
+  City: Tbilisi
+  Country: Georgia
+  LatitudeDecimalDegrees: 41.6692
+  LongitudeDecimalDegrees: 44.9547
+  State: .nan
+UUWW:
+  AirportName: Vnukovo International Airport
+  City: Moscow
+  Country: Russia
+  LatitudeDecimalDegrees: 55.591
+  LongitudeDecimalDegrees: 37.261
+  State: .nan
+VCBI:
+  AirportName: Bandaranaike International Airport
+  City: Negombo
+  Country: Sri Lanka
+  LatitudeDecimalDegrees: 7.181
+  LongitudeDecimalDegrees: 79.884
+  State: .nan
+VCCC:
+  AirportName: Ratmalana  Airport
+  City: Colombo
+  Country: Sri Lanka
+  LatitudeDecimalDegrees: .nan
+  LongitudeDecimalDegrees: .nan
+  State: .nan
+VDPP:
+  AirportName: Phnom Penh International Airport
+  City: Phnom Penh
+  Country: Cambodia
+  LatitudeDecimalDegrees: 11.546
+  LongitudeDecimalDegrees: 104.844
+  State: .nan
+VGHS:
+  AirportName: Dhaka Shahjalal International Airport
+  City: Dhaka
+  Country: Bangladesh
+  LatitudeDecimalDegrees: 23.842778
+  LongitudeDecimalDegrees: 90.400556
+  State: .nan
+VIDP:
+  AirportName: Indira Gandhi International Airport
+  City: Delhi
+  Country: India
+  LatitudeDecimalDegrees: 28.566
+  LongitudeDecimalDegrees: 77.10300000000002
+  State: .nan
+VNKT:
+  AirportName: Tribhuvan International Airport
+  City: Kathmandu
+  Country: Nepal
+  LatitudeDecimalDegrees: 27.696
+  LongitudeDecimalDegrees: 85.359
+  State: .nan
+VVNB:
+  AirportName: Noi Bai IAP
+  City: Ha Noi
+  Country: Vietnam
+  LatitudeDecimalDegrees: 21.222
+  LongitudeDecimalDegrees: 105.806
+  State: .nan

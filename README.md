@@ -23,7 +23,7 @@ Tasks in this project are designed to be executed using the recursive make tool 
 Datasets and high level resources:
 
 - `installment1/` - Dataset released to UWCHR via FOIA in December 2018. Contains ICE Air ARTS passenger data for 2010-10-01 through 2018-12-05.
-- `installment2/` - Dataset released to UWCHR via FOIA in August 2019. Contains ICE Air ARTS passenger and mission data for 2010-10-01 through 2018-05-03.
+- `installment2/` - Dataset released to UWCHR via FOIA in August 2019. Contains ICE Air ARTS passenger and mission data for 2010-10-01 through 2019-05-03.
 - `installment3/` - Dataset released to UWCHR via FOIA in November 2020. Contains ICE Air ARTS passenger and mission data for 2018-10-01 through 2020-05-08.
 - `compare/` - Project for comparing contents of ICE Air ARTS installments 1 and 2.
 - `kykm/` - Small task for dataset of community observations of ICE Air flights at Yakima Air Terminal (KYMK).

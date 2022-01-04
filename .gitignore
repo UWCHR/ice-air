@@ -6,3 +6,4 @@ analyze/output/figures/*
 *.pdf
 !installment2/write/output/wal-kbro-memo-final.pdf
 installment3/export/frozen/*.csv
+!installment3/import/input/*

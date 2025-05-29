@@ -2,6 +2,8 @@
 
 A project analyzing data from Immigration and Customs Enforcement's Alien Repatriation and Transfer System (ARTS) for the report [Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation](https://jsis.washington.edu/humanrights/2019/04/23/ice-air/) by the [University of Washington Center for Human Rights](https://jsis.washington.edu/humanrights/).
 
+Original Excel files as released by ICE can be found on [UWCHR's Google Drive](https://drive.google.com/open?id=1GVeLTfCm846YkZKWPlK0HF5eRxxYqPsF). These raw files are excluded from the repository due to their size. The most complete data were released in "Installment 2", contains ICE Air ARTS passenger and mission data for 2010-10-01 through 2019-05-03.
+
 ## Report contents
 
 - [Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation](https://jsis.washington.edu/humanrights/2019/04/23/ice-air/)
@@ -23,8 +25,8 @@ Tasks in this project are designed to be executed using the recursive make tool 
 Datasets and high level resources:
 
 - `installment1/` - Dataset released to UWCHR via FOIA in December 2018. Contains ICE Air ARTS passenger data for 2010-10-01 through 2018-12-05.
-- `installment2/` - Dataset released to UWCHR via FOIA in August 2019. Contains ICE Air ARTS passenger and mission data for 2010-10-01 through 2019-05-03.
-- `installment3/` - Dataset released to UWCHR via FOIA in November 2020. Contains ICE Air ARTS passenger and mission data for 2018-10-01 through 2020-05-08.
+- `installment2/` - Dataset released to UWCHR via FOIA in August 2019. Contains ICE Air ARTS passenger and mission data for 2010-10-01 through 2019-05-03. This is the most complete version of data obtained via FOIA by UWCHR.
+- `installment3/` - Dataset released to UWCHR via FOIA in November 2020. Contains ICE Air ARTS passenger and mission data for 2018-10-01 through 2020-05-08. This version of data is more heavily redacted than previous installments obtained via FOIA by UWCHR.
 - `compare/` - Project for comparing contents of ICE Air ARTS installments 1 and 2.
 - `kykm/` - Small task for dataset of community observations of ICE Air flights at Yakima Air Terminal (KYMK).
 - `radarbox/` - Task for data on Swift Air (SWQ) and World Atlatic (WAL) flights using commercial flight tracker records from Radarbox.com
@@ -43,8 +45,3 @@ Project-level tasks, in order of workflow (not all tasks will be present in all 
   - `analyze/output/` contains various versions of figures and data subsets; currently none of these are used in any downstream tasks.
 - `write/` - Writes out final reports to HTML using [Pweave](http://mpastell.com/pweave/).
   - All analysis, figure generation, etc. takes place in `write/src/`.
-
-# To-do
-
-- [ ] Update data appendix for `installment2/`
-- [ ] Convert `installment1/` and `installment2/` tasks `optimize/` and `clean/` to output feather format files

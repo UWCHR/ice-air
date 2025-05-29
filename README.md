@@ -2,7 +2,7 @@
 
 A project analyzing data from Immigration and Customs Enforcement's Alien Repatriation and Transfer System (ARTS) for the report [Hidden in Plain Sight: ICE Air and the Machinery of Mass Deportation](https://jsis.washington.edu/humanrights/2019/04/23/ice-air/) by the [University of Washington Center for Human Rights](https://jsis.washington.edu/humanrights/).
 
-Original Excel files as released by ICE can be found on [UWCHR's Google Drive](https://drive.google.com/open?id=1GVeLTfCm846YkZKWPlK0HF5eRxxYqPsF). These raw files are excluded from the repository due to their size. The most complete data were released in "Installment 2", contains ICE Air ARTS passenger and mission data for 2010-10-01 through 2019-05-03.
+Original Excel files as released by ICE can be found on [UWCHR's Google Drive](https://drive.google.com/open?id=1GVeLTfCm846YkZKWPlK0HF5eRxxYqPsF). These raw files are excluded from the repository due to their size. The most complete data were released in "Installment 2", containing ICE Air ARTS passenger and mission data for 2010-10-01 through 2019-05-03.
 
 ## Report contents
 
